@@ -56,11 +56,7 @@ def main():
         return
 
     tehran_tz = datetime.timezone(datetime.timedelta(hours=3, minutes=30))
-    now = datetime.datetime.now(tehran_tz)
     
-    start_of_yesterday = (now - datetime.timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
-    end_of_yesterday = start_of_yesterday.replace(hour=23, minute=59, second=59, microsecond=999999)
-
     log_data = daily_logger.load_log()
     if not log_data:
         return
@@ -68,11 +64,6 @@ def main():
     processed_message_ids = []
 
     for track in log_data:
-        track_time = datetime.datetime.fromtimestamp(track["timestamp"], tehran_tz)
-        
-        if track_time > end_of_yesterday:
-            continue
-            
         message_id = track["message_id"]
         raw_caption = track.get("caption", "")
         base_caption = html.escape(raw_caption) if raw_caption else ""
