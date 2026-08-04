@@ -19,7 +19,7 @@ jobs:
           python-version: "3.12"
           
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install google-generativeai==0.8.3
         
       - name: Decrypt state and log
         env:

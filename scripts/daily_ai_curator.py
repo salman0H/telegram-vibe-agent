@@ -1,6 +1,7 @@
 import os
 import datetime
 import time
+import html
 import google.generativeai as genai
 import daily_logger
 import telegram_client
@@ -73,7 +74,8 @@ def main():
             continue
             
         message_id = track["message_id"]
-        base_caption = track.get("caption", "")
+        raw_caption = track.get("caption", "")
+        base_caption = html.escape(raw_caption) if raw_caption else ""
         
         ai_text = generate_vibe_caption(track["performer"], track["title"], track["genres"])
         

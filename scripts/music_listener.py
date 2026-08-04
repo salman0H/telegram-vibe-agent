@@ -26,7 +26,7 @@ def main():
     if not updates:
         return
 
-    next_offset = st.get("offset")
+    next_offset = st.get("offset") or 0
     
     for update in updates:
         update_id = update.get("update_id", 0)
