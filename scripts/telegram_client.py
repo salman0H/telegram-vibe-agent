@@ -50,7 +50,12 @@ def edit_message_caption(message_id, caption, parse_mode="HTML"):
         "caption": caption,
         "parse_mode": parse_mode,
     }
-    return _post("editMessageCaption", payload)
+    result = _post("editMessageCaption", payload)
+    if not result.get("ok"):
+        desc = result.get("description", "")
+        if "can't be edited" in desc or "message is not modified" in desc or "forwarded" in desc:
+            return {"ok": True, "ignored": True}
+    return result
 
 def iter_channel_audio_posts(updates):
     for update in updates:
