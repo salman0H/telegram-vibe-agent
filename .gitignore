@@ -3,7 +3,5 @@ __pycache__/
 *.pyc
 .venv/
 venv/
-music_state.json
-daily_log.json
 *.tar.gz
 *.enc

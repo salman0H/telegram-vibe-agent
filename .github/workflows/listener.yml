@@ -17,15 +17,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          
-      - name: Decrypt state and log
-        env:
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-        run: |
-          if [ -f "music_state.enc" ]; then
-            openssl aes-256-cbc -d -pbkdf2 -md sha256 -in music_state.enc -out music_state.tar.gz -pass pass:"$DB_PASSWORD"
-            tar -xzf music_state.tar.gz
-          fi
 
       - name: Run Listener
         env:
@@ -33,26 +24,15 @@ jobs:
           MUSIC_CHANNEL_ID: ${{ secrets.MUSIC_CHANNEL_ID }}
         run: python scripts/music_listener.py
         
-      - name: Encrypt and commit state
-        env:
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      - name: Commit raw state and log
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          STATE_FILES=""
-          [ -f music_state.json ] && STATE_FILES="$STATE_FILES music_state.json"
-          [ -f daily_log.json ] && STATE_FILES="$STATE_FILES daily_log.json"
-          
-          if [ -n "$STATE_FILES" ]; then
-            tar -czf music_state.tar.gz $STATE_FILES
-            openssl aes-256-cbc -salt -pbkdf2 -md sha256 -in music_state.tar.gz -out music_state.enc -pass pass:"$DB_PASSWORD"
-            rm -f music_state.json daily_log.json music_state.tar.gz
-            git add -f music_state.enc
-          fi
+          git add -f music_state.json daily_log.json || true
           
           if ! git diff --cached --quiet; then
-            git commit -m "chore: update listener tracking state"
+            git commit -m "chore: update raw tracking state and daily log"
             git pull --rebase origin main || true
             git push
           fi
