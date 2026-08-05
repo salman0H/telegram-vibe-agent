@@ -67,4 +67,4 @@ Because committing raw state files to a repository (especially public ones) is b
 
 ---
 
-### *"Music expresses that which cannot be put into words and that which cannot remain silent."* — Victor Hugo (and now, this bot).*
+### *"Music expresses that which cannot be put into words and that which cannot remain silent." — Victor Hugo (and now, this bot).*
