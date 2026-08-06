@@ -18,41 +18,54 @@ model = genai.GenerativeModel(
 
 def generate_vibe_caption(performer, title, genres):
     prompt = f"""
-    Generate Telegram caption in EXACT HTML format. No markdown.
+    Generate Telegram caption in EXACT HTML format. No markdown codeblocks, no intro.
     Artist: {performer}, Title: {title}
     
     [Vibe Emoji] {performer} - {title}
-    [One Persian paragraph describing the vibe]
+    
+    [One Persian paragraph describing the mood]
+    
     <blockquote><b>«[Unique Persian literary or cinematic quote]»</b></blockquote>
     <blockquote><b>"[Unique poetic English sentence]"</b></blockquote>
     """
     try:
         response = model.generate_content(prompt)
-        return response.text.replace("```html", "").replace("```", "").strip()
-    except Exception:
+        text = response.text.replace("```html", "").replace("```", "").strip()
+        return text
+    except Exception as e:
+        print(f"[Gemini Error] Caption generation failed: {e}")
         return None
 
 def generate_hashtags(performer, title, genres):
-    prompt = f"Generate 4 to 6 relevant hashtags for: {performer} - {title}. Output ONLY tags separated by space."
+    prompt = f"Generate 4 to 6 relevant hashtags for: {performer} - {title}. Output ONLY tags separated by spaces."
     try:
         response = model.generate_content(prompt)
         return response.text.replace("```", "").strip()
-    except Exception:
+    except Exception as e:
+        print(f"[Gemini Error] Hashtag generation failed: {e}")
         return None
 
 def main():
-    if not GEMINI_KEY or not os.path.exists(LOG_FILE):
+    if not GEMINI_KEY:
+        print("[Error] Missing GEMINI_API_KEY.")
+        return
+
+    if not os.path.exists(LOG_FILE):
+        print(f"[Curator] {LOG_FILE} does not exist. Execution skipped.")
         return
 
     with open(LOG_FILE, "r", encoding="utf-8") as f:
         try:
             log_data = json.load(f)
-        except Exception:
+        except Exception as e:
+            print(f"[Error] Failed to parse {LOG_FILE}: {e}")
             return
 
     if not log_data:
+        print("[Curator] No tracks pending in log.")
         return
 
+    print(f"[Curator] Loaded {len(log_data)} tracks for processing.")
     success_ids = []
 
     for track in log_data:
@@ -64,20 +77,24 @@ def main():
         needs_tags = bool(base_caption.strip()) and ("#" not in base_caption)
         
         if not needs_caption and not needs_tags:
+            print(f"[Curator] Message {message_id} already complete. Marking done.")
             success_ids.append(message_id)
             continue
 
+        print(f"[Curator] Processing message {message_id} (Artist: {track.get('performer')}, Title: {track.get('title')})")
         new_caption = base_caption
 
         if needs_caption:
-            ai_text = generate_vibe_caption(track["performer"], track["title"], track["genres"])
+            ai_text = generate_vibe_caption(track.get("performer", "Unknown"), track.get("title", "Unknown"), track.get("genres", []))
             if not ai_text:
+                print(f"[Curator] Failed to get AI caption for message {message_id}. Retaining in log.")
                 continue
             new_caption = ai_text
             
         elif needs_tags:
-            tags_text = generate_hashtags(track["performer"], track["title"], track["genres"])
+            tags_text = generate_hashtags(track.get("performer", "Unknown"), track.get("title", "Unknown"), track.get("genres", []))
             if not tags_text:
+                print(f"[Curator] Failed to get AI hashtags for message {message_id}. Retaining in log.")
                 continue
             new_caption = f"{base_caption}\n\n{tags_text}"
             
@@ -88,13 +105,17 @@ def main():
         
         if result and (result.get("ok") or result.get("ignored")):
             success_ids.append(message_id)
+        else:
+            print(f"[Curator] Telegram edit failed for message {message_id}. Retaining in log.")
             
-        time.sleep(4)
+        time.sleep(3)
 
     remaining_tracks = [t for t in log_data if t["message_id"] not in success_ids]
     
     with open(LOG_FILE, "w", encoding="utf-8") as f:
         json.dump(remaining_tracks, f, ensure_ascii=False, indent=2)
+        
+    print(f"[Curator] Execution finished. {len(success_ids)} tracks updated. {len(remaining_tracks)} remaining in log.")
 
 if __name__ == "__main__":
     main()
