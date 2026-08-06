@@ -4,7 +4,6 @@ import urllib.request
 import urllib.parse
 from urllib.error import URLError
 
-# Configuration
 BOT_TOKEN = os.environ.get("MUSIC_BOT_TOKEN", "")
 CHANNEL_ID = str(os.environ.get("MUSIC_CHANNEL_ID", ""))
 STATE_FILE = "music_state.json"
@@ -28,7 +27,6 @@ def main():
         print("[Error] Missing MUSIC_BOT_TOKEN")
         return
 
-    # Load persistent state and existing queue
     state = load_json(STATE_FILE, {"offset": 0})
     queue = load_json(LOG_FILE, [])
     queued_ids = {track["message_id"] for track in queue}
@@ -62,7 +60,6 @@ def main():
         if not post or "audio" not in post:
             continue
 
-        # Enforce channel matching
         msg_channel = str(post.get("chat", {}).get("id", ""))
         if CHANNEL_ID and msg_channel != CHANNEL_ID:
             continue
@@ -73,7 +70,6 @@ def main():
 
         raw_caption = post.get("caption", "")
         
-        # Determine if track requires AI intervention
         needs_caption = not raw_caption.strip()
         needs_tags = bool(raw_caption.strip()) and ("#" not in raw_caption)
 
@@ -89,7 +85,6 @@ def main():
             })
             queued_ids.add(message_id)
 
-    # Save mutated queue and advance offset
     save_json(LOG_FILE, queue)
     state["offset"] = highest_offset
     save_json(STATE_FILE, state)
