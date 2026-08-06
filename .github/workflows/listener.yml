@@ -17,14 +17,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      
-      - name: Install dependencies
-        run: pip install telethon==1.33.1
 
       - name: Run Listener
         env:
-          TG_API_ID: ${{ secrets.TG_API_ID }}
-          TG_API_HASH: ${{ secrets.TG_API_HASH }}
           MUSIC_BOT_TOKEN: ${{ secrets.MUSIC_BOT_TOKEN }}
           MUSIC_CHANNEL_ID: ${{ secrets.MUSIC_CHANNEL_ID }}
         run: python scripts/music_listener.py
@@ -37,7 +32,7 @@ jobs:
           git add -f music_state.json daily_log.json || true
           
           if ! git diff --cached --quiet; then
-            git commit -m "chore: update raw tracking state and daily log"
+            git commit -m "fix: revert listener to HTTP getUpdates and stabilize persistent queue"
             git pull --rebase origin main || true
             git push
           fi

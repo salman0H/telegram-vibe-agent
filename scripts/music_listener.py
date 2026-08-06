@@ -1,68 +1,98 @@
 import os
 import json
-import asyncio
-from telethon import TelegramClient
+import urllib.request
+import urllib.parse
+from urllib.error import URLError
 
-API_ID = int(os.environ.get("TG_API_ID", 0))
-API_HASH = os.environ.get("TG_API_HASH", "")
+# Configuration
 BOT_TOKEN = os.environ.get("MUSIC_BOT_TOKEN", "")
-CHANNEL_ID = os.environ.get("MUSIC_CHANNEL_ID", "")
+CHANNEL_ID = str(os.environ.get("MUSIC_CHANNEL_ID", ""))
+STATE_FILE = "music_state.json"
 LOG_FILE = "daily_log.json"
 
-async def main():
-    if not all([API_ID, API_HASH, BOT_TOKEN, CHANNEL_ID]):
+def load_json(filepath, default):
+    if os.path.exists(filepath):
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return default
+
+def save_json(filepath, data):
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+def main():
+    if not BOT_TOKEN:
+        print("[Error] Missing MUSIC_BOT_TOKEN")
         return
 
-    client = TelegramClient('bot_session', API_ID, API_HASH)
-    await client.start(bot_token=BOT_TOKEN)
+    # Load persistent state and existing queue
+    state = load_json(STATE_FILE, {"offset": 0})
+    queue = load_json(LOG_FILE, [])
+    queued_ids = {track["message_id"] for track in queue}
+
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/getUpdates"
+    params = {"offset": state["offset"], "timeout": 5, "allowed_updates": ["channel_post"]}
+    req = urllib.request.Request(f"{url}?{urllib.parse.urlencode(params)}")
 
     try:
-        target_channel = int(CHANNEL_ID)
-    except ValueError:
-        target_channel = CHANNEL_ID
+        with urllib.request.urlopen(req) as response:
+            data = json.loads(response.read().decode())
+    except URLError as e:
+        print(f"[Network Error] {e}")
+        return
 
-    extracted_tracks = []
-    existing_log = []
-    
-    if os.path.exists(LOG_FILE):
-        with open(LOG_FILE, "r", encoding="utf-8") as f:
-            try:
-                existing_log = json.load(f)
-            except Exception:
-                pass
-                
-    existing_ids = {track["message_id"] for track in existing_log}
+    if not data.get("ok"):
+        print(f"[Telegram API Error] {data}")
+        return
 
-    async for message in client.iter_messages(target_channel, limit=100):
-        if message.audio:
-            raw_caption = message.text or ""
-            needs_caption = not raw_caption.strip()
-            needs_tags = bool(raw_caption.strip()) and ("#" not in raw_caption)
+    updates = data.get("result", [])
+    if not updates:
+        return
 
-            if needs_caption or needs_tags:
-                if message.id not in existing_ids:
-                    performer, title = "Unknown", "Unknown"
-                    for attr in message.document.attributes:
-                        if hasattr(attr, 'performer'):
-                            performer = attr.performer or performer
-                            title = attr.title or title
-                            break
-                            
-                    extracted_tracks.append({
-                        "message_id": message.id,
-                        "performer": performer,
-                        "title": title,
-                        "genres": [],
-                        "caption": raw_caption,
-                        "timestamp": message.date.timestamp()
-                    })
+    highest_offset = state["offset"]
 
-    existing_log.extend(extracted_tracks)
-    
-    with open(LOG_FILE, "w", encoding="utf-8") as f:
-        json.dump(existing_log, f, ensure_ascii=False, indent=2)
+    for update in updates:
+        update_id = update["update_id"]
+        highest_offset = max(highest_offset, update_id + 1)
+        
+        post = update.get("channel_post")
+        if not post or "audio" not in post:
+            continue
 
-    await client.disconnect()
+        # Enforce channel matching
+        msg_channel = str(post.get("chat", {}).get("id", ""))
+        if CHANNEL_ID and msg_channel != CHANNEL_ID:
+            continue
+
+        message_id = post["message_id"]
+        if message_id in queued_ids:
+            continue
+
+        raw_caption = post.get("caption", "")
+        
+        # Determine if track requires AI intervention
+        needs_caption = not raw_caption.strip()
+        needs_tags = bool(raw_caption.strip()) and ("#" not in raw_caption)
+
+        if needs_caption or needs_tags:
+            audio = post["audio"]
+            queue.append({
+                "message_id": message_id,
+                "performer": audio.get("performer", "Unknown Artist"),
+                "title": audio.get("title", "Unknown Title"),
+                "genres": [],
+                "caption": raw_caption,
+                "timestamp": post.get("date", 0)
+            })
+            queued_ids.add(message_id)
+
+    # Save mutated queue and advance offset
+    save_json(LOG_FILE, queue)
+    state["offset"] = highest_offset
+    save_json(STATE_FILE, state)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
