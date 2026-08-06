@@ -1,5 +1,4 @@
 import os
-import datetime
 import time
 import html
 import google.generativeai as genai
@@ -51,15 +50,26 @@ def generate_vibe_caption(performer, title, genres):
     except Exception:
         return None
 
+def generate_hashtags(performer, title, genres):
+    prompt = f"""
+    Generate 4 to 6 relevant, aesthetic hashtags for this track:
+    Artist: {performer}
+    Title: {title}
+    Genres: {', '.join(genres) if genres else 'Unknown'}
+    
+    STRICT RULES:
+    1. Output ONLY the hashtags separated by spaces (e.g., #Melancholy #DarkVibe #Persian).
+    2. No introductions, no extra text, no bullet points.
+    """
+    try:
+        response = model.generate_content(prompt)
+        return response.text.strip().replace("```", "")
+    except Exception:
+        return None
+
 def main():
     if not GEMINI_KEY:
         return
-
-    tehran_tz = datetime.timezone(datetime.timedelta(hours=3, minutes=30))
-    now = datetime.datetime.now(tehran_tz)
-    
-    start_of_yesterday = (now - datetime.timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
-    end_of_yesterday = start_of_yesterday.replace(hour=23, minute=59, second=59, microsecond=999999)
 
     log_data = daily_logger.load_log()
     if not log_data:
@@ -68,35 +78,49 @@ def main():
     processed_message_ids = []
 
     for track in log_data:
-        track_time = datetime.datetime.fromtimestamp(track["timestamp"], tehran_tz)
-        
-        if track_time > end_of_yesterday:
-            continue
-            
         message_id = track["message_id"]
         raw_caption = track.get("caption", "")
         base_caption = html.escape(raw_caption) if raw_caption else ""
         
-        ai_text = generate_vibe_caption(track["performer"], track["title"], track["genres"])
+        # Condition Checkers
+        needs_full_caption = not base_caption.strip()
+        needs_hashtags = bool(base_caption.strip()) and ("#" not in base_caption)
         
-        if not ai_text:
+        # If track is fully configured, skip processing and remove from log
+        if not needs_full_caption and not needs_hashtags:
+            processed_message_ids.append(message_id)
             continue
-            
-        if base_caption:
-            new_caption = f"{base_caption}\n\n{ai_text}"
-        else:
+
+        new_caption = base_caption
+
+        # Apply AI mutations based on the condition
+        if needs_full_caption:
+            ai_text = generate_vibe_caption(track["performer"], track["title"], track["genres"])
+            if not ai_text:
+                continue
             new_caption = ai_text
             
+        elif needs_hashtags:
+            tags_text = generate_hashtags(track["performer"], track["title"], track["genres"])
+            if not tags_text:
+                continue
+            new_caption = f"{base_caption}\n\n{tags_text}"
+            
+        # Enforce Telegram caption limits
         if len(new_caption) > 1024:
             new_caption = new_caption[:1020] + "..."
             
+        # Push update to Telegram
         result = telegram_client.edit_message_caption(message_id, new_caption)
         
+        # If successful or ignored due to Telegram rules, mark as done
         if result and (result.get("ok") or result.get("ignored")):
             processed_message_ids.append(message_id)
             
+        # Avoid hitting API limits
         time.sleep(4)
 
+    # Clean up the log file by removing processed tracks
     if processed_message_ids:
         daily_logger.remove_tracks(processed_message_ids)
 
