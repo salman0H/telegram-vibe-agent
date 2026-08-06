@@ -9,6 +9,16 @@ import telegram_client
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
 LOG_FILE = "daily_log.json"
 
+# List of models to try in order (Fallback Mechanism)
+AVAILABLE_MODELS = [
+    "gemini-2.5-flash",
+    "gemini-2.0-flash",
+    "gemini-1.5-flash-latest",
+    "gemini-1.5-flash",
+    "gemini-1.5-pro",
+    "gemini-pro"
+]
+
 if GEMINI_KEY:
     client = genai.Client(api_key=GEMINI_KEY)
 else:
@@ -26,36 +36,50 @@ def generate_vibe_caption(performer, title, genres):
     <blockquote><b>«[Unique Persian literary or cinematic quote]»</b></blockquote>
     <blockquote><b>"[Unique poetic English sentence]"</b></blockquote>
     """
-    try:
-        response = client.models.generate_content(
-            model='gemini-2.0-flash',
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                temperature=0.85,
-                max_output_tokens=500,
+    
+    for model_name in AVAILABLE_MODELS:
+        try:
+            print(f"[Gemini] Attempting to generate caption with model: {model_name}...")
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    temperature=0.85,
+                    max_output_tokens=500,
+                )
             )
-        )
-        text = response.text.replace("```html", "").replace("```", "").strip()
-        return text
-    except Exception as e:
-        print(f"[Gemini Error] Caption generation failed: {e}")
-        return None
+            text = response.text.replace("```html", "").replace("```", "").strip()
+            print(f"[Gemini] Success! Model {model_name} generated the caption.")
+            return text
+        except Exception as e:
+            print(f"[Gemini Warning] Model {model_name} failed: {e}")
+            continue # Try the next model in the list
+            
+    print("[Gemini Error] All models failed to generate caption.")
+    return None
 
 def generate_hashtags(performer, title, genres):
     prompt = f"Generate 4 to 6 relevant hashtags for: {performer} - {title}. Output ONLY tags separated by spaces."
-    try:
-        response = client.models.generate_content(
-            model='gemini-2.0-flash',
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                temperature=0.85,
-                max_output_tokens=500,
+    
+    for model_name in AVAILABLE_MODELS:
+        try:
+            print(f"[Gemini] Attempting to generate hashtags with model: {model_name}...")
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    temperature=0.85,
+                    max_output_tokens=500,
+                )
             )
-        )
-        return response.text.replace("```", "").strip()
-    except Exception as e:
-        print(f"[Gemini Error] Hashtag generation failed: {e}")
-        return None
+            print(f"[Gemini] Success! Model {model_name} generated the hashtags.")
+            return response.text.replace("```", "").strip()
+        except Exception as e:
+            print(f"[Gemini Warning] Model {model_name} failed: {e}")
+            continue # Try the next model in the list
+
+    print("[Gemini Error] All models failed to generate hashtags.")
+    return None
 
 def main():
     if not client:
