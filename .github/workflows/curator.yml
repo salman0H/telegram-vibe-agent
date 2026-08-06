@@ -18,16 +18,21 @@ jobs:
         with:
           python-version: "3.12"
           
-      - name: Install dependencies
-        run: pip install google-genai
+      # Zero-dependency architecture: No pip install required!
         
       - name: Run AI Curator
         env:
-          MUSIC_BOT_TOKEN: ${{ secrets.MUSIC_BOT_TOKEN }}
-          MUSIC_CHANNEL_ID: ${{ secrets.MUSIC_CHANNEL_ID }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.MUSIC_BOT_TOKEN }}
-          TELEGRAM_CHANNEL_ID: ${{ secrets.MUSIC_CHANNEL_ID }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Telegram Configs (Standardized)
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          # Fallback for old secret names just in case
+          MUSIC_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          MUSIC_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          
+          # AI Provider Configs (Add whichever you have to GitHub Secrets)
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
         run: python scripts/daily_ai_curator.py
         
       - name: Commit raw state and log
@@ -38,7 +43,7 @@ jobs:
           git add -f daily_log.json || true
           
           if ! git diff --cached --quiet; then
-            git commit -m "chore: update daily log queue after curation"
+            git commit -m "chore: update daily log queue after AI curation"
             git pull --rebase origin main || true
             git push
           fi
