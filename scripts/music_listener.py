@@ -1,57 +1,68 @@
-import re
-import sys
-import state
-import telegram_client
-import itunes_client
-import daily_logger
+import os
+import json
+import asyncio
+from telethon import TelegramClient
 
-def extract_performer_title(audio):
-    performer = audio.get("performer")
-    title = audio.get("title")
-    if performer and title:
-        return performer, title
-    file_name = audio.get("file_name", "")
-    name_no_ext = re.sub(r"\.\w{2,4}$", "", file_name)
-    match = re.match(r"^\s*(.+?)\s*-\s*(.+?)\s*$", name_no_ext)
-    if match:
-        return performer or match.group(1), title or match.group(2)
-    return performer or "Unknown Artist", title or (name_no_ext or "Unknown Title")
+API_ID = int(os.environ.get("TG_API_ID", 0))
+API_HASH = os.environ.get("TG_API_HASH", "")
+BOT_TOKEN = os.environ.get("MUSIC_BOT_TOKEN", "")
+CHANNEL_ID = os.environ.get("MUSIC_CHANNEL_ID", "")
+LOG_FILE = "daily_log.json"
 
-def main():
-    if not telegram_client.CHANNEL_ID:
-        sys.exit(1)
-
-    st = state.load_state()
-    updates = telegram_client.get_updates(offset=st.get("offset"))
-    if not updates:
+async def main():
+    if not all([API_ID, API_HASH, BOT_TOKEN, CHANNEL_ID]):
         return
 
-    next_offset = st.get("offset") or 0
+    client = TelegramClient('bot_session', API_ID, API_HASH)
+    await client.start(bot_token=BOT_TOKEN)
+
+    try:
+        target_channel = int(CHANNEL_ID)
+    except ValueError:
+        target_channel = CHANNEL_ID
+
+    extracted_tracks = []
+    existing_log = []
     
-    for update in updates:
-        update_id = update.get("update_id", 0)
-        if update_id >= next_offset:
-            next_offset = update_id + 1
+    if os.path.exists(LOG_FILE):
+        with open(LOG_FILE, "r", encoding="utf-8") as f:
+            try:
+                existing_log = json.load(f)
+            except Exception:
+                pass
+                
+    existing_ids = {track["message_id"] for track in existing_log}
 
-    for message_id, audio, base_caption in telegram_client.iter_channel_audio_posts(updates):
-        if state.is_processed(st, message_id):
-            continue
-            
-        performer, title = extract_performer_title(audio)
-        genres = []
-        
-        match = itunes_client.search_track(performer, title)
-        if match:
-            performer = match["artists"][0] if match["artists"] else performer
-            title = match["name"] or title
-            if match.get("genres"):
-                genres = match["genres"]
+    async for message in client.iter_messages(target_channel, limit=100):
+        if message.audio:
+            raw_caption = message.text or ""
+            needs_caption = not raw_caption.strip()
+            needs_tags = bool(raw_caption.strip()) and ("#" not in raw_caption)
 
-        daily_logger.add_track(message_id, performer, title, genres, base_caption)
-        state.mark_processed(st, message_id)
+            if needs_caption or needs_tags:
+                if message.id not in existing_ids:
+                    performer, title = "Unknown", "Unknown"
+                    for attr in message.document.attributes:
+                        if hasattr(attr, 'performer'):
+                            performer = attr.performer or performer
+                            title = attr.title or title
+                            break
+                            
+                    extracted_tracks.append({
+                        "message_id": message.id,
+                        "performer": performer,
+                        "title": title,
+                        "genres": [],
+                        "caption": raw_caption,
+                        "timestamp": message.date.timestamp()
+                    })
 
-    st["offset"] = next_offset
-    state.save_state(st)
+    existing_log.extend(extracted_tracks)
+    
+    with open(LOG_FILE, "w", encoding="utf-8") as f:
+        json.dump(existing_log, f, ensure_ascii=False, indent=2)
+
+    await client.disconnect()
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
