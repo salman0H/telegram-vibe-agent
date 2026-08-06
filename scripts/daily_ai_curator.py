@@ -2,19 +2,17 @@ import os
 import time
 import json
 import html
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import telegram_client
 
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
 LOG_FILE = "daily_log.json"
 
 if GEMINI_KEY:
-    genai.configure(api_key=GEMINI_KEY)
-    
-model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash-latest",
-    generation_config={"temperature": 0.85, "max_output_tokens": 500}
-)
+    client = genai.Client(api_key=GEMINI_KEY)
+else:
+    client = None
 
 def generate_vibe_caption(performer, title, genres):
     prompt = f"""
@@ -29,7 +27,14 @@ def generate_vibe_caption(performer, title, genres):
     <blockquote><b>"[Unique poetic English sentence]"</b></blockquote>
     """
     try:
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(
+            model='gemini-1.5-flash',
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.85,
+                max_output_tokens=500,
+            )
+        )
         text = response.text.replace("```html", "").replace("```", "").strip()
         return text
     except Exception as e:
@@ -39,14 +44,21 @@ def generate_vibe_caption(performer, title, genres):
 def generate_hashtags(performer, title, genres):
     prompt = f"Generate 4 to 6 relevant hashtags for: {performer} - {title}. Output ONLY tags separated by spaces."
     try:
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(
+            model='gemini-1.5-flash',
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.85,
+                max_output_tokens=500,
+            )
+        )
         return response.text.replace("```", "").strip()
     except Exception as e:
         print(f"[Gemini Error] Hashtag generation failed: {e}")
         return None
 
 def main():
-    if not GEMINI_KEY:
+    if not client:
         print("[Error] Missing GEMINI_API_KEY.")
         return
 
