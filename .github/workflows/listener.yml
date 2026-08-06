@@ -32,7 +32,7 @@ jobs:
           git add -f music_state.json daily_log.json || true
           
           if ! git diff --cached --quiet; then
-            git commit -m "fix: revert listener to HTTP getUpdates and stabilize persistent queue"
-            git pull --rebase origin main || true
+            git commit -m "chore(listener): track new uploads and update state ($(date +'%Y-%m-%d'))"
+            git pull --rebase origin main
             git push
           fi
