@@ -81,16 +81,18 @@ def call_groq(system_prompt, user_prompt):
 def generate_ai_content(performer, title, needs_caption, needs_tags):
     """
     A unified generator that handles captions, tags, or both in a SINGLE API call.
-    Uses iTunes genre to guide the LLM's poetic tone.
+    Uses strict formatting rules for bolding, punctuation, and spacing.
     """
     genre = fetch_itunes_metadata(performer, title)
     
-    # Core universal rules for the LLM
+    # Core universal rules for the LLM typography and content
     rules = [
         "CRITICAL STRICT RULES:",
         "1. NEVER write the artist's name or the song title in your response.",
         "2. NEVER use emojis under any circumstances.",
-        "3. DO NOT use markdown, HTML, or blockquotes.",
+        "3. NO extra spaces inside quotation marks. (Wrong: « text » | Right: «text»)",
+        "4. The poetic sentence MUST end with a period/full stop (.).",
+        "5. You MUST wrap the entire poetic sentence (including quotes and period) in HTML bold tags: <b>...</b>"
     ]
     
     if needs_caption and needs_tags:
@@ -99,31 +101,46 @@ def generate_ai_content(performer, title, needs_caption, needs_tags):
         system_prompt += "Part 1: A single, deeply poetic sentence (max 2 lines) capturing the emotional vibe of the song.\n"
         system_prompt += "Part 2: Exactly 3 to 4 relevant hashtags.\n\n"
         system_prompt += "\n".join(rules) + "\n"
-        system_prompt += "4. LANGUAGE DETECTION for Part 1: Analyze the artist and title. If the artist is Iranian/Persian, you MUST write Part 1 in pure, elegant Persian (فارسی) and wrap it in standard Persian quotes: « »\n"
-        system_prompt += "5. If the song is international/English, write Part 1 in English and wrap it in double quotes: \" \"\n"
-        system_prompt += "6. For Part 2 (Hashtags): If it's a Persian song, include 1 or 2 Persian hashtags. Format: #Tag1 #Tag2\n"
-        system_prompt += "7. Output ONLY the final text. No introductions, no explanations."
+        system_prompt += "6. LANGUAGE DETECTION for Part 1: Analyze the artist and title. If the artist is Iranian/Persian, write Part 1 in pure Persian. Format EXACTLY like this template: <b>«متن شاعرانه شما در اینجا.»</b>\n"
+        system_prompt += "7. If the song is international/English, write Part 1 in English. Format EXACTLY like this template: <b>\"Your poetic English sentence here.\"</b>\n"
+        system_prompt += "8. For Part 2 (Hashtags): If it's a Persian song, include 1 or 2 Persian hashtags. Format: #Tag1 #Tag2\n"
+        system_prompt += "9. Output ONLY the final text. No introductions, no explanations."
         
     elif needs_caption:
         system_prompt = "You are an elite, minimalist music curator.\n"
         system_prompt += "Your goal is to write a single, deeply poetic sentence (max 2 lines) capturing the emotional vibe of the requested song.\n\n"
         system_prompt += "\n".join(rules) + "\n"
-        system_prompt += "4. LANGUAGE DETECTION: Analyze the artist and title. If the artist is Iranian/Persian, you MUST write the sentence in pure, elegant Persian (فارسی) and wrap it in standard Persian quotes: « »\n"
-        system_prompt += "5. If the song is international/English, write it in English and wrap it in double quotes: \" \"\n"
-        system_prompt += "6. Output ONLY the final quoted sentence. No introductions, no explanations."
+        system_prompt += "6. LANGUAGE DETECTION: Analyze the artist and title. If the artist is Iranian/Persian, write the sentence in pure Persian. Format EXACTLY like this template: <b>«متن شاعرانه شما در اینجا.»</b>\n"
+        system_prompt += "7. If the song is international/English, write the sentence in English. Format EXACTLY like this template: <b>\"Your poetic English sentence here.\"</b>\n"
+        system_prompt += "8. Output ONLY the final text. No introductions, no explanations."
         
     else: # Only tags needed
         system_prompt = "You are an SEO expert for a minimalist music channel.\n"
         system_prompt += "Your goal is to generate exactly 3 to 4 relevant hashtags based on the artist and genre.\n\n"
-        system_prompt += "\n".join(rules) + "\n"
-        system_prompt += "4. Format: #Tag1 #Tag2 #Tag3\n"
-        system_prompt += "5. If it's a Persian song, include 1 or 2 Persian hashtags.\n"
-        system_prompt += "6. Output ONLY the hashtags separated by spaces."
+        system_prompt += "CRITICAL STRICT RULES:\n1. NEVER write the artist's name or title.\n2. NEVER use emojis.\n"
+        system_prompt += "3. Format: #Tag1 #Tag2 #Tag3\n"
+        system_prompt += "4. If it's a Persian song, include 1 or 2 Persian hashtags.\n"
+        system_prompt += "5. Output ONLY the hashtags separated by spaces."
 
     user_prompt = f"Artist: {performer}\nTitle: {title}\nGenre from iTunes: {genre}\n\nGenerate the content now based on the strict rules."
     
     print("[Groq API] Sending optimized unified generation request...")
     return call_groq(system_prompt, user_prompt)
+
+def clean_typography(text):
+    """
+    Python post-processing safety net.
+    Ensures that even if the LLM hallucinates spaces inside quotes, they are stripped out.
+    """
+    if not text:
+        return text
+    # Fix Persian quotes spacing
+    text = text.replace("« ", "«").replace(" »", "»")
+    text = text.replace("<b>« ", "<b>«").replace(" »</b>", "»</b>")
+    # Fix English quotes spacing
+    text = text.replace('" ', '"').replace(' "', '"')
+    text = text.replace('<b>" ', '<b>"').replace(' "</b>', '"</b>')
+    return text
 
 def main():
     if not GROQ_API_KEY:
@@ -168,12 +185,15 @@ def main():
             ai_text = generate_ai_content(track.get("performer", "Unknown"), track.get("title", "Unknown"), needs_caption, needs_tags)
             
             if ai_text:
+                # Apply typography safety net
+                ai_text = clean_typography(ai_text)
+                
                 if needs_caption and needs_tags:
-                    new_caption = ai_text # LLM provides both nicely formatted
+                    new_caption = ai_text 
                 elif needs_caption:
-                    new_caption = ai_text # LLM provides just the quote
+                    new_caption = ai_text 
                 elif needs_tags:
-                    new_caption = f"{new_caption}\n\n{ai_text}" if new_caption else ai_text # Append tags
+                    new_caption = f"{new_caption}\n\n{ai_text}" if new_caption else ai_text 
             else:
                 print(f"[Curator] Failed to get AI content for message {message_id}. Retaining in log.")
                 continue 
