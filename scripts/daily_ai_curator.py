@@ -12,8 +12,8 @@ GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
 def fetch_itunes_metadata(performer, title):
     """
-    Searches the iTunes API to find the primary genre and metadata of the song.
-    This helps the LLM understand the true vibe and origin of the track.
+    Searches the iTunes API ONCE per song to find the primary genre.
+    Reduces API calls significantly while giving context to the LLM.
     """
     query = f"{performer} {title}"
     safe_query = urllib.parse.quote_plus(query)
@@ -25,8 +25,7 @@ def fetch_itunes_metadata(performer, title):
         with urllib.request.urlopen(req, timeout=10) as response:
             data = json.loads(response.read().decode("utf-8"))
             if data.get("resultCount", 0) > 0:
-                track_info = data["results"][0]
-                genre = track_info.get("primaryGenreName", "Unknown")
+                genre = data["results"][0].get("primaryGenreName", "Unknown")
                 print(f"[iTunes] Found genre: {genre}")
                 return genre
     except Exception as e:
@@ -36,7 +35,8 @@ def fetch_itunes_metadata(performer, title):
 
 def call_groq(system_prompt, user_prompt):
     """
-    Sends a highly strictly formatted prompt to the Groq API.
+    Sends a single optimized request to the Groq API.
+    Bypasses Cloudflare 1010 block with standard browser headers.
     """
     if not GROQ_API_KEY:
         print("[LLM Error] GROQ_API_KEY is missing.")
@@ -50,7 +50,7 @@ def call_groq(system_prompt, user_prompt):
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
         ],
-        "temperature": 0.65, # Lowered slightly for more focused, less hallucinatory poetic generation
+        "temperature": 0.65, 
         "max_tokens": 150
     }
     
@@ -78,43 +78,51 @@ def call_groq(system_prompt, user_prompt):
         
     return None
 
-def generate_vibe_caption(performer, title):
-    """Generates the main artistic caption based on iTunes vibe and language detection."""
-    
-    # 1. Ask iTunes for help to get the exact genre
+def generate_ai_content(performer, title, needs_caption, needs_tags):
+    """
+    A unified generator that handles captions, tags, or both in a SINGLE API call.
+    Uses iTunes genre to guide the LLM's poetic tone.
+    """
     genre = fetch_itunes_metadata(performer, title)
     
-    # 2. Strict system guidelines to match image_af914f.png style
-    system_prompt = """You are an elite, minimalist music curator.
-    Your goal is to write a single, deeply poetic, and atmospheric sentence (max 2 lines) that captures the exact emotional vibe of the requested song.
+    # Core universal rules for the LLM
+    rules = [
+        "CRITICAL STRICT RULES:",
+        "1. NEVER write the artist's name or the song title in your response.",
+        "2. NEVER use emojis under any circumstances.",
+        "3. DO NOT use markdown, HTML, or blockquotes.",
+    ]
     
-    CRITICAL STRICT RULES:
-    1. NEVER write the artist's name or the song title in your response.
-    2. NEVER use emojis.
-    3. DO NOT use markdown, HTML, or blockquotes.
-    4. LANGUAGE DETECTION: Analyze the artist and title. If the artist is Iranian/Persian, you MUST write the sentence in pure, elegant Persian (فارسی) and wrap it in standard Persian quotes: « »
-    5. If the song is international/English, write it in English and wrap it in double quotes: " "
-    6. Output ONLY the final quoted sentence. No introductions, no explanations, no translations."""
+    if needs_caption and needs_tags:
+        system_prompt = "You are an elite, minimalist music curator.\n"
+        system_prompt += "Your goal is to write a final caption containing exactly two parts separated by a blank line:\n"
+        system_prompt += "Part 1: A single, deeply poetic sentence (max 2 lines) capturing the emotional vibe of the song.\n"
+        system_prompt += "Part 2: Exactly 3 to 4 relevant hashtags.\n\n"
+        system_prompt += "\n".join(rules) + "\n"
+        system_prompt += "4. LANGUAGE DETECTION for Part 1: Analyze the artist and title. If the artist is Iranian/Persian, you MUST write Part 1 in pure, elegant Persian (فارسی) and wrap it in standard Persian quotes: « »\n"
+        system_prompt += "5. If the song is international/English, write Part 1 in English and wrap it in double quotes: \" \"\n"
+        system_prompt += "6. For Part 2 (Hashtags): If it's a Persian song, include 1 or 2 Persian hashtags. Format: #Tag1 #Tag2\n"
+        system_prompt += "7. Output ONLY the final text. No introductions, no explanations."
+        
+    elif needs_caption:
+        system_prompt = "You are an elite, minimalist music curator.\n"
+        system_prompt += "Your goal is to write a single, deeply poetic sentence (max 2 lines) capturing the emotional vibe of the requested song.\n\n"
+        system_prompt += "\n".join(rules) + "\n"
+        system_prompt += "4. LANGUAGE DETECTION: Analyze the artist and title. If the artist is Iranian/Persian, you MUST write the sentence in pure, elegant Persian (فارسی) and wrap it in standard Persian quotes: « »\n"
+        system_prompt += "5. If the song is international/English, write it in English and wrap it in double quotes: \" \"\n"
+        system_prompt += "6. Output ONLY the final quoted sentence. No introductions, no explanations."
+        
+    else: # Only tags needed
+        system_prompt = "You are an SEO expert for a minimalist music channel.\n"
+        system_prompt += "Your goal is to generate exactly 3 to 4 relevant hashtags based on the artist and genre.\n\n"
+        system_prompt += "\n".join(rules) + "\n"
+        system_prompt += "4. Format: #Tag1 #Tag2 #Tag3\n"
+        system_prompt += "5. If it's a Persian song, include 1 or 2 Persian hashtags.\n"
+        system_prompt += "6. Output ONLY the hashtags separated by spaces."
 
-    user_prompt = f"Artist: {performer}\nTitle: {title}\nGenre from iTunes: {genre}\n\nWrite the single poetic sentence now based on the rules."
+    user_prompt = f"Artist: {performer}\nTitle: {title}\nGenre from iTunes: {genre}\n\nGenerate the content now based on the strict rules."
     
-    print("[Groq API] Sending caption generation request...")
-    return call_groq(system_prompt, user_prompt)
-
-def generate_hashtags(performer, title):
-    """Generates a minimalistic set of Telegram hashtags."""
-    genre = fetch_itunes_metadata(performer, title) # Can use cached version in future, but fine for now
-    
-    system_prompt = """You are an SEO expert for a minimalist music channel.
-    Generate exactly 3 to 4 relevant hashtags based on the artist and genre.
-    RULES:
-    1. Output ONLY the hashtags separated by spaces.
-    2. If it's a Persian song, include 1 or 2 Persian hashtags.
-    3. DO NOT output any other text."""
-    
-    user_prompt = f"Artist: {performer}\nTitle: {title}\nGenre: {genre}"
-    
-    print("[Groq API] Sending hashtag generation request...")
+    print("[Groq API] Sending optimized unified generation request...")
     return call_groq(system_prompt, user_prompt)
 
 def main():
@@ -156,20 +164,19 @@ def main():
         print(f"\n[Curator] --- Processing message {message_id} ({track.get('performer')} - {track.get('title')}) ---")
         new_caption = base_caption
 
-        if needs_caption:
-            ai_text = generate_vibe_caption(track.get("performer", "Unknown"), track.get("title", "Unknown"))
+        if needs_caption or needs_tags:
+            ai_text = generate_ai_content(track.get("performer", "Unknown"), track.get("title", "Unknown"), needs_caption, needs_tags)
+            
             if ai_text:
-                new_caption = ai_text
+                if needs_caption and needs_tags:
+                    new_caption = ai_text # LLM provides both nicely formatted
+                elif needs_caption:
+                    new_caption = ai_text # LLM provides just the quote
+                elif needs_tags:
+                    new_caption = f"{new_caption}\n\n{ai_text}" if new_caption else ai_text # Append tags
             else:
-                print(f"[Curator] Failed to get AI caption for message {message_id}. Retaining in log.")
+                print(f"[Curator] Failed to get AI content for message {message_id}. Retaining in log.")
                 continue 
-                
-        if needs_tags or needs_caption: 
-            tags_text = generate_hashtags(track.get("performer", "Unknown"), track.get("title", "Unknown"))
-            if tags_text:
-                new_caption = f"{new_caption}\n\n{tags_text}" if new_caption else tags_text
-            else:
-                print(f"[Curator] Warning: Failed to generate hashtags for {message_id}.")
             
         if len(new_caption) > 1024:
             new_caption = new_caption[:1020] + "..."
