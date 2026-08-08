@@ -3,19 +3,43 @@ import time
 import json
 import html
 import urllib.request
+import urllib.parse
 import urllib.error
 import telegram_client
 
 LOG_FILE = "daily_log.json"
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
-def call_groq(prompt):
+def fetch_itunes_metadata(performer, title):
     """
-    Sends a prompt directly to the Groq API using standard urllib.
-    Includes a browser User-Agent to bypass Cloudflare 1010 firewall errors.
+    Searches the iTunes API to find the primary genre and metadata of the song.
+    This helps the LLM understand the true vibe and origin of the track.
+    """
+    query = f"{performer} {title}"
+    safe_query = urllib.parse.quote_plus(query)
+    url = f"https://itunes.apple.com/search?term={safe_query}&entity=song&limit=1"
+    
+    try:
+        print(f"[iTunes] Fetching metadata for: {performer} - {title}")
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = json.loads(response.read().decode("utf-8"))
+            if data.get("resultCount", 0) > 0:
+                track_info = data["results"][0]
+                genre = track_info.get("primaryGenreName", "Unknown")
+                print(f"[iTunes] Found genre: {genre}")
+                return genre
+    except Exception as e:
+        print(f"[iTunes] Failed to fetch metadata: {e}")
+        
+    return "Unknown"
+
+def call_groq(system_prompt, user_prompt):
+    """
+    Sends a highly strictly formatted prompt to the Groq API.
     """
     if not GROQ_API_KEY:
-        print("[LLM Error] GROQ_API_KEY is missing from environment variables.")
+        print("[LLM Error] GROQ_API_KEY is missing.")
         return None
 
     url = "https://api.groq.com/openai/v1/chat/completions"
@@ -23,22 +47,15 @@ def call_groq(prompt):
     payload = {
         "model": "llama-3.3-70b-versatile",
         "messages": [
-            {
-                "role": "system", 
-                "content": "You are a poetic music curator for a Telegram channel. You write exclusively in Persian. Output exactly what is requested, no markdown code blocks, no chatty introductions, no extra text."
-            },
-            {
-                "role": "user", 
-                "content": prompt
-            }
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
         ],
-        "temperature": 0.7,
-        "max_tokens": 500
+        "temperature": 0.65, # Lowered slightly for more focused, less hallucinatory poetic generation
+        "max_tokens": 150
     }
     
     data = json.dumps(payload).encode("utf-8")
     
-    # 🔴 FIX: Added User-Agent and Accept headers to bypass Cloudflare WAF block (Error 1010)
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {GROQ_API_KEY}",
@@ -49,14 +66,10 @@ def call_groq(prompt):
     req = urllib.request.Request(url, data=data, headers=headers)
     
     try:
-        print("[Groq API] Sending generation request...")
         with urllib.request.urlopen(req, timeout=30) as response:
             res_data = json.loads(response.read().decode("utf-8"))
             content = res_data.get("choices", [])[0].get("message", {}).get("content", "")
-            
-            print("[Groq API] Success! Response received.")
-            return content.replace("```html", "").replace("```", "").strip()
-            
+            return content.strip()
     except urllib.error.HTTPError as e:
         err_msg = e.read().decode("utf-8")
         print(f"[Groq HTTP Error] Code {e.code}: {err_msg}")
@@ -66,24 +79,43 @@ def call_groq(prompt):
     return None
 
 def generate_vibe_caption(performer, title):
-    """Generates the main artistic caption formatted in HTML."""
-    prompt = f"""
-    Generate a Telegram caption in EXACT HTML format.
-    Artist: {performer}, Title: {title}
+    """Generates the main artistic caption based on iTunes vibe and language detection."""
     
-    [Vibe Emoji] {performer} - {title}
+    # 1. Ask iTunes for help to get the exact genre
+    genre = fetch_itunes_metadata(performer, title)
     
-    [One very short Persian paragraph describing the emotional mood of this song]
+    # 2. Strict system guidelines to match image_af914f.png style
+    system_prompt = """You are an elite, minimalist music curator.
+    Your goal is to write a single, deeply poetic, and atmospheric sentence (max 2 lines) that captures the exact emotional vibe of the requested song.
     
-    <blockquote><b>«[Unique Persian literary or cinematic quote matching the vibe]»</b></blockquote>
-    <blockquote><b>"[Unique poetic English sentence matching the vibe]"</b></blockquote>
-    """
-    return call_groq(prompt)
+    CRITICAL STRICT RULES:
+    1. NEVER write the artist's name or the song title in your response.
+    2. NEVER use emojis.
+    3. DO NOT use markdown, HTML, or blockquotes.
+    4. LANGUAGE DETECTION: Analyze the artist and title. If the artist is Iranian/Persian, you MUST write the sentence in pure, elegant Persian (فارسی) and wrap it in standard Persian quotes: « »
+    5. If the song is international/English, write it in English and wrap it in double quotes: " "
+    6. Output ONLY the final quoted sentence. No introductions, no explanations, no translations."""
+
+    user_prompt = f"Artist: {performer}\nTitle: {title}\nGenre from iTunes: {genre}\n\nWrite the single poetic sentence now based on the rules."
+    
+    print("[Groq API] Sending caption generation request...")
+    return call_groq(system_prompt, user_prompt)
 
 def generate_hashtags(performer, title):
-    """Generates Telegram hashtags separately."""
-    prompt = f"Generate 4 to 6 relevant hashtags for the song: {performer} - {title}. Output ONLY hashtags separated by spaces. Example: #Pop #Music #Vibe"
-    return call_groq(prompt)
+    """Generates a minimalistic set of Telegram hashtags."""
+    genre = fetch_itunes_metadata(performer, title) # Can use cached version in future, but fine for now
+    
+    system_prompt = """You are an SEO expert for a minimalist music channel.
+    Generate exactly 3 to 4 relevant hashtags based on the artist and genre.
+    RULES:
+    1. Output ONLY the hashtags separated by spaces.
+    2. If it's a Persian song, include 1 or 2 Persian hashtags.
+    3. DO NOT output any other text."""
+    
+    user_prompt = f"Artist: {performer}\nTitle: {title}\nGenre: {genre}"
+    
+    print("[Groq API] Sending hashtag generation request...")
+    return call_groq(system_prompt, user_prompt)
 
 def main():
     if not GROQ_API_KEY:
@@ -121,7 +153,7 @@ def main():
             success_ids.append(message_id)
             continue
 
-        print(f"[Curator] Processing message {message_id} (Artist: {track.get('performer')}, Title: {track.get('title')})")
+        print(f"\n[Curator] --- Processing message {message_id} ({track.get('performer')} - {track.get('title')}) ---")
         new_caption = base_caption
 
         if needs_caption:
@@ -129,7 +161,7 @@ def main():
             if ai_text:
                 new_caption = ai_text
             else:
-                print(f"[Curator] Failed to get Groq AI caption for message {message_id}. Retaining in log.")
+                print(f"[Curator] Failed to get AI caption for message {message_id}. Retaining in log.")
                 continue 
                 
         if needs_tags or needs_caption: 
@@ -156,7 +188,7 @@ def main():
     with open(LOG_FILE, "w", encoding="utf-8") as f:
         json.dump(remaining_tracks, f, ensure_ascii=False, indent=2)
         
-    print(f"[Curator] Execution finished. {len(success_ids)} updated, {len(remaining_tracks)} remaining.")
+    print(f"\n[Curator] Execution finished. {len(success_ids)} updated, {len(remaining_tracks)} remaining.")
 
 if __name__ == "__main__":
     main()
