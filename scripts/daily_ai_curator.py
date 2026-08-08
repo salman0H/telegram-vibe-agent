@@ -12,18 +12,16 @@ GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 def call_groq(prompt):
     """
     Sends a prompt directly to the Groq API using standard urllib.
-    Zero external dependencies required.
-    Returns the generated text or None if the request fails.
+    Includes a browser User-Agent to bypass Cloudflare 1010 firewall errors.
     """
     if not GROQ_API_KEY:
         print("[LLM Error] GROQ_API_KEY is missing from environment variables.")
         return None
 
-    # Groq uses standard OpenAI-compatible endpoints
     url = "https://api.groq.com/openai/v1/chat/completions"
     
     payload = {
-        "model": "llama3-70b-8192", # Using 70b model for superior Persian language understanding
+        "model": "llama3-70b-8192",
         "messages": [
             {
                 "role": "system", 
@@ -40,15 +38,15 @@ def call_groq(prompt):
     
     data = json.dumps(payload).encode("utf-8")
     
-    # Prepare the HTTP request with necessary headers
-    req = urllib.request.Request(
-        url,
-        data=data,
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {GROQ_API_KEY}"
-        }
-    )
+    # 🔴 FIX: Added User-Agent and Accept headers to bypass Cloudflare WAF block (Error 1010)
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Accept": "application/json"
+    }
+    
+    req = urllib.request.Request(url, data=data, headers=headers)
     
     try:
         print("[Groq API] Sending generation request...")
@@ -57,7 +55,6 @@ def call_groq(prompt):
             content = res_data.get("choices", [])[0].get("message", {}).get("content", "")
             
             print("[Groq API] Success! Response received.")
-            # Strip markdown formatting just in case the LLM tries to format it as code
             return content.replace("```html", "").replace("```", "").strip()
             
     except urllib.error.HTTPError as e:
@@ -97,7 +94,6 @@ def main():
         print(f"[Curator] {LOG_FILE} does not exist. Execution skipped.")
         return
 
-    # Load pending tracks from log file
     with open(LOG_FILE, "r", encoding="utf-8") as f:
         try:
             log_data = json.load(f)
@@ -117,7 +113,6 @@ def main():
         raw_caption = track.get("caption", "")
         base_caption = html.escape(raw_caption) if raw_caption else ""
         
-        # Determine what needs to be updated
         needs_caption = not base_caption.strip()
         needs_tags = bool(base_caption.strip()) and ("#" not in base_caption)
         
@@ -129,29 +124,24 @@ def main():
         print(f"[Curator] Processing message {message_id} (Artist: {track.get('performer')}, Title: {track.get('title')})")
         new_caption = base_caption
 
-        # 1. Process Main Caption
         if needs_caption:
             ai_text = generate_vibe_caption(track.get("performer", "Unknown"), track.get("title", "Unknown"))
             if ai_text:
                 new_caption = ai_text
             else:
                 print(f"[Curator] Failed to get Groq AI caption for message {message_id}. Retaining in log.")
-                continue # Skip this track and try again next time
+                continue 
                 
-        # 2. Process Hashtags
         if needs_tags or needs_caption: 
             tags_text = generate_hashtags(track.get("performer", "Unknown"), track.get("title", "Unknown"))
             if tags_text:
-                # Safely append hashtags to the bottom
                 new_caption = f"{new_caption}\n\n{tags_text}" if new_caption else tags_text
             else:
                 print(f"[Curator] Warning: Failed to generate hashtags for {message_id}.")
             
-        # Ensure caption does not exceed Telegram's 1024 character limit
         if len(new_caption) > 1024:
             new_caption = new_caption[:1020] + "..."
             
-        # 3. Apply changes via Telegram Client
         result = telegram_client.edit_message_caption(message_id, new_caption)
         
         if result and (result.get("ok") or result.get("ignored")):
@@ -160,10 +150,8 @@ def main():
         else:
             print(f"[Curator] Telegram edit request failed for message {message_id}. Retaining in log.")
             
-        # Respect rate limits (Groq is fast, but Telegram APIs have strict limits)
         time.sleep(3)
 
-    # Save remaining uncompleted tracks back to log file
     remaining_tracks = [t for t in log_data if t["message_id"] not in success_ids]
     with open(LOG_FILE, "w", encoding="utf-8") as f:
         json.dump(remaining_tracks, f, ensure_ascii=False, indent=2)
