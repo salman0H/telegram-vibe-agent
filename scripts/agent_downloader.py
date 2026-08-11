@@ -7,7 +7,7 @@ import telegram_api
 # Environment Variables
 BOT_TOKEN = os.environ.get("MUSIC_BOT_TOKEN")
 CHANNEL_ID = os.environ.get("MUSIC_CHANNEL_ID")
-ADMIN_ID = os.environ.get("ADMIN_USER_ID") # Security: Only accept queries from this Telegram User ID
+ADMIN_ID = os.environ.get("ADMIN_USER_ID")
 
 # Constants
 STATE_FILE = "state.json"
@@ -39,13 +39,7 @@ def save_daily_log(log_data):
         json.dump(log_data, f, ensure_ascii=False, indent=2)
 
 def download_track(query):
-    """
-    Uses yt-dlp to search, download, and extract best quality audio.
-    Caps file size at ~45MB to respect Telegram's 50MB bot upload limit.
-    """
     output_template = f"{DOWNLOAD_DIR}/%(title)s.%(ext)s"
-    
-    # Command constructs: search yt, extract audio, convert to mp3, limit size
     cmd = [
         "yt-dlp",
         f"ytsearch1:{query}",
@@ -61,13 +55,11 @@ def download_track(query):
     print(f"[Downloader] Executing yt-dlp for query: '{query}'")
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        # Parse yt-dlp output to get file details
         for line in result.stdout.strip().split('\n'):
             try:
                 info = json.loads(line)
                 title = info.get("title", "Unknown Title")
                 uploader = info.get("uploader", "Unknown Artist")
-                # yt-dlp changes extension to mp3 after post-processing
                 expected_filepath = os.path.join(DOWNLOAD_DIR, f"{title}.mp3")
                 
                 if os.path.exists(expected_filepath):
@@ -81,7 +73,7 @@ def download_track(query):
 
 def main():
     if not all([BOT_TOKEN, CHANNEL_ID, ADMIN_ID]):
-        print("[Error] Missing critical environment variables (Token, Channel, or Admin ID).")
+        print("[Error] Missing critical environment variables.")
         return
 
     ensure_dirs()
@@ -99,7 +91,7 @@ def main():
     
     for update in updates:
         update_id = update.get("update_id")
-        state["last_update_id"] = update_id # Confirm receipt to Telegram
+        state["last_update_id"] = update_id 
         
         message = update.get("message")
         if not message:
@@ -107,35 +99,51 @@ def main():
             
         user_id = str(message.get("from", {}).get("id", ""))
         
-        # Security Gateway: Ignore everyone except the authorized Admin
+        # Security Gateway
         if user_id != str(ADMIN_ID):
             print(f"[Security] Ignored message from unauthorized user: {user_id}")
             continue
             
         text_query = message.get("text")
+        message_id = message.get("message_id")
+        
         if not text_query:
-            continue # We only process text queries (song names) for now
+            continue
             
         print(f"\n[Agent] Received authorized query: '{text_query}'")
         
-        # 1. Download
+        # --- Interactive Feedback: Step 1 (Start) ---
+        status_msg = telegram_api.send_message(
+            BOT_TOKEN, 
+            user_id, 
+            f"⏳ Searching and downloading:\n{text_query}", 
+            reply_to_message_id=message_id
+        )
+        status_msg_id = status_msg.get("result", {}).get("message_id") if status_msg else None
+        
+        # --- Processing: Download ---
         track_info = download_track(text_query)
         if not track_info:
-            print("[Agent] Failed to download track. Moving to next update.")
+            print("[Agent] Failed to download track.")
+            if status_msg_id:
+                telegram_api.edit_message_text(BOT_TOKEN, user_id, status_msg_id, "❌ Failed to find or download the track. It might be too large (>45MB).")
             continue
             
-        # 2. Upload to Channel
+        # --- Interactive Feedback: Step 2 (Downloaded) ---
+        if status_msg_id:
+            telegram_api.edit_message_text(BOT_TOKEN, user_id, status_msg_id, "✅ Download complete!\nUploading to channel...")
+            
+        # --- Processing: Upload ---
         audio_path = track_info["path"]
         tg_response = telegram_api.send_audio(BOT_TOKEN, CHANNEL_ID, audio_path, caption="")
         
-        # 3. Cleanup: CRITICAL STEP to respect GitHub Storage Limits
+        # Cleanup file from GitHub disk
         try:
             os.remove(audio_path)
-            print(f"[Cleanup] Deleted local file: {audio_path}")
         except Exception as e:
             print(f"[Cleanup Error] Could not delete {audio_path}: {e}")
             
-        # 4. Append to Daily Log for Night Shift (AI Curator)
+        # --- Interactive Feedback: Step 3 (Finished) ---
         if tg_response and tg_response.get("ok"):
             channel_msg = tg_response.get("result", {})
             channel_msg_id = channel_msg.get("message_id")
@@ -144,13 +152,17 @@ def main():
                 "message_id": channel_msg_id,
                 "performer": track_info["performer"],
                 "title": track_info["title"],
-                "caption": "" # Empty, waiting for AI
+                "caption": ""
             })
-            print(f"[Agent] Track queued in daily_log.json for AI curation (Msg ID: {channel_msg_id})")
+            print(f"[Agent] Queued in daily_log.json (Msg ID: {channel_msg_id})")
+            if status_msg_id:
+                telegram_api.edit_message_text(BOT_TOKEN, user_id, status_msg_id, "🚀 Uploaded to channel successfully!\nQueued for AI night shift.")
+        else:
+            if status_msg_id:
+                telegram_api.edit_message_text(BOT_TOKEN, user_id, status_msg_id, "❌ Failed to upload to channel. (Telegram API Error)")
         
-        time.sleep(2) # Respect API limits
+        time.sleep(2) 
 
-    # Save tracking states
     save_state(state)
     save_daily_log(log_data)
     print("\n[Agent] Shift completed. States saved.")
