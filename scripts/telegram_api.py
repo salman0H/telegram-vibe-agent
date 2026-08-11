@@ -20,7 +20,6 @@ def get_updates(bot_token, offset=None):
         return []
 
 def send_message(bot_token, chat_id, text, reply_to_message_id=None):
-    """Sends a text message to a specific chat, optionally replying to another message."""
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     payload = {"chat_id": chat_id, "text": text}
     if reply_to_message_id:
@@ -32,14 +31,11 @@ def send_message(bot_token, chat_id, text, reply_to_message_id=None):
     try:
         with urllib.request.urlopen(req, timeout=10) as response:
             return json.loads(response.read().decode())
-    except HTTPError as e:
-        print(f"[Telegram API] sendMessage HTTP Error {e.code}: {e.read().decode()}")
     except Exception as e:
         print(f"[Telegram API] sendMessage Exception: {e}")
     return None
 
 def edit_message_text(bot_token, chat_id, message_id, text):
-    """Edits an existing text message."""
     url = f"https://api.telegram.org/bot{bot_token}/editMessageText"
     payload = {"chat_id": chat_id, "message_id": message_id, "text": text}
     
@@ -49,10 +45,8 @@ def edit_message_text(bot_token, chat_id, message_id, text):
     try:
         with urllib.request.urlopen(req, timeout=10) as response:
             return json.loads(response.read().decode())
-    except HTTPError as e:
-        print(f"[Telegram API] editMessageText HTTP Error {e.code}: {e.read().decode()}")
     except Exception as e:
-        print(f"[Telegram API] editMessageText Exception: {e}")
+        pass
     return None
 
 def send_audio(bot_token, chat_id, audio_path, caption=""):
@@ -87,8 +81,6 @@ def send_audio(bot_token, chat_id, audio_path, caption=""):
         with urllib.request.urlopen(req, timeout=120) as response:
             res_data = json.loads(response.read().decode())
             return res_data
-    except HTTPError as e:
-        print(f"[Telegram API] HTTP Error {e.code}: {e.read().decode()}")
     except Exception as e:
         print(f"[Telegram API] sendAudio Exception: {e}")
         
