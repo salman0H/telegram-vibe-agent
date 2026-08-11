@@ -3,6 +3,7 @@ import json
 import time
 import subprocess
 import glob
+import urllib.request
 import telegram_api
 
 # Environment Variables
@@ -25,7 +26,7 @@ def load_state():
             with open(STATE_FILE, "r") as f:
                 return json.load(f)
         except json.JSONDecodeError:
-            print("[Warning] state.json is corrupted or empty. Starting fresh.")
+            pass
     return {"last_update_id": 0}
 
 def save_state(state):
@@ -45,14 +46,13 @@ def save_daily_log(log_data):
     with open(LOG_FILE, "w", encoding="utf-8") as f:
         json.dump(log_data, f, ensure_ascii=False, indent=2)
 
-def download_track(query):
-    # Empty the downloads directory first to prevent picking up old files
+def empty_dir():
     for f in glob.glob(f"{DOWNLOAD_DIR}/*"):
-        try:
-            os.remove(f)
-        except:
-            pass
+        try: os.remove(f)
+        except: pass
 
+def download_track_ytdlp(query):
+    empty_dir()
     output_template = f"{DOWNLOAD_DIR}/%(title)s.%(ext)s"
     cmd = [
         "yt-dlp",
@@ -66,7 +66,7 @@ def download_track(query):
         "--no-warnings"
     ]
     
-    print(f"[Downloader] Executing yt-dlp for query: '{query}'")
+    print(f"[Downloader] Executing yt-dlp for text query: '{query}'")
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         for line in result.stdout.strip().split('\n'):
@@ -75,22 +75,43 @@ def download_track(query):
                 title = info.get("title", "Unknown Title")
                 uploader = info.get("uploader", "Unknown Artist")
                 
-                # 🔴 FIX: Bulletproof File Resolution
-                # Instead of reconstructing the path from the title (which fails on characters like '/'),
-                # we directly grab the generated .mp3 file from the ephemeral directory.
                 downloaded_files = glob.glob(f"{DOWNLOAD_DIR}/*.mp3")
-                
                 if downloaded_files:
                     actual_filepath = downloaded_files[0]
-                    print(f"[Debug] File successfully located at: {actual_filepath}")
                     return {"path": actual_filepath, "title": title, "performer": uploader}
-                
             except json.JSONDecodeError:
                 continue
     except subprocess.CalledProcessError as e:
         print(f"[Downloader Error] yt-dlp failed: {e.stderr}")
-        
     return None
+
+def download_telegram_file(file_id, output_filename):
+    empty_dir()
+    try:
+        url = f"https://api.telegram.org/bot{BOT_TOKEN}/getFile?file_id={file_id}"
+        req = urllib.request.Request(url)
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = json.loads(response.read().decode())
+            
+        if not data.get("ok"):
+            print(f"[Downloader Error] getFile failed: {data}")
+            return None
+            
+        file_path = data["result"]["file_path"]
+        dl_url = f"https://api.telegram.org/file/bot{BOT_TOKEN}/{file_path}"
+        
+        output_filename = output_filename.replace("/", "_").replace("\\", "_")
+        if not output_filename.endswith(".mp3"):
+            output_filename += ".mp3"
+            
+        output_filepath = os.path.join(DOWNLOAD_DIR, output_filename)
+        print(f"[Downloader] Pulling file directly from Telegram servers...")
+        
+        urllib.request.urlretrieve(dl_url, output_filepath)
+        return output_filepath
+    except Exception as e:
+        print(f"[Downloader Error] Telegram direct download failed: {e}")
+        return None
 
 def main():
     if not all([BOT_TOKEN, CHANNEL_ID, ADMIN_ID]):
@@ -101,11 +122,10 @@ def main():
     state = load_state()
     offset = state.get("last_update_id", 0) + 1
     
-    print(f"[Agent] Checking for new messages (Offset: {offset})...")
     updates = telegram_api.get_updates(BOT_TOKEN, offset)
     
     if not updates:
-        print("[Agent] No new messages in Telegram queue.")
+        print("[Agent] No new messages in queue.")
         return
         
     print(f"[Agent] Found {len(updates)} new update(s) in queue! Processing...")
@@ -115,56 +135,70 @@ def main():
         update_id = update.get("update_id")
         state["last_update_id"] = update_id 
         
-        message = update.get("message")
+        # 🔴 FIX: Support both standard and edited messages
+        message = update.get("message") or update.get("edited_message")
+        
         if not message:
+            print(f"[Debug] Update {update_id} skipped: No message/edited_message key. Keys present: {list(update.keys())}")
             continue
             
         user_id = str(message.get("from", {}).get("id", ""))
-        text_query = message.get("text", "")
         message_id = message.get("message_id")
         
         # Security Gateway
         if user_id != str(ADMIN_ID):
-            print(f"[Security] Blocked unauthorized sender: {user_id}")
+            print(f"[Security] Update {update_id} blocked. Unauthorized sender: {user_id}")
             continue
             
-        if not text_query:
+        text_query = message.get("text", "")
+        audio_obj = message.get("audio") or message.get("voice") or message.get("document")
+        
+        if not text_query and not audio_obj:
+            print(f"[Debug] Update {update_id} skipped: No text or audio found. Keys: {list(message.keys())}")
             continue
             
-        print(f"\n[Agent] Received authorized query: '{text_query}'")
+        track_info = None
+        status_msg_id = None
         
-        # --- Feedback: Start ---
-        status_msg = telegram_api.send_message(
-            BOT_TOKEN, 
-            user_id, 
-            f"⏳ Searching and downloading:\n{text_query}", 
-            reply_to_message_id=message_id
-        )
-        status_msg_id = status_msg.get("result", {}).get("message_id") if status_msg else None
-        
-        # --- Download ---
-        track_info = download_track(text_query)
-        if not track_info:
-            print("[Agent] Failed to download track.")
+        if audio_obj:
+            print(f"\n[Agent] Received forwarded Audio/Document.")
+            file_id = audio_obj.get("file_id")
+            title = audio_obj.get("title", f"Track_{update_id}") if isinstance(audio_obj, dict) else f"Track_{update_id}"
+            performer = audio_obj.get("performer", "Unknown Artist") if isinstance(audio_obj, dict) else "Unknown Artist"
+            file_name = audio_obj.get("file_name", f"{title}.mp3") if isinstance(audio_obj, dict) else f"{title}.mp3"
+            
+            status = telegram_api.send_message(BOT_TOKEN, user_id, f"⏳ Receiving forwarded audio:\n{title}", reply_to_message_id=message_id)
+            status_msg_id = status.get("result", {}).get("message_id") if status else None
+            
+            audio_path = download_telegram_file(file_id, file_name)
+            if audio_path:
+                track_info = {"path": audio_path, "title": title, "performer": performer}
+                
+        elif text_query:
+            print(f"\n[Agent] Received text query: '{text_query}'")
+            status = telegram_api.send_message(BOT_TOKEN, user_id, f"⏳ Searching yt-dlp for:\n{text_query}", reply_to_message_id=message_id)
+            status_msg_id = status.get("result", {}).get("message_id") if status else None
+            
+            track_info = download_track_ytdlp(text_query)
+
+        # Validation & Upload
+        if not track_info or not track_info["path"]:
+            print("[Agent] Failed to process track.")
             if status_msg_id:
-                telegram_api.edit_message_text(BOT_TOKEN, user_id, status_msg_id, "❌ Failed to find or download the track.")
+                telegram_api.edit_message_text(BOT_TOKEN, user_id, status_msg_id, "❌ Failed to process or download the track.")
             continue
             
-        # --- Feedback: Uploading ---
         if status_msg_id:
             telegram_api.edit_message_text(BOT_TOKEN, user_id, status_msg_id, "✅ Download complete!\nUploading to channel...")
             
-        # --- Upload ---
         audio_path = track_info["path"]
         tg_response = telegram_api.send_audio(BOT_TOKEN, CHANNEL_ID, audio_path, caption="")
         
-        # Cleanup
         try:
             os.remove(audio_path)
-        except Exception as e:
-            print(f"[Cleanup Error] Could not delete {audio_path}: {e}")
+        except Exception:
+            pass
             
-        # --- Feedback: Finished ---
         if tg_response and tg_response.get("ok"):
             channel_msg = tg_response.get("result", {})
             channel_msg_id = channel_msg.get("message_id")
