@@ -2,6 +2,7 @@ import os
 import json
 import mimetypes
 import uuid
+import time
 import urllib.request
 from urllib.error import HTTPError
 
@@ -29,7 +30,7 @@ def send_message(bot_token, chat_id, text, reply_to_message_id=None):
     req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
     
     try:
-        with urllib.request.urlopen(req, timeout=10) as response:
+        with urllib.request.urlopen(req, timeout=15) as response:
             return json.loads(response.read().decode())
     except Exception as e:
         print(f"[Telegram API] sendMessage Exception: {e}")
@@ -43,13 +44,17 @@ def edit_message_text(bot_token, chat_id, message_id, text):
     req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
     
     try:
-        with urllib.request.urlopen(req, timeout=10) as response:
+        with urllib.request.urlopen(req, timeout=15) as response:
             return json.loads(response.read().decode())
-    except Exception as e:
+    except Exception:
         pass
     return None
 
-def send_audio(bot_token, chat_id, audio_path, caption=""):
+def send_audio(bot_token, chat_id, audio_path, caption="", retries=3):
+    """
+    Uploads an audio file using an intelligent retry mechanism with progressive backoff.
+    Aborts immediately on HTTP logic errors, but retries on network timeouts.
+    """
     url = f"https://api.telegram.org/bot{bot_token}/sendAudio"
     boundary = uuid.uuid4().hex
     headers = {'Content-Type': f'multipart/form-data; boundary={boundary}'}
@@ -76,12 +81,28 @@ def send_audio(bot_token, chat_id, audio_path, caption=""):
     full_data = body_bytes + audio_bytes + footer
     req = urllib.request.Request(url, data=full_data, headers=headers)
     
-    try:
-        print(f"[Telegram API] Uploading {filename} to Telegram...")
-        with urllib.request.urlopen(req, timeout=120) as response:
-            res_data = json.loads(response.read().decode())
-            return res_data
-    except Exception as e:
-        print(f"[Telegram API] sendAudio Exception: {e}")
-        
+    for attempt in range(1, retries + 1):
+        try:
+            print(f"[Telegram API] Uploading {filename} (Attempt {attempt}/{retries})...")
+            # Set timeout to 180s for heavy audio payloads
+            with urllib.request.urlopen(req, timeout=180) as response:
+                res_data = json.loads(response.read().decode())
+                return res_data
+                
+        except HTTPError as e:
+            # Fatal Telegram logic errors (e.g., 413 Payload Too Large, 400 Bad Request)
+            # Retrying these is useless, abort immediately.
+            print(f"[Telegram API] Fatal HTTP Error {e.code}: {e.read().decode()}")
+            return None 
+            
+        except Exception as e:
+            # Transient network errors (Timeout, Connection Reset)
+            print(f"[Telegram API] Network Error on attempt {attempt}: {e}")
+            if attempt < retries:
+                # Progressive backoff: 5s, 10s
+                backoff_time = attempt * 5 
+                print(f"[Telegram API] Retrying in {backoff_time} seconds...")
+                time.sleep(backoff_time)
+            
+    print("[Telegram API] All upload attempts failed due to persistent network issues.")
     return None
