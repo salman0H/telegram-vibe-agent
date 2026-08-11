@@ -1,0 +1,57 @@
+name: Serverless Telegram Music Agent
+
+on:
+  schedule:
+    # Runs every 3 hours. Acts as both Download Shift and Curation Shift.
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          
+      - name: Install System Dependencies (FFmpeg & yt-dlp)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          pip install --upgrade yt-dlp
+          
+      - name: Shift 1 - Download & Upload (Daytime Logic)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID }}
+        run: python scripts/agent_downloader.py
+        
+      - name: Shift 2 - AI Vibe Curator (Nighttime Logic)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python scripts/daily_ai_curator.py
+        
+      - name: Reconcile and Commit State
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Add tracking files
+          git add -f state.json daily_log.json || true
+          
+          # Safe commit and push to prevent dangling commit errors
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: state update after Agent shifts (download & curate)"
+            git pull --rebase origin main || true
+            git push
+          fi
