@@ -2,7 +2,6 @@ name: Serverless Telegram Music Agent
 
 on:
   schedule:
-    # Runs every 3 hours. Acts as both Download Shift and Curation Shift.
     - cron: '0 */3 * * *'
   workflow_dispatch:
 
@@ -29,15 +28,16 @@ jobs:
           
       - name: Shift 1 - Download & Upload (Daytime Logic)
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          # Using fallbacks just in case you used the old variable names
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && secrets.TELEGRAM_BOT_TOKEN || secrets.MUSIC_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID != '' && secrets.TELEGRAM_CHANNEL_ID || secrets.MUSIC_CHANNEL_ID }}
           ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID }}
         run: python scripts/agent_downloader.py
         
       - name: Shift 2 - AI Vibe Curator (Nighttime Logic)
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && secrets.TELEGRAM_BOT_TOKEN || secrets.MUSIC_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID != '' && secrets.TELEGRAM_CHANNEL_ID || secrets.MUSIC_CHANNEL_ID }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python scripts/daily_ai_curator.py
         
@@ -46,10 +46,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Add tracking files
-          git add -f state.json daily_log.json || true
+          # Fix: Touch files to ensure they exist before adding, preventing fatal git errors
+          touch state.json daily_log.json
+          git add -f state.json daily_log.json
           
-          # Safe commit and push to prevent dangling commit errors
           if ! git diff --cached --quiet; then
             git commit -m "chore: state update after Agent shifts (download & curate)"
             git pull --rebase origin main || true
