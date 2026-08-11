@@ -5,6 +5,7 @@ import html
 import urllib.request
 import urllib.parse
 import urllib.error
+import random
 import telegram_client
 
 LOG_FILE = "daily_log.json"
@@ -13,7 +14,6 @@ GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 def fetch_itunes_metadata(performer, title):
     """
     Searches the iTunes API ONCE per song to find the primary genre.
-    Reduces API calls significantly while giving context to the LLM.
     """
     query = f"{performer} {title}"
     safe_query = urllib.parse.quote_plus(query)
@@ -36,7 +36,6 @@ def fetch_itunes_metadata(performer, title):
 def call_groq(system_prompt, user_prompt):
     """
     Sends a single optimized request to the Groq API.
-    Bypasses Cloudflare 1010 block with standard browser headers.
     """
     if not GROQ_API_KEY:
         print("[LLM Error] GROQ_API_KEY is missing.")
@@ -50,7 +49,7 @@ def call_groq(system_prompt, user_prompt):
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
         ],
-        "temperature": 0.65, 
+        "temperature": 0.75, # 🔴 FIX: Slightly increased temperature for more creative, less predictable vocabulary
         "max_tokens": 150
     }
     
@@ -80,41 +79,54 @@ def call_groq(system_prompt, user_prompt):
 
 def generate_ai_content(performer, title, needs_caption, needs_tags):
     """
-    A unified generator that handles captions, tags, or both in a SINGLE API call.
-    Uses strict formatting rules for bolding, punctuation, and spacing.
+    Unified generator. Injects dynamic structural constraints to prevent repetitive "In the..." or "در سکوت..." patterns.
     """
     genre = fetch_itunes_metadata(performer, title)
     
-    # Core universal rules for the LLM typography and content
+    # 🔴 FIX: Dynamic Diversity Engine
+    # Randomly selects a structural mandate to force the LLM to start sentences differently every single time.
+    structural_styles = [
+        "Start the sentence immediately with a raw emotion or abstract concept. DO NOT set a scene.",
+        "Begin the sentence with a strong, active verb or action.",
+        "Open with a striking, surreal visual imagery without introductory phrases.",
+        "Start by describing a specific, fleeting physical sensation or touch.",
+        "Launch directly into a bold philosophical statement about memory or time.",
+        "Focus purely on the atmosphere, starting with a noun related to nature or urban life."
+    ]
+    forced_style = random.choice(structural_styles)
+    
     rules = [
         "CRITICAL STRICT RULES:",
-        "1. NEVER write the artist's name or the song title in your response.",
-        "2. NEVER use emojis under any circumstances.",
+        "1. NEVER write the artist's name or the song title.",
+        "2. NEVER use emojis.",
         "3. NO extra spaces inside quotation marks. (Wrong: « text » | Right: «text»)",
         "4. The poetic sentence MUST end with a period/full stop (.).",
-        "5. You MUST wrap the entire poetic sentence (including quotes and period) in HTML bold tags: <b>...</b>"
+        "5. You MUST wrap the entire poetic sentence in HTML bold tags: <b>...</b>",
+        "6. BAN LIST: NEVER start sentences with 'In the...', 'در تاریکی', 'در سکوت', 'در این ترانه', 'Through the', or 'Amidst'.",
+        "7. BAN LIST: AVOID clichés like 'haunting melody', 'echoes', 'اشک‌ها', 'قلب', 'صدای تنهایی'.",
+        f"8. STRUCTURAL MANDATE: {forced_style}"
     ]
     
     if needs_caption and needs_tags:
-        system_prompt = "You are an elite, minimalist music curator.\n"
+        system_prompt = "You are an elite, unpredictable, minimalist music curator.\n"
         system_prompt += "Your goal is to write a final caption containing exactly two parts separated by a blank line:\n"
         system_prompt += "Part 1: A single, deeply poetic sentence (max 2 lines) capturing the emotional vibe of the song.\n"
         system_prompt += "Part 2: Exactly 3 to 4 relevant hashtags.\n\n"
         system_prompt += "\n".join(rules) + "\n"
-        system_prompt += "6. LANGUAGE DETECTION for Part 1: Analyze the artist and title. If the artist is Iranian/Persian, write Part 1 in pure Persian. Format EXACTLY like this template: <b>«متن شاعرانه شما در اینجا.»</b>\n"
-        system_prompt += "7. If the song is international/English, write Part 1 in English. Format EXACTLY like this template: <b>\"Your poetic English sentence here.\"</b>\n"
-        system_prompt += "8. For Part 2 (Hashtags): If it's a Persian song, include 1 or 2 Persian hashtags. Format: #Tag1 #Tag2\n"
-        system_prompt += "9. Output ONLY the final text. No introductions, no explanations."
+        system_prompt += "9. LANGUAGE DETECTION for Part 1: Analyze the artist and title. If the artist is Iranian/Persian, write Part 1 in pure Persian. Format EXACTLY like this template: <b>«متن شاعرانه شما در اینجا.»</b>\n"
+        system_prompt += "10. If the song is international/English, write Part 1 in English. Format EXACTLY like this template: <b>\"Your poetic English sentence here.\"</b>\n"
+        system_prompt += "11. For Part 2 (Hashtags): If Persian song, include 1-2 Persian hashtags. Format: #Tag1 #Tag2\n"
+        system_prompt += "12. Output ONLY the final text. No introductions."
         
     elif needs_caption:
-        system_prompt = "You are an elite, minimalist music curator.\n"
+        system_prompt = "You are an elite, unpredictable, minimalist music curator.\n"
         system_prompt += "Your goal is to write a single, deeply poetic sentence (max 2 lines) capturing the emotional vibe of the requested song.\n\n"
         system_prompt += "\n".join(rules) + "\n"
-        system_prompt += "6. LANGUAGE DETECTION: Analyze the artist and title. If the artist is Iranian/Persian, write the sentence in pure Persian. Format EXACTLY like this template: <b>«متن شاعرانه شما در اینجا.»</b>\n"
-        system_prompt += "7. If the song is international/English, write the sentence in English. Format EXACTLY like this template: <b>\"Your poetic English sentence here.\"</b>\n"
-        system_prompt += "8. Output ONLY the final text. No introductions, no explanations."
+        system_prompt += "9. LANGUAGE DETECTION: Analyze the artist and title. If the artist is Iranian/Persian, write the sentence in pure Persian. Format EXACTLY like this template: <b>«متن شاعرانه شما در اینجا.»</b>\n"
+        system_prompt += "10. If the song is international/English, write the sentence in English. Format EXACTLY like this template: <b>\"Your poetic English sentence here.\"</b>\n"
+        system_prompt += "11. Output ONLY the final text. No introductions."
         
-    else: # Only tags needed
+    else: 
         system_prompt = "You are an SEO expert for a minimalist music channel.\n"
         system_prompt += "Your goal is to generate exactly 3 to 4 relevant hashtags based on the artist and genre.\n\n"
         system_prompt += "CRITICAL STRICT RULES:\n1. NEVER write the artist's name or title.\n2. NEVER use emojis.\n"
@@ -124,20 +136,17 @@ def generate_ai_content(performer, title, needs_caption, needs_tags):
 
     user_prompt = f"Artist: {performer}\nTitle: {title}\nGenre from iTunes: {genre}\n\nGenerate the content now based on the strict rules."
     
-    print("[Groq API] Sending optimized unified generation request...")
+    print("[Groq API] Sending optimized unified generation request with diversity engine...")
     return call_groq(system_prompt, user_prompt)
 
 def clean_typography(text):
     """
     Python post-processing safety net.
-    Ensures that even if the LLM hallucinates spaces inside quotes, they are stripped out.
     """
     if not text:
         return text
-    # Fix Persian quotes spacing
     text = text.replace("« ", "«").replace(" »", "»")
     text = text.replace("<b>« ", "<b>«").replace(" »</b>", "»</b>")
-    # Fix English quotes spacing
     text = text.replace('" ', '"').replace(' "', '"')
     text = text.replace('<b>" ', '<b>"').replace(' "</b>', '"</b>')
     return text
@@ -185,7 +194,6 @@ def main():
             ai_text = generate_ai_content(track.get("performer", "Unknown"), track.get("title", "Unknown"), needs_caption, needs_tags)
             
             if ai_text:
-                # Apply typography safety net
                 ai_text = clean_typography(ai_text)
                 
                 if needs_caption and needs_tags:
