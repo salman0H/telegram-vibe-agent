@@ -5,8 +5,8 @@ import subprocess
 import telegram_api
 
 # Environment Variables
-BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
-CHANNEL_ID = os.environ.get("TELEGRAM_CHANNEL_ID")
+BOT_TOKEN = os.environ.get("MUSIC_BOT_TOKEN")
+CHANNEL_ID = os.environ.get("MUSIC_CHANNEL_ID")
 ADMIN_ID = os.environ.get("ADMIN_USER_ID") # Security: Only accept queries from this Telegram User ID
 
 # Constants
