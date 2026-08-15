@@ -50,10 +50,9 @@ def edit_message_text(bot_token, chat_id, message_id, text):
         pass
     return None
 
-def send_audio(bot_token, chat_id, audio_path, caption="", retries=3):
+def send_audio(bot_token, chat_id, audio_path, caption="", performer=None, title=None, retries=3):
     """
-    Uploads an audio file using an intelligent retry mechanism with progressive backoff.
-    Aborts immediately on HTTP logic errors, but retries on network timeouts.
+    Uploads an audio file with smart retry backoff and forced ID3 tags (performer/title).
     """
     url = f"https://api.telegram.org/bot{bot_token}/sendAudio"
     boundary = uuid.uuid4().hex
@@ -63,6 +62,12 @@ def send_audio(bot_token, chat_id, audio_path, caption="", retries=3):
     body.append(f"--{boundary}\r\nContent-Disposition: form-data; name=\"chat_id\"\r\n\r\n{chat_id}\r\n")
     if caption:
         body.append(f"--{boundary}\r\nContent-Disposition: form-data; name=\"caption\"\r\n\r\n{caption}\r\n")
+        
+    # Injecting clean metadata
+    if performer and performer != "Unknown Artist":
+        body.append(f"--{boundary}\r\nContent-Disposition: form-data; name=\"performer\"\r\n\r\n{performer}\r\n")
+    if title and title != "Unknown Title":
+        body.append(f"--{boundary}\r\nContent-Disposition: form-data; name=\"title\"\r\n\r\n{title}\r\n")
 
     filename = os.path.basename(audio_path)
     mime_type = mimetypes.guess_type(audio_path)[0] or 'audio/mpeg'
@@ -84,22 +89,18 @@ def send_audio(bot_token, chat_id, audio_path, caption="", retries=3):
     for attempt in range(1, retries + 1):
         try:
             print(f"[Telegram API] Uploading {filename} (Attempt {attempt}/{retries})...")
-            # Set timeout to 180s for heavy audio payloads
+            # Timeout set to 180s for network stability
             with urllib.request.urlopen(req, timeout=180) as response:
                 res_data = json.loads(response.read().decode())
                 return res_data
                 
         except HTTPError as e:
-            # Fatal Telegram logic errors (e.g., 413 Payload Too Large, 400 Bad Request)
-            # Retrying these is useless, abort immediately.
             print(f"[Telegram API] Fatal HTTP Error {e.code}: {e.read().decode()}")
             return None 
             
         except Exception as e:
-            # Transient network errors (Timeout, Connection Reset)
             print(f"[Telegram API] Network Error on attempt {attempt}: {e}")
             if attempt < retries:
-                # Progressive backoff: 5s, 10s
                 backoff_time = attempt * 5 
                 print(f"[Telegram API] Retrying in {backoff_time} seconds...")
                 time.sleep(backoff_time)
