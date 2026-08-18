@@ -44,7 +44,7 @@ def call_groq(system_prompt, user_prompt):
     url = "https://api.groq.com/openai/v1/chat/completions"
     
     payload = {
-        "model": "llama3-70b-8192",
+        "model": "openai/gpt-oss-120b",
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
