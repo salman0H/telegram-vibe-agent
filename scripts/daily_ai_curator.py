@@ -2,6 +2,7 @@ import os
 import time
 import json
 import html
+import re
 import urllib.request
 import urllib.parse
 import urllib.error
@@ -44,13 +45,13 @@ def call_groq(system_prompt, user_prompt):
     url = "https://api.groq.com/openai/v1/chat/completions"
     
     payload = {
-        "model": "openai/gpt-oss-120b",
+        "model": "openai/gpt-oss-120b",  # Official replacement for llama-3.3-70b-versatile (deprecated Aug 16, 2026)
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
         ],
-        "temperature": 0.75, # 🔴 FIX: Slightly increased temperature for more creative, less predictable vocabulary
-        "max_tokens": 150
+        "temperature": 0.75,
+        "max_tokens": 600  # Generous limit: model needs tokens for reasoning + poetic caption + hashtags
     }
     
     data = json.dumps(payload).encode("utf-8")
@@ -67,8 +68,13 @@ def call_groq(system_prompt, user_prompt):
     try:
         with urllib.request.urlopen(req, timeout=30) as response:
             res_data = json.loads(response.read().decode("utf-8"))
-            content = res_data.get("choices", [])[0].get("message", {}).get("content", "")
-            return content.strip()
+            choice = res_data.get("choices", [])[0]
+            finish_reason = choice.get("finish_reason", "unknown")
+            content = choice.get("message", {}).get("content", "")
+            print(f"[Groq API] finish_reason={finish_reason}, content_length={len(content)}")
+            if finish_reason == "length":
+                print("[Groq Warning] Response was truncated! Increase max_tokens.")
+            return content.strip() if content else None
     except urllib.error.HTTPError as e:
         err_msg = e.read().decode("utf-8")
         print(f"[Groq HTTP Error] Code {e.code}: {err_msg}")
@@ -145,10 +151,24 @@ def clean_typography(text):
     """
     if not text:
         return text
+
+    # Strip both closed <think>...</think> and unclosed <think>... blocks
+    # This handles reasoning models (Qwen, etc.) that may not close the tag within max_tokens
+    text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL)
+    text = re.sub(r'<think>.*', '', text, flags=re.DOTALL)
+    text = text.strip()
+
     text = text.replace("« ", "«").replace(" »", "»")
     text = text.replace("<b>« ", "<b>«").replace(" »</b>", "»</b>")
     text = text.replace('" ', '"').replace(' "', '"')
     text = text.replace('<b>" ', '<b>"').replace(' "</b>', '"</b>')
+    
+    # Repair broken HTML: close any unclosed <b> tags
+    open_b_count = text.count('<b>')
+    close_b_count = text.count('</b>')
+    if open_b_count > close_b_count:
+        text = text.rstrip() + '</b>' * (open_b_count - close_b_count)
+    
     return text
 
 def main():
