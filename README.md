@@ -16,7 +16,7 @@ Empty captions still receive a sentence only, following the original decision lo
 
 ## How it works
 
-1. **Downloader — `scripts/agent_downloader.py`:** accepts text requests or forwarded audio from `ADMIN_USER_ID`, downloads/converts the track, uploads it to the channel, and adds it to `daily_log.json`.
+1. **Downloader — `scripts/agent_downloader.py`:** accepts text requests or forwarded audio from `ADMIN_USER_ID`, downloads/converts text-search results or reuses forwarded Telegram Audio by `file_id`, publishes it to the channel, and adds it to `daily_log.json`.
 2. **Listener — `scripts/music_listener.py`:** polls Telegram channel updates, filters the configured channel and audio messages, deduplicates queued message IDs, and queues posts needing captions or tags.
 3. **Curator — `scripts/daily_ai_curator.py`:** uses queued genres when available, otherwise searches iTunes once per track. It generates [JSON-mode output](https://console.groq.com/docs/structured-outputs) through Groq's `openai/gpt-oss-120b`, validates the result, renders safe Telegram HTML, and edits the post.
 4. **Editorial memory — `scripts/content_memory.py`:** stores used source IDs, normalized caption fingerprints, the latest 100 captions and editorial choices, and pending edits in `content_memory.json`. Actions commit this file alongside the queue so memory survives fresh runners.
@@ -98,6 +98,16 @@ Enable Actions with repository content-write permission. Each workflow can also 
 
 The downloader workflow also invokes the curator after downloading. GitHub cron execution can be delayed. The listener/downloader still use the original Telegram `getUpdates` polling arrangement; this change does not redesign ingestion or recover channel history. Avoid attaching another update consumer or webhook to the same bot.
 
+## Audio length and file limits
+
+There is no three-minute music-duration limit in the downloader or workflow. A network timeout measures how long a request takes, not the playback duration of the track.
+
+- **Forwarded Audio:** the agent calls `sendAudio` with the existing `file_id`. It does not download or reupload the bytes, so `getFile`'s 20 MB download ceiling does not apply. This preserves the original file and avoids a redundant transfer. Telegram documents no file-size limit for resending existing files by ID.
+- **Document/Voice:** Telegram does not allow a file ID to be resent as a different media type. These retain the existing download/upload path and its 20 MB cloud download ceiling. Oversized items now receive a specific status message asking the administrator to resend music as Audio.
+- **Text search with yt-dlp:** the existing `--max-filesize 45M` input-download cap is unchanged. A long track may hit a size limit, but there is no duration filter. New multipart uploads also remain subject to Telegram's 50 MB limit.
+
+See [Telegram's file transfer rules](https://core.telegram.org/bots/api#sending-files) and [getFile documentation](https://core.telegram.org/bots/api#getfile). Downloader logs now include the received media type, duration when available, byte size, and the Telegram error description when a download is rejected. If an earlier run already skipped a failed request, resend it after deploying this version; old Telegram updates are not replayed automatically.
+
 ## Development and verification
 
 ```sh
@@ -105,7 +115,7 @@ python3 -m unittest discover -s tests -v
 python3 -m compileall -q scripts tests
 ```
 
-Tests run offline with mocked Groq and Telegram calls. They cover source exhaustion, persistent exact history, Persian normalization, near duplicates, pending reservations, bounded retries, strict output validation, original-caption preservation, HTML length safety, and crash recovery. They never publish to the channel. A separate CI workflow runs these checks on pushes and pull requests.
+Tests run offline with mocked Groq and Telegram calls. They cover source exhaustion, persistent exact history, Persian normalization, near duplicates, pending reservations, bounded retries, strict output validation, original-caption preservation, HTML length safety, crash recovery, and large/long forwarded audio without a local download. They never publish to the channel. A separate CI workflow runs these checks on pushes and pull requests.
 
 For an intentional local live run from the repository root, set the appropriate environment variables first:
 

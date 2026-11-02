@@ -86,9 +86,28 @@ def send_audio(bot_token, chat_id, audio_path, caption="", performer=None, title
     full_data = body_bytes + audio_bytes + footer
     req = urllib.request.Request(url, data=full_data, headers=headers)
     
+    return _send_audio_request(req, filename, retries)
+
+
+def send_audio_file_id(bot_token, chat_id, file_id, caption="", performer=None, title=None, retries=3):
+    """Reuse an audio already held by this bot, avoiding getFile's download limit."""
+    payload = {"chat_id": chat_id, "audio": file_id, "caption": caption}
+    if performer and performer != "Unknown Artist":
+        payload["performer"] = performer
+    if title and title != "Unknown Title":
+        payload["title"] = title
+    req = urllib.request.Request(
+        f"https://api.telegram.org/bot{bot_token}/sendAudio",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+    return _send_audio_request(req, "existing Telegram audio", retries)
+
+
+def _send_audio_request(req, label, retries):
     for attempt in range(1, retries + 1):
         try:
-            print(f"[Telegram API] Uploading {filename} (Attempt {attempt}/{retries})...")
+            print(f"[Telegram API] Sending {label} (Attempt {attempt}/{retries})...")
             # Timeout set to 180s for network stability
             with urllib.request.urlopen(req, timeout=180) as response:
                 res_data = json.loads(response.read().decode())

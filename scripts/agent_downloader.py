@@ -4,6 +4,7 @@ import time
 import subprocess
 import glob
 import urllib.request
+from urllib.error import HTTPError
 import telegram_api
 
 BOT_TOKEN = os.environ.get("MUSIC_BOT_TOKEN")
@@ -122,6 +123,16 @@ def download_telegram_file(file_id, output_filename):
         
         urllib.request.urlretrieve(dl_url, output_filepath)
         return output_filepath
+    except HTTPError as error:
+        # Keep the actual Telegram reason instead of only '400: Bad Request'.
+        try:
+            description = json.loads(error.read().decode("utf-8")).get("description", "Unknown error")
+        except (ValueError, UnicodeDecodeError):
+            description = error.reason
+        if BOT_TOKEN:
+            description = str(description).replace(BOT_TOKEN, "[redacted]")
+        print(f"[Downloader Error] Telegram getFile/download HTTP {error.code}: {description}")
+        return None
     except Exception as e:
         print(f"[Downloader Error] Telegram direct download failed: {e}")
         return None
@@ -174,16 +185,34 @@ def main():
         if audio_obj:
             print(f"\n[Agent] Received forwarded Audio/Document.")
             file_id = audio_obj.get("file_id")
+            media_type = "audio" if message.get("audio") else "voice" if message.get("voice") else "document"
+            print(f"[Agent] Media type={media_type}, duration={audio_obj.get('duration', 'unknown')}s, "
+                  f"size={audio_obj.get('file_size', 'unknown')} bytes")
             clean_title = audio_obj.get("title", f"Track_{update_id}") if isinstance(audio_obj, dict) else f"Track_{update_id}"
             clean_performer = audio_obj.get("performer", "Unknown Artist") if isinstance(audio_obj, dict) else "Unknown Artist"
             file_name = audio_obj.get("file_name", f"{clean_title}.mp3") if isinstance(audio_obj, dict) else f"{clean_title}.mp3"
             
-            status = telegram_api.send_message(BOT_TOKEN, user_id, f"⏳ Receiving forwarded audio:\n{clean_title}", reply_to_message_id=message_id)
+            status = telegram_api.send_message(BOT_TOKEN, user_id, f"⏳ Preparing forwarded audio:\n{clean_title}", reply_to_message_id=message_id)
             status_msg_id = status.get("result", {}).get("message_id") if status else None
             
-            audio_path = download_telegram_file(file_id, file_name)
-            if audio_path:
-                track_info = {"path": audio_path}
+            if message.get("audio"):
+                # Audio is already on Telegram: downloading and uploading it again
+                # needlessly subjects it to the cloud getFile 20 MB limit.
+                track_info = {"file_id": file_id}
+                print("[Agent] Reusing Telegram audio; no download required.")
+            else:
+                # Document/voice file IDs cannot be resent as a different media type.
+                if audio_obj.get("file_size", 0) > 20 * 1024 * 1024:
+                    print("[Downloader Error] Document/voice exceeds the getFile download limit.")
+                    if status_msg_id:
+                        telegram_api.edit_message_text(
+                            BOT_TOKEN, user_id, status_msg_id,
+                            "❌ Telegram cannot download this document/voice file (over 20 MB). "
+                            "Please resend music as Audio instead of Document/Voice.")
+                    continue
+                audio_path = download_telegram_file(file_id, file_name)
+                if audio_path:
+                    track_info = {"path": audio_path}
                 
         elif text_query:
             print(f"\n[Agent] Received text query: '{text_query}'")
@@ -196,32 +225,31 @@ def main():
             track_info = download_track_ytdlp(text_query)
 
         # Validation & Upload
-        if not track_info or not track_info["path"]:
+        if not track_info or not (track_info.get("path") or track_info.get("file_id")):
             print("[Agent] Failed to process track.")
             if status_msg_id:
                 telegram_api.edit_message_text(BOT_TOKEN, user_id, status_msg_id, "❌ Failed to process or download the track.")
             continue
             
         if status_msg_id:
-            telegram_api.edit_message_text(BOT_TOKEN, user_id, status_msg_id, "✅ Download complete!\nUploading to channel...")
+            telegram_api.edit_message_text(BOT_TOKEN, user_id, status_msg_id, "✅ Audio ready!\nPublishing to channel...")
             
-        audio_path = track_info["path"]
-        
-        # Pass the extracted clean metadata directly to Telegram API
-        tg_response = telegram_api.send_audio(
-            BOT_TOKEN, 
-            CHANNEL_ID, 
-            audio_path, 
-            caption="", 
-            performer=clean_performer, 
-            title=clean_title
-        )
-        
-        try:
-            os.remove(audio_path)
-        except Exception:
-            pass
-            
+        audio_path = track_info.get("path")
+        if track_info.get("file_id"):
+            tg_response = telegram_api.send_audio_file_id(
+                BOT_TOKEN, CHANNEL_ID, track_info["file_id"], caption="",
+                performer=clean_performer, title=clean_title)
+        else:
+            tg_response = telegram_api.send_audio(
+                BOT_TOKEN, CHANNEL_ID, audio_path, caption="",
+                performer=clean_performer, title=clean_title)
+
+        if audio_path:
+            try:
+                os.remove(audio_path)
+            except OSError:
+                pass
+
         if tg_response and tg_response.get("ok"):
             channel_msg = tg_response.get("result", {})
             channel_msg_id = channel_msg.get("message_id")
