@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "used_poem_ids": [
+    "hafez-336-01"
+  ],
+  "fingerprints": [
+    "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b"
+  ],
+  "recent": [
+    {
+      "text": "لامپ زرد آشپزخانه، بیسِ زیرش را به رقص می‌کشاند تا قهوه‌ساز بیدار شود.",
+      "poem_id": "hafez-336-01",
+      "author": "حافظ",
+      "style": "fragment",
+      "lens": "domestic"
+    }
+  ],
+  "pending": {
+    "1273": {
+      "caption": "<b>«ای که در افق ناپدید شدی، سنگ‌های خسته مسیر به سکوت تو گوش می‌دهند، همان‌گونه که بادهای دور، نغمه‌ای از دل‌تنهایی می‌فرستند.»</b>",
+      "text": "ای که در افق ناپدید شدی، سنگ‌های خسته مسیر به سکوت تو گوش می‌دهند، همان‌گونه که بادهای دور، نغمه‌ای از دل‌تنهایی می‌فرستند.",
+      "poem_id": "saadi-13-01",
+      "author": "سعدی",
+      "style": "address",
+      "lens": "landscape",
+      "original_caption": ""
+    },
+    "1274": {
+      "caption": "<b>«لرزش نازک شیشه زیر انگشتان، همچون نغمه‌ای که از دل پارچه‌ای پاره می‌گذرد، یادآور جدایی بی‌پایان است.»</b>",
+      "text": "لرزش نازک شیشه زیر انگشتان، همچون نغمه‌ای که از دل پارچه‌ای پاره می‌گذرد، یادآور جدایی بی‌پایان است.",
+      "poem_id": "hafez-336-06",
+      "author": "حافظ",
+      "style": "sensation",
+      "lens": "material",
+      "original_caption": ""
+    },
+    "1275": {
+      "caption": "<b>«دوید به افق خسته‌ام، گام‌هایم خاک را می‌پوشانند تا نغمهٔ بی‌گریه‌ات را به باد بسپارند.»</b>",
+      "text": "دوید به افق خسته‌ام، گام‌هایم خاک را می‌پوشانند تا نغمهٔ بی‌گریه‌ات را به باد بسپارند.",
+      "poem_id": "hafez-336-04",
+      "author": "حافظ",
+      "style": "action",
+      "lens": "landscape",
+      "original_caption": ""
+    },
+    "1276": {
+      "caption": "<b>«ساعت دیوار خالی، نیمی از نور صبح به آرامی به لبهٔ پنجره می‌چرخد، گویی تصمیمِ گریه کردن در دل سکوت می‌لغزد.»</b>",
+      "text": "ساعت دیوار خالی، نیمی از نور صبح به آرامی به لبهٔ پنجره می‌چرخد، گویی تصمیمِ گریه کردن در دل سکوت می‌لغزد.",
+      "poem_id": "saadi-13-03",
+      "author": "سعدی",
+      "style": "time",
+      "lens": "space",
+      "original_caption": ""
+    },
+    "1277": {
+      "caption": "<b>«یک شاخه‌ی خشک در دست من، ناگهان سبزه‌های نقره‌ای می‌رویند، گویی بهاری درون آن می‌جوشد.»</b>",
+      "text": "یک شاخه‌ی خشک در دست من، ناگهان سبزه‌های نقره‌ای می‌رویند، گویی بهاری درون آن می‌جوشد.",
+      "poem_id": "saadi-13-02",
+      "author": "سعدی",
+      "style": "object",
+      "lens": "growth",
+      "original_caption": ""
+    },
+    "1285": {
+      "caption": "<b>\"You, who linger like the first amber glow on the lake, keep the world from slipping into dusk.\"</b>",
+      "text": "You, who linger like the first amber glow on the lake, keep the world from slipping into dusk.",
+      "poem_id": "shakespeare-18-06",
+      "author": "William Shakespeare",
+      "style": "address",
+      "lens": "light",
+      "original_caption": ""
+    },
+    "1287": {
+      "caption": "<b>\"A lone kettle whistles a stray chorus, the steam spelling a fleeting map that dissolves as the door clicks shut.\"</b>",
+      "text": "A lone kettle whistles a stray chorus, the steam spelling a fleeting map that dissolves as the door clicks shut.",
+      "poem_id": "poe-dream-02",
+      "author": "Edgar Allan Poe",
+      "style": "fragment",
+      "lens": "domestic",
+      "original_caption": ""
+    }
+  }
+}
