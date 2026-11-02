@@ -6,8 +6,9 @@ import re
 import urllib.request
 import urllib.parse
 import urllib.error
-import random
 import telegram_client
+from content_memory import MEMORY_FILE, load_memory, load_corpus, remember, save_json
+from editorial import SYSTEM_PROMPT, make_brief, validate_response
 
 LOG_FILE = "daily_log.json"
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
@@ -45,13 +46,14 @@ def call_groq(system_prompt, user_prompt):
     url = "https://api.groq.com/openai/v1/chat/completions"
     
     payload = {
-        "model": "openai/gpt-oss-120b",  # Official replacement for llama-3.3-70b-versatile (deprecated Aug 16, 2026)
+        "model": "openai/gpt-oss-120b",
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
         ],
         "temperature": 0.75,
-        "max_tokens": 600  # Generous limit: model needs tokens for reasoning + poetic caption + hashtags
+        "max_tokens": 1600,
+        "response_format": {"type": "json_object"}
     }
     
     data = json.dumps(payload).encode("utf-8")
@@ -73,7 +75,8 @@ def call_groq(system_prompt, user_prompt):
             content = choice.get("message", {}).get("content", "")
             print(f"[Groq API] finish_reason={finish_reason}, content_length={len(content)}")
             if finish_reason == "length":
-                print("[Groq Warning] Response was truncated! Increase max_tokens.")
+                print("[Groq Warning] Truncated response rejected.")
+                return None
             return content.strip() if content else None
     except urllib.error.HTTPError as e:
         err_msg = e.read().decode("utf-8")
@@ -83,167 +86,97 @@ def call_groq(system_prompt, user_prompt):
         
     return None
 
-def generate_ai_content(performer, title, needs_caption, needs_tags):
-    """
-    Unified generator. Injects dynamic structural constraints to prevent repetitive "In the..." or "در سکوت..." patterns.
-    """
-    genre = fetch_itunes_metadata(performer, title)
-    
-    # 🔴 FIX: Dynamic Diversity Engine
-    # Randomly selects a structural mandate to force the LLM to start sentences differently every single time.
-    structural_styles = [
-        "Start the sentence immediately with a raw emotion or abstract concept. DO NOT set a scene.",
-        "Begin the sentence with a strong, active verb or action.",
-        "Open with a striking, surreal visual imagery without introductory phrases.",
-        "Start by describing a specific, fleeting physical sensation or touch.",
-        "Launch directly into a bold philosophical statement about memory or time.",
-        "Focus purely on the atmosphere, starting with a noun related to nature or urban life."
-    ]
-    forced_style = random.choice(structural_styles)
-    
-    rules = [
-        "CRITICAL STRICT RULES:",
-        "1. NEVER write the artist's name or the song title.",
-        "2. NEVER use emojis.",
-        "3. NO extra spaces inside quotation marks. (Wrong: « text » | Right: «text»)",
-        "4. The poetic sentence MUST end with a period/full stop (.).",
-        "5. You MUST wrap the entire poetic sentence in HTML bold tags: <b>...</b>",
-        "6. BAN LIST: NEVER start sentences with 'In the...', 'در تاریکی', 'در سکوت', 'در این ترانه', 'Through the', or 'Amidst'.",
-        "7. BAN LIST: AVOID clichés like 'haunting melody', 'echoes', 'اشک‌ها', 'قلب', 'صدای تنهایی'.",
-        f"8. STRUCTURAL MANDATE: {forced_style}"
-    ]
-    
-    if needs_caption and needs_tags:
-        system_prompt = "You are an elite, unpredictable, minimalist music curator.\n"
-        system_prompt += "Your goal is to write a final caption containing exactly two parts separated by a blank line:\n"
-        system_prompt += "Part 1: A single, deeply poetic sentence (max 2 lines) capturing the emotional vibe of the song.\n"
-        system_prompt += "Part 2: Exactly 3 to 4 relevant hashtags.\n\n"
-        system_prompt += "\n".join(rules) + "\n"
-        system_prompt += "9. LANGUAGE DETECTION for Part 1: Analyze the artist and title. If the artist is Iranian/Persian, write Part 1 in pure Persian. Format EXACTLY like this template: <b>«متن شاعرانه شما در اینجا.»</b>\n"
-        system_prompt += "10. If the song is international/English, write Part 1 in English. Format EXACTLY like this template: <b>\"Your poetic English sentence here.\"</b>\n"
-        system_prompt += "11. For Part 2 (Hashtags): If Persian song, include 1-2 Persian hashtags. Format: #Tag1 #Tag2\n"
-        system_prompt += "12. Output ONLY the final text. No introductions."
-        
-    elif needs_caption:
-        system_prompt = "You are an elite, unpredictable, minimalist music curator.\n"
-        system_prompt += "Your goal is to write a single, deeply poetic sentence (max 2 lines) capturing the emotional vibe of the requested song.\n\n"
-        system_prompt += "\n".join(rules) + "\n"
-        system_prompt += "9. LANGUAGE DETECTION: Analyze the artist and title. If the artist is Iranian/Persian, write the sentence in pure Persian. Format EXACTLY like this template: <b>«متن شاعرانه شما در اینجا.»</b>\n"
-        system_prompt += "10. If the song is international/English, write the sentence in English. Format EXACTLY like this template: <b>\"Your poetic English sentence here.\"</b>\n"
-        system_prompt += "11. Output ONLY the final text. No introductions."
-        
-    else: 
-        system_prompt = "You are an SEO expert for a minimalist music channel.\n"
-        system_prompt += "Your goal is to generate exactly 3 to 4 relevant hashtags based on the artist and genre.\n\n"
-        system_prompt += "CRITICAL STRICT RULES:\n1. NEVER write the artist's name or title.\n2. NEVER use emojis.\n"
-        system_prompt += "3. Format: #Tag1 #Tag2 #Tag3\n"
-        system_prompt += "4. If it's a Persian song, include 1 or 2 Persian hashtags.\n"
-        system_prompt += "5. Output ONLY the hashtags separated by spaces."
-
-    user_prompt = f"Artist: {performer}\nTitle: {title}\nGenre from iTunes: {genre}\n\nGenerate the content now based on the strict rules."
-    
-    print("[Groq API] Sending optimized unified generation request with diversity engine...")
-    return call_groq(system_prompt, user_prompt)
-
-def clean_typography(text):
-    """
-    Python post-processing safety net.
-    """
-    if not text:
-        return text
-
-    # Strip both closed <think>...</think> and unclosed <think>... blocks
-    # This handles reasoning models (Qwen, etc.) that may not close the tag within max_tokens
-    text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL)
-    text = re.sub(r'<think>.*', '', text, flags=re.DOTALL)
-    text = text.strip()
-
-    text = text.replace("« ", "«").replace(" »", "»")
-    text = text.replace("<b>« ", "<b>«").replace(" »</b>", "»</b>")
-    text = text.replace('" ', '"').replace(' "', '"')
-    text = text.replace('<b>" ', '<b>"').replace(' "</b>', '"</b>')
-    
-    # Repair broken HTML: close any unclosed <b> tags
-    open_b_count = text.count('<b>')
-    close_b_count = text.count('</b>')
-    if open_b_count > close_b_count:
-        text = text.rstrip() + '</b>' * (open_b_count - close_b_count)
-    
-    return text
+def generate_ai_content(performer, title, needs_caption, needs_tags, memory, corpus, genres=None):
+    """Generate, check and retry at most three times; never publish a bad fallback."""
+    genre = ", ".join(genres) if genres else fetch_itunes_metadata(performer, title)
+    feedback = None
+    for attempt in range(3):
+        brief = make_brief(performer, title, genre, needs_caption, needs_tags, memory, corpus)
+        if feedback:
+            brief["revision_needed"] = feedback
+        raw = call_groq(SYSTEM_PROMPT, json.dumps(brief, ensure_ascii=False))
+        if not raw:
+            return None
+        try:
+            return validate_response(raw, brief, memory, corpus)
+        except ValueError as error:
+            feedback = str(error)
+            print(f"[Curator] Rejected candidate {attempt + 1}/3: {feedback}")
+    return None
 
 def main():
     if not GROQ_API_KEY:
-        print("[Error] GROQ_API_KEY is not configured in GitHub Secrets.")
-        return
-
+        raise RuntimeError("GROQ_API_KEY is not configured")
     if not os.path.exists(LOG_FILE):
         print(f"[Curator] {LOG_FILE} does not exist. Execution skipped.")
         return
-
-    with open(LOG_FILE, "r", encoding="utf-8") as f:
-        try:
-            log_data = json.load(f)
-        except Exception as e:
-            print(f"[Error] Failed to parse {LOG_FILE}: {e}")
-            return
-
-    if not log_data:
-        print("[Curator] No tracks pending in log.")
-        return
-
-    print(f"[Curator] Loaded {len(log_data)} tracks for processing.")
-    success_ids = []
-
+    with open(LOG_FILE, encoding="utf-8") as stream:
+        log_data = json.load(stream)
+    memory, corpus = load_memory(), load_corpus()
+    if not isinstance(log_data, list):
+        raise ValueError("The pending queue must be a JSON array")
+    queued_keys = {str(track["message_id"]) for track in log_data}
+    # Finish cleanup if an earlier run removed a queue item before journal cleanup.
+    for key in list(memory["pending"]):
+        if key not in queued_keys:
+            remember(memory, memory["pending"].pop(key))
+            save_json(MEMORY_FILE, memory)
+    remaining = list(log_data)
     for track in log_data:
         message_id = track["message_id"]
+        key = str(message_id)
         raw_caption = track.get("caption", "")
-        base_caption = html.escape(raw_caption) if raw_caption else ""
-        
-        needs_caption = not base_caption.strip()
-        needs_tags = bool(base_caption.strip()) and ("#" not in base_caption)
-        
+        base_caption = html.escape(raw_caption, quote=False)
+        needs_caption = not raw_caption.strip()
+        # Preserve the existing policy: blank posts get a sentence only;
+        # existing captions receive tags only when they have none.
+        needs_tags = bool(raw_caption.strip()) and "#" not in raw_caption
         if not needs_caption and not needs_tags:
-            print(f"[Curator] Message {message_id} is already complete. Marking as done.")
-            success_ids.append(message_id)
+            if key in memory["pending"]:
+                remember(memory, memory["pending"].pop(key))
+                save_json(MEMORY_FILE, memory)
+            remaining = [t for t in remaining if t["message_id"] != message_id]
+            save_json(LOG_FILE, remaining)
             continue
-
-        print(f"\n[Curator] --- Processing message {message_id} ({track.get('performer')} - {track.get('title')}) ---")
-        new_caption = base_caption
-
-        if needs_caption or needs_tags:
-            ai_text = generate_ai_content(track.get("performer", "Unknown"), track.get("title", "Unknown"), needs_caption, needs_tags)
-            
-            if ai_text:
-                ai_text = clean_typography(ai_text)
-                
-                if needs_caption and needs_tags:
-                    new_caption = ai_text 
-                elif needs_caption:
-                    new_caption = ai_text 
-                elif needs_tags:
-                    new_caption = f"{new_caption}\n\n{ai_text}" if new_caption else ai_text 
-            else:
-                print(f"[Curator] Failed to get AI content for message {message_id}. Retaining in log.")
-                continue 
-            
-        if len(new_caption) > 1024:
-            new_caption = new_caption[:1020] + "..."
-            
-        result = telegram_client.edit_message_caption(message_id, new_caption)
-        
+        record = memory["pending"].get(key)
+        if record and record.get("original_caption") != raw_caption:
+            # Reserve the old source conservatively: a previous edit may have succeeded.
+            remember(memory, record)
+            del memory["pending"][key]
+            save_json(MEMORY_FILE, memory)
+            record = None
+        if record is None:
+            record = generate_ai_content(
+                track.get("performer", "Unknown"), track.get("title", "Unknown"),
+                needs_caption, needs_tags, memory, corpus, track.get("genres"))
+            if not record:
+                print(f"[Curator] No acceptable content for {message_id}; retained in queue.")
+                continue
+            caption = record["caption"] if needs_caption else base_caption + "\n\n" + record["caption"]
+            # Telegram measures caption length after entity parsing in UTF-16 units.
+            if len(html.unescape(re.sub(r"</?b>", "", caption)).encode("utf-16-le")) // 2 > 1024:
+                print(f"[Curator] Caption {message_id} exceeds Telegram limit; retained unchanged.")
+                continue
+            record.update(caption=caption, original_caption=raw_caption)
+            memory["pending"][key] = record
+            # Write-ahead journal: a retry edits the SAME post with the SAME caption,
+            # including when Telegram succeeded but the response was lost.
+            save_json(MEMORY_FILE, memory)
+        result = telegram_client.edit_message_caption(message_id, record["caption"])
         if result and (result.get("ok") or result.get("ignored")):
-            success_ids.append(message_id)
-            print(f"[Curator] Successfully updated message {message_id} in Telegram.")
+            remember(memory, record)
+            # Keep the journal until queue removal is durable.
+            save_json(MEMORY_FILE, memory)
+            remaining = [t for t in remaining if t["message_id"] != message_id]
+            save_json(LOG_FILE, remaining)
+            del memory["pending"][key]
+            save_json(MEMORY_FILE, memory)
+            print(f"[Curator] Updated message {message_id}.")
         else:
-            print(f"[Curator] Telegram edit request failed for message {message_id}. Retaining in log.")
-            
+            print(f"[Curator] Edit {message_id} failed; pending caption reserved for retry.")
         time.sleep(3)
+    print(f"[Curator] Finished; {len(remaining)} tracks remaining.")
 
-    remaining_tracks = [t for t in log_data if t["message_id"] not in success_ids]
-    with open(LOG_FILE, "w", encoding="utf-8") as f:
-        json.dump(remaining_tracks, f, ensure_ascii=False, indent=2)
-        
-    print(f"\n[Curator] Execution finished. {len(success_ids)} updated, {len(remaining_tracks)} remaining.")
 
 if __name__ == "__main__":
     main()

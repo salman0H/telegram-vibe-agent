@@ -5,6 +5,11 @@ on:
     - cron: '30 4,10,16,22 * * *'
   workflow_dispatch:
 
+# All three workflows mutate the same queue and editorial history.
+concurrency:
+  group: music-agent-state
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -35,14 +40,16 @@ jobs:
         run: python scripts/daily_ai_curator.py
         
       - name: Commit state and update queue log
+        if: ${{ always() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          git add -f daily_log.json || true
+          git add daily_log.json
+          if [ -f content_memory.json ]; then git add content_memory.json; fi
           
           if ! git diff --cached --quiet; then
             git commit -m "chore: update daily log queue after Groq AI curation"
-            git pull --rebase origin main || true
+            git pull --rebase origin main
             git push
           fi

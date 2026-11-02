@@ -33,7 +33,7 @@ def edit_message_caption(message_id, caption):
     )
     
     try:
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=30) as response:
             res_data = json.loads(response.read().decode())
             print(f"[Telegram Client] Successfully edited message {message_id}")
             return res_data

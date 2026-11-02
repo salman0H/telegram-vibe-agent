@@ -5,6 +5,11 @@ on:
     - cron: '0 4,10,16,22 * * *'
   workflow_dispatch:
 
+# All three workflows mutate the same queue and editorial history.
+concurrency:
+  group: music-agent-state
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -29,7 +34,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          git add -f music_state.json daily_log.json || true
+          git add music_state.json daily_log.json
           
           if ! git diff --cached --quiet; then
             git commit -m "chore(listener): track new uploads and update state ($(date +'%Y-%m-%d'))"

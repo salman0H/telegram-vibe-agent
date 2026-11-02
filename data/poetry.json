@@ -1,0 +1,650 @@
+[
+  {
+    "id": "hafez-336-01",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۳۳۶",
+    "text": "مژدهٔ وصلِ تو کو کز سرِ جان برخیزم",
+    "source": "https://ganjoor.net/hafez/ghazal/sh336",
+    "themes": [
+      "longing",
+      "reunion",
+      "وصال"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-336-02",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۳۳۶",
+    "text": "طایرِ قُدسم و از دامِ جهان برخیزم",
+    "source": "https://ganjoor.net/hafez/ghazal/sh336",
+    "themes": [
+      "freedom",
+      "flight",
+      "رهایی"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-336-03",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۳۳۶",
+    "text": "از سرِ خواجگیِ کون و مکان برخیزم",
+    "source": "https://ganjoor.net/hafez/ghazal/sh336",
+    "themes": [
+      "surrender",
+      "devotion",
+      "عشق"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-336-04",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۳۳۶",
+    "text": "پیشتر زان که چو گَردی ز میان برخیزم",
+    "source": "https://ganjoor.net/hafez/ghazal/sh336",
+    "themes": [
+      "transience",
+      "loss",
+      "گذشت"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-336-05",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۳۳۶",
+    "text": "تا سحرگه ز کنارِ تو جوان برخیزم",
+    "source": "https://ganjoor.net/hafez/ghazal/sh336",
+    "themes": [
+      "renewal",
+      "intimacy",
+      "صبح"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-336-06",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۳۳۶",
+    "text": "روز مرگم نفسی مهلتِ دیدار بده",
+    "source": "https://ganjoor.net/hafez/ghazal/sh336",
+    "themes": [
+      "farewell",
+      "longing",
+      "دیدار"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-13-01",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "مواعظ، غزل ۱۳",
+    "text": "به جهان خُرَّم از آنم که جهان خُرَّم از اوست",
+    "source": "https://ganjoor.net/saadi/mavaez/ghazal2/sh13/",
+    "themes": [
+      "joy",
+      "belonging",
+      "شادی"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-13-02",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "مواعظ، غزل ۱۳",
+    "text": "عاشقم بر همه عالم که همه عالم از اوست",
+    "source": "https://ganjoor.net/saadi/mavaez/ghazal2/sh13/",
+    "themes": [
+      "love",
+      "connection",
+      "عشق"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-13-03",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "مواعظ، غزل ۱۳",
+    "text": "به غنیمت شِمُر ای دوست دمِ عیسیِ صبح",
+    "source": "https://ganjoor.net/saadi/mavaez/ghazal2/sh13/",
+    "themes": [
+      "morning",
+      "renewal",
+      "صبح"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-13-04",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "مواعظ، غزل ۱۳",
+    "text": "به حلاوت بخورم زهر که شاهد ساقیست",
+    "source": "https://ganjoor.net/saadi/mavaez/ghazal2/sh13/",
+    "themes": [
+      "bittersweet",
+      "acceptance",
+      "تلخ"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-13-05",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "مواعظ، غزل ۱۳",
+    "text": "غم و شادی بَرِ عارف چه تفاوت دارد",
+    "source": "https://ganjoor.net/saadi/mavaez/ghazal2/sh13/",
+    "themes": [
+      "equanimity",
+      "contrast",
+      "غم"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-13-06",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "مواعظ، غزل ۱۳",
+    "text": "پادشاهی و گدایی بَرِ ما یکسان است",
+    "source": "https://ganjoor.net/saadi/mavaez/ghazal2/sh13/",
+    "themes": [
+      "equality",
+      "simplicity",
+      "سادگی"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-m1-62-01",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "مثنوی، دفتر اول، بخش ۶۲",
+    "text": "صورت ما موج یا از وی نَمی",
+    "source": "https://ganjoor.net/moulavi/masnavi/daftar1/sh62",
+    "themes": [
+      "sea",
+      "identity",
+      "موج"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-m1-62-02",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "مثنوی، دفتر اول، بخش ۶۲",
+    "text": "جان ز پیدایی و نزدیکی‌ست گُم",
+    "source": "https://ganjoor.net/moulavi/masnavi/daftar1/sh62",
+    "themes": [
+      "closeness",
+      "absence",
+      "نزدیک"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-m1-62-03",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "مثنوی، دفتر اول، بخش ۶۲",
+    "text": "دیدن نور‌ست، آنگه دیدِ رنگ",
+    "source": "https://ganjoor.net/moulavi/masnavi/daftar1/sh62",
+    "themes": [
+      "light",
+      "perception",
+      "رنگ"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-m1-62-04",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "مثنوی، دفتر اول، بخش ۶۲",
+    "text": "از سخن صورت بزاد و باز مُرد",
+    "source": "https://ganjoor.net/moulavi/masnavi/daftar1/sh62",
+    "themes": [
+      "voice",
+      "transience",
+      "صدا"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-m1-62-05",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "مثنوی، دفتر اول، بخش ۶۲",
+    "text": "هر نفس نو می‌شود دنیا و ما",
+    "source": "https://ganjoor.net/moulavi/masnavi/daftar1/sh62",
+    "themes": [
+      "renewal",
+      "time",
+      "تازه"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-m1-62-06",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "مثنوی، دفتر اول، بخش ۶۲",
+    "text": "عُمر همچون جوی نو نو می‌رسد",
+    "source": "https://ganjoor.net/moulavi/masnavi/daftar1/sh62",
+    "themes": [
+      "river",
+      "time",
+      "عمر"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-184-01",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱۸۴",
+    "text": "دوش دیدم که ملائک درِ میخانه زدند",
+    "source": "https://ganjoor.net/hafez/ghazal/sh184",
+    "themes": [
+      "dream",
+      "surprise",
+      "رویا"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-184-02",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱۸۴",
+    "text": "گِلِ آدم بسرشتَند و به پیمانه زدند",
+    "source": "https://ganjoor.net/hafez/ghazal/sh184",
+    "themes": [
+      "creation",
+      "earth",
+      "خاک"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-184-03",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱۸۴",
+    "text": "آسمان بارِ امانت نتوانست کشید",
+    "source": "https://ganjoor.net/hafez/ghazal/sh184",
+    "themes": [
+      "weight",
+      "vulnerability",
+      "بار"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-184-04",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱۸۴",
+    "text": "چون ندیدند حقیقت، رهِ افسانه زدند",
+    "source": "https://ganjoor.net/hafez/ghazal/sh184",
+    "themes": [
+      "illusion",
+      "story",
+      "افسانه"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-184-05",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱۸۴",
+    "text": "شُکرِ ایزد که میانِ من و او صلح افتاد",
+    "source": "https://ganjoor.net/hafez/ghazal/sh184",
+    "themes": [
+      "peace",
+      "reconciliation",
+      "آشتی"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-184-06",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱۸۴",
+    "text": "تا سرِ زلفِ سخن را، به قلم شانه زدند",
+    "source": "https://ganjoor.net/hafez/ghazal/sh184",
+    "themes": [
+      "writing",
+      "texture",
+      "نوشتن"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "dickinson-314-01",
+    "language": "en",
+    "author": "Emily Dickinson",
+    "work": "Hope is the thing with feathers (314)",
+    "text": "“Hope” is the thing with feathers -",
+    "source": "https://www.poetryfoundation.org/poems/42889/hope-is-the-thing-with-feathers-314",
+    "themes": [
+      "hope",
+      "flight"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "dickinson-314-02",
+    "language": "en",
+    "author": "Emily Dickinson",
+    "work": "Hope is the thing with feathers (314)",
+    "text": "That perches in the soul -",
+    "source": "https://www.poetryfoundation.org/poems/42889/hope-is-the-thing-with-feathers-314",
+    "themes": [
+      "shelter",
+      "intimacy"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "dickinson-314-03",
+    "language": "en",
+    "author": "Emily Dickinson",
+    "work": "Hope is the thing with feathers (314)",
+    "text": "And sings the tune without the words -",
+    "source": "https://www.poetryfoundation.org/poems/42889/hope-is-the-thing-with-feathers-314",
+    "themes": [
+      "wordless",
+      "expression"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "dickinson-314-04",
+    "language": "en",
+    "author": "Emily Dickinson",
+    "work": "Hope is the thing with feathers (314)",
+    "text": "And sweetest - in the Gale - is heard -",
+    "source": "https://www.poetryfoundation.org/poems/42889/hope-is-the-thing-with-feathers-314",
+    "themes": [
+      "storm",
+      "resilience"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "dickinson-314-05",
+    "language": "en",
+    "author": "Emily Dickinson",
+    "work": "Hope is the thing with feathers (314)",
+    "text": "That kept so many warm -",
+    "source": "https://www.poetryfoundation.org/poems/42889/hope-is-the-thing-with-feathers-314",
+    "themes": [
+      "warmth",
+      "care"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "dickinson-314-06",
+    "language": "en",
+    "author": "Emily Dickinson",
+    "work": "Hope is the thing with feathers (314)",
+    "text": "It asked a crumb - of me.",
+    "source": "https://www.poetryfoundation.org/poems/42889/hope-is-the-thing-with-feathers-314",
+    "themes": [
+      "generosity",
+      "quiet"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shakespeare-18-01",
+    "language": "en",
+    "author": "William Shakespeare",
+    "work": "Sonnet 18",
+    "text": "Thou art more lovely and more temperate:",
+    "source": "https://www.poetryfoundation.org/poems/45087/sonnet-18-shall-i-compare-thee-to-a-summers-day",
+    "themes": [
+      "tenderness",
+      "admiration"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shakespeare-18-02",
+    "language": "en",
+    "author": "William Shakespeare",
+    "work": "Sonnet 18",
+    "text": "Rough winds do shake the darling buds of May,",
+    "source": "https://www.poetryfoundation.org/poems/45087/sonnet-18-shall-i-compare-thee-to-a-summers-day",
+    "themes": [
+      "wind",
+      "fragility"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shakespeare-18-03",
+    "language": "en",
+    "author": "William Shakespeare",
+    "work": "Sonnet 18",
+    "text": "And summer’s lease hath all too short a date;",
+    "source": "https://www.poetryfoundation.org/poems/45087/sonnet-18-shall-i-compare-thee-to-a-summers-day",
+    "themes": [
+      "summer",
+      "transience"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shakespeare-18-04",
+    "language": "en",
+    "author": "William Shakespeare",
+    "work": "Sonnet 18",
+    "text": "Sometime too hot the eye of heaven shines,",
+    "source": "https://www.poetryfoundation.org/poems/45087/sonnet-18-shall-i-compare-thee-to-a-summers-day",
+    "themes": [
+      "heat",
+      "light"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shakespeare-18-05",
+    "language": "en",
+    "author": "William Shakespeare",
+    "work": "Sonnet 18",
+    "text": "And every fair from fair sometime declines,",
+    "source": "https://www.poetryfoundation.org/poems/45087/sonnet-18-shall-i-compare-thee-to-a-summers-day",
+    "themes": [
+      "change",
+      "loss"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shakespeare-18-06",
+    "language": "en",
+    "author": "William Shakespeare",
+    "work": "Sonnet 18",
+    "text": "But thy eternal summer shall not fade,",
+    "source": "https://www.poetryfoundation.org/poems/45087/sonnet-18-shall-i-compare-thee-to-a-summers-day",
+    "themes": [
+      "endurance",
+      "love"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "poe-dream-01",
+    "language": "en",
+    "author": "Edgar Allan Poe",
+    "work": "A Dream Within a Dream",
+    "text": "Take this kiss upon the brow!",
+    "source": "https://www.poetryfoundation.org/poems/52829/a-dream-within-a-dream",
+    "themes": [
+      "farewell",
+      "touch"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "poe-dream-02",
+    "language": "en",
+    "author": "Edgar Allan Poe",
+    "work": "A Dream Within a Dream",
+    "text": "You are not wrong, who deem",
+    "source": "https://www.poetryfoundation.org/poems/52829/a-dream-within-a-dream",
+    "themes": [
+      "uncertainty",
+      "perception"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "poe-dream-03",
+    "language": "en",
+    "author": "Edgar Allan Poe",
+    "work": "A Dream Within a Dream",
+    "text": "That my days have been a dream;",
+    "source": "https://www.poetryfoundation.org/poems/52829/a-dream-within-a-dream",
+    "themes": [
+      "dream",
+      "memory"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "poe-dream-04",
+    "language": "en",
+    "author": "Edgar Allan Poe",
+    "work": "A Dream Within a Dream",
+    "text": "Yet if hope has flown away",
+    "source": "https://www.poetryfoundation.org/poems/52829/a-dream-within-a-dream",
+    "themes": [
+      "hope",
+      "loss"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "poe-dream-05",
+    "language": "en",
+    "author": "Edgar Allan Poe",
+    "work": "A Dream Within a Dream",
+    "text": "How few! yet how they creep",
+    "source": "https://www.poetryfoundation.org/poems/52829/a-dream-within-a-dream",
+    "themes": [
+      "time",
+      "fragility"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "poe-dream-06",
+    "language": "en",
+    "author": "Edgar Allan Poe",
+    "work": "A Dream Within a Dream",
+    "text": "Through my fingers to the deep,",
+    "source": "https://www.poetryfoundation.org/poems/52829/a-dream-within-a-dream",
+    "themes": [
+      "sand",
+      "release"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "blake-auguries-01",
+    "language": "en",
+    "author": "William Blake",
+    "work": "Auguries of Innocence",
+    "text": "To see a World in a Grain of Sand",
+    "source": "https://www.poetryfoundation.org/poems/43650/auguries-of-innocence",
+    "themes": [
+      "scale",
+      "wonder"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "blake-auguries-02",
+    "language": "en",
+    "author": "William Blake",
+    "work": "Auguries of Innocence",
+    "text": "And a Heaven in a Wild Flower",
+    "source": "https://www.poetryfoundation.org/poems/43650/auguries-of-innocence",
+    "themes": [
+      "nature",
+      "beauty"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "blake-auguries-03",
+    "language": "en",
+    "author": "William Blake",
+    "work": "Auguries of Innocence",
+    "text": "Hold Infinity in the palm of your hand",
+    "source": "https://www.poetryfoundation.org/poems/43650/auguries-of-innocence",
+    "themes": [
+      "touch",
+      "infinity"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "blake-auguries-04",
+    "language": "en",
+    "author": "William Blake",
+    "work": "Auguries of Innocence",
+    "text": "And Eternity in an hour",
+    "source": "https://www.poetryfoundation.org/poems/43650/auguries-of-innocence",
+    "themes": [
+      "time",
+      "stillness"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "blake-auguries-05",
+    "language": "en",
+    "author": "William Blake",
+    "work": "Auguries of Innocence",
+    "text": "Man was made for Joy & Woe",
+    "source": "https://www.poetryfoundation.org/poems/43650/auguries-of-innocence",
+    "themes": [
+      "contrast",
+      "acceptance"
+    ],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "blake-auguries-06",
+    "language": "en",
+    "author": "William Blake",
+    "work": "Auguries of Innocence",
+    "text": "Joy & Woe are woven fine",
+    "source": "https://www.poetryfoundation.org/poems/43650/auguries-of-innocence",
+    "themes": [
+      "texture",
+      "bittersweet"
+    ],
+    "rights": "public-domain original; no modern translation"
+  }
+]

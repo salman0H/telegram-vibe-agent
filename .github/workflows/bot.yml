@@ -5,6 +5,11 @@ on:
     - cron: '0 */3 * * *'
   workflow_dispatch:
 
+# All three workflows mutate the same queue and editorial history.
+concurrency:
+  group: music-agent-state
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -41,16 +46,16 @@ jobs:
         run: python scripts/daily_ai_curator.py
         
       - name: Reconcile and Commit State
+        if: ${{ always() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Anti-Crash: Ensure files exist before git tracks them
-          touch state.json daily_log.json
-          git add -f state.json daily_log.json
+          git add state.json daily_log.json
+          if [ -f content_memory.json ]; then git add content_memory.json; fi
           
           if ! git diff --cached --quiet; then
             git commit -m "chore: state update after Agent shifts (download & curate)"
-            git pull --rebase origin main || true
+            git pull --rebase origin main
             git push
           fi
