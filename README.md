@@ -1,127 +1,220 @@
+<div align="center">
+
 # Poetic Vibe Curator
 
-A serverless Telegram music agent that runs on GitHub Actions. It accepts an administrator's music requests, watches channel audio uploads, and edits the original posts with minimalist Persian or English captions using Groq. Python scripts use the standard library; the download workflow also installs `yt-dlp` and FFmpeg.
+### A little literature. A better music channel.
 
-## Channel rules
+A serverless Telegram agent that gives music a few well-chosen words.<br>
+Persian and English captions. An attributed poetry library. Memory that carries forward.
 
-The channel's existing behavior is preserved:
+[![Curation checks](https://github.com/salman0H/telegram-vibe-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/salman0H/telegram-vibe-agent/actions/workflows/tests.yml)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+![Runtime](https://img.shields.io/badge/Runtime-GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
+![Languages](https://img.shields.io/badge/Captions-Persian_%2B_English-8B5CF6)
 
-- An empty caption receives one short poetic sentence, in bold and quotation marks, ending in a period. Iranian/Persian music gets Persian text; international music gets English text. Romanized Persian metadata is considered by the model.
-- A manually written caption is preserved. If it has no `#`, the agent appends 3–4 hashtags; Persian music receives 1–2 Persian hashtags.
-- A nonempty caption already containing `#` is left alone.
-- Captions contain no emoji, artist names, song titles, or explanatory commentary.
-- The agent edits the original audio message rather than creating another channel post.
+[The experience](#the-experience) · [Inside the agent](#inside-the-agent) · [Quick start](#quick-start) · [Development](#development)
 
-Empty captions still receive a sentence only, following the original decision logic. The system has artist/title metadata and an optional iTunes genre, **not an audio transcription or listening analysis**.
+</div>
 
-## How it works
+---
 
-1. **Downloader — `scripts/agent_downloader.py`:** accepts text requests or forwarded audio from `ADMIN_USER_ID`, downloads/converts text-search results or reuses forwarded Telegram Audio by `file_id`, publishes it to the channel, and adds it to `daily_log.json`.
-2. **Listener — `scripts/music_listener.py`:** polls Telegram channel updates, filters the configured channel and audio messages, deduplicates queued message IDs, and queues posts needing captions or tags.
-3. **Curator — `scripts/daily_ai_curator.py`:** uses queued genres when available, otherwise searches iTunes once per track. It generates [JSON-mode output](https://console.groq.com/docs/structured-outputs) through Groq's `openai/gpt-oss-120b`, validates the result, renders safe Telegram HTML, and edits the post.
-4. **Editorial memory — `scripts/content_memory.py`:** stores used source IDs, normalized caption fingerprints, the latest 100 captions and editorial choices, and pending edits in `content_memory.json`. Actions commit this file alongside the queue so memory survives fresh runners.
+Music already tells a story. The caption should leave room for it.
 
-State remains repository-backed JSON. The current workflows do **not** encrypt it or require Gemini/`DB_PASSWORD`.
+Poetic Vibe Curator accepts an administrator's music requests, watches channel uploads, and adds a short original sentence to the existing audio post. It draws inspiration from Persian and English poetry, remembers its published writing, and checks new candidates for repetition before they reach the channel.
 
-## Reducing repetition
+No always-on server or external database. Python's standard library handles the agent; GitHub Actions provides the runners and Git preserves its editorial memory.
 
-Random wording instructions alone do not provide memory. This version combines:
+## The experience
 
-- Eight sentence structures and eight imagery lenses. Choices used in the last three successful captions are excluded.
-- A small prompt context containing the last 12 successful captions, with instructions to avoid their imagery and phrasing. Stored history remains broader than prompt context.
-- A bilingual poetry corpus with source attribution. Selection excludes every used or pending excerpt, favors authors absent from the last three captions, and favors theme words matching track metadata when available.
-- Permanent exact-caption fingerprints, normalized for punctuation, HTML entities, Arabic/Persian letter variants, diacritics, and Persian half-spaces.
-- Checks against the last 100 captions for similar wording, substantial word overlap, and identical three-word openings. Pending captions are checked too.
-- At most three generation attempts for invalid/repetitive outputs, with specific rejection feedback. After that, the track stays queued. Truncated model responses are rejected.
+> **“A small window keeps the afternoon folded.”**
+>
+> *An illustrative caption: one sentence, a concrete image, room to listen.*
 
-Similarity checks are lexical heuristics; they cannot guarantee that every metaphor is semantically unique. The model chooses the language and emotional interpretation from metadata, so ambiguous artist names can still be misclassified. History starts with the first run of this version; it does not reconstruct old channel captions.
+| What arrives | What the agent does |
+| :--- | :--- |
+| An audio post with no caption | Writes one short poetic sentence, bold and quoted, ending in a period |
+| A caption you wrote yourself | Keeps your text and appends 3–4 hashtags if it contains no `#` |
+| A nonempty caption already containing `#` | Leaves the post as it is |
+| Forwarded Telegram Audio | Reuses its `file_id` and publishes it without downloading the file again |
+| A music search from the administrator | Searches with `yt-dlp`, extracts MP3 audio, and uploads it |
 
-## Poetry corpus and attribution
+Iranian/Persian music receives Persian writing; international music receives English writing. Persian hashtag generation includes 1–2 Persian tags. Empty captions receive a sentence only, without automatically adding hashtags.
 
-[`data/poetry.json`](data/poetry.json) contains **48 short excerpts: 24 Persian and 24 English**, from Hafez, Saadi, Rumi, Emily Dickinson, William Shakespeare, Edgar Allan Poe, and William Blake. Each entry includes:
+The generated copy stays minimal: no emoji, artist names, song titles, or introductory commentary. The curator edits the original audio message, keeping the channel free of extra caption posts.
 
-| Field | Meaning |
-| --- | --- |
-| `id` | Stable excerpt identifier, used to prevent reuse |
+## Creativity with a memory
+
+A different random instruction is only a starting point. This agent also remembers what it has used.
+
+| Layer | How it keeps the writing moving |
+| :--- | :--- |
+| **Structure** | Rotates eight sentence structures and eight imagery lenses, excluding choices from the last three successful captions |
+| **Context** | Includes the latest 12 successful captions in the prompt to discourage familiar openings, images, and metaphors |
+| **Inspiration** | Selects unused poetry excerpts, favors recently absent authors, and considers theme words matching track metadata |
+| **Exact history** | Keeps permanent caption fingerprints after normalizing punctuation, HTML entities, diacritics, Persian letter variants, and half-spaces |
+| **Similarity checks** | Compares candidates with the latest 100 captions and pending edits for similar wording, word overlap, and repeated three-word openings |
+| **Revision** | Allows up to three generation attempts with rejection feedback; unacceptable results remain queued |
+
+The model receives artist/title metadata and an optional iTunes genre. It does not listen to the audio. Language and mood interpretation can be imperfect, and lexical similarity checks cannot guarantee that every metaphor is semantically new. Editorial history begins with this version's first run; old channel captions are not reconstructed.
+
+## A small library, carefully credited
+
+**48 excerpts · 24 Persian · 24 English · 7 poets**
+
+| Persian voices | English voices |
+| :--- | :--- |
+| Hafez · Saadi · Rumi | Emily Dickinson · William Shakespeare · Edgar Allan Poe · William Blake |
+
+The library lives in [`data/poetry.json`](data/poetry.json). Every excerpt carries a stable ID, language, author, work, original text, source URL, themes, and a rights note. It uses historical public-domain originals, with Persian texts linked to [Ganjoor](https://ganjoor.net/) and English texts linked to the [Poetry Foundation](https://www.poetryfoundation.org/poems).
+
+These poems provide inspiration for original captions. The selected poet is recorded in memory; generated writing is never presented as that poet's quotation or signed with their name. The prompt prohibits copying source wording and signature images, and the validator rejects full copied excerpts.
+
+An excerpt is reserved before an edit and marked used after success. Used IDs never expire. When a language's collection runs out, the agent continues writing independently instead of recycling the library. Different excerpts from the same work have separate IDs.
+
+<details>
+<summary><strong>Adding more poetry</strong></summary>
+
+Add entries with the following fields:
+
+| Field | Purpose |
+| :--- | :--- |
+| `id` | A new, stable excerpt identifier |
 | `language` | `fa` or `en` |
-| `author`, `work` | Poet and original work |
-| `text` | Original-language excerpt |
-| `source` | Link to the source text |
-| `themes` | Editorial tags for selection and model context |
-| `rights` | Original-text rights note |
+| `author`, `work` | Verified poet and original work |
+| `text` | The original-language excerpt |
+| `source` | A direct link to its source |
+| `themes` | Editorial tags for selection and prompt context |
+| `rights` | An original-text rights note |
 
-The corpus uses historical public-domain originals rather than modern translations. Persian sources are linked to [Ganjoor](https://ganjoor.net/); English sources are linked to the [Poetry Foundation](https://www.poetryfoundation.org/poems). Specific source URLs are stored with every excerpt.
+Verify the wording, attribution, and reuse rights before adding an entry, then run the offline tests. Keep existing IDs stable: renaming or recycling them defeats usage tracking. Deleting `content_memory.json` resets repetition protection.
 
-The corpus is an **inspiration library**: captions are newly written, not presented as quotations from these poets. The selected poet is recorded in editorial memory; their name is not appended to the channel caption. The validator rejects full copied excerpts. The prompt also prohibits borrowing signature images or falsely attributing generated text.
+</details>
 
-An excerpt is reserved before Telegram is called and marked used after a successful edit. Used IDs never rotate out. Once all entries in a language are exhausted, the agent writes original captions without a source; it does not reset the library or reuse old entries. Different excerpts from the same work have separate IDs.
+## Inside the agent
 
-To expand the corpus, add sourced entries with new IDs, verify the exact text and author, and run the tests. Never rename, recycle, or alter used IDs to make an old excerpt appear new. Keep `content_memory.json` in Git; deleting it resets repetition protection.
+```mermaid
+flowchart LR
+    A[Administrator request] --> D[Downloader]
+    U[Channel audio upload] --> L[Listener]
+    D --> Q[Pending tracks]
+    L --> Q
+    Q --> C[Curator · Groq]
+    P[Poetry library] --> C
+    M[Editorial memory] <--> C
+    C --> V[Validate and render]
+    V --> E[Edit original caption]
+    E --> M
+```
 
-## Failure recovery and state
+| Component | Responsibility |
+| :--- | :--- |
+| [`agent_downloader.py`](scripts/agent_downloader.py) | Checks the administrator, handles music searches and forwarded files, publishes audio, and queues it |
+| [`music_listener.py`](scripts/music_listener.py) | Polls channel updates, filters audio posts, and deduplicates queued message IDs |
+| [`daily_ai_curator.py`](scripts/daily_ai_curator.py) | Uses queued genres or one iTunes lookup per track, requests Groq JSON, and edits accepted captions |
+| [`editorial.py`](scripts/editorial.py) | Builds creative briefs, validates candidates, and renders safe Telegram HTML |
+| [`content_memory.py`](scripts/content_memory.py) | Tracks source usage, caption history, editorial choices, and pending edits |
 
-Before sending an edit, the curator atomically saves its full caption and source reservation in a write-ahead journal. If Telegram fails or its response is lost, the next run retries **the same caption on the same message**. Telegram's “message is not modified” response counts as success. Successful usage is saved before queue removal; writes use a temporary file and atomic replacement.
+Generation uses Groq's `openai/gpt-oss-120b` with [JSON-mode output](https://console.groq.com/docs/structured-outputs). Downloading search results additionally requires `yt-dlp` and FFmpeg, installed by the downloader workflow.
 
-Oversized captions are left queued rather than cut through an HTML tag or a manual caption. Malformed memory fails the run rather than silently erasing used-source history. Restore the latest valid `content_memory.json` from Git if needed.
+## Quick start
 
-All three state-writing workflows share the `music-agent-state` concurrency group. This serializes runs so queue and memory commits do not overwrite one another. State-saving steps for the curator and downloader run even after an earlier failure. Failed Git rebases/pushes remain visible instead of being ignored. GitHub may replace a pending scheduled run when another run queues in the same group; the next run processes the persisted queue.
+### 1. Prepare your bot
 
-| File | Purpose |
-| --- | --- |
+Clone or fork the repository. Add your Telegram bot as a channel administrator with permission to post audio and edit messages. Use Python 3.12 for local development.
+
+### 2. Add repository secrets
+
+Open **Settings → Secrets and variables → Actions** and configure:
+
+| Secret | Purpose |
+| :--- | :--- |
+| `MUSIC_BOT_TOKEN` | Telegram bot credentials |
+| `MUSIC_CHANNEL_ID` | Destination channel |
+| `ADMIN_USER_ID` | The sender authorized to submit music requests |
+| `GROQ_API_KEY` | Caption generation |
+
+The standalone curator also accepts `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHANNEL_ID` as fallbacks. Use the `MUSIC_*` pair consistently across workflows. Editorial memory needs no additional secrets; the current implementation uses Groq and plain JSON state, without Gemini or `DB_PASSWORD`.
+
+### 3. Enable the workflows
+
+Enable GitHub Actions and allow repository content writes. All three agent workflows support manual execution through **Run workflow**, as well as their schedules:
+
+| Workflow | UTC | Tehran · UTC+03:30 |
+| :--- | :--- | :--- |
+| [`bot.yml`](.github/workflows/bot.yml) | Every three hours from 00:00 | Every three hours from 03:30 |
+| [`listener.yml`](.github/workflows/listener.yml) | 04:00 · 10:00 · 16:00 · 22:00 | 01:30 · 07:30 · 13:30 · 19:30 |
+| [`curator.yml`](.github/workflows/curator.yml) | 04:30 · 10:30 · 16:30 · 22:30 | 02:00 · 08:00 · 14:00 · 20:00 |
+
+The downloader also invokes the curator after processing requests. GitHub cron runs can be delayed. The listener and downloader use the existing Telegram `getUpdates` polling arrangement; avoid attaching another update consumer or webhook to the same bot.
+
+## Long tracks, clear limits
+
+There is no three-minute playback limit in the code or workflow. File size and the transfer method determine what can be processed.
+
+| Input | Transfer path | Relevant limit |
+| :--- | :--- | :--- |
+| **Telegram Audio** | Reuse the existing `file_id` | No `getFile` download; Telegram documents no size limit for resending files this way |
+| **Document / Voice** | Download, then upload through the existing path | Telegram cloud downloads are limited to 20 MB; oversized items get a specific status message |
+| **Text search** | `yt-dlp` download → MP3 → Telegram upload | The configured input-download cap is `45M`; new multipart uploads face Telegram's 50 MB limit |
+
+Telegram file IDs cannot be resent as a different media type. Send music as **Audio** to use direct reuse. See Telegram's [file transfer rules](https://core.telegram.org/bots/api#sending-files) and [getFile documentation](https://core.telegram.org/bots/api#getfile).
+
+Logs include the received media type, duration when available, byte size, and Telegram download error descriptions. A request skipped by an earlier run must be sent again; old updates are not automatically replayed. The 180-second upload timeout measures request time, not track length.
+
+## State that survives the next runner
+
+Before a caption edit, the curator atomically saves the proposed caption and source reservation. If Telegram fails or its response is lost, the next run retries the same caption on the same message. A “message is not modified” response counts as success. Usage is saved before the track leaves the queue.
+
+All three state-writing workflows share the `music-agent-state` concurrency group. Curator and downloader persistence steps run even after an earlier failure, and Git synchronization failures remain visible.
+
+<details>
+<summary><strong>State files, recovery, and operational boundaries</strong></summary>
+
+| File | Stores |
+| :--- | :--- |
 | `state.json` | Downloader update cursor |
 | `music_state.json` | Listener update cursor |
-| `daily_log.json` | Tracks pending curation |
-| `content_memory.json` | Created on first accepted generation; source/caption history and retry journal |
+| `daily_log.json` | Tracks awaiting curation |
+| `content_memory.json` | Used excerpt IDs, caption fingerprints, recent writing, and pending edits; created on first accepted generation |
 
-These files contain channel metadata and generated text and are visible to anyone with repository access. API credentials belong only in GitHub Secrets. A runner lost before its final Git commit can still lose local state; Git-backed persistence is not a transactional database. Run local state-mutating scripts only when Actions are idle.
+- Oversized captions stay queued, preserving manual text and HTML integrity.
+- Malformed memory stops curation. Restore the latest valid version from Git instead of resetting its history.
+- Writes use a temporary file and atomic replacement. A runner lost before its final Git commit can still lose local changes; Git-backed state is not a transactional database.
+- GitHub can replace a pending run in the shared concurrency group when another queues. The next run works from the persisted queue.
+- State is plain JSON and contains channel metadata and generated text. Anyone with repository access can read it. Keep credentials in GitHub Secrets.
+- Run local state-mutating scripts only when Actions are idle. The polling arrangement does not recover channel history.
 
-## Setup
+</details>
 
-Use Python 3.12. Configure the bot as a channel administrator with permission to post audio and edit messages, then add these repository secrets:
+## Development
 
-| Secret | Used by |
-| --- | --- |
-| `MUSIC_BOT_TOKEN` | Downloader, listener, curator |
-| `MUSIC_CHANNEL_ID` | Target channel for all three |
-| `ADMIN_USER_ID` | Downloader's authorized sender |
-| `GROQ_API_KEY` | Curator |
-
-The standalone curator also accepts `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHANNEL_ID` as fallbacks. Use the `MUSIC_*` pair consistently to avoid different targets between workflows. No new secrets are required for editorial memory.
-
-Enable Actions with repository content-write permission. Each workflow can also be run manually using `workflow_dispatch`.
-
-| Workflow | UTC schedule | Tehran time (UTC+03:30) |
-| --- | --- | --- |
-| `bot.yml` | Every three hours, starting 00:00 | Every three hours, starting 03:30 |
-| `listener.yml` | 04:00, 10:00, 16:00, 22:00 | 01:30, 07:30, 13:30, 19:30 |
-| `curator.yml` | 04:30, 10:30, 16:30, 22:30 | 02:00, 08:00, 14:00, 20:00 |
-
-The downloader workflow also invokes the curator after downloading. GitHub cron execution can be delayed. The listener/downloader still use the original Telegram `getUpdates` polling arrangement; this change does not redesign ingestion or recover channel history. Avoid attaching another update consumer or webhook to the same bot.
-
-## Audio length and file limits
-
-There is no three-minute music-duration limit in the downloader or workflow. A network timeout measures how long a request takes, not the playback duration of the track.
-
-- **Forwarded Audio:** the agent calls `sendAudio` with the existing `file_id`. It does not download or reupload the bytes, so `getFile`'s 20 MB download ceiling does not apply. This preserves the original file and avoids a redundant transfer. Telegram documents no file-size limit for resending existing files by ID.
-- **Document/Voice:** Telegram does not allow a file ID to be resent as a different media type. These retain the existing download/upload path and its 20 MB cloud download ceiling. Oversized items now receive a specific status message asking the administrator to resend music as Audio.
-- **Text search with yt-dlp:** the existing `--max-filesize 45M` input-download cap is unchanged. A long track may hit a size limit, but there is no duration filter. New multipart uploads also remain subject to Telegram's 50 MB limit.
-
-See [Telegram's file transfer rules](https://core.telegram.org/bots/api#sending-files) and [getFile documentation](https://core.telegram.org/bots/api#getfile). Downloader logs now include the received media type, duration when available, byte size, and the Telegram error description when a download is rejected. If an earlier run already skipped a failed request, resend it after deploying this version; old Telegram updates are not replayed automatically.
-
-## Development and verification
+Run the offline checks from the repository root:
 
 ```sh
 python3 -m unittest discover -s tests -v
 python3 -m compileall -q scripts tests
 ```
 
-Tests run offline with mocked Groq and Telegram calls. They cover source exhaustion, persistent exact history, Persian normalization, near duplicates, pending reservations, bounded retries, strict output validation, original-caption preservation, HTML length safety, crash recovery, and large/long forwarded audio without a local download. They never publish to the channel. A separate CI workflow runs these checks on pushes and pull requests.
+Tests mock Groq and Telegram. Coverage includes poetry exhaustion, Persian normalization, exact and near duplicates, pending reservations, bounded retries, caption validation, manual-text preservation, crash recovery, and large forwarded audio without local downloads. They publish nothing to the channel. The [checks workflow](.github/workflows/tests.yml) runs on relevant pushes and pull requests.
 
-For an intentional local live run from the repository root, set the appropriate environment variables first:
+<details>
+<summary><strong>Running against a real channel</strong></summary>
+
+Set the appropriate environment variables, then run from the repository root:
 
 ```sh
 python3 scripts/music_listener.py
 python3 scripts/daily_ai_curator.py
 ```
 
-The curator command performs real Telegram edits; use the offline tests for routine development.
+The curator performs real Telegram edits. Use the offline test suite for routine development.
+
+</details>
+
+---
+
+<div align="center">
+
+*Good music deserves a caption that knows when to stop.*
+
+</div>
