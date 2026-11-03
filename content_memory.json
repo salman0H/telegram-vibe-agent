@@ -5,14 +5,16 @@
     "poe-dream-05",
     "shakespeare-18-03",
     "dickinson-314-03",
-    "blake-auguries-04"
+    "blake-auguries-04",
+    "poe-dream-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
     "bff335ad8106d46d47c24ba80c9b369ca7d593308c2de25f2e67b8c1ddaa1347",
     "9ac5288a94a67430b3e4ded2959224cb2bd1bff569f44d099cc59fcbea036dcb",
     "084c74429851a57c2260dd24ae36ff8e22d6140bb75eeb8dfbe603f5effbd613",
-    "4fa6204bcaadc5a92a303c57d52a5d2f73de7328a99083ef4a60d546b4bf2833"
+    "4fa6204bcaadc5a92a303c57d52a5d2f73de7328a99083ef4a60d546b4bf2833",
+    "f5a07e9a7b89ea57b8192dc9f6c9acf4370496b3637aed015c6521239e217e7a"
   ],
   "recent": [
     {
@@ -49,6 +51,13 @@
       "author": "William Blake",
       "style": "sensation",
       "lens": "material"
+    },
+    {
+      "text": "A neon billboard flickers over a cracked cobblestone, promising tomorrow while the puddle reflects yesterday's rain.",
+      "poem_id": "poe-dream-01",
+      "author": "Edgar Allan Poe",
+      "style": "contrast",
+      "lens": "city"
     }
   ],
   "pending": {
