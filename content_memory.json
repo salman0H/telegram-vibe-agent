@@ -6,7 +6,11 @@
     "shakespeare-18-03",
     "dickinson-314-03",
     "blake-auguries-04",
-    "poe-dream-01"
+    "poe-dream-01",
+    "shakespeare-18-05",
+    "dickinson-314-02",
+    "rumi-m1-62-05",
+    "blake-auguries-05"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -14,7 +18,11 @@
     "9ac5288a94a67430b3e4ded2959224cb2bd1bff569f44d099cc59fcbea036dcb",
     "084c74429851a57c2260dd24ae36ff8e22d6140bb75eeb8dfbe603f5effbd613",
     "4fa6204bcaadc5a92a303c57d52a5d2f73de7328a99083ef4a60d546b4bf2833",
-    "f5a07e9a7b89ea57b8192dc9f6c9acf4370496b3637aed015c6521239e217e7a"
+    "f5a07e9a7b89ea57b8192dc9f6c9acf4370496b3637aed015c6521239e217e7a",
+    "fbe36cba6a7fba03f391aaf986102fa6f430ca9f8dcdc31c19f28d054f9acadf",
+    "8efb604feba93e9da6708fc3961867e5139b9bbb567bc3f600e81273b77337ac",
+    "8008fea14dc26e2fffb0784b37677a599076328d314b5c409284922e9902bb86",
+    "f197558b1c7875ec8b1a5a8a2a2632213b0d1327c7b244e30c503832cec0e781"
   ],
   "recent": [
     {
@@ -57,6 +65,34 @@
       "poem_id": "poe-dream-01",
       "author": "Edgar Allan Poe",
       "style": "contrast",
+      "lens": "city"
+    },
+    {
+      "text": "Shift the amber streetlight’s glow as it flickers, tracing the edge of a promise that slips farther into night.",
+      "poem_id": "shakespeare-18-05",
+      "author": "William Shakespeare",
+      "style": "action",
+      "lens": "light"
+    },
+    {
+      "text": "A sapling unfurls its first leaves, catching morning light as the world whispers the promise of becoming.",
+      "poem_id": "dickinson-314-02",
+      "author": "Emily Dickinson",
+      "style": "fragment",
+      "lens": "growth"
+    },
+    {
+      "text": "دست تو بر دستهٔ قهوه‌ساز سرد می‌ماند، گویی صبرِ یک صبحِ بی‌پایان را می‌کشد.",
+      "poem_id": "rumi-m1-62-05",
+      "author": "مولانا",
+      "style": "address",
+      "lens": "domestic"
+    },
+    {
+      "text": "A coffee cart rolls down the avenue, its wheels humming a familiar cadence that nudges strangers into spontaneous smiles, as the city’s pulse syncs with an unseen promise of friendship.",
+      "poem_id": "blake-auguries-05",
+      "author": "William Blake",
+      "style": "motion",
       "lens": "city"
     }
   ],
