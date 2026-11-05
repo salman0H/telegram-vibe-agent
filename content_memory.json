@@ -10,7 +10,10 @@
     "shakespeare-18-05",
     "dickinson-314-02",
     "rumi-m1-62-05",
-    "blake-auguries-05"
+    "blake-auguries-05",
+    "poe-dream-06",
+    "dickinson-314-05",
+    "shakespeare-18-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -22,7 +25,10 @@
     "fbe36cba6a7fba03f391aaf986102fa6f430ca9f8dcdc31c19f28d054f9acadf",
     "8efb604feba93e9da6708fc3961867e5139b9bbb567bc3f600e81273b77337ac",
     "8008fea14dc26e2fffb0784b37677a599076328d314b5c409284922e9902bb86",
-    "f197558b1c7875ec8b1a5a8a2a2632213b0d1327c7b244e30c503832cec0e781"
+    "f197558b1c7875ec8b1a5a8a2a2632213b0d1327c7b244e30c503832cec0e781",
+    "a7b6087ebdef3c798a810ab2925f22cd8310fea598ac55e2a84f444a801eda19",
+    "6f8d63a03cb6d817966c6e042cc77293e18535027921ab2f8e1361c5ece38960",
+    "76409e59f3784b9ca7ff606a28b3011367ea77af37d6bd79fccbc133a6f969dd"
   ],
   "recent": [
     {
@@ -94,6 +100,27 @@
       "author": "William Blake",
       "style": "motion",
       "lens": "city"
+    },
+    {
+      "text": "Trace the trembling line of distant hills as the music lifts a fragile promise across the open plain.",
+      "poem_id": "poe-dream-06",
+      "author": "Edgar Allan Poe",
+      "style": "action",
+      "lens": "landscape"
+    },
+    {
+      "text": "A worn wooden spoon, its handle suddenly humming with the faint heat of a sunrise breath, feels like a quiet promise resting in the palm.",
+      "poem_id": "dickinson-314-05",
+      "author": "Emily Dickinson",
+      "style": "object",
+      "lens": "body"
+    },
+    {
+      "text": "I press the crumpled paper of our unfinished letters into the cool glass, its faint imprint lingering like a quiet promise that the world will remember us, even when the ink fades.",
+      "poem_id": "shakespeare-18-01",
+      "author": "William Shakespeare",
+      "style": "address",
+      "lens": "material"
     }
   ],
   "pending": {
