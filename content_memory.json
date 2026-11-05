@@ -13,7 +13,10 @@
     "blake-auguries-05",
     "poe-dream-06",
     "dickinson-314-05",
-    "shakespeare-18-01"
+    "shakespeare-18-01",
+    "blake-auguries-02",
+    "poe-dream-03",
+    "dickinson-314-04"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -28,7 +31,10 @@
     "f197558b1c7875ec8b1a5a8a2a2632213b0d1327c7b244e30c503832cec0e781",
     "a7b6087ebdef3c798a810ab2925f22cd8310fea598ac55e2a84f444a801eda19",
     "6f8d63a03cb6d817966c6e042cc77293e18535027921ab2f8e1361c5ece38960",
-    "76409e59f3784b9ca7ff606a28b3011367ea77af37d6bd79fccbc133a6f969dd"
+    "76409e59f3784b9ca7ff606a28b3011367ea77af37d6bd79fccbc133a6f969dd",
+    "b0e9fc25cd06c5817020f276bd3f4e35a3bcc25070298bab4db4bf8f625dbb1f",
+    "36853f6d3d3324a31c89245c3e8e8cc19df6d9e2072877ce47b25aa96fb2f22a",
+    "74757de4ce593d658d1bf5b75506f94b9c8c1fb6d38bd2a27a029117afb86248"
   ],
   "recent": [
     {
@@ -121,6 +127,27 @@
       "author": "William Shakespeare",
       "style": "address",
       "lens": "material"
+    },
+    {
+      "text": "A sudden teal flash ripples across the hallway, like a fleeting petal catching sunrise, nudging the pulse of the moment forward.",
+      "poem_id": "blake-auguries-02",
+      "author": "William Blake",
+      "style": "motion",
+      "lens": "light"
+    },
+    {
+      "text": "A lone hill’s shadow drifts a foot farther over the meadow as the morning light thins, marking the quiet shift from yesterday’s glow to today’s hush.",
+      "poem_id": "poe-dream-03",
+      "author": "Edgar Allan Poe",
+      "style": "time",
+      "lens": "landscape"
+    },
+    {
+      "text": "Grip the cold metal railing as the surge of distorted chords presses against your ribs, like a storm‑charged breath that steadies the pulse.",
+      "poem_id": "dickinson-314-04",
+      "author": "Emily Dickinson",
+      "style": "action",
+      "lens": "body"
     }
   ],
   "pending": {
