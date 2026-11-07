@@ -58,3 +58,4 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 51 | Måneskin | 1. THE DRIVER |
 | 52 | 3 Doors Down | 1. Here Without You |
 | 53 | Radio Company | 1. All Our Own |
+| 54 | Hotel Ugly | 1. Shut up My Moms Calling |
