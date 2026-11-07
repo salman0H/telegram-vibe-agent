@@ -646,5 +646,4145 @@
       "bittersweet"
     ],
     "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "khayyam-rubai-01",
+    "language": "fa",
+    "author": "خیام",
+    "work": "رباعیات، رباعی ۱",
+    "text": "برخیز و مخور غم جهان گذران",
+    "source": "https://ganjoor.net/khayyam/robaee/sh1",
+    "themes": ["present", "impermanence", "دم‌غنیمت‌شماری", "گذر عمر"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "khayyam-rubai-02",
+    "language": "fa",
+    "author": "خیام",
+    "work": "رباعیات، رباعی ۱",
+    "text": "خوش باش و دمی به شادمانی گذران",
+    "source": "https://ganjoor.net/khayyam/robaee/sh1",
+    "themes": ["joy", "mindfulness", "شادی", "حضور"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "khayyam-rubai-03",
+    "language": "fa",
+    "author": "خیام",
+    "work": "رباعیات، رباعی ۱",
+    "text": "در طبع جهان اگر وفایی بودی",
+    "source": "https://ganjoor.net/khayyam/robaee/sh1",
+    "themes": ["world", "unreliability", "وفا", "روزگار"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "khayyam-rubai-04",
+    "language": "fa",
+    "author": "خیام",
+    "work": "رباعیات، رباعی ۱",
+    "text": "نوبت به تو خود نیامدی از دگران",
+    "source": "https://ganjoor.net/khayyam/robaee/sh1",
+    "themes": ["mortality", "succession", "مرگ", "چرخه"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "khayyam-rubai-20-01",
+    "language": "fa",
+    "author": "خیام",
+    "work": "رباعیات، رباعی ۲۰",
+    "text": "اسرار ازل را نه تو دانی و نه من",
+    "source": "https://ganjoor.net/khayyam/robaee/sh20",
+    "themes": ["mystery", "agnosticism", "راز", "ندانستن"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "khayyam-rubai-20-02",
+    "language": "fa",
+    "author": "خیام",
+    "work": "رباعیات، رباعی ۲۰",
+    "text": "وین حرف معما نه تو خوانی و نه من",
+    "source": "https://ganjoor.net/khayyam/robaee/sh20",
+    "themes": ["enigma", "limits", "معما", "محدودیت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "khayyam-rubai-20-03",
+    "language": "fa",
+    "author": "خیام",
+    "work": "رباعیات، رباعی ۲۰",
+    "text": "هست از پس پرده گفتگوی من و تو",
+    "source": "https://ganjoor.net/khayyam/robaee/sh20",
+    "themes": ["veil", "illusion", "پرده", "پندار"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "khayyam-rubai-20-04",
+    "language": "fa",
+    "author": "خیام",
+    "work": "رباعیات، رباعی ۲۰",
+    "text": "چون پرده برافتد نه تو مانی و نه من",
+    "source": "https://ganjoor.net/khayyam/robaee/sh20",
+    "themes": ["truth", "dissolution", "حقیقت", "فنا"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "ferdowsi-shahnameh-01",
+    "language": "fa",
+    "author": "فردوسی",
+    "work": "شاهنامه، آغاز کتاب",
+    "text": "به نام خداوند جان و خرد",
+    "source": "https://ganjoor.net/ferdousi/shahname/aghaz/sh1",
+    "themes": ["wisdom", "creation", "خرد", "آغاز"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "ferdowsi-shahnameh-02",
+    "language": "fa",
+    "author": "فردوسی",
+    "work": "شاهنامه، آغاز کتاب",
+    "text": "کزین برتر اندیشه برنگذرد",
+    "source": "https://ganjoor.net/ferdousi/shahname/aghaz/sh1",
+    "themes": ["thought", "transcendence", "اندیشه", "تعالی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "ferdowsi-shahnameh-03",
+    "language": "fa",
+    "author": "فردوسی",
+    "work": "شاهنامه، آغاز کتاب",
+    "text": "توانا بود هر که دانا بود",
+    "source": "https://ganjoor.net/ferdousi/shahname/aghaz/sh1",
+    "themes": ["knowledge", "strength", "دانایی", "توانایی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "ferdowsi-shahnameh-04",
+    "language": "fa",
+    "author": "فردوسی",
+    "work": "شاهنامه، آغاز کتاب",
+    "text": "ز دانش دل پیر برنا بود",
+    "source": "https://ganjoor.net/ferdousi/shahname/aghaz/sh1",
+    "themes": ["vitality", "learning", "جوانی", "دانش"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "ferdowsi-shahnameh-05",
+    "language": "fa",
+    "author": "فردوسی",
+    "work": "شاهنامه، داستان رستم و سهراب",
+    "text": "چنین است کردار گردنده دهر",
+    "source": "https://ganjoor.net/ferdousi/shahname/sohrab/sh1",
+    "themes": ["fate", "time", "تقدیر", "روزگار"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "ferdowsi-shahnameh-06",
+    "language": "fa",
+    "author": "فردوسی",
+    "work": "شاهنامه، داستان رستم و سهراب",
+    "text": "گهی نوش بار آورد گاه زهر",
+    "source": "https://ganjoor.net/ferdousi/shahname/sohrab/sh1",
+    "themes": ["duality", "fortune", "تضاد", "تلخ و شیرین"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "attar-mantiq-01",
+    "language": "fa",
+    "author": "عطار",
+    "work": "منطق‌الطیر، وادی طلب",
+    "text": "چون نهان شد در درونِ جانِ تو",
+    "source": "https://ganjoor.net/attar/manteghotteyr/mv26",
+    "themes": ["inwardness", "soul", "درون", "جان"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "attar-mantiq-02",
+    "language": "fa",
+    "author": "عطار",
+    "work": "منطق‌الطیر، وادی عشق",
+    "text": "عشق اینجا آتش است و عقل دود",
+    "source": "https://ganjoor.net/attar/manteghotteyr/mv27",
+    "themes": ["passion", "reason", "عشق", "عقل"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "attar-mantiq-03",
+    "language": "fa",
+    "author": "عطار",
+    "work": "منطق‌الطیر، وادی عشق",
+    "text": "عشق کارِ مردِ هشیار و نکوست",
+    "source": "https://ganjoor.net/attar/manteghotteyr/mv27",
+    "themes": ["awareness", "courage", "هشیاری", "جسارت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "attar-mantiq-04",
+    "language": "fa",
+    "author": "عطار",
+    "work": "منطق‌الطیر، وادی معرفت",
+    "text": "سیرِ هر کس تا کمالِ او بُوَد",
+    "source": "https://ganjoor.net/attar/manteghotteyr/mv28",
+    "themes": ["journey", "individuality", "سلوک", "فردیت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "attar-mantiq-05",
+    "language": "fa",
+    "author": "عطار",
+    "work": "منطق‌الطیر، وادی توحید",
+    "text": "هر چه بینی سایهٔ خورشیدِ اوست",
+    "source": "https://ganjoor.net/attar/manteghotteyr/mv30",
+    "themes": ["unity", "light", "وحدت", "نور"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "attar-mantiq-06",
+    "language": "fa",
+    "author": "عطار",
+    "work": "منطق‌الطیر، وادی حیرت",
+    "text": "مردِ حیران گم کند راهِ وصال",
+    "source": "https://ganjoor.net/attar/manteghotteyr/mv31",
+    "themes": ["bewilderment", "seeking", "حیرت", "جستجو"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-shams-441-01",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "دیوان شمس، غزل ۴۴۱",
+    "text": "بنمای رخ که باغ و گلستانم آرزوست",
+    "source": "https://ganjoor.net/moulavi/shams/ghazalsh/sh441",
+    "themes": ["desire", "beauty", "آرزو", "زیبایی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-shams-441-02",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "دیوان شمس، غزل ۴۴۱",
+    "text": "بگشای لب که قند فراوانم آرزوست",
+    "source": "https://ganjoor.net/moulavi/shams/ghazalsh/sh441",
+    "themes": ["sweetness", "speech", "سخن", "شیرینی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-shams-441-03",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "دیوان شمس، غزل ۴۴۱",
+    "text": "ای آفتاب حسن برون آ دمی ز ابر",
+    "source": "https://ganjoor.net/moulavi/shams/ghazalsh/sh441",
+    "themes": ["revelation", "radiance", "طلوع", "اشراق"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-shams-441-04",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "دیوان شمس، غزل ۴۴۱",
+    "text": "زآن رو که دیده در رخ تو خیره مانده است",
+    "source": "https://ganjoor.net/moulavi/shams/ghazalsh/sh441",
+    "themes": ["awe", "gaze", "تماشا", "شگفتی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-shams-441-05",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "دیوان شمس، غزل ۴۴۱",
+    "text": "دی شیخ با چراغ همی‌گشت گرد شهر",
+    "source": "https://ganjoor.net/moulavi/shams/ghazalsh/sh441",
+    "themes": ["quest", "humanity", "جستجو", "انسانیت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "rumi-shams-441-06",
+    "language": "fa",
+    "author": "مولانا",
+    "work": "دیوان شمس، غزل ۴۴۱",
+    "text": "کز دیو و دد ملولم و انسانم آرزوست",
+    "source": "https://ganjoor.net/moulavi/shams/ghazalsh/sh441",
+    "themes": ["alienation", "authenticity", "ملال", "اصالت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-golestan-1-10-01",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "گلستان، باب اول، حکایت ۱۰",
+    "text": "بنی‌آدم اعضای یکدیگرند",
+    "source": "https://ganjoor.net/saadi/golestan/gbab1/sh10",
+    "themes": ["empathy", "unity", "همدلی", "یگانگی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-golestan-1-10-02",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "گلستان، باب اول، حکایت ۱۰",
+    "text": "که در آفرینش ز یک گوهرند",
+    "source": "https://ganjoor.net/saadi/golestan/gbab1/sh10",
+    "themes": ["origin", "equality", "گوهر", "برابری"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-golestan-1-10-03",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "گلستان، باب اول، حکایت ۱۰",
+    "text": "چو عضوی به درد آورد روزگار",
+    "source": "https://ganjoor.net/saadi/golestan/gbab1/sh10",
+    "themes": ["suffering", "shared-pain", "درد", "رنج"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-golestan-1-10-04",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "گلستان، باب اول، حکایت ۱۰",
+    "text": "دگر عضوها را نماند قرار",
+    "source": "https://ganjoor.net/saadi/golestan/gbab1/sh10",
+    "themes": ["solidarity", "restlessness", "همبستگی", "بی‌قراری"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-golestan-1-10-05",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "گلستان، باب اول، حکایت ۱۰",
+    "text": "تو کز محنت دیگران بی‌غمی",
+    "source": "https://ganjoor.net/saadi/golestan/gbab1/sh10",
+    "themes": ["indifference", "ethics", "بی‌تفاوتی", "اخلاق"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "saadi-golestan-1-10-06",
+    "language": "fa",
+    "author": "سعدی",
+    "work": "گلستان، باب اول، حکایت ۱۰",
+    "text": "نشاید که نامت نهند آدمی",
+    "source": "https://ganjoor.net/saadi/golestan/gbab1/sh10",
+    "themes": ["compassion", "humanity", "شفقت", "آدمیت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-01-01",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱",
+    "text": "الا یا ایها الساقی ادر کاسا و ناولها",
+    "source": "https://ganjoor.net/hafez/ghazal/sh1",
+    "themes": ["invocation", "beginning", "آغاز", "ساقی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-01-02",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱",
+    "text": "که عشق آسان نمود اول ولی افتاد مشکل‌ها",
+    "source": "https://ganjoor.net/hafez/ghazal/sh1",
+    "themes": ["love", "difficulty", "عشق", "دشواری"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-01-03",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱",
+    "text": "به بوی نافه‌ای کاخر صبا زان طره بگشاید",
+    "source": "https://ganjoor.net/hafez/ghazal/sh1",
+    "themes": ["scent", "anticipation", "انتظار", "نسیم"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-01-04",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱",
+    "text": "مرا در منزل جانان چه امن عیش چون هر دم",
+    "source": "https://ganjoor.net/hafez/ghazal/sh1",
+    "themes": ["unsettlement", "journey", "سفر", "ناامنی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-01-05",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱",
+    "text": "شب تاریک و بیم موج و گردابی چنین هایل",
+    "source": "https://ganjoor.net/hafez/ghazal/sh1",
+    "themes": ["darkness", "turmoil", "تاریکی", "طوفان"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "hafez-01-06",
+    "language": "fa",
+    "author": "حافظ",
+    "work": "غزل ۱",
+    "text": "کجا دانند حال ما سبکباران ساحل‌ها",
+    "source": "https://ganjoor.net/hafez/ghazal/sh1",
+    "themes": ["solitude", "perspective", "تنهایی", "فاصله"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "babataher-01-01",
+    "language": "fa",
+    "author": "باباطاهر",
+    "work": "دوبیتی ۱",
+    "text": "خوشا آنان که الله یارشان بی",
+    "source": "https://ganjoor.net/babataher/dobeyti/sh1",
+    "themes": ["devotion", "serenity", "آرامش", "ایمان"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "babataher-15-01",
+    "language": "fa",
+    "author": "باباطاهر",
+    "work": "دوبیتی ۱۵",
+    "text": "ز دست دیده و دل هر دو فریاد",
+    "source": "https://ganjoor.net/babataher/dobeyti/sh15",
+    "themes": ["heartache", "inner-conflict", "دل", "فریاد"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "babataher-15-02",
+    "language": "fa",
+    "author": "باباطاهر",
+    "work": "دوبیتی ۱۵",
+    "text": "که هر چه دیده بیند دل کند یاد",
+    "source": "https://ganjoor.net/babataher/dobeyti/sh15",
+    "themes": ["memory", "longing", "یاد", "حسرت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "babataher-15-03",
+    "language": "fa",
+    "author": "باباطاهر",
+    "work": "دوبیتی ۱۵",
+    "text": "بسازم خنجری نیشش ز فولاد",
+    "source": "https://ganjoor.net/babataher/dobeyti/sh15",
+    "themes": ["resolve", "intensity", "شدت", "اراده"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "babataher-15-04",
+    "language": "fa",
+    "author": "باباطاهر",
+    "work": "دوبیتی ۱۵",
+    "text": "زنم بر دیده تا دل گردد آزاد",
+    "source": "https://ganjoor.net/babataher/dobeyti/sh15",
+    "themes": ["liberation", "detachment", "رهایی", "آزادی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "nezami-khosrow-01",
+    "language": "fa",
+    "author": "نظامی",
+    "work": "خسرو و شیرین، در ستایش عشق",
+    "text": "فلک جز عشق محرابی ندارد",
+    "source": "https://ganjoor.net/nezami/5ganj/khosro-shirin/sh7",
+    "themes": ["cosmos", "love", "کیهان", "عشق"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "nezami-khosrow-02",
+    "language": "fa",
+    "author": "نظامی",
+    "work": "خسرو و شیرین، در ستایش عشق",
+    "text": "جهان بی‌خاک عشق آبی ندارد",
+    "source": "https://ganjoor.net/nezami/5ganj/khosro-shirin/sh7",
+    "themes": ["essence", "vitality", "گوهر", "طراوت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "nezami-khosrow-03",
+    "language": "fa",
+    "author": "نظامی",
+    "work": "خسرو و شیرین، در ستایش عشق",
+    "text": "گر اندیشه کنی از راه بینش",
+    "source": "https://ganjoor.net/nezami/5ganj/khosro-shirin/sh7",
+    "themes": ["insight", "reflection", "بینش", "تامل"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "nezami-khosrow-04",
+    "language": "fa",
+    "author": "نظامی",
+    "work": "خسرو و شیرین، در ستایش عشق",
+    "text": "به عشق است ایستاده آفرینش",
+    "source": "https://ganjoor.net/nezami/5ganj/khosro-shirin/sh7",
+    "themes": ["foundation", "harmony", "بنیاد", "هماهنگی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "bidel-ghazal-01",
+    "language": "fa",
+    "author": "بیدل دهلوی",
+    "work": "غزلیات، غزل ۱۱۲",
+    "text": "زندگی در صدف خویش گهر ساختن است",
+    "source": "https://ganjoor.net/bidel/ghazalbi/sh112",
+    "themes": ["self-cultivation", "solitude", "خودسازی", "خلوت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "bidel-ghazal-02",
+    "language": "fa",
+    "author": "بیدل دهلوی",
+    "work": "غزلیات، غزل ۱۱۲",
+    "text": "در دل قطره فرو رفتن و دریا شدن است",
+    "source": "https://ganjoor.net/bidel/ghazalbi/sh112",
+    "themes": ["depth", "expansion", "عمق", "وسعت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "bidel-ghazal-03",
+    "language": "fa",
+    "author": "بیدل دهلوی",
+    "work": "غزلیات، غزل ۵۵",
+    "text": "هیچ شکلی بی‌هیولا قابل صورت نشد",
+    "source": "https://ganjoor.net/bidel/ghazalbi/sh55",
+    "themes": ["potential", "form", "فرم", "استعداد"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "bidel-ghazal-04",
+    "language": "fa",
+    "author": "بیدل دهلوی",
+    "work": "غزلیات، غزل ۵۵",
+    "text": "آدمی هم پیش از آن کاینجا شود، آنجا شود",
+    "source": "https://ganjoor.net/bidel/ghazalbi/sh55",
+    "themes": ["becoming", "transcendence", "شدن", "فراتر رفتن"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "parvin-divan-01",
+    "language": "fa",
+    "author": "پروین اعتصامی",
+    "work": "دیوان اشعار، مست و هشیار",
+    "text": "محتسب مستی به ره دید و گریبانش گرفت",
+    "source": "https://ganjoor.net/parvin/divanp/mtm/sh38",
+    "themes": ["judgment", "hypocrisy", "قضاوت", "ریا"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "parvin-divan-02",
+    "language": "fa",
+    "author": "پروین اعتصامی",
+    "work": "دیوان اشعار، مست و هشیار",
+    "text": "مست گفت ای دوست، این پیراهن است، افسار نیست",
+    "source": "https://ganjoor.net/parvin/divanp/mtm/sh38",
+    "themes": ["dignity", "autonomy", "کرامت", "استقلال"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "parvin-divan-03",
+    "language": "fa",
+    "author": "پروین اعتصامی",
+    "work": "دیوان اشعار، مست و هشیار",
+    "text": "گفت: مستی، زان سبب افتان و خیزان می‌روی",
+    "source": "https://ganjoor.net/parvin/divanp/mtm/sh38",
+    "themes": ["appearance", "stumbling", "ظاهر", "لغزش"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "parvin-divan-04",
+    "language": "fa",
+    "author": "پروین اعتصامی",
+    "work": "دیوان اشعار، مست و هشیار",
+    "text": "گفت: جرم راه رفتن نیست، ره هموار نیست",
+    "source": "https://ganjoor.net/parvin/divanp/mtm/sh38",
+    "themes": ["justice", "society", "عدالت", "جامعه"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "sanai-hadighe-01",
+    "language": "fa",
+    "author": "سنایی",
+    "work": "حدیقة الحقیقه، در صفت عقل",
+    "text": "سال‌ها باید که تا یک سنگ اصلی ز آفتاب",
+    "source": "https://ganjoor.net/sanaee/hadighe/bh1/sh15",
+    "themes": ["patience", "maturation", "صبر", "پختگی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "sanai-hadighe-02",
+    "language": "fa",
+    "author": "سنایی",
+    "work": "حدیقة الحقیقه، در صفت عقل",
+    "text": "لعل گردد در بدخشان یا عقیق اندر یمن",
+    "source": "https://ganjoor.net/sanaee/hadighe/bh1/sh15",
+    "themes": ["transformation", "value", "دگرگونی", "ارزش"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "jam-baharestan-01",
+    "language": "fa",
+    "author": "جامی",
+    "work": "بهارستان، روضه هفتم",
+    "text": "به گیتی به از نام نیکو مجوی",
+    "source": "https://ganjoor.net/jami/baharestan/roze7/sh1",
+    "themes": ["legacy", "virtue", "نام نیک", "فضیلت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "jam-baharestan-02",
+    "language": "fa",
+    "author": "جامی",
+    "work": "بهارستان، روضه هفتم",
+    "text": "سخن چون حکیمان نکو سنج گوی",
+    "source": "https://ganjoor.net/jami/baharestan/roze7/sh1",
+    "themes": ["eloquence", "measure", "سخنوری", "سنجیدگی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "whitman-leaves-01",
+    "language": "en",
+    "author": "Walt Whitman",
+    "work": "Song of Myself (51)",
+    "text": "Do I contradict myself? Very well then I contradict myself,",
+    "source": "https://www.poetryfoundation.org/poems/45477/song-of-myself-1892-version",
+    "themes": ["complexity", "identity", "پیچیدگی", "هویت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "whitman-leaves-02",
+    "language": "en",
+    "author": "Walt Whitman",
+    "work": "Song of Myself (51)",
+    "text": "(I am large, I contain multitudes.)",
+    "source": "https://www.poetryfoundation.org/poems/45477/song-of-myself-1892-version",
+    "themes": ["expansiveness", "self", "وسعت", "خویشتن"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "whitman-leaves-03",
+    "language": "en",
+    "author": "Walt Whitman",
+    "work": "Song of Myself (52)",
+    "text": "I sound my barbaric yawp over the roofs of the world.",
+    "source": "https://www.poetryfoundation.org/poems/45477/song-of-myself-1892-version",
+    "themes": ["voice", "vitality", "صدا", "سرچشمه حیات"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "whitman-leaves-04",
+    "language": "en",
+    "author": "Walt Whitman",
+    "work": "Song of Myself (52)",
+    "text": "If you want me again look for me under your boot-soles.",
+    "source": "https://www.poetryfoundation.org/poems/45477/song-of-myself-1892-version",
+    "themes": ["earth", "continuity", "خاک", "تداوم"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "whitman-leaves-05",
+    "language": "en",
+    "author": "Walt Whitman",
+    "work": "O Me! O Life!",
+    "text": "That the powerful play goes on, and you may contribute a verse.",
+    "source": "https://www.poetryfoundation.org/poems/51568/o-me-o-life",
+    "themes": ["purpose", "creation", "هدف", "آفرینش"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "keats-urn-01",
+    "language": "en",
+    "author": "John Keats",
+    "work": "Ode on a Grecian Urn",
+    "text": "Heard melodies are sweet, but those unheard",
+    "source": "https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn",
+    "themes": ["imagination", "silence", "تخیل", "سکوت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "keats-urn-02",
+    "language": "en",
+    "author": "John Keats",
+    "work": "Ode on a Grecian Urn",
+    "text": "Are sweeter; therefore, ye soft pipes, play on;",
+    "source": "https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn",
+    "themes": ["music", "spirit", "موسیقی", "روح"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "keats-urn-03",
+    "language": "en",
+    "author": "John Keats",
+    "work": "Ode on a Grecian Urn",
+    "text": "Beauty is truth, truth beauty,—that is all",
+    "source": "https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn",
+    "themes": ["beauty", "truth", "زیبایی", "حقیقت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "keats-urn-04",
+    "language": "en",
+    "author": "John Keats",
+    "work": "Ode on a Grecian Urn",
+    "text": "Ye know on earth, and all ye need to know.",
+    "source": "https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn",
+    "themes": ["sufficiency", "wisdom", "کفایت", "حکمت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "keats-endymion-01",
+    "language": "en",
+    "author": "John Keats",
+    "work": "Endymion",
+    "text": "A thing of beauty is a joy for ever:",
+    "source": "https://www.poetryfoundation.org/poems/44469/endymion-56d2239287ca5",
+    "themes": ["permanence", "joy", "ماندگاری", "شادی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "keats-endymion-02",
+    "language": "en",
+    "author": "John Keats",
+    "work": "Endymion",
+    "text": "Its loveliness increases; it will never",
+    "source": "https://www.poetryfoundation.org/poems/44469/endymion-56d2239287ca5",
+    "themes": ["growth", "grace", "افزایش", "لطافت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "keats-endymion-03",
+    "language": "en",
+    "author": "John Keats",
+    "work": "Endymion",
+    "text": "Pass into nothingness; but still will keep",
+    "source": "https://www.poetryfoundation.org/poems/44469/endymion-56d2239287ca5",
+    "themes": ["endurance", "memory", "پایداری", "خاطره"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shelley-ozymandias-01",
+    "language": "en",
+    "author": "Percy Bysshe Shelley",
+    "work": "Ozymandias",
+    "text": "My name is Ozymandias, King of Kings;",
+    "source": "https://www.poetryfoundation.org/poems/46565/ozymandias",
+    "themes": ["hubris", "power", "غرور", "قدرت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shelley-ozymandias-02",
+    "language": "en",
+    "author": "Percy Bysshe Shelley",
+    "work": "Ozymandias",
+    "text": "Look on my Works, ye Mighty, and despair!",
+    "source": "https://www.poetryfoundation.org/poems/46565/ozymandias",
+    "themes": ["irony", "monument", "طنز تلخ", "بنا"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shelley-ozymandias-03",
+    "language": "en",
+    "author": "Percy Bysshe Shelley",
+    "work": "Ozymandias",
+    "text": "Nothing beside remains. Round the decay",
+    "source": "https://www.poetryfoundation.org/poems/46565/ozymandias",
+    "themes": ["erosion", "ruin", "فرسایش", "ویرانی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shelley-ozymandias-04",
+    "language": "en",
+    "author": "Percy Bysshe Shelley",
+    "work": "Ozymandias",
+    "text": "The lone and level sands stretch far away.",
+    "source": "https://www.poetryfoundation.org/poems/46565/ozymandias",
+    "themes": ["emptiness", "time", "تهی‌بودن", "زمان"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shelley-westwind-01",
+    "language": "en",
+    "author": "Percy Bysshe Shelley",
+    "work": "Ode to the West Wind",
+    "text": "If Winter comes, can Spring be far behind?",
+    "source": "https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind",
+    "themes": ["hope", "cycles", "امید", "چرخه طبیعت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "tennyson-ulysses-01",
+    "language": "en",
+    "author": "Alfred, Lord Tennyson",
+    "work": "Ulysses",
+    "text": "I am a part of all that I have met;",
+    "source": "https://www.poetryfoundation.org/poems/45392/ulysses",
+    "themes": ["experience", "identity", "تجربه", "هویت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "tennyson-ulysses-02",
+    "language": "en",
+    "author": "Alfred, Lord Tennyson",
+    "work": "Ulysses",
+    "text": "Yet all experience is an arch wherethro'",
+    "source": "https://www.poetryfoundation.org/poems/45392/ulysses",
+    "themes": ["horizon", "discovery", "افق", "کشف"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "tennyson-ulysses-03",
+    "language": "en",
+    "author": "Alfred, Lord Tennyson",
+    "work": "Ulysses",
+    "text": "Gleams that untravell'd world whose margin fades",
+    "source": "https://www.poetryfoundation.org/poems/45392/ulysses",
+    "themes": ["unknown", "curiosity", "ناشناخته", "کنجکاوی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "tennyson-ulysses-04",
+    "language": "en",
+    "author": "Alfred, Lord Tennyson",
+    "work": "Ulysses",
+    "text": "How dull it is to pause, to make an end,",
+    "source": "https://www.poetryfoundation.org/poems/45392/ulysses",
+    "themes": ["restlessness", "momentum", "پویایی", "حرکت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "tennyson-ulysses-05",
+    "language": "en",
+    "author": "Alfred, Lord Tennyson",
+    "work": "Ulysses",
+    "text": "To rust unburnish'd, not to shine in use!",
+    "source": "https://www.poetryfoundation.org/poems/45392/ulysses",
+    "themes": ["action", "purpose", "عمل", "هدفمندی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "tennyson-ulysses-06",
+    "language": "en",
+    "author": "Alfred, Lord Tennyson",
+    "work": "Ulysses",
+    "text": "To strive, to seek, to find, and not to yield.",
+    "source": "https://www.poetryfoundation.org/poems/45392/ulysses",
+    "themes": ["perseverance", "grit", "پشتکار", "استقامت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "frost-road-01",
+    "language": "en",
+    "author": "Robert Frost",
+    "work": "The Road Not Taken",
+    "text": "Two roads diverged in a yellow wood,",
+    "source": "https://www.poetryfoundation.org/poems/44272/the-road-not-taken",
+    "themes": ["choice", "crossroads", "انتخاب", "دوراهی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "frost-road-02",
+    "language": "en",
+    "author": "Robert Frost",
+    "work": "The Road Not Taken",
+    "text": "Yet knowing how way leads on to way,",
+    "source": "https://www.poetryfoundation.org/poems/44272/the-road-not-taken",
+    "themes": ["consequence", "path", "پیامد", "مسیر"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "frost-road-03",
+    "language": "en",
+    "author": "Robert Frost",
+    "work": "The Road Not Taken",
+    "text": "I doubted if I should ever come back.",
+    "source": "https://www.poetryfoundation.org/poems/44272/the-road-not-taken",
+    "themes": ["irreversibility", "time", "برگشت‌ناپذیری", "گذر زمان"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "frost-road-04",
+    "language": "en",
+    "author": "Robert Frost",
+    "work": "The Road Not Taken",
+    "text": "I took the one less traveled by,",
+    "source": "https://www.poetryfoundation.org/poems/44272/the-road-not-taken",
+    "themes": ["individuality", "courage", "فردیت", "شجاعت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "frost-woods-01",
+    "language": "en",
+    "author": "Robert Frost",
+    "work": "Stopping by Woods on a Snowy Evening",
+    "text": "The woods are lovely, dark and deep,",
+    "source": "https://www.poetryfoundation.org/poems/42891/stopping-by-woods-on-a-snowy-evening",
+    "themes": ["stillness", "nature", "سکون", "طبیعت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "frost-woods-02",
+    "language": "en",
+    "author": "Robert Frost",
+    "work": "Stopping by Woods on a Snowy Evening",
+    "text": "But I have promises to keep,",
+    "source": "https://www.poetryfoundation.org/poems/42891/stopping-by-woods-on-a-snowy-evening",
+    "themes": ["duty", "commitment", "تعهد", "مسئولیت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "frost-woods-03",
+    "language": "en",
+    "author": "Robert Frost",
+    "work": "Stopping by Woods on a Snowy Evening",
+    "text": "And miles to go before I sleep,",
+    "source": "https://www.poetryfoundation.org/poems/42891/stopping-by-woods-on-a-snowy-evening",
+    "themes": ["endurance", "journey", "تداوم", "سفر"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "yeats-innisfree-01",
+    "language": "en",
+    "author": "William Butler Yeats",
+    "work": "The Lake Isle of Innisfree",
+    "text": "I will arise and go now, and go to Innisfree,",
+    "source": "https://www.poetryfoundation.org/poems/43281/the-lake-isle-of-innisfree",
+    "themes": ["departure", "sanctuary", "هجرت", "پناهگاه"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "yeats-innisfree-02",
+    "language": "en",
+    "author": "William Butler Yeats",
+    "work": "The Lake Isle of Innisfree",
+    "text": "And I shall have some peace there, for peace comes dropping slow,",
+    "source": "https://www.poetryfoundation.org/poems/43281/the-lake-isle-of-innisfree",
+    "themes": ["peace", "patience", "آرامش", "طمانینه"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "yeats-innisfree-03",
+    "language": "en",
+    "author": "William Butler Yeats",
+    "work": "The Lake Isle of Innisfree",
+    "text": "I hear it in the deep heart’s core.",
+    "source": "https://www.poetryfoundation.org/poems/43281/the-lake-isle-of-innisfree",
+    "themes": ["inner-voice", "calling", "ندای درون", "قلب"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "yeats-cloths-01",
+    "language": "en",
+    "author": "William Butler Yeats",
+    "work": "He Wishes for the Cloths of Heaven",
+    "text": "I have spread my dreams under your feet;",
+    "source": "https://www.poetryfoundation.org/poems/43282/he-wishes-for-the-cloths-of-heaven",
+    "themes": ["vulnerability", "offering", "آسیب‌پذیری", "ایثار"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "yeats-cloths-02",
+    "language": "en",
+    "author": "William Butler Yeats",
+    "work": "He Wishes for the Cloths of Heaven",
+    "text": "Tread softly because you tread on my dreams.",
+    "source": "https://www.poetryfoundation.org/poems/43282/he-wishes-for-the-cloths-of-heaven",
+    "themes": ["tenderness", "dreams", "لطافت", "رویا"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "wordsworth-daffodils-01",
+    "language": "en",
+    "author": "William Wordsworth",
+    "work": "I Wandered Lonely as a Cloud",
+    "text": "I wandered lonely as a cloud",
+    "source": "https://www.poetryfoundation.org/poems/45521/i-wandered-lonely-as-a-cloud",
+    "themes": ["solitude", "wandering", "تنهایی", "پرسه"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "wordsworth-daffodils-02",
+    "language": "en",
+    "author": "William Wordsworth",
+    "work": "I Wandered Lonely as a Cloud",
+    "text": "A host, of golden daffodils;",
+    "source": "https://www.poetryfoundation.org/poems/45521/i-wandered-lonely-as-a-cloud",
+    "themes": ["nature", "delight", "طبیعت", "سرور"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "wordsworth-daffodils-03",
+    "language": "en",
+    "author": "William Wordsworth",
+    "work": "I Wandered Lonely as a Cloud",
+    "text": "They flash upon that inward eye",
+    "source": "https://www.poetryfoundation.org/poems/45521/i-wandered-lonely-as-a-cloud",
+    "themes": ["memory", "vision", "خاطره", "چشم درون"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "wordsworth-daffodils-04",
+    "language": "en",
+    "author": "William Wordsworth",
+    "work": "I Wandered Lonely as a Cloud",
+    "text": "Which is the bliss of solitude;",
+    "source": "https://www.poetryfoundation.org/poems/45521/i-wandered-lonely-as-a-cloud",
+    "themes": ["bliss", "contemplation", "خلوت", "تامل"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "byron-beauty-01",
+    "language": "en",
+    "author": "Lord Byron",
+    "work": "She Walks in Beauty",
+    "text": "She walks in beauty, like the night",
+    "source": "https://www.poetryfoundation.org/poems/43844/she-walks-in-beauty",
+    "themes": ["grace", "night", "وقار", "شب"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "byron-beauty-02",
+    "language": "en",
+    "author": "Lord Byron",
+    "work": "She Walks in Beauty",
+    "text": "Of cloudless climes and starry skies;",
+    "source": "https://www.poetryfoundation.org/poems/43844/she-walks-in-beauty",
+    "themes": ["clarity", "stars", "شفافیت", "ستارگان"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "byron-beauty-03",
+    "language": "en",
+    "author": "Lord Byron",
+    "work": "She Walks in Beauty",
+    "text": "And all that’s best of dark and bright",
+    "source": "https://www.poetryfoundation.org/poems/43844/she-walks-in-beauty",
+    "themes": ["balance", "contrast", "تعادل", "تضاد"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "byron-beauty-04",
+    "language": "en",
+    "author": "Lord Byron",
+    "work": "She Walks in Beauty",
+    "text": "A mind at peace with all below,",
+    "source": "https://www.poetryfoundation.org/poems/43844/she-walks-in-beauty",
+    "themes": ["serenity", "harmony", "آرامش ذهن", "صلح"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shakespeare-116-01",
+    "language": "en",
+    "author": "William Shakespeare",
+    "work": "Sonnet 116",
+    "text": "Let me not to the marriage of true minds",
+    "source": "https://www.poetryfoundation.org/poems/45106/sonnet-116-let-me-not-to-the-marriage-of-true-minds",
+    "themes": ["devotion", "connection", "پیوند", "وفاداری"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shakespeare-116-02",
+    "language": "en",
+    "author": "William Shakespeare",
+    "work": "Sonnet 116",
+    "text": "Love is not love which alters when it alteration finds,",
+    "source": "https://www.poetryfoundation.org/poems/45106/sonnet-116-let-me-not-to-the-marriage-of-true-minds",
+    "themes": ["constancy", "fidelity", "ثبات", "پایداری"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shakespeare-116-03",
+    "language": "en",
+    "author": "William Shakespeare",
+    "work": "Sonnet 116",
+    "text": "O no! it is an ever-fixed mark",
+    "source": "https://www.poetryfoundation.org/poems/45106/sonnet-116-let-me-not-to-the-marriage-of-true-minds",
+    "themes": ["guidance", "anchor", "راهنما", "تکیه‌گاه"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "shakespeare-116-04",
+    "language": "en",
+    "author": "William Shakespeare",
+    "work": "Sonnet 116",
+    "text": "That looks on tempests and is never shaken;",
+    "source": "https://www.poetryfoundation.org/poems/45106/sonnet-116-let-me-not-to-the-marriage-of-true-minds",
+    "themes": ["resilience", "storm", "تاب‌آوری", "طوفان"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "milton-paradise-01",
+    "language": "en",
+    "author": "John Milton",
+    "work": "Paradise Lost (Book 1)",
+    "text": "The mind is its own place, and in itself",
+    "source": "https://www.poetryfoundation.org/poems/45718/paradise-lost-book-1-1674-version",
+    "themes": ["mind", "autonomy", "ذهن", "استقلال"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "milton-paradise-02",
+    "language": "en",
+    "author": "John Milton",
+    "work": "Paradise Lost (Book 1)",
+    "text": "Can make a Heav'n of Hell, a Hell of Heav'n.",
+    "source": "https://www.poetryfoundation.org/poems/45718/paradise-lost-book-1-1674-version",
+    "themes": ["perspective", "agency", "نگرش", "اختیار"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "milton-blindness-01",
+    "language": "en",
+    "author": "John Milton",
+    "work": "Sonnet 19: When I Consider How My Light is Spent",
+    "text": "They also serve who only stand and wait.",
+    "source": "https://www.poetryfoundation.org/poems/44750/sonnet-19-when-i-consider-how-my-light-is-spent",
+    "themes": ["patience", "readiness", "شکیبایی", "آمادگی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "dickinson-214-01",
+    "language": "en",
+    "author": "Emily Dickinson",
+    "work": "I taste a liquor never brewed (214)",
+    "text": "Inebriate of air – am I –",
+    "source": "https://www.poetryfoundation.org/poems/44085/i-taste-a-liquor-never-brewed-214",
+    "themes": ["ecstasy", "nature", "سرمستی", "طبیعت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "dickinson-632-01",
+    "language": "en",
+    "author": "Emily Dickinson",
+    "work": "The Brain—is wider than the Sky— (632)",
+    "text": "The Brain—is wider than the Sky—",
+    "source": "https://www.poetryfoundation.org/poems/52199/the-brain-is-wider-than-the-sky-632",
+    "themes": ["consciousness", "infinity", "آگاهی", "بی‌نهایت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "dickinson-632-02",
+    "language": "en",
+    "author": "Emily Dickinson",
+    "work": "The Brain—is wider than the Sky— (632)",
+    "text": "The Brain is deeper than the sea—",
+    "source": "https://www.poetryfoundation.org/poems/52199/the-brain-is-wider-than-the-sky-632",
+    "themes": ["depth", "thought", "عمق", "اندیشه"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "henley-invictus-01",
+    "language": "en",
+    "author": "William Ernest Henley",
+    "work": "Invictus",
+    "text": "My head is bloody, but unbowed.",
+    "source": "https://www.poetryfoundation.org/poems/51642/invictus",
+    "themes": ["defiance", "fortitude", "ایستادگی", "صلابت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "henley-invictus-02",
+    "language": "en",
+    "author": "William Ernest Henley",
+    "work": "Invictus",
+    "text": "I am the master of my fate,",
+    "source": "https://www.poetryfoundation.org/poems/51642/invictus",
+    "themes": ["agency", "sovereignty", "اراده", "سرنوشت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "henley-invictus-03",
+    "language": "en",
+    "author": "William Ernest Henley",
+    "work": "Invictus",
+    "text": "I am the captain of my soul.",
+    "source": "https://www.poetryfoundation.org/poems/51642/invictus",
+    "themes": ["self-mastery", "soul", "خویشتن‌داری", "جان"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "tagore-gitanjali-01",
+    "language": "en",
+    "author": "Rabindranath Tagore",
+    "work": "Gitanjali (35)",
+    "text": "Where the mind is without fear and the head is held high;",
+    "source": "https://www.poetryfoundation.org/poems/45668/gitanjali-35",
+    "themes": ["freedom", "dignity", "آزادی", "سربلندی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "tagore-gitanjali-02",
+    "language": "en",
+    "author": "Rabindranath Tagore",
+    "work": "Gitanjali (35)",
+    "text": "Where knowledge is free;",
+    "source": "https://www.poetryfoundation.org/poems/45668/gitanjali-35",
+    "themes": ["knowledge", "openness", "دانش", "گشودگی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "tagore-gitanjali-03",
+    "language": "en",
+    "author": "Rabindranath Tagore",
+    "work": "Gitanjali (35)",
+    "text": "Where words come out from the depth of truth;",
+    "source": "https://www.poetryfoundation.org/poems/45668/gitanjali-35",
+    "themes": ["sincerity", "truth", "صداقت", "حقیقت"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "tagore-gitanjali-04",
+    "language": "en",
+    "author": "Rabindranath Tagore",
+    "work": "Gitanjali (35)",
+    "text": "Where tireless striving stretches its arms towards perfection;",
+    "source": "https://www.poetryfoundation.org/poems/45668/gitanjali-35",
+    "themes": ["aspiration", "effort", "تلاش", "کمال"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "gibran-prophet-01",
+    "language": "en",
+    "author": "Kahlil Gibran",
+    "work": "The Prophet (On Joy and Sorrow)",
+    "text": "Your joy is your sorrow unmasked.",
+    "source": "https://poets.org/poem/joy-and-sorrow",
+    "themes": ["duality", "emotion", "دوگانگی", "غم و شادی"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "gibran-prophet-02",
+    "language": "en",
+    "author": "Kahlil Gibran",
+    "work": "The Prophet (On Work)",
+    "text": "Work is love made visible.",
+    "source": "https://poets.org/poem/work-2",
+    "themes": ["craft", "devotion", "کار", "عشق"],
+    "rights": "public-domain original; no modern translation"
+  },
+  {
+    "id": "obama-farewell-2017-01",
+    "language": "en",
+    "author": "Barack Obama",
+    "work": "Farewell Address (2017)",
+    "text": "Democracy requires a basic sense of solidarity—the idea that for all our outward differences, we are all in this together.",
+    "source": "https://obamawhitehouse.archives.gov/farewell",
+    "themes": ["solidarity", "democracy", "unity", "همبستگی", "دموکراسی"],
+    "rights": "public-domain government work; paraphrased summary"
+  },
+  {
+    "id": "obama-farewell-2017-02",
+    "language": "en",
+    "author": "Barack Obama",
+    "work": "Farewell Address (2017)",
+    "text": "Change only happens when ordinary people get involved, get engaged, and come together to demand it.",
+    "source": "https://obamawhitehouse.archives.gov/farewell",
+    "themes": ["action", "change", "civic-duty", "تغییر", "مشارکت"],
+    "rights": "public-domain government work; paraphrased summary"
+  },
+  {
+    "id": "ardern-harvard-2022-01",
+    "language": "en",
+    "author": "Jacinda Ardern",
+    "work": "Harvard Commencement Address (2022)",
+    "text": "True strength in leadership is not measured by loudness or aggression, but by empathy and the courage to be kind.",
+    "source": "https://news.harvard.edu/gazette/",
+    "themes": ["empathy", "leadership", "kindness", "همدلی", "رهبری"],
+    "rights": "fair-use paraphrased concept; speech summary"
+  },
+  {
+    "id": "mandela-legacy-01",
+    "language": "en",
+    "author": "Nelson Mandela",
+    "work": "Public Addresses on Reconciliation",
+    "text": "Courage is not the absence of fear, but learning how to triumph over it and move forward.",
+    "source": "https://www.nelsonmandela.org/",
+    "themes": ["courage", "fear", "resilience", "شجاعت", "غلبه بر ترس"],
+    "rights": "paraphrased public statement"
+  },
+  {
+    "id": "merkel-harvard-2019-01",
+    "language": "en",
+    "author": "Angela Merkel",
+    "work": "Harvard Commencement Speech (2019)",
+    "text": "Walls of ignorance and narrow-mindedness that exist in our minds must be torn down to build a shared future.",
+    "source": "https://news.harvard.edu/gazette/",
+    "themes": ["openness", "progress", "borders", "آگاهی", "پیشرفت"],
+    "rights": "fair-use paraphrased concept; speech summary"
+  },
+  {
+    "id": "keanu-grief-2019-01",
+    "language": "en",
+    "author": "Keanu Reeves",
+    "work": "Late Show Interview on Loss (2019)",
+    "text": "When we lose someone we love, the memory and the love we shared remain unmistakable; those who loved us will always miss us.",
+    "source": "https://www.cbs.com/shows/the-late-show-with-stephen-colbert/",
+    "themes": ["grief", "love", "remembrance", "سوگ", "ماندگاری عشق"],
+    "rights": "paraphrased interview insight"
+  },
+  {
+    "id": "hopkins-time-2020-01",
+    "language": "en",
+    "author": "Anthony Hopkins",
+    "work": "Reflections on Acting and Aging",
+    "text": "Accepting life as it unfolds, without demanding answers from every moment, brings a quiet and liberating peace.",
+    "source": "https://www.bafta.org/",
+    "themes": ["acceptance", "aging", "peace", "پذیرش", "آرامش"],
+    "rights": "paraphrased interview insight"
+  },
+  {
+    "id": "washington-craft-2017-01",
+    "language": "en",
+    "author": "Denzel Washington",
+    "work": "Commencement Address on Perseverance",
+    "text": "Ambition without discipline remains a wish; falling forward through failure is the only path to mastery.",
+    "source": "https://www.upenn.edu/",
+    "themes": ["discipline", "failure", "mastery", "انضباط", "پشتکار"],
+    "rights": "paraphrased speech concept"
+  },
+  {
+    "id": "streep-empathy-2017-01",
+    "language": "en",
+    "author": "Meryl Streep",
+    "work": "Golden Globes Lifetime Achievement Remarks (2017)",
+    "text": "The essence of art and acting is entering the lives of people who are different from us and letting others feel what that feels like.",
+    "source": "https://goldenglobes.com/",
+    "themes": ["art", "empathy", "perspective", "هنر", "همذات‌پنداری"],
+    "rights": "paraphrased speech concept"
+  },
+  {
+    "id": "murphy-oscar-2024-01",
+    "language": "en",
+    "author": "Cillian Murphy",
+    "work": "Academy Awards Acceptance Remarks (2024)",
+    "text": "For better or for worse, we are all living in a world shaped by our collective choices, so we owe everything to the peacemakers.",
+    "source": "https://www.oscars.org/",
+    "themes": ["peace", "responsibility", "history", "صلح", "مسئولیت"],
+    "rights": "paraphrased speech concept"
+  },
+  {
+    "id": "yeoh-oscar-2023-01",
+    "language": "en",
+    "author": "Michelle Yeoh",
+    "work": "Academy Awards Acceptance Remarks (2023)",
+    "text": "Never let anyone define when your prime has passed; keep holding on to your possibilities and dreams.",
+    "source": "https://www.oscars.org/",
+    "themes": ["perseverance", "age", "hope", "امید", "تداوم تلاش"],
+    "rights": "paraphrased speech concept"
+  },
+  {
+    "id": "farhadi-cannes-2021-01",
+    "language": "fa",
+    "author": "اصغر فرهادی",
+    "work": "گفت‌وگوهای سینمایی درباره اخلاق و قضاوت (۱۴۰۰)",
+    "text": "در پیچیدگی‌های زندگی مدرن، مرز میان حقیقت و مصلحت آن‌قدر باریک می‌شود که قضاوت قطعی درباره انسان‌ها ناممکن می‌گردد.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["morality", "judgment", "ambiguity", "اخلاق", "قضاوت"],
+    "rights": "paraphrased interview insight"
+  },
+  {
+    "id": "shajarian-legacy-2016-01",
+    "language": "fa",
+    "author": "محمدرضا شجریان",
+    "work": "یادداشت‌ها و گفت‌وگوها درباره هنر و مردم",
+    "text": "هنری ماندگار می‌ماند که ریشه در دردها، شادی‌ها و زیستِ روزمره مردم سرزمینش داشته باشد.",
+    "source": "https://www.bbc.com/persian",
+    "themes": ["art", "people", "authenticity", "هنر", "مردم"],
+    "rights": "paraphrased public statement"
+  },
+  {
+    "id": "beyzaie-stanford-2018-01",
+    "language": "fa",
+    "author": "بهرام بیضایی",
+    "work": "سخنرانی‌های پژوهشی درباره اسطوره و تاریخ",
+    "text": "واکاوی اسطوره‌های کهن، گریز از زمان حال نیست؛ بلکه آینه‌ای است برای شناخت ریشه‌های فراموشی و تکرار در امروز.",
+    "source": "https://iranian-studies.stanford.edu/",
+    "themes": ["myth", "history", "identity", "اسطوره", "تاریخ"],
+    "rights": "paraphrased academic lecture"
+  },
+  {
+    "id": "kalhor-womex-2019-01",
+    "language": "fa",
+    "author": "کیهان کلهر",
+    "work": "سخنرانی دریافت جایزه وومکس (۲۰۱۹)",
+    "text": "موسیقی زبانی است که پیش از مرزها زاده شده و در روزگار جدایی‌ها، قلب‌های دور از هم را به یکدیگر پیوند می‌دهد.",
+    "source": "https://www.womex.com/",
+    "themes": ["music", "unity", "borderless", "موسیقی", "پیوند"],
+    "rights": "paraphrased speech concept"
+  },
+  {
+    "id": "vuong-earth-2019-01",
+    "language": "en",
+    "author": "Ocean Vuong",
+    "work": "On Earth We're Briefly Gorgeous (2019) — Thematic Essence",
+    "text": "Survival is not meant to overshadow the quiet beauty of tenderness; we must remember the joy that makes enduring worthwhile.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["tenderness", "survival", "memory", "لطافت", "بقا"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "haig-midnight-2020-01",
+    "language": "en",
+    "author": "Matt Haig",
+    "work": "The Midnight Library (2020) — Thematic Essence",
+    "text": "Letting go of the unlived versions of our lives frees us to recognize the infinite value of the present moment we actually inhabit.",
+    "source": "https://canongate.co.uk/",
+    "themes": ["regret", "potential", "present", "حسرت", "زیستن در حال"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "ishiguro-klara-2021-01",
+    "language": "en",
+    "author": "Kazuo Ishiguro",
+    "work": "Klara and the Sun (2021) — Thematic Essence",
+    "text": "What makes a human heart unique is not merely what resides inside it, but the irreplaceable love it evokes in those who hold it dear.",
+    "source": "https://www.faber.co.uk/",
+    "themes": ["humanity", "connection", "devotion", "انسانیت", "دل‌بستگی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "rooney-world-2021-01",
+    "language": "en",
+    "author": "Sally Rooney",
+    "work": "Beautiful World, Where Are You (2021) — Thematic Essence",
+    "text": "Even amid global uncertainty and modern exhaustion, human relationships remain the fragile anchor that gives meaning to our days.",
+    "source": "https://www.faber.co.uk/",
+    "themes": ["intimacy", "modernity", "meaning", "ارتباط انسانی", "معنا"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "tokarczuk-nobel-2019-01",
+    "language": "en",
+    "author": "Olga Tokarczuk",
+    "work": "The Tender Narrator — Nobel Lecture (2019)",
+    "text": "Tenderness is the most modest form of love; it appears whenever we look closely at another being and perceive our shared fragility.",
+    "source": "https://www.nobelprize.org/prizes/literature/2018/tokarczuk/lecture/",
+    "themes": ["tenderness", "empathy", "storytelling", "شفقت", "روایت"],
+    "rights": "paraphrased Nobel lecture concept"
+  },
+  {
+    "id": "han-kang-nobel-2024-01",
+    "language": "en",
+    "author": "Han Kang",
+    "work": "Reflections on Literature and Human Vulnerability (2024)",
+    "text": "Confronting historical pain through quiet prose allows us to witness human fragility without surrendering our capacity for dignity.",
+    "source": "https://www.nobelprize.org/prizes/literature/2024/han/facts/",
+    "themes": ["vulnerability", "memory", "dignity", "آسیب‌پذیری", "کرامت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "shafak-island-2021-01",
+    "language": "en",
+    "author": "Elif Shafak",
+    "work": "The Island of Missing Trees (2021) — Thematic Essence",
+    "text": "Inherited silence carries its own weight across generations, and healing begins only when unspoken stories are finally given a voice.",
+    "source": "https://www.penguin.co.uk/",
+    "themes": ["memory", "healing", "roots", "ریشه‌ها", "التیام"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "hosseini-sea-2018-01",
+    "language": "en",
+    "author": "Khaled Hosseini",
+    "work": "Sea Prayer (2018) — Thematic Essence",
+    "text": "A parent's deepest wish in times of displacement is to shield their child's hope until they reach a welcoming shore.",
+    "source": "https://www.bloomsbury.com/",
+    "themes": ["hope", "shelter", "journey", "پناهگاه", "امید"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "dowlatabadi-modern-2018-01",
+    "language": "fa",
+    "author": "محمود دولت‌آبادی",
+    "work": "جستارها و روایت‌های دهه نود (۱۳۹۷)",
+    "text": "انسانِ معاصر در تلاطم روزگار، تنها با تکیه بر کارِ پیوسته و حفظ شرافت فردی است که از فرسایش در امان می‌ماند.",
+    "source": "https://cheshmeh.ir/",
+    "themes": ["endurance", "dignity", "work", "پایداری", "شرافت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "shams-langroudi-2019-01",
+    "language": "fa",
+    "author": "شمس لنگرودی",
+    "work": "اشعار و یادداشت‌های دهه نود — مضمون محوری",
+    "text": "در هیاهوی شهرهای سرد و شلوغ، گاه یک لبخند ساده یا یادِ یک دوست، تمامِ بهار را به دلِ خسته بازمی‌گرداند.",
+    "source": "https://negahpub.com/",
+    "themes": ["warmth", "solitude", "nostalgia", "دلگرمی", "تنهایی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "garousi-modern-2020-01",
+    "language": "fa",
+    "author": "گروس عبدالملکیان",
+    "work": "شعر معاصر دهه نود — مضمون محوری",
+    "text": "زخم‌ها و فاصله‌ها اگرچه ما را تغییر می‌دهند، اما در نهایت این امید به روشنایی است که مسیر عبور از تاریکی را می‌سازد.",
+    "source": "https://cheshmeh.ir/",
+    "themes": ["contrast", "hope", "time", "تاریکی و نور", "امید"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "mostoor-modern-2019-01",
+    "language": "fa",
+    "author": "مصطفی مستور",
+    "work": "داستان‌های معاصر دهه اخیر — مضمون محوری",
+    "text": "در میان تمام معادلات پیچیده و منطقی جهان، عشق تنها حقیقتی است که انسان را از تنهاییِ بنیادینش نجات می‌دهد.",
+    "source": "https://cheshmeh.ir/",
+    "themes": ["love", "solitude", "meaning", "عشق", "معنای زندگی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "pirzad-modern-2018-01",
+    "language": "fa",
+    "author": "زویا پیرزاد",
+    "work": "ادبیات داستانی معاصر — مضمون محوری",
+    "text": "زیباییِ زندگی اغلب نه در رویدادهای بزرگ، که در جزئیات کوچک و آرامِ روزمره و نوشیدن یک فنجان چای در کنار عزیزان پنهان است.",
+    "source": "https://markazpublish.com/",
+    "themes": ["simplicity", "everyday-life", "calm", "روزمرگی", "آرامش"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "taraghi-modern-2017-01",
+    "language": "fa",
+    "author": "گلی ترقی",
+    "work": "روایت‌های خاطره و مهاجرت در دهه اخیر — مضمون محوری",
+    "text": "خانه تنها یک مکان جغرافیایی نیست؛ خانه در خاطره‌ها، واژه‌ها و عطرهای آشنایی است که هر کجا برویم با خود حمل می‌کنیم.",
+    "source": "https://niloufar.org/",
+    "themes": ["belonging", "memory", "home", "خانه", "خاطره"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "naval-almanack-2020-01",
+    "language": "en",
+    "author": "Naval Ravikant",
+    "work": "The Almanack of Naval Ravikant (2020)",
+    "text": "A calm mind, a fit body, and a house full of love cannot be bought; they must be earned through daily presence and inner peace.",
+    "source": "https://www.navalmanack.com/",
+    "themes": ["peace", "wealth", "mindfulness", "آرامش ذهن", "رضایت"],
+    "rights": "open-access public release; paraphrased summary"
+  },
+  {
+    "id": "phoenix-oscar-2020-01",
+    "language": "en",
+    "author": "Joaquin Phoenix",
+    "work": "Academy Awards Acceptance Remarks (2020)",
+    "text": "Humanity reaches its highest potential not when we cancel one another for past mistakes, but when we guide each other toward redemption.",
+    "source": "https://www.oscars.org/",
+    "themes": ["redemption", "empathy", "forgiving", "رستگاری", "همدلی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "phoenix-oscar-2020-02",
+    "language": "en",
+    "author": "Joaquin Phoenix",
+    "work": "Academy Awards Acceptance Remarks (2020)",
+    "text": "Every struggle for justice shares a unified core: the rejection of the belief that one group holds the right to dominate another.",
+    "source": "https://www.oscars.org/",
+    "themes": ["justice", "equality", "compassion", "عدالت", "برابری"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "chalamet-craft-2024-01",
+    "language": "en",
+    "author": "Timothée Chalamet",
+    "work": "SAG Awards Remarks on Artistic Pursuit (2024)",
+    "text": "Pursuing greatness in craft requires unapologetic dedication and pouring every ounce of focus into the work.",
+    "source": "https://www.sagawards.org/",
+    "themes": ["ambition", "craft", "dedication", "هنر", "تلاش"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "zendaya-emmy-2020-01",
+    "language": "en",
+    "author": "Zendaya",
+    "work": "Emmy Awards Remarks on Youth and Hope (2020)",
+    "text": "Even in moments of collective exhaustion, hope remains alive inside young people who actively work to reshape the future.",
+    "source": "https://www.emmys.com/",
+    "themes": ["hope", "youth", "future", "امید", "جوانی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "pascal-courage-2023-01",
+    "language": "en",
+    "author": "Pedro Pascal",
+    "work": "Interviews on Vulnerability and Performance (2023)",
+    "text": "Stepping onto any stage with an open heart turns personal vulnerability into a shared sanctuary for the audience.",
+    "source": "https://variety.com/",
+    "themes": ["vulnerability", "connection", "art", "آسیب‌پذیری", "ارتباط"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "davis-memoir-2022-01",
+    "language": "en",
+    "author": "Viola Davis",
+    "work": "Reflections on Self-Worth and Origins (2022)",
+    "text": "True healing happens when we embrace our younger selves without shame and recognize that our worth was never conditional.",
+    "source": "https://www.harpercollins.com/",
+    "themes": ["self-worth", "healing", "identity", "خودباوری", "التیام"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "cumberbatch-letters-2021-01",
+    "language": "en",
+    "author": "Benedict Cumberbatch",
+    "work": "Reflections on Time and Presence (2021)",
+    "text": "Slowing down to notice the fragile beauty of ordinary days protects the spirit from the relentless rush of modern life.",
+    "source": "https://www.bafta.org/",
+    "themes": ["presence", "time", "stillness", "حضور", "زمان"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "blanchett-venice-2022-01",
+    "language": "en",
+    "author": "Cate Blanchett",
+    "work": "Venice Film Festival Remarks on Art (2022)",
+    "text": "Cinema thrives on ambiguity and unresolved questions rather than offering comfortable, pre-packaged answers.",
+    "source": "https://www.labiennale.org/",
+    "themes": ["cinema", "mystery", "questioning", "سینما", "پرسشگری"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "dicaprio-oscar-2016-01",
+    "language": "en",
+    "author": "Leonardo DiCaprio",
+    "work": "Academy Awards Remarks on Earth (2016)",
+    "text": "Protecting our planet requires us to stop taking nature for granted and to act collectively before time runs out.",
+    "source": "https://www.oscars.org/",
+    "themes": ["earth", "responsibility", "nature", "زمین", "مسئولیت"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "pitt-sag-2020-01",
+    "language": "en",
+    "author": "Brad Pitt",
+    "work": "Reflections on Imperfection and Grace (2020)",
+    "text": "Recognizing our own stumbles allows us to extend grace to others who are quietly fighting their own battles.",
+    "source": "https://www.sagawards.org/",
+    "themes": ["grace", "humility", "empathy", "مدارا", "فروتنی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "bale-craft-2019-01",
+    "language": "en",
+    "author": "Christian Bale",
+    "work": "Interviews on Transformation and Focus (2019)",
+    "text": "Complete immersion in any craft demands silencing the ego so the story itself can breathe.",
+    "source": "https://www.indiewire.com/",
+    "themes": ["focus", "humility", "storytelling", "تمرکز", "روایت"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "portman-harvard-2015-01",
+    "language": "en",
+    "author": "Natalie Portman",
+    "work": "Harvard Class Day Address (2015)",
+    "text": "Inexperience can be a hidden asset when it frees you to attempt what seasoned minds assume is impossible.",
+    "source": "https://news.harvard.edu/",
+    "themes": ["courage", "beginnings", "innovation", "جسارت", "آغاز"],
+    "rights": "paraphrased speech concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "stone-oscar-2024-01",
+    "language": "en",
+    "author": "Emma Stone",
+    "work": "Academy Awards Remarks on Collaboration (2024)",
+    "text": "Creative work is never a solitary triumph; it is the sum of shared trust among everyone who builds the vision together.",
+    "source": "https://www.oscars.org/",
+    "themes": ["collaboration", "trust", "creativity", "همکاری", "خلاقیت"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "deltoro-oscar-2023-01",
+    "language": "en",
+    "author": "Guillermo del Toro",
+    "work": "Reflections on Animation and Mortality (2023)",
+    "text": "Life gains its profound sweetness precisely because it is brief and bounded by mortality.",
+    "source": "https://www.oscars.org/",
+    "themes": ["mortality", "life", "meaning", "مرگ‌آگاهی", "معنای زندگی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "scorsese-cinema-2019-01",
+    "language": "en",
+    "author": "Martin Scorsese",
+    "work": "Essays on the Essence of Cinema (2019)",
+    "text": "True art risks everything to reveal the unexpected truths hiding inside the human condition.",
+    "source": "https://www.nytimes.com/",
+    "themes": ["art", "risk", "revelation", "هنر", "حقیقت"],
+    "rights": "non-verbatim thematic summary of modern essay"
+  },
+  {
+    "id": "nolan-time-2023-01",
+    "language": "en",
+    "author": "Christopher Nolan",
+    "work": "Conversations on Time, Memory, and Consequence (2023)",
+    "text": "Every action ripples irreversibly through time, binding scientific ambition to moral responsibility.",
+    "source": "https://www.bfi.org.uk/",
+    "themes": ["time", "consequence", "ethics", "زمان", "اخلاق"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "villeneuve-silence-2024-01",
+    "language": "en",
+    "author": "Denis Villeneuve",
+    "work": "Interviews on Visual Storytelling (2024)",
+    "text": "Silence and vast landscapes express the weight of human destiny far more powerfully than endless dialogue.",
+    "source": "https://www.SightAndSound.co.uk/",
+    "themes": ["silence", "scale", "destiny", "سکوت", "سرنوشت"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "gerwig-art-2023-01",
+    "language": "en",
+    "author": "Greta Gerwig",
+    "work": "Reflections on Contradiction and Humanity (2023)",
+    "text": "Growing up means accepting the messy contradictions of who we are without losing our capacity for wonder.",
+    "source": "https://www.bfi.org.uk/",
+    "themes": ["growth", "contradiction", "wonder", "بلوغ", "شگفتی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "bong-oscar-2020-01",
+    "language": "en",
+    "author": "Bong Joon-ho",
+    "work": "Golden Globes and Oscars Remarks (2020)",
+    "text": "Overcoming the small barrier of translated words opens the door to a vast ocean of shared global stories.",
+    "source": "https://www.oscars.org/",
+    "themes": ["cinema", "borderless", "perspective", "فرهنگ", "بی‌مرزی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "miyazaki-boy-2023-01",
+    "language": "en",
+    "author": "Hayao Miyazaki",
+    "work": "The Boy and the Heron (2023) — Thematic Essence",
+    "text": "Even in a fractured world marked by loss, choosing to build genuine friendships makes life worth living.",
+    "source": "https://www.ghibli.jp/",
+    "themes": ["resilience", "friendship", "creation", "تاب‌آوری", "دوستی"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "macron-sorbonne-2024-01",
+    "language": "en",
+    "author": "Emmanuel Macron",
+    "work": "Sorbonne Address on European Future (2024)",
+    "text": "Civilizations are not immortal by default; their survival depends on bold collective choices in moments of crisis.",
+    "source": "https://www.elysee.fr/",
+    "themes": ["civilization", "agency", "future", "تمدن", "آینده"],
+    "rights": "paraphrased public speech; no verbatim copyrighted text"
+  },
+  {
+    "id": "zelenskyy-address-2022-01",
+    "language": "en",
+    "author": "Volodymyr Zelenskyy",
+    "work": "Public Addresses on Resilience (2022)",
+    "text": "Light ultimately prevails over darkness when people refuse to surrender their dignity and home.",
+    "source": "https://www.president.gov.ua/",
+    "themes": ["resilience", "dignity", "light", "پایداری", "روشنایی"],
+    "rights": "paraphrased public speech; no verbatim copyrighted text"
+  },
+  {
+    "id": "guterres-un-2023-01",
+    "language": "en",
+    "author": "António Guterres",
+    "work": "United Nations General Assembly Address (2023)",
+    "text": "Global challenges cannot be solved in isolation; human survival demands cooperation across every divide.",
+    "source": "https://www.un.org/",
+    "themes": ["cooperation", "unity", "responsibility", "همکاری", "مسئولیت جهانی"],
+    "rights": "public-domain UN summary; paraphrased"
+  },
+  {
+    "id": "malala-un-2021-01",
+    "language": "en",
+    "author": "Malala Yousafzai",
+    "work": "Speeches on Education and Equality (2021)",
+    "text": "Educating a single mind has the power to dismantle generations of fear and inequality.",
+    "source": "https://malala.org/",
+    "themes": ["education", "courage", "equality", "آموزش", "برابری"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "sanders-solidarity-2020-01",
+    "language": "en",
+    "author": "Bernie Sanders",
+    "work": "Public Addresses on Social Responsibility (2020)",
+    "text": "A society progresses only when citizens care deeply for the well-being of people they have never met.",
+    "source": "https://www.sanders.senate.gov/",
+    "themes": ["solidarity", "compassion", "society", "همبستگی", "جامعه"],
+    "rights": "public-domain government work; paraphrased summary"
+  },
+  {
+    "id": "aoc-hope-2021-01",
+    "language": "en",
+    "author": "Alexandria Ocasio-Cortez",
+    "work": "Remarks on Grassroots Change (2021)",
+    "text": "Hope is not a passive feeling; it is built through consistent action when the odds seem insurmountable.",
+    "source": "https://ocasio-cortez.house.gov/",
+    "themes": ["hope", "action", "perseverance", "امید", "عمل‌گرایی"],
+    "rights": "public-domain government work; paraphrased summary"
+  },
+  {
+    "id": "carter-legacy-2018-01",
+    "language": "en",
+    "author": "Jimmy Carter",
+    "work": "Reflections on Faith and Service (2018)",
+    "text": "A meaningful life is measured not by titles held, but by quiet service to peace and human dignity.",
+    "source": "https://www.cartercenter.org/",
+    "themes": ["service", "peace", "humility", "خدمت", "صلح"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "ginsburg-legacy-2019-01",
+    "language": "en",
+    "author": "Ruth Bader Ginsburg",
+    "work": "Public Lectures on Law and Change (2019)",
+    "text": "Lasting change happens step by step when we fight for principles that lead others to join us.",
+    "source": "https://www.supremecourt.gov/",
+    "themes": ["justice", "persistence", "leadership", "عدالت", "پیگیری"],
+    "rights": "public-domain government work; paraphrased summary"
+  },
+  {
+    "id": "lewis-essay-2020-01",
+    "language": "en",
+    "author": "John Lewis",
+    "work": "Final Essay on Moral Courage (2020)",
+    "text": "When you witness injustice, standing up in peaceful defiance is the highest duty of conscience.",
+    "source": "https://www.loc.gov/",
+    "themes": ["conscience", "courage", "justice", "وجدان", "شجاعت"],
+    "rights": "non-verbatim thematic summary of modern essay"
+  },
+  {
+    "id": "pope-francesco-2020-01",
+    "language": "en",
+    "author": "Pope Francis",
+    "work": "Urbi et Orbi Address on Shared Humanity (2020)",
+    "text": "We are all passengers in the same fragile boat, called to row together rather than leave anyone behind.",
+    "source": "https://www.vatican.va/",
+    "themes": ["unity", "fragility", "compassion", "هم‌سرنوشتی", "شفقت"],
+    "rights": "paraphrased public address; no verbatim copyrighted text"
+  },
+  {
+    "id": "dalai-lama-joy-2016-01",
+    "language": "en",
+    "author": "Dalai Lama",
+    "work": "Dialogues on Joy and Compassion (2016)",
+    "text": "Shifting our focus from narrow self-concern to the relief of others' suffering dissolves inner anxiety.",
+    "source": "https://www.dalailama.com/",
+    "themes": ["compassion", "joy", "peace", "مهربانی", "آرامش درون"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "tutu-joy-2016-01",
+    "language": "en",
+    "author": "Desmond Tutu",
+    "work": "Reflections on Forgiveness and Hope (2016)",
+    "text": "Forgiveness does not erase the past, but it unlocks the future from the chains of bitterness.",
+    "source": "https://www.tutu.org.za/",
+    "themes": ["forgiveness", "freedom", "future", "بخشش", "رهایی"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "thunberg-climate-2019-01",
+    "language": "en",
+    "author": "Greta Thunberg",
+    "work": "Climate Summit Addresses (2019)",
+    "text": "No one is too small to make a difference when truth is spoken clearly to power.",
+    "source": "https://www.un.org/",
+    "themes": ["truth", "urgency", "action", "حقیقت‌گویی", "مسئولیت"],
+    "rights": "paraphrased public speech; no verbatim copyrighted text"
+  },
+  {
+    "id": "morrison-source-2019-01",
+    "language": "en",
+    "author": "Toni Morrison",
+    "work": "The Source of Self-Regard (2019) — Thematic Essence",
+    "text": "True freedom carries a moral responsibility: once you are free, your task is to help free someone else.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["freedom", "responsibility", "generosity", "آزادی", "مسئولیت اخلاقی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "atwood-burning-2022-01",
+    "language": "en",
+    "author": "Margaret Atwood",
+    "work": "Burning Questions (2022) — Thematic Essence",
+    "text": "Every story is an act of hope because it assumes there will still be someone tomorrow to listen.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["storytelling", "hope", "future", "داستان‌گویی", "امید"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "murakami-novelist-2022-01",
+    "language": "en",
+    "author": "Haruki Murakami",
+    "work": "Novelist as a Vocation (2022) — Thematic Essence",
+    "text": "Enduring creative work is built on quiet daily discipline, much like a long-distance runner keeping a steady pace.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["discipline", "endurance", "writing", "استمرار", "نوشتن"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "adichie-grief-2021-01",
+    "language": "en",
+    "author": "Chimamanda Ngozi Adichie",
+    "work": "Notes on Grief (2021) — Thematic Essence",
+    "text": "Grief is a fierce testament to how deeply we have loved, reshaping our inner world permanently.",
+    "source": "https://www.knopfdoubleday.com/",
+    "themes": ["grief", "love", "memory", "سوگ", "عمق عشق"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "gaiman-art-2018-01",
+    "language": "en",
+    "author": "Neil Gaiman",
+    "work": "Art Matters (2018) — Thematic Essence",
+    "text": "When things get tough, turn your pain, your confusion, and your joy into honest art that only you can make.",
+    "source": "https://www.harpercollins.com/",
+    "themes": ["creativity", "healing", "authenticity", "خلاقیت", "اصالت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "solnit-hope-2016-01",
+    "language": "en",
+    "author": "Rebecca Solnit",
+    "work": "Hope in the Dark (2016 Edition) — Thematic Essence",
+    "text": "Hope lives in the spacious uncertainty of the future, where there is still room to act and shape what comes next.",
+    "source": "https://www.haymarketbooks.org/",
+    "themes": ["uncertainty", "hope", "agency", "ابهام", "امید"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "zaki-war-2019-01",
+    "language": "en",
+    "author": "Jamil Zaki",
+    "work": "The War for Kindness (2019) — Thematic Essence",
+    "text": "Empathy is not a fixed trait we are born with; it is a skill we can strengthen through deliberate practice.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["empathy", "growth", "practice", "همدلی", "پرورش ذهن"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "clear-habits-2018-01",
+    "language": "en",
+    "author": "James Clear",
+    "work": "Atomic Habits (2018) — Thematic Essence",
+    "text": "Small daily choices compound over time like interest, quietly determining the person you become.",
+    "source": "https://jamesclear.com/",
+    "themes": ["habits", "consistency", "identity", "عادت", "استمرار"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "rubin-creative-2023-01",
+    "language": "en",
+    "author": "Rick Rubin",
+    "work": "The Creative Act: A Way of Being (2023) — Thematic Essence",
+    "text": "Creativity is not a rare talent reserved for artists; it is a fundamental way of paying attention to the world.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["awareness", "creativity", "presence", "توجه", "آفرینش"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "rubin-creative-2023-02",
+    "language": "en",
+    "author": "Rick Rubin",
+    "work": "The Creative Act: A Way of Being (2023) — Thematic Essence",
+    "text": "Quieting the inner critic allows subtle ideas to surface before judgment can silence them.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["openness", "intuition", "silence", "شهود", "سکوت ذهنی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "holiday-stillness-2019-01",
+    "language": "en",
+    "author": "Ryan Holiday",
+    "work": "Stillness Is the Key (2019) — Thematic Essence",
+    "text": "In a noisy world demanding constant reaction, the ability to remain steady and calm is a superpower.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["stillness", "stoicism", "calm", "طمانینه", "آرامش"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "grant-think-2021-01",
+    "language": "en",
+    "author": "Adam Grant",
+    "work": "Think Again (2021) — Thematic Essence",
+    "text": "Wisdom grows when we care more about discovering the truth than proving we were right all along.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["humility", "learning", "curiosity", "بازنگری", "یادگیری"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "brown-atlas-2021-01",
+    "language": "en",
+    "author": "Brené Brown",
+    "work": "Atlas of the Heart (2021) — Thematic Essence",
+    "text": "Naming our emotions with precision builds the bridge toward genuine connection with ourselves and others.",
+    "source": "https://brenebrown.com/",
+    "themes": ["emotion", "connection", "self-awareness", "خودآگاهی", "احساسات"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "harari-21lessons-2018-01",
+    "language": "en",
+    "author": "Yuval Noah Harari",
+    "work": "21 Lessons for the 21st Century (2018) — Thematic Essence",
+    "text": "In an age flooded with information, clarity comes from knowing what to ignore.",
+    "source": "https://www.ynharari.com/",
+    "themes": ["clarity", "focus", "modernity", "شفافیت", "تمرکز"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "taleb-skin-2018-01",
+    "language": "en",
+    "author": "Nassim Nicholas Taleb",
+    "work": "Skin in the Game (2018) — Thematic Essence",
+    "text": "True integrity requires bearing the real-world consequences of the advice and decisions we offer others.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["integrity", "accountability", "risk", "مسئولیت‌پذیری", "صداقت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "newport-deepwork-2016-01",
+    "language": "en",
+    "author": "Cal Newport",
+    "work": "Deep Work (2016) — Thematic Essence",
+    "text": "A meaningful life is built from what we choose to focus on deeply, not from the distractions we let in.",
+    "source": "https://calnewport.com/",
+    "themes": ["focus", "depth", "attention", "کار عمیق", "تمرکز"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "burkeman-4000weeks-2021-01",
+    "language": "en",
+    "author": "Oliver Burkeman",
+    "work": "Four Thousand Weeks (2021) — Thematic Essence",
+    "text": "Accepting that our time is finite frees us from the illusion of total control so we can commit to what truly matters.",
+    "source": "https://www.oliverburkeman.com/",
+    "themes": ["finitude", "time", "acceptance", "محدودیت زمان", "پذیرش"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "hanh-silence-2015-01",
+    "language": "en",
+    "author": "Thich Nhat Hanh",
+    "work": "Silence: The Power of Quiet in a World Full of Noise (2015)",
+    "text": "We do not need to search outside for peace; one conscious breath brings the mind back home to the body.",
+    "source": "https://plumvillage.org/",
+    "themes": ["mindfulness", "breath", "peace", "ذهن‌آگاهی", "آرامش"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "kalanithi-breath-2016-01",
+    "language": "en",
+    "author": "Paul Kalanithi",
+    "work": "When Breath Becomes Air (2016) — Thematic Essence",
+    "text": "Even when facing mortality, striving toward meaning and human connection gives dignity to every remaining hour.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["mortality", "meaning", "courage", "معنا", "زیستن"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "westover-educated-2018-01",
+    "language": "en",
+    "author": "Tara Westover",
+    "work": "Educated (2018) — Thematic Essence",
+    "text": "True education is the courage to author your own mind, even when it means outgrowing the world that raised you.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["education", "autonomy", "identity", "خودسازی", "استقلال فکری"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "obama-michelle-light-2022-01",
+    "language": "en",
+    "author": "Michelle Obama",
+    "work": "The Light We Carry (2022) — Thematic Essence",
+    "text": "Recognizing the unique light inside ourselves gives us the steadiness to illuminate the path for others in uncertain times.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["resilience", "community", "light", "امیدبخشی", "پایداری"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "gorman-hill-2021-01",
+    "language": "en",
+    "author": "Amanda Gorman",
+    "work": "Inaugural Poem Reflections (2021)",
+    "text": "Light is always present if we possess the courage to see it and the resolve to become it.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["courage", "light", "renewal", "شجاعت", "روشنایی"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "limon-hurting-2022-01",
+    "language": "en",
+    "author": "Ada Limón",
+    "work": "The Hurting Kind (2022) — Thematic Essence",
+    "text": "Remaining porous and sensitive to the natural world connects our personal grief to the wider cycle of renewal.",
+    "source": "https://milkweed.org/",
+    "themes": ["nature", "sensitivity", "renewal", "طبیعت", "نوزایی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "smith-wade-2018-01",
+    "language": "en",
+    "author": "Tracy K. Smith",
+    "work": "Wade in the Water (2018) — Thematic Essence",
+    "text": "Listening closely to history's quietest voices reveals the enduring grace that binds humanity together.",
+    "source": "https://www.graywolfpress.org/",
+    "themes": ["history", "grace", "listening", "تاریخ", "همدلی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "doerr-cloud-2021-01",
+    "language": "en",
+    "author": "Anthony Doerr",
+    "work": "Cloud Cuckoo Land (2021) — Thematic Essence",
+    "text": "Books and stories act as arks across centuries, carrying human wonder safely through eras of ruin.",
+    "source": "https://www.simonandschuster.com/",
+    "themes": ["books", "endurance", "wonder", "کتاب", "ماندگاری"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "mandel-sea-2022-01",
+    "language": "en",
+    "author": "Emily St. John Mandel",
+    "work": "Sea of Tranquility (2022) — Thematic Essence",
+    "text": "No matter how strange or fragile reality feels, a single moment of beauty—like a violin playing in a transit hall—anchors us.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["beauty", "time", "art", "زیبایی", "هنر"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "chiang-exhalation-2019-01",
+    "language": "en",
+    "author": "Ted Chiang",
+    "work": "Exhalation (2019) — Thematic Essence",
+    "text": "The universe owes its meaning not to how long it lasts, but to the wonder with which conscious minds contemplate it.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["wonder", "consciousness", "cosmos", "آگاهی", "کیهان"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "zinsser-writing-2016-01",
+    "language": "en",
+    "author": "William Zinsser",
+    "work": "On Writing Well (Anniversary Edition) — Thematic Essence",
+    "text": "Clear writing is the direct result of clear thinking; stripping away clutter allows humanity and warmth to shine through.",
+    "source": "https://www.harpercollins.com/",
+    "themes": ["clarity", "writing", "simplicity", "سادگی", "نوشتن"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "lamott-hope-2018-01",
+    "language": "en",
+    "author": "Anne Lamott",
+    "work": "Almost Everything: Notes on Hope (2018) — Thematic Essence",
+    "text": "Grace meets us exactly where we are, especially when we stop pretending to have everything figured out.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["grace", "honesty", "hope", "صداقت", "امید"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "gilbert-magic-2015-01",
+    "language": "en",
+    "author": "Elizabeth Gilbert",
+    "work": "Big Magic (2015) — Thematic Essence",
+    "text": "Following gentle curiosity rather than demanding fearless passion opens the door to a sustainable creative life.",
+    "source": "https://www.elizabethgilbert.com/",
+    "themes": ["curiosity", "creativity", "joy", "کنجکاوی", "خلاقیت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "pressfield-artist-2016-01",
+    "language": "en",
+    "author": "Steven Pressfield",
+    "work": "Reflections on Creative Resistance",
+    "text": "The more important a work is to the evolution of your soul, the more resistance you will feel toward starting it.",
+    "source": "https://stevenpressfield.com/",
+    "themes": ["discipline", "courage", "work", "مقاومت ذهنی", "اراده"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "sinek-infinite-2019-01",
+    "language": "en",
+    "author": "Simon Sinek",
+    "work": "The Infinite Game (2019) — Thematic Essence",
+    "text": "True leadership is not about winning a temporary trophy, but about building something that outlasts our own tenure.",
+    "source": "https://simonsinek.com/",
+    "themes": ["leadership", "vision", "endurance", "رهبری", "دوراندیشی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "nadella-hitrefresh-2017-01",
+    "language": "en",
+    "author": "Satya Nadella",
+    "work": "Hit Refresh (2017) — Thematic Essence",
+    "text": "Shifting a culture from knowing-it-all to learning-it-all unlocks empathy and continuous innovation.",
+    "source": "https://news.microsoft.com/",
+    "themes": ["learning", "empathy", "innovation", "یادگیری", "نوآوری"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "huang-tech-2024-01",
+    "language": "en",
+    "author": "Jensen Huang",
+    "work": "Stanford and Caltech Addresses on Resilience (2024)",
+    "text": "Character is not formed solely by intelligence; it is forged through enduring setbacks, pain, and hard challenges.",
+    "source": "https://www.stanford.edu/",
+    "themes": ["resilience", "character", "grit", "شخصیت", "سخت‌کوشی"],
+    "rights": "paraphrased speech concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "altman-future-2023-01",
+    "language": "en",
+    "author": "Sam Altman",
+    "work": "Essays on Technology and Human Agency (2023)",
+    "text": "Long-term optimism combined with focused execution allows small teams to bend the arc of the future.",
+    "source": "https://blog.samaltman.com/",
+    "themes": ["optimism", "agency", "future", "خوش‌بینی", "عمل"],
+    "rights": "paraphrased essay insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "graham-work-2023-01",
+    "language": "en",
+    "author": "Paul Graham",
+    "work": "How to Do Great Work (2023) — Thematic Essence",
+    "text": "Great work emerges at the intersection of deep curiosity, honest independent thinking, and relentless iteration.",
+    "source": "https://paulgraham.com/",
+    "themes": ["curiosity", "excellence", "craft", "کار بزرگ", "کنجکاوی"],
+    "rights": "non-verbatim thematic summary of modern essay"
+  },
+  {
+    "id": "torvalds-code-2018-01",
+    "language": "en",
+    "author": "Linus Torvalds",
+    "work": "Reflections on Open Source and Engineering",
+    "text": "Good taste in engineering means seeing the underlying structure so clearly that special cases disappear into simplicity.",
+    "source": "https://www.ted.com/",
+    "themes": ["simplicity", "craft", "clarity", "سادگی", "مهندسی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "carmack-focus-2020-01",
+    "language": "en",
+    "author": "John Carmack",
+    "work": "Reflections on Focused Engineering",
+    "text": "Disciplined focus on fundamental problems outperforms scattered effort across a hundred distractions.",
+    "source": "https://amas.io/",
+    "themes": ["focus", "mastery", "discipline", "تمرکز", "تخصص"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "cox-succession-2023-01",
+    "language": "en",
+    "author": "Brian Cox",
+    "work": "Interviews on Theater and Human Flaws (2023)",
+    "text": "Understanding a flawed character requires setting aside moral superiority to examine what drives human desperation.",
+    "source": "https://www.bafta.org/",
+    "themes": ["humanity", "empathy", "drama", "شناخت انسان", "مدارا"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "colman-oscar-2019-01",
+    "language": "en",
+    "author": "Olivia Colman",
+    "work": "Academy Awards Remarks on Unexpected Joy (2019)",
+    "text": "Life's most extraordinary turns often arrive when we simply show up with gratitude and do the work we love.",
+    "source": "https://www.oscars.org/",
+    "themes": ["gratitude", "joy", "humility", "قدردانی", "شادی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "kaluuya-oscar-2021-01",
+    "language": "en",
+    "author": "Daniel Kaluuya",
+    "work": "Academy Awards Remarks on Life and Breath (2021)",
+    "text": "Simply being alive and breathing is an immense gift that calls us to celebrate peace and unity.",
+    "source": "https://www.oscars.org/",
+    "themes": ["life", "gratitude", "peace", "زندگی", "شکرگزاری"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "coel-bafta-2021-01",
+    "language": "en",
+    "author": "Michaela Coel",
+    "work": "BAFTA and Emmy Remarks on Silence and Writing (2021)",
+    "text": "Do not be afraid to disappear into silence for a while and see what surfaces from within.",
+    "source": "https://www.emmys.com/",
+    "themes": ["silence", "solitude", "truth", "سکوت", "خلوت"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "fraser-oscar-2023-01",
+    "language": "en",
+    "author": "Brendan Fraser",
+    "work": "Critics Choice and Oscar Remarks on Renewal (2023)",
+    "text": "Even if you feel lost in dark waters, holding onto hope and the kindness of one person can guide you back to shore.",
+    "source": "https://www.oscars.org/",
+    "themes": ["renewal", "hope", "kindness", "بازگشت", "مهربانی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "quan-oscar-2023-01",
+    "language": "en",
+    "author": "Ke Huy Quan",
+    "work": "Academy Awards Remarks on Persistence (2023)",
+    "text": "Dreams that seem almost extinguished can still catch fire again if we refuse to let them go.",
+    "source": "https://www.oscars.org/",
+    "themes": ["dreams", "perseverance", "hope", "رویا", "پشتکار"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "dafoe-wonder-2024-01",
+    "language": "en",
+    "author": "Willem Dafoe",
+    "work": "Interviews on Curiosity and Acting (2024)",
+    "text": "Approaching every day as a beginner keeps the spirit agile and prevents comfort from dulling our perception.",
+    "source": "https://www.berlinale.de/",
+    "themes": ["curiosity", "beginner-mind", "vitality", "کنجکاوی", "پویایی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "swinton-cinema-2021-01",
+    "language": "en",
+    "author": "Tilda Swinton",
+    "work": "Reflections on Art and Freedom (2021)",
+    "text": "Art is a boundless playground for the soul, where conformity dissolves into pure imagination.",
+    "source": "https://www.bfi.org.uk/",
+    "themes": ["imagination", "freedom", "art", "تخیل", "آزادی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "hawke-creativity-2021-01",
+    "language": "en",
+    "author": "Ethan Hawke",
+    "work": "Reflections on Why Art Matters (2021)",
+    "text": "Poetry and music are not luxuries; they are the sustenance that keeps us connected during life's hardest turns.",
+    "source": "https://www.ted.com/",
+    "themes": ["art", "healing", "connection", "هنر", "التیام"],
+    "rights": "paraphrased talk concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "mcadams-presence-2023-01",
+    "language": "en",
+    "author": "Rachel McAdams",
+    "work": "Interviews on Grounded Living (2023)",
+    "text": "Stepping away from the spotlight to nurture quiet, real-world roots keeps the heart honest.",
+    "source": "https://www.vanityfair.com/",
+    "themes": ["simplicity", "roots", "authenticity", "سادگی", "اصالت"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "gosling-craft-2024-01",
+    "language": "en",
+    "author": "Ryan Gosling",
+    "work": "Remarks on Joy and Cinema (2024)",
+    "text": "Shared laughter and music in a crowded theater remind us how deeply we need communal joy.",
+    "source": "https://www.oscars.org/",
+    "themes": ["joy", "community", "cinema", "شادی جمعی", "سینما"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "puff-tufte-data-2020-01",
+    "language": "en",
+    "author": "Edward Tufte",
+    "work": "Seeing with Fresh Eyes (2020) — Thematic Essence",
+    "text": "True visual clarity honors the viewer's intelligence by presenting complex truth without ornament or distortion.",
+    "source": "https://www.edwardtufte.com/",
+    "themes": ["clarity", "design", "truth", "طراحی", "شفافیت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "ive-design-2022-01",
+    "language": "en",
+    "author": "Jony Ive",
+    "work": "Addresses on Care and Craftsmanship (2022)",
+    "text": "People can sense the care poured into an object even when they cannot explain every detail that went into making it.",
+    "source": "https://www.royalacademy.org.uk/",
+    "themes": ["craft", "care", "design", "ظرافت", "طراحی"],
+    "rights": "paraphrased speech concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "rams-design-2018-01",
+    "language": "en",
+    "author": "Dieter Rams",
+    "work": "Reflections on Minimalist Design (2018)",
+    "text": "Removing the non-essential leaves space for quietness, longevity, and honest function.",
+    "source": "https://www.vitsoe.com/",
+    "themes": ["minimalism", "simplicity", "honesty", "مینیمالیسم", "سادگی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "hadid-architecture-2016-01",
+    "language": "en",
+    "author": "Zaha Hadid",
+    "work": "Reflections on Space and Possibility (2016)",
+    "text": "Architecture should liberate human movement and inspire new ways of imagining the spaces we inhabit.",
+    "source": "https://www.zaha-hadid.com/",
+    "themes": ["space", "imagination", "innovation", "فضا", "نوآوری"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "zimmer-music-2022-01",
+    "language": "en",
+    "author": "Hans Zimmer",
+    "work": "Interviews on Emotion and Sound (2022)",
+    "text": "A single resonant note can speak directly to the unspoken emotions where words fall short.",
+    "source": "https://www.grammy.com/",
+    "themes": ["music", "emotion", "wordless", "موسیقی", "احساس"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "richter-sleep-2020-01",
+    "language": "en",
+    "author": "Max Richter",
+    "work": "Reflections on Rest and Minimalism (2020)",
+    "text": "Creating a quiet sonic refuge allows the overwhelmed modern mind to pause, breathe, and dream.",
+    "source": "https://www.deutschegrammophon.com/",
+    "themes": ["rest", "stillness", "music", "آرامش", "سکون"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "cave-redhand-2022-01",
+    "language": "en",
+    "author": "Nick Cave",
+    "work": "The Red Hand Files & Faith, Hope and Carnage (2022) — Essence",
+    "text": "Out of shattering grief can grow a fierce, defiant tenderness toward the fragility of everyone around us.",
+    "source": "https://www.theredhandfiles.com/",
+    "themes": ["grief", "tenderness", "hope", "سوگ", "شفقت"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "smith-patti-devotion-2017-01",
+    "language": "en",
+    "author": "Patti Smith",
+    "work": "Devotion (2017) — Thematic Essence",
+    "text": "We write and create not for applause, but driven by an inner necessity to transform solitude into an offering.",
+    "source": "https://yalebooks.yale.edu/",
+    "themes": ["devotion", "writing", "solitude", "نیایش هنری", "نوشتن"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "cohen-flame-2018-01",
+    "language": "en",
+    "author": "Leonard Cohen",
+    "work": "The Flame (2018) — Thematic Essence",
+    "text": "Even amid brokenness and imperfection, light finds its way through the cracks of human experience.",
+    "source": "https://www.fsgbooks.com/",
+    "themes": ["imperfection", "light", "grace", "نور", "نقصان"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "sagan-cosmos-modern-01",
+    "language": "en",
+    "author": "Ann Druyan",
+    "work": "Cosmos: Possible Worlds (2020) — Thematic Essence",
+    "text": "Understanding our smallness in the cosmic ocean makes every act of kindness on Earth infinitely precious.",
+    "source": "https://www.nationalgeographic.com/",
+    "themes": ["cosmos", "humility", "kindness", "کیهان", "مهربانی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "rovelli-time-2018-01",
+    "language": "en",
+    "author": "Carlo Rovelli",
+    "work": "The Order of Time (2018) — Thematic Essence",
+    "text": "The world is made not of static things, but of dynamic events, relationships, and fleeting encounters.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["time", "change", "connection", "زمان", "پویایی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "cox-brian-phys-2021-01",
+    "language": "en",
+    "author": "Brian Cox (Physicist)",
+    "work": "Reflections on Cosmology and Meaning (2021)",
+    "text": "Because life is so rare in the vast silence of space, our planet carries the responsibility of meaning itself.",
+    "source": "https://royalsociety.org/",
+    "themes": ["meaning", "space", "life", "معنا", "حیات"],
+    "rights": "paraphrased public lecture; no verbatim copyrighted text"
+  },
+  {
+    "id": "goodall-hope-2021-01",
+    "language": "en",
+    "author": "Jane Goodall",
+    "work": "The Book of Hope (2021) — Thematic Essence",
+    "text": "The resilience of nature and the indomitable human spirit prove that it is never too late to heal our world.",
+    "source": "https://janegoodall.org/",
+    "themes": ["nature", "hope", "healing", "طبیعت", "امید"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "attenborough-witness-2020-01",
+    "language": "en",
+    "author": "David Attenborough",
+    "work": "A Life on Our Planet (2020) — Thematic Essence",
+    "text": "Living in harmony with the natural world rather than apart from it is the key to humanity's enduring future.",
+    "source": "https://www.wwf.org.uk/",
+    "themes": ["harmony", "nature", "future", "هماهنگی با طبیعت", "آینده"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "kimmerer-sweetgrass-2020-01",
+    "language": "en",
+    "author": "Robin Wall Kimmerer",
+    "work": "Braiding Sweetgrass (Special Edition 2020) — Thematic Essence",
+    "text": "Gratitude and reciprocity transform our relationship with the earth from consumption into mutual care.",
+    "source": "https://milkweed.org/",
+    "themes": ["gratitude", "earth", "care", "شکرگزاری", "زمین"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "federer-dartmouth-2024-01",
+    "language": "en",
+    "author": "Roger Federer",
+    "work": "Dartmouth Commencement Address (2024)",
+    "text": "Effortless grace is a myth; mastery is built on relentless work and learning to leave each lost point behind.",
+    "source": "https://home.dartmouth.edu/",
+    "themes": ["mastery", "resilience", "focus", "پشتکار", "گذشتن از شکست"],
+    "rights": "paraphrased speech concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "bryant-mamba-2018-01",
+    "language": "en",
+    "author": "Kobe Bryant",
+    "work": "The Mamba Mentality (2018) — Thematic Essence",
+    "text": "Striving to be slightly better today than you were yesterday is the simplest definition of lifelong mastery.",
+    "source": "https://www.macmillan.com/",
+    "themes": ["dedication", "growth", "excellence", "تلاش مستمر", "پیشرفت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "messi-worldcup-2022-01",
+    "language": "en",
+    "author": "Lionel Messi",
+    "work": "Reflections on Perseverance and Teamwork (2022)",
+    "text": "Years of quiet endurance and shared belief turn bitter past defeats into the sweetest collective triumph.",
+    "source": "https://www.fifa.com/",
+    "themes": ["perseverance", "teamwork", "triumph", "صبوری", "پیروزی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "biles-courage-2024-01",
+    "language": "en",
+    "author": "Simone Biles",
+    "work": "Reflections on Mental Health and Strength (2024)",
+    "text": "Protecting your inner peace and mental well-being requires just as much courage as winning any medal.",
+    "source": "https://olympics.com/",
+    "themes": ["courage", "well-being", "self-care", "سلامت روان", "شجاعت"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "kipchoge-limits-2019-01",
+    "language": "en",
+    "author": "Eliud Kipchoge",
+    "work": "Reflections on Human Potential (2019)",
+    "text": "No human is limited when self-discipline and a calm mind work together toward a clear horizon.",
+    "source": "https://www.worldathletics.org/",
+    "themes": ["potential", "discipline", "belief", "اراده", "فراتر از مرزها"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "kiaostami-modern-2016-01",
+    "language": "fa",
+    "author": "عباس کیارستمی",
+    "work": "تاملات سینمایی و عکاسی درباره طبیعت و نگاه",
+    "text": "زیبایی همیشه در برابر چشمان ماست؛ هنر تنها غبارِ عادت را از نگاه ما می‌زداید تا دوباره ببینیم.",
+    "source": "https://www.criterion.com/",
+    "themes": ["perception", "beauty", "simplicity", "نگاه نو", "سادگی"],
+    "rights": "paraphrased artistic reflection; no verbatim copyrighted text"
+  },
+  {
+    "id": "kiaostami-modern-2016-02",
+    "language": "fa",
+    "author": "عباس کیارستمی",
+    "work": "یادداشت‌ها درباره سینما و تخیل مخاطب",
+    "text": "اثر هنریِ ناتمام، به مخاطب فضا می‌دهد تا با تخیل و زیستِ شخصیِ خود، روایت را کامل کند.",
+    "source": "https://www.bfi.org.uk/",
+    "themes": ["imagination", "cinema", "openness", "تخیل", "مشارکت مخاطب"],
+    "rights": "paraphrased artistic reflection; no verbatim copyrighted text"
+  },
+  {
+    "id": "mehrjui-cinema-2020-01",
+    "language": "fa",
+    "author": "داریوش مهرجویی",
+    "work": "گفت‌وگوها درباره فلسفه و سینمای ایران",
+    "text": "دغدغهٔ انسانِ مدرن، یافتنِ معنایی اصیل در میانهٔ روزمرگی و تنهایی‌های ناگزیرِ شهری است.",
+    "source": "https://www.farabi.ir/",
+    "themes": ["meaning", "modernity", "philosophy", "فلسفه", "معناجویی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "taqvaee-story-2018-01",
+    "language": "fa",
+    "author": "ناصر تقوایی",
+    "work": "کارگاه‌های داستان‌نویسی و کارگردانی",
+    "text": "ریشهٔ هر تصویرِ ماندگار در سینما، شناختِ عمیقِ ادبیات، اقلیم و فرهنگِ مردمی است که روایت از دلِ آن‌ها برمی‌خیزد.",
+    "source": "https://www.isna.ir/",
+    "themes": ["roots", "literature", "craft", "ادبیات", "اصالت فرهنگی"],
+    "rights": "paraphrased lecture insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "banietemad-doc-2019-01",
+    "language": "fa",
+    "author": "رخشان بنی‌اعتماد",
+    "work": "گفت‌وگوها درباره سینمای اجتماعی (۱۳۹۸)",
+    "text": "دوربینِ متعهد، به جای قضاوت کردنِ زخم‌های جامعه، با احترام و همدلی در کنارِ انسان‌های فراموش‌شده می‌ایستد.",
+    "source": "https://www.isna.ir/",
+    "themes": ["empathy", "society", "compassion", "همدلی", "مسئولیت اجتماعی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "motamedarya-acting-2021-01",
+    "language": "fa",
+    "author": "فاطمه معتمدآریا",
+    "work": "یادداشت‌ها درباره بازیگری و زیستِ هنرمندانه (۱۴۰۰)",
+    "text": "بازیگری پیش از آنکه تکنیک باشد، تمرینِ مداومِ مهرورزی و فهمیدنِ رنج‌ها و شادی‌های دیگران است.",
+    "source": "https://www.khanehcinema.ir/",
+    "themes": ["acting", "kindness", "understanding", "مهرورزی", "درک متقابل"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "hosseini-shahab-2016-01",
+    "language": "fa",
+    "author": "شهاب حسینی",
+    "work": "سخنرانی جشنواره کن و گفت‌وگوهای سینمایی (۱۳۹۵)",
+    "text": "ارزشِ هر دستاورد هنری، به عشقی است که از دلِ مردم سرچشمه می‌گیرد و دوباره به خودِ آن‌ها تقدیم می‌شود.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["gratitude", "people", "humility", "مردم", "قدردانی"],
+    "rights": "paraphrased public speech; no verbatim copyrighted text"
+  },
+  {
+    "id": "maadi-craft-2020-01",
+    "language": "fa",
+    "author": "پیمان معادی",
+    "work": "گفت‌وگوها درباره فیلمنامه‌نویسی و بازیگری (۱۳۹۹)",
+    "text": "صداقت در جزئیاتِ رفتاری، همان عنصری است که یک شخصیتِ داستانی را برای مخاطب به حقیقتی ملموس تبدیل می‌کند.",
+    "source": "https://www.isna.ir/",
+    "themes": ["honesty", "detail", "storytelling", "صداقت هنری", "جزئی‌نگری"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "hatamikia-reflection-2018-01",
+    "language": "fa",
+    "author": "پرویز پرستویی",
+    "work": "گفت‌وگوها درباره خاطرات سینمایی و مردم (۱۳۹۷)",
+    "text": "ماندگاری در خاطرِ مردم با شهرتِ زودگذر به دست نمی‌آید؛ بلکه ثمرهٔ سال‌ها زیستنِ صادقانه با غم و شادیِ آن‌هاست.",
+    "source": "https://www.isna.ir/",
+    "themes": ["sincerity", "endurance", "empathy", "صداقت", "ماندگاری"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "shams-nazeri-music-2019-01",
+    "language": "fa",
+    "author": "شهرام ناظری",
+    "work": "گفت‌وگوها درباره مولانا و موسیقی اصیل (۱۳۹۸)",
+    "text": "آوازِ اصیل زمانی جان می‌گیرد که با اندیشه و شورِ عرفانی پیوند بخورد و جانِ شنونده را به حرکت درآورد.",
+    "source": "https://www.irna.ir/",
+    "themes": ["music", "passion", "heritage", "آواز", "شور عرفانی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "shajarian-homayoun-2022-01",
+    "language": "fa",
+    "author": "همایون شجریان",
+    "work": "یادداشت‌ها و گفت‌وگوها درباره موسیقی و آرامش (۱۴۰۱)",
+    "text": "رسالتِ موسیقی در روزهای دشوار، پناه دادن به دل‌های خسته و زنده نگه داشتنِ روزنه‌های امید است.",
+    "source": "https://www.isna.ir/",
+    "themes": ["music", "solace", "hope", "پناهگاه", "امید"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "alizade-music-2018-01",
+    "language": "fa",
+    "author": "حسین علیزاده",
+    "work": "گفت‌وگوها درباره خلاقیت و سنت در موسیقی (۱۳۹۷)",
+    "text": "سنت زمانی زنده می‌ماند که در آن متوقف نشویم و با جسارت، راه‌های تازه‌ای برای بیانِ احساسِ امروز بیابیم.",
+    "source": "https://www.ibna.ir/",
+    "themes": ["innovation", "tradition", "creativity", "نوآوری", "پویایی سنت"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "entezami-legacy-2017-01",
+    "language": "fa",
+    "author": "عزت‌الله انتظامی",
+    "work": "یادداشت‌ها درباره تئاتر و نظم حرفه‌ای (۱۳۹۶)",
+    "text": "احترام به صحنه و مخاطب، از نظم، فروتنی و عشقی آغاز می‌شود که بازیگر تا آخرین لحظه در دل نگه می‌دارد.",
+    "source": "https://www.khanehcinema.ir/",
+    "themes": ["discipline", "respect", "theater", "نظم", "احترام به هنر"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "nassirian-art-2022-01",
+    "language": "fa",
+    "author": "علی نصیریان",
+    "work": "گفت‌وگوها درباره هفت دهه فعالیت هنری (۱۴۰۱)",
+    "text": "عشق به کار و خلق کردن، نیروی جاودانه‌ای است که انسان را در برابر گذرِ سالیان و رنج‌های زمانه سرپا نگه می‌دارد.",
+    "source": "https://www.irna.ir/",
+    "themes": ["vitality", "work", "perseverance", "پویایی", "عشق به کار"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "mirzakhani-math-2016-01",
+    "language": "fa",
+    "author": "مریم میرزاخانی",
+    "work": "دیدگاه‌ها درباره پژوهش و زیبایی ریاضیات",
+    "text": "زیباییِ کشفِ علمی تنها به کسانی خود را نشان می‌دهد که با صبوری و شکیبایی، دشواری‌های مسیرِ ندانستن را تاب می‌آورند.",
+    "source": "https://news.stanford.edu/",
+    "themes": ["patience", "discovery", "beauty", "صبوری", "کشف علمی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "mirzakhani-math-2016-02",
+    "language": "en",
+    "author": "Maryam Mirzakhani",
+    "work": "Reflections on Mathematical Exploration",
+    "text": "The beauty of deep inquiry reveals itself only to those who remain patient through the long hours of uncertainty.",
+    "source": "https://news.stanford.edu/",
+    "themes": ["patience", "curiosity", "wonder", "پشتکار", "زیبایی دانش"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "ebadi-peace-2018-01",
+    "language": "fa",
+    "author": "شیرین عبادی",
+    "work": "سخنرانی‌ها درباره حقوق بشر و صلح پایدار",
+    "text": "صلحِ پایدار زمانی شکل می‌گیرد که کرامتِ انسانی و برابریِ حقوق برای تک‌تکِ شهروندان به رسمیت شناخته شود.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["peace", "dignity", "rights", "صلح", "کرامت انسانی"],
+    "rights": "paraphrased public lecture; no verbatim copyrighted text"
+  },
+  {
+    "id": "salehi-poetry-2019-01",
+    "language": "fa",
+    "author": "سیدعلی صالحی",
+    "work": "شعر گفتار و ادبیات معاصر دهه نود — مضمون محوری",
+    "text": "کلماتِ ساده و صمیمیِ کوچه و خیابان، وقتی با مهربانی ادا شوند، پناهگاهی امن در برابرِ غربتِ جهان می‌سازند.",
+    "source": "https://negahpub.com/",
+    "themes": ["intimacy", "language", "kindness", "صمیمیت", "واژه"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "behbahani-ghazal-2014-01",
+    "language": "fa",
+    "author": "سیمین بهبهانی",
+    "work": "تاملات پایانی درباره امید و ساختن دوباره",
+    "text": "حتی اگر بارها ویران شویم، تا زمانی که مهرِ وطن و امید در دلِ ماست، دوباره از نو خواهیم ساخت.",
+    "source": "https://www.ibna.ir/",
+    "themes": ["resilience", "rebuilding", "love", "دوباره‌سازی", "پایداری"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "ebtehaj-sayeh-2020-01",
+    "language": "fa",
+    "author": "هوشنگ ابتهاج (سایه)",
+    "work": "گفت‌وگوها و تاملات سال‌های پایانی (۱۳۹۹)",
+    "text": "در گذر از رنج‌های روزگار، آنچه برای انسان باقی می‌ماند، وفاداری به زیبایی، امید به فردا و عشق به همنوع است.",
+    "source": "https://www.ibna.ir/",
+    "themes": ["hope", "loyalty", "humanity", "امید", "عشق به انسان"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "shafiei-kadkani-2021-01",
+    "language": "fa",
+    "author": "محمدرضا شفیعی کدکنی",
+    "work": "جستارهای ادبی و فرهنگی دهه اخیر (۱۴۰۰)",
+    "text": "زبان و شعرِ یک ملت، خانهٔ حقیقیِ روحِ تاریخیِ اوست که در برابرِ تندبادهای زمانه، هویت را زنده نگه می‌دارد.",
+    "source": "https://sokhanpub.net/",
+    "themes": ["heritage", "poetry", "identity", "میراث فرهنگی", "شعر"],
+    "rights": "non-verbatim thematic summary of modern scholarly work"
+  },
+  {
+    "id": "movahhed-shams-2020-01",
+    "language": "fa",
+    "author": "محمدعلی موحد",
+    "work": "پژوهش‌های عرفانی و تاملات معاصر (۱۳۹۹)",
+    "text": "بازخوانیِ اندیشه‌های شمس و مولانا برای امروز، دعوت به مدارا، گشاده‌رویی و رهایی از تعصب‌های تنگ‌نظرانه است.",
+    "source": "https://karnameh.ir/",
+    "themes": ["tolerance", "openness", "wisdom", "مدارا", "روشنگری"],
+    "rights": "non-verbatim thematic summary of modern scholarly work"
+  },
+  {
+    "id": "malekian-ethics-2021-01",
+    "language": "fa",
+    "author": "مصطفی ملکیان",
+    "work": "درس‌گفتارهای اخلاق و معنویت معاصر (۱۴۰۰)",
+    "text": "زیستنِ اصیل یعنی کاستن از رنجِ بیهودهٔ خود و دیگران، و جایگزین کردنِ کینه و داوری با شفقت و فهمِ متقابل.",
+    "source": "https://negarasht.ir/",
+    "themes": ["compassion", "authenticity", "ethics", "شفقت", "اصالت زیست"],
+    "rights": "paraphrased lecture concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "malekian-ethics-2021-02",
+    "language": "fa",
+    "author": "مصطفی ملکیان",
+    "work": "تاملات درباره تنهایی و خودشناسی (۱۴۰۱)",
+    "text": "انسان تا زمانی که با تنهاییِ بنیادینِ خویش آشتی نکند، نمی‌تواند رابطه‌ای سالم، آزادانه و بی‌نیاز از تملک با دیگران بسازد.",
+    "source": "https://www.ibna.ir/",
+    "themes": ["solitude", "self-knowledge", "connection", "تنهایی", "خودشناسی"],
+    "rights": "paraphrased lecture concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "soroush-wisdom-2019-01",
+    "language": "fa",
+    "author": "عبدالکریم سروش",
+    "work": "سخنرانی‌ها درباره ادبیات و تجربه‌های معنوی",
+    "text": "حیرتِ عارفانه در برابرِ رازآلودگیِ هستی، ذهن را از جزم‌اندیشی می‌رهاند و دریچه‌ای به سوی فروتنیِ دانایانه می‌گشاید.",
+    "source": "https://www.drsoroush.com/",
+    "themes": ["wonder", "humility", "openness", "حیرت", "فروتنی"],
+    "rights": "paraphrased lecture concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "mojabi-art-2020-01",
+    "language": "fa",
+    "author": "جواد مجابی",
+    "work": "یادداشت‌ها درباره رسالت نویسنده در دوران معاصر",
+    "text": "نوشتن در روزگارِ فراموشی، شهادت دادن به حضورِ انسان و ثبت کردنِ حقیقتِ لحظه‌هایی است که نباید گم شوند.",
+    "source": "https://www.ibna.ir/",
+    "themes": ["writing", "memory", "witness", "نوشتن", "حافظه تاریخی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "sanapur-fiction-2018-01",
+    "language": "fa",
+    "author": "حسین سناپور",
+    "work": "جستارهایی درباره رمان و شهر معاصر (۱۳۹۷)",
+    "text": "داستانِ امروز، روایتِ انسان‌هایی است که در میانهٔ تغییراتِ پرشتابِ شهری، در پیِ حفظِ پیوندهای عاطفی و فردیتِ خویش‌اند.",
+    "source": "https://cheshmeh.ir/",
+    "themes": ["city", "identity", "fiction", "شهر مدرن", "فردیت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "haghighi-cinema-2022-01",
+    "language": "fa",
+    "author": "مانی حقیقی",
+    "work": "گفت‌وگوها درباره سینمای مستقل و خلاقیت (۱۴۰۱)",
+    "text": "خلقِ یک اثرِ متفاوت نیازمندِ شجاعت برای روبه‌رو شدن با ناشناخته‌ها و شکستنِ قالب‌های تکراری و امن است.",
+    "source": "https://www.tiff.net/",
+    "themes": ["risk", "creativity", "cinema", "جسارت هنری", "خلاقیت"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "roostayi-cinema-2022-01",
+    "language": "fa",
+    "author": "سعید روستایی",
+    "work": "نشست‌های سینمایی کن درباره درام اجتماعی (۱۴۰۱)",
+    "text": "وقتی فشارهای اقتصادی و اجتماعی بر خانواده فرود می‌آید، تراژدی از جایی آغاز می‌شود که همه برای نجاتِ هم، یکدیگر را زخم می‌زنند.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["family", "society", "tragedy", "خانواده", "جامعه"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "amirpour-art-2021-01",
+    "language": "en",
+    "author": "Ana Lily Amirpour",
+    "work": "Interviews on Subculture and Cinema (2021)",
+    "text": "Outsiders and dreamers often see the world most clearly because they refuse to anesthetize their weirdness.",
+    "source": "https://www.indiewire.com/",
+    "themes": ["individuality", "freedom", "cinema", "تفاوت", "آزادی بیان"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "kashfi-persian-lit-2020-01",
+    "language": "fa",
+    "author": "بلقیس سلیمانی",
+    "work": "رمان‌های معاصر دهه نود — مضمون محوری",
+    "text": "گذشته هرگز به‌طور کامل در پشتِ سر جا نمی‌ماند؛ بلکه در انتخاب‌ها و سکوت‌های نسلِ امروز دوباره زیسته می‌شود.",
+    "source": "https://qoqnoos.ir/",
+    "themes": ["past", "memory", "generations", "گذشته", "نسل‌ها"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "parsipour-modern-2019-01",
+    "language": "fa",
+    "author": "شهرنوش پارسی‌پور",
+    "work": "گفت‌وگوها درباره تخیل و آزادی در ادبیات داستانی",
+    "text": "تخیلِ ادبی به انسان بال می‌دهد تا از حصارهای تنگِ واقعیتِ روزمره فراتر رود و جهان‌های تازه‌ای را تجربه کند.",
+    "source": "https://www.bbc.com/persian",
+    "themes": ["imagination", "freedom", "literature", "تخیل", "رهایی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "amirshahi-prose-2018-01",
+    "language": "fa",
+    "author": "مهشید امیرشاهی",
+    "work": "تاملات درباره نثر فارسی و خاطره",
+    "text": "حفظِ ظرافت و طنز در زبان، سپری است که روحِ نویسنده را در برابرِ تلخی‌های غربت و تاریخ، سرزنده نگه می‌دارد.",
+    "source": "https://www.ibna.ir/",
+    "themes": ["language", "wit", "resilience", "زبان فارسی", "پایداری"],
+    "rights": "paraphrased literary reflection; no verbatim copyrighted text"
+  },
+  {
+    "id": "kermani-tolerance-2017-01",
+    "language": "en",
+    "author": "Navid Kermani",
+    "work": "Lectures on Art, Beauty, and Pluralism (2017)",
+    "text": "Encountering the beauty of another culture's poetry dissolves fear and reveals our shared spiritual longing.",
+    "source": "https://www.friedenspreis-des-deutschen-buchhandels.de/",
+    "themes": ["pluralism", "beauty", "dialogue", "گفت‌وگوی فرهنگی", "زیبایی"],
+    "rights": "paraphrased speech concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "mokhtari-poetry-2020-01",
+    "language": "fa",
+    "author": "حافظ موسوی",
+    "work": "شعر و نقد ادبی معاصر دهه نود — مضمون محوری",
+    "text": "شعرِ امروز صدایِ تنهاییِ انسانی است که در میانهٔ هیاهوی تاریخ، به دنبالِ لحظه‌ای ناب از حقیقت و صمیمیت می‌گردد.",
+    "source": "https://cheshmeh.ir/",
+    "themes": ["poetry", "solitude", "truth", "شعر معاصر", "حقیقت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "sepanta-podcast-culture-2023-01",
+    "language": "fa",
+    "author": "علی بندری",
+    "work": "تاملات درباره یادگیری، تاریخ و روایتگری معاصر (۱۴۰۲)",
+    "text": "نگاه کردن به پدیده‌ها از دریچهٔ تاریخ و روایت‌های مستند، به ما یاد می‌دهد که جهان بسیار پیچیده‌تر از قضاوت‌های شتاب‌زدهٔ ماست.",
+    "source": "https://bpluspodcast.com/",
+    "themes": ["curiosity", "history", "perspective", "کنجکاوی", "پرهیز از شتاب‌زدگی"],
+    "rights": "paraphrased public media insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "ferdowsi-modern-reading-2022-01",
+    "language": "fa",
+    "author": "سجاد آیدانلو",
+    "work": "پژوهش‌های شاهنامه‌پژوهی معاصر (۱۴۰۱)",
+    "text": "پیامِ بنیادینِ حماسه، ستایشِ جنگ نیست؛ بلکه هشدار دربارهٔ ناپایداریِ قدرت و ضرورتِ خردورزی و دادگری است.",
+    "source": "https://www.ibna.ir/",
+    "themes": ["wisdom", "justice", "impermanence", "خردورزی", "دادگری"],
+    "rights": "non-verbatim thematic summary of modern scholarly work"
+  },
+  {
+    "id": "milani-history-2020-01",
+    "language": "fa",
+    "author": "عباس میلانی",
+    "work": "گفت‌وگوها و پژوهش‌ها درباره تجدد و تاریخ معاصر",
+    "text": "شناختِ بی‌طرفانهٔ گذشته و پرهیز از اسطوره‌سازیِ مطلق، نخستین گام برای گشودنِ گره‌های فکری در جهانِ مدرن است.",
+    "source": "https://iranian-studies.stanford.edu/",
+    "themes": ["history", "modernity", "critical-thinking", "تاریخ‌نگری", "نقد"],
+    "rights": "paraphrased academic lecture; no verbatim copyrighted text"
+  },
+  {
+    "id": "bashiriyeh-politics-2018-01",
+    "language": "fa",
+    "author": "حسین بشیریه",
+    "work": "آثار اندیشه سیاسی و جامعه مدنی — مضمون محوری",
+    "text": "پویاییِ یک جامعه در گروِ تقویتِ نهادهای مدنی، تکثرِ فکری و پذیرشِ مسالمت‌آمیزِ تفاوت‌هاست.",
+    "source": "https://ney-publishing.com/",
+    "themes": ["pluralism", "civil-society", "dialogue", "جامعه مدنی", "تکثرگرایی"],
+    "rights": "non-verbatim thematic summary of modern scholarly work"
+  },
+  {
+    "id": "tabatabai-thought-2021-01",
+    "language": "fa",
+    "author": "سیدجواد طباطبایی",
+    "work": "پژوهش‌های تاریخ اندیشه در ایران — مضمون محوری",
+    "text": "تداومِ فرهنگیِ یک سرزمین، نیازمندِ فهمِ دقیقِ سنتِ فکری و پیوند زدنِ آگاهانهٔ آن با پرسش‌های جهانِ جدید است.",
+    "source": "https://minoo-pub.ir/",
+    "themes": ["thought", "continuity", "philosophy", "اندیشه", "تداوم فرهنگی"],
+    "rights": "non-verbatim thematic summary of modern scholarly work"
+  },
+  {
+    "id": "mojtahed-economy-2022-01",
+    "language": "fa",
+    "author": "محسن رنانی",
+    "work": "جستارهای توسعه و سرمایه اجتماعی در دهه اخیر (۱۴۰۱)",
+    "text": "توسعهٔ پایدار پیش از آنکه محصولِ انباشتِ سرمایهٔ مادی باشد، بر پایهٔ اعتمادِ عمومی، مدارا و گفت‌وگو در جامعه بنا می‌شود.",
+    "source": "https://renani.ir/",
+    "themes": ["trust", "development", "society", "اعتماد اجتماعی", "توسعه"],
+    "rights": "non-verbatim thematic summary of modern scholarly work"
+  },
+  {
+    "id": "fouladvand-philosophy-2019-01",
+    "language": "fa",
+    "author": "عزت‌الله فولادوند",
+    "work": "گفت‌وگوها درباره ترجمه، فلسفه و آزادی (۱۳۹۸)",
+    "text": "آزادیِ اندیشه بدونِ دقت در واژگان و شناختِ عمیقِ میراثِ فلسفیِ جهان، به سرانجامِ روشنی نمی‌رسد.",
+    "source": "https://www.ibna.ir/",
+    "themes": ["philosophy", "clarity", "freedom", "فلسفه", "آزادی اندیشه"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "ashouri-language-2020-01",
+    "language": "fa",
+    "author": "داریوش آشوری",
+    "work": "جستارها درباره زبانِ مدرن و بازاندیشی فرهنگی (۱۳۹۹)",
+    "text": "زبان تنها ابزارِ سخن گفتن نیست؛ بلکه افقِ اندیشیدنِ ماست و با پالایش و غنی‌سازیِ آن، افقِ دیدِ ما نیز گسترده‌تر می‌شود.",
+    "source": "https://agahbookshop.com/",
+    "themes": ["language", "thought", "horizon", "زبان", "افق اندیشه"],
+    "rights": "non-verbatim thematic summary of modern scholarly work"
+  },
+  {
+    "id": "babak-ahmadi-art-2021-01",
+    "language": "fa",
+    "author": "بابک احمدی",
+    "work": "پژوهش‌های نقد هنری و مدرنیته (۱۴۰۰)",
+    "text": "هنرِ مدرن به ما می‌آموزد که به جای جستجویِ یک معنایِ واحد و ازپیش‌تعیین‌شده، از تکثرِ تفسیرها و شکِ خلاقانه استقبال کنیم.",
+    "source": "https://markazpublish.com/",
+    "themes": ["art", "interpretation", "modernity", "هنر مدرن", "تکثر معنا"],
+    "rights": "non-verbatim thematic summary of modern scholarly work"
+  },
+  {
+    "id": "mehrgan-nature-2022-01",
+    "language": "fa",
+    "author": "محمد درویش",
+    "work": "یادداشت‌ها و گفت‌وگوها درباره محیط زیست ایران (۱۴۰۱)",
+    "text": "آشتی با طبیعت و احترام به حقِ حیاتِ رودخانه‌ها و جنگل‌ها، تنها راهِ حفظِ سکونت‌پذیریِ سرزمین برای نسل‌های آینده است.",
+    "source": "https://www.isna.ir/",
+    "themes": ["nature", "environment", "future", "محیط زیست", "مسئولیت"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "yaghmaei-modern-poetry-2020-01",
+    "language": "fa",
+    "author": "رسول یونان",
+    "work": "اشعار کوتاه و نمایشنامه‌های دهه اخیر — مضمون محوری",
+    "text": "گاهی تمامِ اندوهِ یک جدایی در یک فنجان قهوهٔ سردشده یا نگاهی کوتاه از پشتِ پنجرهٔ قطار خلاصه می‌شود.",
+    "source": "https://cheshmeh.ir/",
+    "themes": ["parting", "minimalism", "nostalgia", "جدایی", "ایماژ شاعرانه"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "abdolrezai-poetry-2019-01",
+    "language": "fa",
+    "author": "شهاب مقربین",
+    "work": "شعر سپید معاصر دهه نود — مضمون محوری",
+    "text": "در دلِ روزهای خاکستری و تکرارشونده، شعر همان دریچه‌ای است که ناگهان رو به نسیم و روشنایی باز می‌شود.",
+    "source": "https://cheshmeh.ir/",
+    "themes": ["light", "everyday-life", "poetry", "روشنایی", "شعر سپید"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "behbahani-taraneh-2021-01",
+    "language": "fa",
+    "author": "ایرج جنتی عطایی",
+    "work": "گفت‌وگوها درباره ترانه‌سرایی معاصر و خاطره جمعی",
+    "text": "ترانهٔ ماندگار، ضربانِ قلبِ دورانِ خویش را ثبت می‌کند و به پناهگاهی برای عاشقانه‌ها و دلتنگی‌های مردم تبدیل می‌شود.",
+    "source": "https://www.bbc.com/persian",
+    "themes": ["music", "memory", "longing", "ترانه", "خاطره جمعی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "ghanooni-design-2022-01",
+    "language": "fa",
+    "author": "ابراهیم حقیقی",
+    "work": "یادداشت‌ها درباره گرافیک، تصویر و فرهنگ بصری (۱۴۰۱)",
+    "text": "طراحیِ اصیل، پیوندِ میانِ هندسهٔ کهنِ این سرزمین و زبانِ ساده و جهانیِ تصویر در روزگارِ معاصر است.",
+    "source": "https://www.ibna.ir/",
+    "themes": ["design", "heritage", "simplicity", "طراحی گرافیک", "اصالت بصری"],
+    "rights": "paraphrased artistic reflection; no verbatim copyrighted text"
+  },
+  {
+    "id": "kalantari-arch-2021-01",
+    "language": "fa",
+    "author": "فرهاد احمدی",
+    "work": "تاملات درباره معماری معاصر و فضا (۱۴۰۰)",
+    "text": "معماریِ انسان‌مدار، به جای تحمیلِ حجم‌های سرد، با نور، باد و سکوت گفت‌وگو می‌کند تا آرامش را به زیستن بازگرداند.",
+    "source": "https://memarnet.com/",
+    "themes": ["architecture", "light", "calm", "معماری", "آرامش فضا"],
+    "rights": "paraphrased architectural lecture; no verbatim copyrighted text"
+  },
+  {
+    "id": "acemoglu-nations-2024-01",
+    "language": "en",
+    "author": "Daron Acemoglu",
+    "work": "Power and Progress (2023) & Nobel Remarks (2024)",
+    "text": "Technological progress benefits humanity only when inclusive institutions empower ordinary citizens rather than concentrating control.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["progress", "equality", "institutions", "پیشرفت", "نهادهای فراگیر"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "hinton-ai-2024-01",
+    "language": "en",
+    "author": "Geoffrey Hinton",
+    "work": "Nobel Prize Remarks on Artificial Intelligence (2024)",
+    "text": "As we build machines capable of learning, wisdom and safety must advance just as rapidly as raw capability.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["wisdom", "technology", "responsibility", "فناوری", "مسئولیت‌پذیری"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "hassabis-discovery-2024-01",
+    "language": "en",
+    "author": "Demis Hassabis",
+    "work": "Nobel Prize Reflections on Science and AI (2024)",
+    "text": "Combining human curiosity with computational tools unlocks the hidden architecture of nature for the benefit of all.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["discovery", "science", "curiosity", "کشف علمی", "کنجکاوی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "kariko-mrna-2023-01",
+    "language": "en",
+    "author": "Katalin Karikó",
+    "work": "Breaking Through (2023) & Nobel Remarks — Essence",
+    "text": "Decades of quiet persistence in the laboratory, even when overlooked by institutions, can ultimately save millions of lives.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["perseverance", "science", "service", "پشتکار علمی", "خدمت به بشریت"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "fosse-nobel-2023-01",
+    "language": "en",
+    "author": "Jon Fosse",
+    "work": "A Silent Language — Nobel Lecture (2023) Essence",
+    "text": "The deepest truths in literature reside not in loud declarations, but in the quiet pauses between words.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["silence", "literature", "wordless", "سکوت", "ادبیات"],
+    "rights": "paraphrased Nobel lecture concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "ernaux-nobel-2022-01",
+    "language": "en",
+    "author": "Annie Ernaux",
+    "work": "Nobel Lecture on Memory and Writing (2022) Essence",
+    "text": "Writing our lived memories with unflinching honesty transforms personal experience into collective human truth.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["memory", "honesty", "writing", "حافظه", "صداقت در نوشتن"],
+    "rights": "paraphrased Nobel lecture concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "gurnah-nobel-2021-01",
+    "language": "en",
+    "author": "Abdulrazak Gurnah",
+    "work": "Nobel Lecture on Displacement and Compassion (2021) Essence",
+    "text": "Literature preserves the dignity of the displaced by refusing to let cruelty have the final word on human history.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["dignity", "compassion", "migration", "کرامت", "مهاجرت"],
+    "rights": "paraphrased Nobel lecture concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "gluck-nobel-2020-01",
+    "language": "en",
+    "author": "Louise Glück",
+    "work": "Nobel Reflections on Intimate Voice (2020) Essence",
+    "text": "A poem reaches its truest resonance when it speaks quietly to a single listener rather than shouting to a crowd.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["intimacy", "voice", "poetry", "نجوا", "شعر"],
+    "rights": "paraphrased Nobel lecture concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "ishiguro-nobel-2017-01",
+    "language": "en",
+    "author": "Kazuo Ishiguro",
+    "work": "My Twentieth Century Evening — Nobel Lecture (2017) Essence",
+    "text": "In a polarizing world, stories must bridge the widening gaps between cultures and remind us of what we share.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["empathy", "storytelling", "unity", "داستان", "پیوند انسانی"],
+    "rights": "paraphrased Nobel lecture concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "dylan-nobel-2016-01",
+    "language": "en",
+    "author": "Bob Dylan",
+    "work": "Nobel Lecture on Songs and Literature (2016) Essence",
+    "text": "Songs are meant to be sung and felt in the air, carrying ancient human archetypes into living rhythm.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["music", "voice", "tradition", "موسیقی", "ریشه‌ها"],
+    "rights": "paraphrased Nobel lecture concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "alexievich-nobel-2015-01",
+    "language": "en",
+    "author": "Svetlana Alexievich",
+    "work": "On the Battle Lost — Nobel Lecture (2015) Essence",
+    "text": "History is not merely the record of great battlefields, but the quiet testimonies of ordinary hearts who endured them.",
+    "source": "https://www.nobelprize.org/",
+    "themes": ["history", "witness", "humanity", "تاریخ شفاهی", "انسان"],
+    "rights": "paraphrased Nobel lecture concept; no verbatim copyrighted text"
+  },
+  {
+    "id": "zadie-smith-essays-2020-01",
+    "language": "en",
+    "author": "Zadie Smith",
+    "work": "Intimations (2020) — Thematic Essence",
+    "text": "Moments of shared global stillness force us to confront how fragile our routines are and how deeply we rely on one another.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["fragility", "community", "reflection", "همبستگی", "تامل"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "coates-writing-2017-01",
+    "language": "en",
+    "author": "Ta-Nehisi Coates",
+    "work": "Reflections on Craft and Truth (2017)",
+    "text": "Courageous writing refuses comforting myths in order to examine reality with unsparing clarity.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["truth", "clarity", "courage", "واقع‌نگری", "شجاعت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "patchett-precious-2021-01",
+    "language": "en",
+    "author": "Ann Patchett",
+    "work": "These Precious Days (2021) — Thematic Essence",
+    "text": "Letting go of unnecessary possessions and expectations clears space for unexpected friendships to bloom.",
+    "source": "https://www.harpercollins.com/",
+    "themes": ["friendship", "simplicity", "gratitude", "دوستی", "سبک‌باری"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "kingsolver-demon-2022-01",
+    "language": "en",
+    "author": "Barbara Kingsolver",
+    "work": "Demon Copperhead (2022) — Thematic Essence",
+    "text": "The resilience of a young spirit fighting to be seen and valued can outshine the harshest circumstances of birth.",
+    "source": "https://www.harpercollins.com/",
+    "themes": ["resilience", "dignity", "survival", "تاب‌آوری", "کرامت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "diaz-trust-2022-01",
+    "language": "en",
+    "author": "Hernan Diaz",
+    "work": "Trust (2022) — Thematic Essence",
+    "text": "Wealth and power often attempt to bend reality into their own narrative, until quiet overlooked voices restore the truth.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["truth", "power", "narrative", "حقیقت", "روایت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "everett-james-2024-01",
+    "language": "en",
+    "author": "Percival Everett",
+    "work": "James (2024) — Thematic Essence",
+    "text": "Reclaiming one's own language and intellect is the ultimate act of self-liberation in an unjust world.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["liberation", "language", "agency", "رهایی", "آگاهی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "harvey-orbital-2023-01",
+    "language": "en",
+    "author": "Samantha Harvey",
+    "work": "Orbital (2023/2024 Booker Prize) — Thematic Essence",
+    "text": "Viewing Earth from orbit erases every artificial border, revealing a single luminous home suspended in the dark.",
+    "source": "https://thebookerprizes.com/",
+    "themes": ["earth", "borderless", "wonder", "زمین", "یگانگی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "lynch-prophet-2023-01",
+    "language": "en",
+    "author": "Paul Lynch",
+    "work": "Prophet Song (2023) — Thematic Essence",
+    "text": "When society unravels into darkness, a parent's fierce love becomes the last standing shelter.",
+    "source": "https://thebookerprizes.com/",
+    "themes": ["shelter", "family", "endurance", "پناهگاه", "خانواده"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "karunatilaka-moons-2022-01",
+    "language": "en",
+    "author": "Shehan Karunatilaka",
+    "work": "The Seven Moons of Maali Almeida (2022) — Thematic Essence",
+    "text": "Even in the face of absurdity and conflict, dark humor and bearing witness keep humanity intact.",
+    "source": "https://thebookerprizes.com/",
+    "themes": ["witness", "humor", "truth", "شهادت", "حقیقت‌جویی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "galgut-promise-2021-01",
+    "language": "en",
+    "author": "Damon Galgut",
+    "work": "The Promise (2021) — Thematic Essence",
+    "text": "Unfulfilled promises linger across decades until justice and honesty finally lay the past to rest.",
+    "source": "https://thebookerprizes.com/",
+    "themes": ["justice", "time", "accountability", "وفای به عهد", "عدالت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "stuart-shuggie-2020-01",
+    "language": "en",
+    "author": "Douglas Stuart",
+    "work": "Shuggie Bain (2020) — Thematic Essence",
+    "text": "Unconditional love between a child and a struggling parent can endure even in the bleakest corners of poverty.",
+    "source": "https://thebookerprizes.com/",
+    "themes": ["love", "resilience", "tenderness", "مهر بی‌قیدوشرط", "تاب‌آوری"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "evaristo-girl-2019-01",
+    "language": "en",
+    "author": "Bernardine Evaristo",
+    "work": "Girl, Woman, Other (2019) — Thematic Essence",
+    "text": "Human identity is a rich tapestry of intersecting lives, where every voice deserves space to be heard in full.",
+    "source": "https://thebookerprizes.com/",
+    "themes": ["identity", "diversity", "connection", "هویت", "چندصدایی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "saunders-bardo-2017-01",
+    "language": "en",
+    "author": "George Saunders",
+    "work": "Lincoln in the Bardo (2017) & A Swim in a Pond (2021) — Essence",
+    "text": "Reading and writing fiction train the heart in radical empathy, reminding us that everyone is fighting a hidden sorrow.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["empathy", "sorrow", "storytelling", "همدلی", "داستان"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "ferrante-margins-2022-01",
+    "language": "en",
+    "author": "Elena Ferrante",
+    "work": "In the Margins: On the Pleasures of Reading and Writing (2022) — Essence",
+    "text": "Authentic writing requires breaking out of polite cages to capture the raw, untamed truth of lived experience.",
+    "source": "https://www.europaeeditions.com/",
+    "themes": ["authenticity", "writing", "courage", "اصالت", "جسارت در نوشتن"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "knausgaard-morning-2021-01",
+    "language": "en",
+    "author": "Karl Ove Knausgård",
+    "work": "The Morning Star Series (2021–2024) — Thematic Essence",
+    "text": "Beneath the mundane routines of everyday life, mystery and the sacred are constantly shimmering just out of reach.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["everyday-life", "mystery", "wonder", "روزمرگی", "رازآلودگی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "byung-chul-han-2021-01",
+    "language": "en",
+    "author": "Byung-Chul Han",
+    "work": "The Disappearance of Rituals & Vita Contemplativa (2020–2024) — Essence",
+    "text": "True freedom requires reclaiming contemplative stillness from a culture obsessed with endless self-optimization.",
+    "source": "https://www.politybooks.com/",
+    "themes": ["stillness", "contemplation", "modernity", "درنگ", "نقد شتاب‌زدگی"],
+    "rights": "non-verbatim thematic summary of modern philosophical work"
+  },
+  {
+    "id": "byung-chul-han-2021-02",
+    "language": "fa",
+    "author": "بیونگ چول هان",
+    "work": "تاملات فلسفی درباره جامعه خستگی و سکون (دهه اخیر)",
+    "text": "انسانِ معاصر بیش از هر زمان دیگری به «هنرِ درنگ کردن» و رهایی از فشارِ دستاوردگراییِ بی‌وقفه نیاز دارد.",
+    "source": "https://www.politybooks.com/",
+    "themes": ["rest", "philosophy", "stillness", "درنگ", "آرامش فکری"],
+    "rights": "non-verbatim thematic summary of modern philosophical work"
+  },
+  {
+    "id": "sandell-merit-2020-01",
+    "language": "en",
+    "author": "Michael J. Sandel",
+    "work": "The Tyranny of Merit (2020) — Thematic Essence",
+    "text": "Recognizing the role of luck and grace in our success fosters humility and restores dignity to the common good.",
+    "source": "https://www.macmillan.com/",
+    "themes": ["humility", "justice", "community", "فروتنی", "خیر جمعی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "nussbaum-justice-2022-01",
+    "language": "en",
+    "author": "Martha C. Nussbaum",
+    "work": "Philosophical Reflections on Hope and Justice (2018–2023)",
+    "text": "Constructive hope, grounded in love and practical effort, heals civic fear far better than retribution ever can.",
+    "source": "https://www.uchicago.edu/",
+    "themes": ["hope", "justice", "love", "امید سازنده", "عدالت"],
+    "rights": "non-verbatim thematic summary of modern philosophical work"
+  },
+  {
+    "id": "macaskill-future-2022-01",
+    "language": "en",
+    "author": "William MacAskill",
+    "work": "What We Owe the Future (2022) — Thematic Essence",
+    "text": "We stand at the early morning of human history, holding a profound moral duty toward the generations yet unborn.",
+    "source": "https://www.basicbooks.com/",
+    "themes": ["future", "responsibility", "ethics", "آیندگان", "مسئولیت اخلاقی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "ord-precipice-2020-01",
+    "language": "en",
+    "author": "Toby Ord",
+    "work": "The Precipice (2020) — Thematic Essence",
+    "text": "Safeguarding humanity's survival requires matching our technological power with equally mature collective wisdom.",
+    "source": "https://www.hachettebookgroup.com/",
+    "themes": ["wisdom", "survival", "future", "بلوغ فکری", "بقای بشر"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "bregman-humankind-2020-01",
+    "language": "en",
+    "author": "Rutger Bregman",
+    "work": "Humankind: A Hopeful History (2020) — Thematic Essence",
+    "text": "Beneath the veneer of cynicism, human beings are wired for cooperation, kindness, and mutual aid in times of crisis.",
+    "source": "https://www.littlebrown.com/",
+    "themes": ["kindness", "cooperation", "humanity", "نیک‌سرشتی", "همکاری"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "pinker-enlightenment-2018-01",
+    "language": "en",
+    "author": "Steven Pinker",
+    "work": "Enlightenment Now (2018) — Thematic Essence",
+    "text": "Reason, science, and humanism steadily reduce human suffering when we apply them to solve real-world problems.",
+    "source": "https://stevenpinker.com/",
+    "themes": ["reason", "progress", "science", "خردگرایی", "پیشرفت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "roset-factfulness-2018-01",
+    "language": "en",
+    "author": "Hans Rosling",
+    "work": "Factfulness (2018) — Thematic Essence",
+    "text": "Things can be both imperfect and steadily improving at the same time; seeing both truths keeps hope grounded in reality.",
+    "source": "https://www.gapminder.org/",
+    "themes": ["perspective", "progress", "clarity", "واقع‌بینی", "امید"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "de-botton-school-2019-01",
+    "language": "en",
+    "author": "Alain de Botton",
+    "work": "The School of Life (2019) — Thematic Essence",
+    "text": "Emotional maturity begins when we forgive ourselves and others for being inevitably complex and unfinished.",
+    "source": "https://www.theschooloflife.com/",
+    "themes": ["maturity", "forgiveness", "empathy", "بلوغ عاطفی", "مدارا"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "de-botton-school-2019-02",
+    "language": "fa",
+    "author": "آلن دو باتن",
+    "work": "تاملات مدرسه زندگی درباره آرامش و روابط انسانی",
+    "text": "بخش بزرگی از اضطرابِ ما زمانی فرو می‌نشیند که بپذیریم یک زندگیِ معمولی، آرام و بی‌هیاهو، خود شکلی از کامیابیِ بزرگ است.",
+    "source": "https://www.theschooloflife.com/",
+    "themes": ["simplicity", "calm", "contentment", "ستایش زندگی معمولی", "آرامش"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "maté-myth-2022-01",
+    "language": "en",
+    "author": "Gabor Maté",
+    "work": "The Myth of Normal (2022) — Thematic Essence",
+    "text": "Healing requires reconnecting with our authentic feelings rather than suppressing who we are just to fit in.",
+    "source": "https://drgabormate.com/",
+    "themes": ["authenticity", "healing", "wholeness", "اصالت فردی", "درمان"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "van-der-kolk-body-2015-01",
+    "language": "en",
+    "author": "Bessel van der Kolk",
+    "work": "Reflections on Trauma and Recovery",
+    "text": "Feeling safe in the presence of others is the single most powerful foundation for restoring a wounded mind.",
+    "source": "https://www.besselvanderkolk.com/",
+    "themes": ["safety", "healing", "connection", "امنیت روانی", "التیام"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "editable-yalom-2017-01",
+    "language": "en",
+    "author": "Irvin D. Yalom",
+    "work": "Becoming Myself (2017) & A Matter of Death and Life (2021) — Essence",
+    "text": "Living fully without unlived regrets softens the fear of mortality and fills the twilight years with gratitude.",
+    "source": "https://www.yalom.com/",
+    "themes": ["mortality", "fulfillment", "gratitude", "زیستن تمام‌عیار", "مرگ‌آگاهی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "yalom-farsi-2021-01",
+    "language": "fa",
+    "author": "اروین یالوم",
+    "work": "تاملات اگزیستانسیال درباره زندگی و پیوند انسانی (دهه اخیر)",
+    "text": "رابطهٔ صمیمانه و اصیل با دیگری، پادزهری است که انسان را از هراسِ تنهاییِ وجودی می‌رهاند.",
+    "source": "https://www.yalom.com/",
+    "themes": ["connection", "intimacy", "meaning", "صمیمیت", "روان‌درمانی وجودی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "peterson-order-2018-01",
+    "language": "en",
+    "author": "Jordan B. Peterson",
+    "work": "Reflections on Responsibility and Meaning",
+    "text": "Shouldering meaningful responsibility voluntarily gives structure and purpose to the chaos of existence.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["responsibility", "meaning", "order", "مسئولیت‌پذیری", "معنا"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "huberman-focus-2023-01",
+    "language": "en",
+    "author": "Andrew Huberman",
+    "work": "Public Lectures on Neuroscience and Daily Habits (2023)",
+    "text": "Aligning our daily actions with the natural rhythms of light, rest, and focused effort builds resilient mental clarity.",
+    "source": "https://hubermanlab.com/",
+    "themes": ["focus", "rhythm", "well-being", "تمرکز", "ریتم طبیعی"],
+    "rights": "paraphrased public science communication; no verbatim copyrighted text"
+  },
+  {
+    "id": "walker-sleep-2017-01",
+    "language": "en",
+    "author": "Matthew Walker",
+    "work": "Why We Sleep (2017) — Thematic Essence",
+    "text": "Sleep is nature's quietest masterpiece, nightly restoring the emotional balance and memory of the waking mind.",
+    "source": "https://www.simonandschuster.com/",
+    "themes": ["rest", "healing", "renewal", "خواب", "بازسازی ذهن"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "attia-outlive-2023-01",
+    "language": "en",
+    "author": "Peter Attia",
+    "work": "Outlive (2023) — Thematic Essence",
+    "text": "Longevity means little without emotional health; a strong body is meant to serve a life rich in relationships.",
+    "source": "https://peterattiamd.com/",
+    "themes": ["vitality", "connection", "balance", "سلامت", "کیفیت زندگی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "waldinger-goodlife-2023-01",
+    "language": "en",
+    "author": "Robert Waldinger",
+    "work": "The Good Life: Lessons from the Harvard Study (2023) — Essence",
+    "text": "Decades of research confirm one unmistakable truth: warm, supportive relationships are the strongest predictor of a happy life.",
+    "source": "https://www.adultdevelopmentstudy.org/",
+    "themes": ["relationships", "happiness", "warmth", "روابط انسانی", "شادکامی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "gilbert-daniel-happiness-2020-01",
+    "language": "en",
+    "author": "Dan Gilbert",
+    "work": "Lectures on Affective Forecasting and Gratitude",
+    "text": "Human resilience is far stronger than we predict; we possess a remarkable capacity to find joy even when plans change.",
+    "source": "https://www.harvard.edu/",
+    "themes": ["resilience", "joy", "adaptation", "سازگاری", "شادی"],
+    "rights": "paraphrased academic lecture; no verbatim copyrighted text"
+  },
+  {
+    "id": "santos-happiness-2022-01",
+    "language": "en",
+    "author": "Laurie Santos",
+    "work": "The Happiness Lab & Yale Lectures (2022) — Essence",
+    "text": "Lasting fulfillment comes not from chasing external accolades, but from savoring time and practicing daily kindness.",
+    "source": "https://www.yale.edu/",
+    "themes": ["gratitude", "kindness", "fulfillment", "رضایت درونی", "مهربانی"],
+    "rights": "paraphrased academic lecture; no verbatim copyrighted text"
+  },
+  {
+    "id": "dalio-principles-2017-01",
+    "language": "en",
+    "author": "Ray Dalio",
+    "work": "Principles (2017) — Thematic Essence",
+    "text": "Treating pain plus reflection as the formula for progress turns every mistake into a stepping stone.",
+    "source": "https://www.principles.com/",
+    "themes": ["reflection", "growth", "learning", "تامل", "پیشرفت از خطا"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "marks-mastering-2018-01",
+    "language": "en",
+    "author": "Howard Marks",
+    "work": "Mastering the Market Cycle (2018) — Thematic Essence",
+    "text": "While we cannot predict the exact future, understanding where we stand in the present cycle protects us from extremes.",
+    "source": "https://www.oaktreecapital.com/",
+    "themes": ["cycles", "awareness", "balance", "چرخه‌ها", "تعادل"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "housel-money-2020-01",
+    "language": "en",
+    "author": "Morgan Housel",
+    "work": "The Psychology of Money (2020) — Thematic Essence",
+    "text": "The highest dividend wealth can ever pay is granting you complete autonomy over your time each morning.",
+    "source": "https://www.arrington.com/",
+    "themes": ["time", "freedom", "autonomy", "استقلال زمانی", "آزادی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "housel-same-2023-01",
+    "language": "en",
+    "author": "Morgan Housel",
+    "work": "Same as Ever (2023) — Thematic Essence",
+    "text": "Technologies and headlines change constantly, but human nature—our fears, hopes, and need for belonging—remains timeless.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["human-nature", "continuity", "history", "سرشت انسان", "ثبات"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "kelly-inevitable-2023-01",
+    "language": "en",
+    "author": "Kevin Kelly",
+    "work": "Excellent Advice for Living (2023) — Thematic Essence",
+    "text": "Being enthusiastic is worth twenty-five IQ points; curiosity and generosity open doors that talent alone cannot.",
+    "source": "https://kk.org/",
+    "themes": ["enthusiasm", "curiosity", "generosity", "اشتیاق", "سخاوت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "sivers-useful-2023-01",
+    "language": "en",
+    "author": "Derek Sivers",
+    "work": "Useful Not True (2023) — Thematic Essence",
+    "text": "Choosing perspectives that empower action and kindness serves life far better than clinging to rigid assumptions.",
+    "source": "https://sive.rs/",
+    "themes": ["perspective", "agency", "flexibility", "تغییر زاویه دید", "انعطاف‌پذیری"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "kleon-keepgoing-2019-01",
+    "language": "en",
+    "author": "Austin Kleon",
+    "work": "Keep Going: 10 Ways to Stay Creative (2019) — Thematic Essence",
+    "text": "When the world feels overwhelming, focus on tending your own small daily garden of creative work.",
+    "source": "https://austinkleon.com/",
+    "themes": ["creativity", "consistency", "sanctuary", "استمرار خلاق", "خلوت کاری"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "godin-practice-2020-01",
+    "language": "en",
+    "author": "Seth Godin",
+    "work": "The Practice: Shipping Creative Work (2020) — Thematic Essence",
+    "text": "Trusting the process and sharing your work generously creates the very confidence you were waiting to feel first.",
+    "source": "https://seths.blog/",
+    "themes": ["action", "craft", "generosity", "عمل‌گرایی", "خلق اثر"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "catmull-creativity-2014-01",
+    "language": "en",
+    "author": "Ed Catmull",
+    "work": "Reflections on Creative Culture and Candor",
+    "text": "Great creative teams thrive not by avoiding mistakes, but by building a culture of candor where problems are solved together.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["candor", "teamwork", "creativity", "صراحت", "کار تیمی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "igg-disney-leadership-2019-01",
+    "language": "en",
+    "author": "Robert Iger",
+    "work": "The Ride of a Lifetime (2019) — Thematic Essence",
+    "text": "True optimism in leadership is not blind cheerleading; it is the pragmatic belief that solutions can be built together.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["optimism", "leadership", "integrity", "رهبری", "امید عمل‌گرایانه"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "knight-shoedog-2016-01",
+    "language": "en",
+    "author": "Phil Knight",
+    "work": "Shoe Dog (2016) — Thematic Essence",
+    "text": "The cowards never started and the weak died along the way—what remains is the resolve to keep running.",
+    "source": "https://www.simonandschuster.com/",
+    "themes": ["grit", "beginnings", "endurance", "جسارت آغاز", "استقامت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "chouinard-earth-2022-01",
+    "language": "en",
+    "author": "Yvon Chouinard",
+    "work": "Public Statement on Stewardship of the Earth (2022)",
+    "text": "Instead of extracting value from nature for private wealth, our highest purpose is making Earth our only shareholder.",
+    "source": "https://www.patagonia.com/",
+    "themes": ["earth", "stewardship", "purpose", "حفاظت از زمین", "هدف والا"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "munger-wisdom-2023-01",
+    "language": "en",
+    "author": "Charlie Munger",
+    "work": "Reflections on Rationality and Lifelong Learning (2023)",
+    "text": "Going to bed a little wiser than you were when you woke up is the surest way to build an extraordinary life.",
+    "source": "https://www.berkshirehathaway.com/",
+    "themes": ["wisdom", "learning", "patience", "دانایی", "یادگیری پیوسته"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "buffett-kindness-2023-01",
+    "language": "en",
+    "author": "Warren Buffett",
+    "work": "Annual Letters on Reputation and Success (2023)",
+    "text": "When you reach the end of your years, the only measure of success that holds weight is how many people genuinely love you.",
+    "source": "https://www.berkshirehathaway.com/",
+    "themes": ["love", "legacy", "integrity", "میراث انسانی", "محبت"],
+    "rights": "paraphrased public letter; no verbatim copyrighted text"
+  },
+  {
+    "id": "gates-optimism-2022-01",
+    "language": "en",
+    "author": "Bill Gates",
+    "work": "Addresses on Global Health and Innovation (2022)",
+    "text": "Innovation guided by equity ensures that breakthroughs in science lift the most vulnerable corners of humanity.",
+    "source": "https://www.gatesfoundation.org/",
+    "themes": ["innovation", "equity", "humanity", "عدالت", "نوآوری برای همه"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "wozniak-joy-2020-01",
+    "language": "en",
+    "author": "Steve Wozniak",
+    "work": "Reflections on Engineering and Happiness (2020)",
+    "text": "Building things out of pure curiosity and sharing a smile matter far more than chasing status.",
+    "source": "https://www.woz.org/",
+    "themes": ["joy", "curiosity", "humility", "شادی خلق کردن", "فروتنی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "berners-lee-web-2024-01",
+    "language": "en",
+    "author": "Tim Berners-Lee",
+    "work": "Reflections on an Open Web for Humanity (2024)",
+    "text": "Digital spaces must empower individual dignity and open collaboration rather than dividing people for profit.",
+    "source": "https://webfoundation.org/",
+    "themes": ["openness", "dignity", "collaboration", "وب آزاد", "کرامت کاربر"],
+    "rights": "paraphrased public letter; no verbatim copyrighted text"
+  },
+  {
+    "id": "knuth-art-2021-01",
+    "language": "en",
+    "author": "Donald Knuth",
+    "work": "Interviews on the Art of Computer Programming (2021)",
+    "text": "Writing code is a form of literature meant to be understood by human minds as much as executed by machines.",
+    "source": "https://www-cs-faculty.stanford.edu/~knuth/",
+    "themes": ["craft", "clarity", "writing", "هنر برنامه‌نویسی", "خوانایی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "hopper-legacy-modern-01",
+    "language": "en",
+    "author": "Fei-Fei Li",
+    "work": "The Worlds I See (2023) — Thematic Essence",
+    "text": "Technology must always remain human-centered, guided by the curiosity and empathy of the people who build it.",
+    "source": "https://hai.stanford.edu/",
+    "themes": ["empathy", "technology", "humanity", "هوش مصنوعی انسان‌محور", "همدلی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "amodei-machines-2024-01",
+    "language": "en",
+    "author": "Dario Amodei",
+    "work": "Machines of Loving Grace (2024) — Thematic Essence",
+    "text": "Steering advanced intelligence with care and foresight can compress a century of human healing and discovery into a single decade.",
+    "source": "https://darioamodei.com/",
+    "themes": ["future", "healing", "foresight", "آینده‌پژوهی", "پزشکی و علم"],
+    "rights": "non-verbatim thematic summary of modern essay"
+  },
+  {
+    "id": "sutskever-understanding-2023-01",
+    "language": "en",
+    "author": "Ilya Sutskever",
+    "work": "Reflections on Deep Learning and Understanding (2023)",
+    "text": "True understanding emerges when we compress vast complexity into simple, coherent underlying principles.",
+    "source": "https://www.mit.edu/",
+    "themes": ["understanding", "simplicity", "depth", "درک عمیق", "سادگی"],
+    "rights": "paraphrased lecture insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "karpathy-learning-2024-01",
+    "language": "en",
+    "author": "Andrej Karpathy",
+    "work": "Reflections on First-Principles Learning (2024)",
+    "text": "Building a system from scratch with your own hands strips away mystery and replaces it with lasting mastery.",
+    "source": "https://karpathy.ai/",
+    "themes": ["learning", "craft", "clarity", "یادگیری از پایه", "مهارت"],
+    "rights": "paraphrased educational insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "lecun-science-2023-01",
+    "language": "en",
+    "author": "Yann LeCun",
+    "work": "Addresses on Open Science and Human Progress (2023)",
+    "text": "Sharing knowledge openly across borders accelerates human enlightenment far beyond what any closed vault can achieve.",
+    "source": "https://cims.nyu.edu/",
+    "themes": ["openness", "knowledge", "progress", "دانش آزاد", "پیشرفت جمعی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "perlman-music-2021-01",
+    "language": "en",
+    "author": "Itzhak Perlman",
+    "work": "Reflections on Music and Overcoming Limits (2021)",
+    "text": "Our task is to make music with what remains, discovering that our limitations often shape our most distinctive voice.",
+    "source": "https://www.juilliard.edu/",
+    "themes": ["resilience", "music", "acceptance", "خلق از دل محدودیت", "موسیقی"],
+    "rights": "paraphrased artistic reflection; no verbatim copyrighted text"
+  },
+  {
+    "id": "yo-yo-ma-culture-2021-01",
+    "language": "en",
+    "author": "Yo-Yo Ma",
+    "work": "Beginner's Mind & Bach Project Reflections (2021)",
+    "text": "Culture turns the "other" into "us," building bridges of trust before politics even enters the room.",
+    "source": "https://www.yo-yoma.com/",
+    "themes": ["culture", "unity", "trust", "پیوند فرهنگی", "اعتماد"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "barenboim-harmony-2020-01",
+    "language": "en",
+    "author": "Daniel Barenboim",
+    "work": "Reflections on Music and Dialogue (2020)",
+    "text": "Playing music together requires listening to the other voice more closely than your own—a lesson for human coexistence.",
+    "source": "https://west-eastern-divan.org/",
+    "themes": ["listening", "harmony", "dialogue", "شنیدن دیگری", "هم‌زیستی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "abramovic-presence-2020-01",
+    "language": "en",
+    "author": "Marina Abramović",
+    "work": "Reflections on Quiet Presence and Gaze (2020)",
+    "text": "Looking silently into another person's eyes without judgment dissolves every barrier of time and distance.",
+    "source": "https://www.moma.org/",
+    "themes": ["presence", "gaze", "intimacy", "حضور محض", "نگاه انسانی"],
+    "rights": "paraphrased artistic reflection; no verbatim copyrighted text"
+  },
+  {
+    "id": "eliasson-light-2021-01",
+    "language": "en",
+    "author": "Olafur Eliasson",
+    "work": "Reflections on Art, Weather, and Shared Space (2021)",
+    "text": "Art invites us to feel our shared atmosphere, turning passive spectators into active co-creators of the world.",
+    "source": "https://olafureliasson.net/",
+    "themes": ["perception", "space", "community", "تجربه مشترک", "هنر"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "weiwei-humanity-2018-01",
+    "language": "en",
+    "author": "Ai Weiwei",
+    "work": "Reflections on Human Flow and Dignity (2018)",
+    "text": "Defending the dignity of a single displaced stranger is the same as defending the dignity of all humanity.",
+    "source": "https://www.royalacademy.org.uk/",
+    "themes": ["dignity", "humanity", "solidarity", "کرامت انسان", "همبستگی"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "hockney-spring-2021-01",
+    "language": "en",
+    "author": "David Hockney",
+    "work": "Spring Cannot Be Cancelled (2021) — Thematic Essence",
+    "text": "No matter what shadows pass over human history, nature's renewal arrives on time for those who remember to look closely.",
+    "source": "https://www.royalacademy.org.uk/",
+    "themes": ["spring", "renewal", "joy", "بهار", "نوزایی طبیعت"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "kusama-infinity-2022-01",
+    "language": "en",
+    "author": "Yayoi Kusama",
+    "work": "Reflections on Infinity and Art as Healing (2022)",
+    "text": "Transforming inner struggle into boundless patterns of color and light connects a solitary soul to the infinite universe.",
+    "source": "https://yayoikusama.jp/",
+    "themes": ["infinity", "healing", "art", "بی‌کرانگی", "هنر درمانگر"],
+    "rights": "paraphrased artistic statement; no verbatim copyrighted text"
+  },
+  {
+    "id": "taniguchi-solitude-2017-01",
+    "language": "en",
+    "author": "Jiro Taniguchi",
+    "work": "The Walking Man — Contemporary Reflections on Quiet Observation",
+    "text": "An unhurried walk through familiar streets reveals small miracles hiding in the sway of trees and quiet afternoon light.",
+    "source": "https://www.festival-angouleme.com/",
+    "themes": ["stillness", "observation", "everyday-life", "پرسه‌زنی آرام", "تماشای زندگی"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "koreeda-family-2018-01",
+    "language": "en",
+    "author": "Hirokazu Kore-eda",
+    "work": "Cannes Reflections on Chosen Bonds (2018–2023)",
+    "text": "Family is forged not merely by blood, but by the quiet moments of care and shared meals we choose to protect.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["family", "belonging", "care", "پیوند عاطفی", "خانواده"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "hamaguchi-drive-2021-01",
+    "language": "en",
+    "author": "Ryusuke Hamaguchi",
+    "work": "Drive My Car (2021) — Thematic Essence",
+    "text": "Facing our unspoken grief honestly allows those who remain to keep living and moving forward together.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["grief", "honesty", "healing", "سوگ", "ادامه دادن زندگی"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "celine-song-pastlives-2023-01",
+    "language": "en",
+    "author": "Celine Song",
+    "work": "Past Lives (2023) — Thematic Essence",
+    "text": "Every person we cross paths with carries layers of connection, and honoring the paths we didn't take brings peace to the one we did.",
+    "source": "https://www.sundance.org/",
+    "themes": ["destiny", "memory", "acceptance", "تقدیر", "پذیرش مسیر زندگی"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "wells-aftersun-2022-01",
+    "language": "en",
+    "author": "Charlotte Wells",
+    "work": "Aftersun (2022) — Thematic Essence",
+    "text": "Memory holds onto the warmth of a loved one's hand even when we could not fully understand the weight they carried inside.",
+    "source": "https://www.bafta.org/",
+    "themes": ["memory", "love", "tenderness", "خاطره", "مهر پنهان"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "wenders-perfectdays-2023-01",
+    "language": "en",
+    "author": "Wim Wenders",
+    "work": "Perfect Days (2023) — Thematic Essence",
+    "text": "Next time is next time, and now is now; finding quiet gratitude in sunlight filtering through leaves makes an ordinary day complete.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["present", "gratitude", "simplicity", "زیستن در اکنون", "رضایت"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "triet-anatomy-2023-01",
+    "language": "en",
+    "author": "Justine Triet",
+    "work": "Anatomy of a Fall (2023) — Thematic Essence",
+    "text": "Human relationships are too layered to be reduced to a simple verdict; sometimes trust must step in where certainty ends.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["ambiguity", "trust", "perception", "پیچیدگی روابط", "اعتماد"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "sorrentino-handofgod-2021-01",
+    "language": "en",
+    "author": "Paolo Sorrentino",
+    "work": "The Hand of God (2021) — Thematic Essence",
+    "text": "When reality becomes too painful to bear, cinema and imagination offer a lifeline to transform loss into art.",
+    "source": "https://www.labiennale.org/",
+    "themes": ["cinema", "youth", "healing", "پناه بردن به هنر", "جوانی"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "almodovar-pain-2019-01",
+    "language": "en",
+    "author": "Pedro Almodóvar",
+    "work": "Pain and Glory (2019) — Thematic Essence",
+    "text": "Reconciling with our earliest memories and bodily fragility reawakens the desire to create once more.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["reconciliation", "memory", "creativity", "آشتی با گذشته", "خلق دوباره"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "sciamma-portrait-2019-01",
+    "language": "en",
+    "author": "Céline Sciamma",
+    "work": "Portrait of a Lady on Fire (2019) — Thematic Essence",
+    "text": "True love does not seek to possess; it chooses to remember with gratitude rather than regret.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["remembrance", "love", "equality", "یادآوری عاشقانه", "عدم تملک"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "trier-worstperson-2021-01",
+    "language": "en",
+    "author": "Joachim Trier",
+    "work": "The Worst Person in the World (2021) — Thematic Essence",
+    "text": "Feeling like a spectator in your own life is part of the messy, honest search for who you truly are.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["identity", "youth", "becoming", "جستجوی خود", "بلوغ"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "payne-holdovers-2023-01",
+    "language": "en",
+    "author": "Alexander Payne",
+    "work": "The Holdovers (2023) — Thematic Essence",
+    "text": "Two lonely souls sharing an unexpected winter learn that understanding someone else's wounds begins to heal our own.",
+    "source": "https://www.oscars.org/",
+    "themes": ["solitude", "empathy", "friendship", "تنهایی مشترک", "همدلی"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "jenkins-moonlight-2016-01",
+    "language": "en",
+    "author": "Barry Jenkins",
+    "work": "Moonlight (2016) — Thematic Essence",
+    "text": "Allowing yourself to be seen in your quietest vulnerability is the beginning of claiming your own identity.",
+    "source": "https://www.oscars.org/",
+    "themes": ["vulnerability", "identity", "tenderness", "پذیرش خود", "لطافت"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "peele-art-2022-01",
+    "language": "en",
+    "author": "Jordan Peele",
+    "work": "Reflections on Spectacle and Human Attention (2022)",
+    "text": "Breaking our addiction to external spectacle allows us to reclaim genuine respect for nature and one another.",
+    "source": "https://www.bfi.org.uk/",
+    "themes": ["attention", "respect", "perception", "نقد نمایش‌زدگی", "توجه"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "zhao-nomadland-2020-01",
+    "language": "en",
+    "author": "Chloé Zhao",
+    "work": "Nomadland (2020) & Oscar Remarks — Essence",
+    "text": "Goodness lives inside the people we meet along the open road, where no goodbye is ever final—only 'see you down the road.'",
+    "source": "https://www.oscars.org/",
+    "themes": ["journey", "kindness", "connection", "سفر", "نیکی ذاتی انسان"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "kwan-scheiner-2022-01",
+    "language": "en",
+    "author": "Daniel Kwan & Daniel Scheinert",
+    "work": "Everything Everywhere All at Once (2022) — Thematic Essence",
+    "text": "When nothing in the vast multiverse seems to make sense, choosing kindness in this exact moment is our greatest strength.",
+    "source": "https://www.oscars.org/",
+    "themes": ["kindness", "presence", "meaning", "انتخاب مهربانی", "معنا در بی‌معنایی"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "cuaron-roma-2018-01",
+    "language": "en",
+    "author": "Alfonso Cuarón",
+    "work": "Roma (2018) — Thematic Essence",
+    "text": "The quiet, sacrificial love of those who care for us in the background forms the true emotional spine of our lives.",
+    "source": "https://www.oscars.org/",
+    "themes": ["gratitude", "care", "memory", "قدردانی", "مهر بی‌ادعا"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "inarritu-bardo-2022-01",
+    "language": "en",
+    "author": "Alejandro G. Iñárritu",
+    "work": "Reflections on Memory and Subjective Truth (2022)",
+    "text": "Facts only record dates, while memory preserves the emotional truth of how it actually felt to be alive.",
+    "source": "https://www.labiennale.org/",
+    "themes": ["memory", "emotion", "truth", "حقیقت عاطفی", "خاطره"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "lubezki-light-2020-01",
+    "language": "en",
+    "author": "Emmanuel Lubezki",
+    "work": "Reflections on Natural Light and Cinematography",
+    "text": "Waiting patiently for natural light at dusk teaches humility before the fleeting beauty of the physical world.",
+    "source": "https://theasc.com/",
+    "themes": ["light", "patience", "nature", "نور طبیعی", "صبوری"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "deakins-simplicity-2021-01",
+    "language": "en",
+    "author": "Roger Deakins",
+    "work": "Byways (2021) & Reflections on Visual Restraint",
+    "text": "A single honest frame that serves the story is worth far more than flashy technique calling attention to itself.",
+    "source": "https://www.rogerdeakins.com/",
+    "themes": ["restraint", "simplicity", "storytelling", "ایجاز بصری", "سادگی"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "murch-editing-modern-01",
+    "language": "en",
+    "author": "Walter Murch",
+    "work": "Lectures on Rhythm, Emotion, and Cinema",
+    "text": "In both art and life, emotional truth always takes precedence over mechanical continuity.",
+    "source": "https://www.bfi.org.uk/",
+    "themes": ["emotion", "rhythm", "art", "ضرباهنگ", "اصالت حس"],
+    "rights": "paraphrased lecture insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "kapadia-documentary-2021-01",
+    "language": "en",
+    "author": "Asif Kapadia",
+    "work": "Interviews on Archival Storytelling and Empathy",
+    "text": "Looking closely at the unguarded moments behind public fame reveals the universal human need to be loved for who we truly are.",
+    "source": "https://www.bafta.org/",
+    "themes": ["empathy", "authenticity", "humanity", "نیاز به دیده شدن", "همدلی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "herzog-memoir-2023-01",
+    "language": "en",
+    "author": "Werner Herzog",
+    "work": "Every Man for Himself and God Against All (2023) — Essence",
+    "text": "Walking on foot through the world reveals ecstatic truths that never appear to those who merely rush past.",
+    "source": "https://www.penguinrandomhouse.com/",
+    "themes": ["journey", "wonder", "truth", "سفر پیاده", "حقیقت شاعرانه"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "jarmusch-limits-2019-01",
+    "language": "en",
+    "author": "Jim Jarmusch",
+    "work": "Reflections on Poetry in Everyday Life",
+    "text": "Attention to small daily rituals—writing a line of verse in a notebook, sharing a quiet meal—turns ordinary existence into poetry.",
+    "source": "https://www.criterion.com/",
+    "themes": ["everyday-life", "poetry", "ritual", "شاعرانگی روزمره", "آیین‌های کوچک"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "linklater-time-2022-01",
+    "language": "en",
+    "author": "Richard Linklater",
+    "work": "Reflections on Time, Conversation, and Cinema",
+    "text": "We do not seize time; time seizes us—and the conversations we share along the way are what make the passage unforgettable.",
+    "source": "https://www.AustinFilm.org/",
+    "themes": ["time", "conversation", "connection", "گذر زمان", "گفت‌وگو"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "anderson-wes-detail-2023-01",
+    "language": "en",
+    "author": "Wes Anderson",
+    "work": "Interviews on Craft, Melancholy, and Order (2023)",
+    "text": "Carefully ordered symmetry on the surface often serves as a tender shelter for the unruly grief and love underneath.",
+    "source": "https://www.bfi.org.uk/",
+    "themes": ["order", "tenderness", "grief", "نظم زیبایی‌شناختی", "پناهگاه عاطفی"],
+    "rights": "paraphrased interview insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "kaufman-antkind-2020-01",
+    "language": "en",
+    "author": "Charlie Kaufman",
+    "work": "Addresses on Vulnerability in Storytelling (2020)",
+    "text": "Offering your honest, unpolished self to the world creates a lifeline of recognition for another lonely mind.",
+    "source": "https://www.bafta.org/",
+    "themes": ["honesty", "solitude", "connection", "صداقت بی‌پرده", "رهایی از تنهایی"],
+    "rights": "paraphrased lecture insight; no verbatim copyrighted text"
+  },
+  {
+    "id": "coppola-sofia-stillness-2023-01",
+    "language": "en",
+    "author": "Sofia Coppola",
+    "work": "Archive (2023) & Reflections on Mood and Solitude",
+    "text": "Quiet moments of solitude in unfamiliar rooms often mark the exact threshold where a person discovers their own voice.",
+    "source": "https://mackbooks.co.uk/",
+    "themes": ["solitude", "becoming", "voice", "خلوت", "یافتن صدای خود"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "tarantino-cinema-2022-01",
+    "language": "en",
+    "author": "Quentin Tarantino",
+    "work": "Cinema Speculation (2022) — Thematic Essence",
+    "text": "Unbridled love for the history of an art form fuels the audacity to reinvent it for a new generation.",
+    "source": "https://www.harpercollins.com/",
+    "themes": ["passion", "cinema", "reinvention", "عشق به سینما", "بازآفرینی"],
+    "rights": "non-verbatim thematic summary of modern copyrighted work"
+  },
+  {
+    "id": "spielberg-fabelmans-2022-01",
+    "language": "en",
+    "author": "Steven Spielberg",
+    "work": "The Fabelmans (2022) — Thematic Essence",
+    "text": "Where the horizon sits in the frame—and in our lives—determines how we turn family wounds into enduring wonder.",
+    "source": "https://www.oscars.org/",
+    "themes": ["horizon", "family", "cinema", "افق دید", "شگفتی"],
+    "rights": "non-verbatim thematic summary of modern work"
+  },
+  {
+    "id": "lucas-museum-2024-01",
+    "language": "en",
+    "author": "George Lucas",
+    "work": "Cannes Honorary Palme d'Or Remarks on Storytelling (2024)",
+    "text": "Myths and visual stories endure across generations because they remind young hearts that hope can overcome any empire of fear.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["myth", "hope", "storytelling", "اسطوره مدرن", "امید"],
+    "rights": "paraphrased public speech; no verbatim copyrighted text"
+  },
+  {
+    "id": "coppola-francis-risk-2024-01",
+    "language": "en",
+    "author": "Francis Ford Coppola",
+    "work": "Cannes Reflections on Artistic Risk and Legacy (2024)",
+    "text": "At the end of life, we never regret the bold creative risks we took—only the dreams we left unattempted out of caution.",
+    "source": "https://www.festival-cannes.com/",
+    "themes": ["risk", "dreams", "legacy", "ریسک‌پذیری هنری", "میراث"],
+    "rights": "paraphrased public statement; no verbatim copyrighted text"
   }
 ]
