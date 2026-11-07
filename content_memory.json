@@ -16,7 +16,11 @@
     "shakespeare-18-01",
     "blake-auguries-02",
     "poe-dream-03",
-    "dickinson-314-04"
+    "dickinson-314-04",
+    "karpathy-learning-2024-01",
+    "kaluuya-oscar-2021-01",
+    "tennyson-ulysses-03",
+    "henley-invictus-03"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -34,7 +38,11 @@
     "76409e59f3784b9ca7ff606a28b3011367ea77af37d6bd79fccbc133a6f969dd",
     "b0e9fc25cd06c5817020f276bd3f4e35a3bcc25070298bab4db4bf8f625dbb1f",
     "36853f6d3d3324a31c89245c3e8e8cc19df6d9e2072877ce47b25aa96fb2f22a",
-    "74757de4ce593d658d1bf5b75506f94b9c8c1fb6d38bd2a27a029117afb86248"
+    "74757de4ce593d658d1bf5b75506f94b9c8c1fb6d38bd2a27a029117afb86248",
+    "0b8c4b89e8f71182e25406f9df894069770a0cb16d1cc6de38cd42770e562ab5",
+    "083f129c5b3da7da153332a62b1169961247df8e1b527ad45221926b5f546cce",
+    "13cfaa67a8085d62006889803f23e8960f1de322c4e9bd40562efd472f32bab5",
+    "82b331f48e9f358bd79c59ca03e1f1fbbc235f3e8623b6a42a314b58ea495dc3"
   ],
   "recent": [
     {
@@ -148,6 +156,34 @@
       "author": "Emily Dickinson",
       "style": "action",
       "lens": "body"
+    },
+    {
+      "text": "A rusted garden trowel sprouts tiny leaves, each blade whispering that even the most stubborn tools can nurture new soil.",
+      "poem_id": "karpathy-learning-2024-01",
+      "author": "Andrej Karpathy",
+      "style": "object",
+      "lens": "growth"
+    },
+    {
+      "text": "A tiny desk lamp flickers in a vast, silent hall, reminding that even the smallest glow persists when the world stretches beyond.",
+      "poem_id": "kaluuya-oscar-2021-01",
+      "author": "Daniel Kaluuya",
+      "style": "contrast",
+      "lens": "space"
+    },
+    {
+      "text": "On the rain‑slick boulevard, the empty bench keeps your forgotten footsteps, as if the city waits for the one who never returns.",
+      "poem_id": "tennyson-ulysses-03",
+      "author": "Alfred, Lord Tennyson",
+      "style": "address",
+      "lens": "city"
+    },
+    {
+      "text": "A burst of amber light slashes across the dance floor, each step a pulse that propels the night forward like a daring heartbeat.",
+      "poem_id": "henley-invictus-03",
+      "author": "William Ernest Henley",
+      "style": "motion",
+      "lens": "light"
     }
   ],
   "pending": {

@@ -51,3 +51,9 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 44 | Octave | 1. Baby Bebin Baroone |
 | 45 | Reza Pishro &amp; Yas &amp; Tech N9ne | 1. Separ (Rapkadeh) |
 | 46 | Shayea | 1. Aziatam |
+| 47 | Rodríguez | 1. Sandrevan Lullaby - Lifestyles |
+| 48 | Oliver Tree | 1. Life Goes On |
+| 49 | Ray Charles | 1. What'd I Say |
+| 50 | Kenny Loggins | 1. I'm Alright (Theme from "Caddyshack") |
+| 51 | Måneskin | 1. THE DRIVER |
+| 52 | 3 Doors Down | 1. Here Without You |
