@@ -49,7 +49,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
           git add daily_log.json
-          if [ -f data/artists.txt ]; then git add data/artists.txt; fi
+          if [ -f data/artist_tracks.json ]; then git add data/artist_tracks.json; fi
+          if [ -f data/artists.md ]; then git add data/artists.md; fi
           if [ -f content_memory.json ]; then git add content_memory.json; fi
           
           if ! git diff --cached --quiet; then

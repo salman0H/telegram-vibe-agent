@@ -1,0 +1,53 @@
+# Channel artists and songs
+
+Artists and songs appear in first-recorded order. Song numbers are local to each artist.
+Generated from `artist_tracks.json`; updated automatically when channel audio is recorded.
+
+| # | Artist | Songs |
+| --- | --- | --- |
+| 1 | Emilee | 1. i love you baby |
+| 2 | Zedbazi, Arash Dara | 1. Montazer Boodan Kaarie Ke Bazi Vaghta Pesara Bara Dokhtara Mikonan... |
+| 3 | Emily Sage | 1. You Have My Heart (feat. Stephen Day) |
+| 4 | beabadoobee | 1. Coffee |
+| 5 | The Macarons Project | 1. Somewhere Only We Know |
+| 6 | Kina Grannis, Imaginary Future | 1. What a Wonderful World |
+| 7 | The Don/Sijal | 1. Mikham Bargardam |
+| 8 | Canis/ Behzad Leito/ Zakhmi | 1. Daeman (feat. Behzad Leito &amp; Zakhmi) |
+| 9 | The Veer Union | 1. Nightmare |
+| 10 | Korn | 1. Word Up! |
+| 11 | VRSTY | 1. MONTERO (Call Me By Your Name) |
+| 12 | Blacktop Mojo | 1. Dream On |
+| 13 | Motionless In White | 1. Somebody Told Me |
+| 14 | Apocalyptica/ Jacoby Shaddix | 1. White Room (feat. Jacoby Shaddix) |
+| 15 | Seether | 1. Careless Whisper |
+| 16 | Mohsen Chavoshi | 1. Akharin Otoboos<br>2. Man Bayad Miraftam \[ Piano Version \] |
+| 17 | Mehrad Hidden | 1. Keybaz (Alternative Version)<br>2. Oon Rooz Hichvaght Nemiad<br>3. Maar<br>4. Ghal'e |
+| 18 | O-HUM | 1. In Kherghe Biandaz |
+| 19 | Reza Yazdani | 1. Ahange Ghadimi |
+| 20 | ArgonA, Parsa Amini | 1. Mesale Naghz |
+| 21 | The Jacksons | 1. I'll Be There (Live from the 1981 U.S. Tour) |
+| 22 | Jason Isbell and the 400 Unit | 1. Driver 8 |
+| 23 | Stone Temple Pilots | 1. Big Empty (2019 Remaster) |
+| 24 | Dekamond | 1. Bezan Baroon |
+| 25 | David Guetta | 1. Gone Gone Gone |
+| 26 | Daniela Andrade | 1. La Vie En Rose |
+| 27 | Zedbazi | 1. Daro Baz Kon (Acoustic Version)<br>2. Daro Baz Kon<br>3. Old Money<br>4. Bekhand Masnooyi |
+| 28 | Noga Erez | 1. Stuck In Heaven |
+| 29 | Nilüfer | 1. Son Arzum<br>2. Heryerde Kar Var |
+| 30 | Yann Tiersen | 1. Porz Goret |
+| 31 | Koop | 1. Koop Island Blues |
+| 32 | داریوش | 1. دلم میخواد گریه کنم |
+| 33 | سیاوش قمیشی | 1. گریه کن |
+| 34 | ابی | 1. گریه نکن |
+| 35 | گوگوش | 1. گریه کنم یا نکنم |
+| 36 | همایون شجریان | 1. گریه کن. |
+| 37 | Minoram | 1. Soltane Ghalbha |
+| 38 | LISA | 1. SaWaDiKa |
+| 39 | Simin Ghanem | 1. Range mesi |
+| 40 | Daal Band | 1. Parvaze Tehran Shiraz |
+| 41 | Dang Show | 1. Slightly Slower |
+| 42 | Mohammad Reza Shajarian | 1. Your Drunken Eyes |
+| 43 | Guns N' Roses | 1. November Rain (Acoustic Version / 1986 Sound City Session) |
+| 44 | Octave | 1. Baby Bebin Baroone |
+| 45 | Reza Pishro &amp; Yas &amp; Tech N9ne | 1. Separ (Rapkadeh) |
+| 46 | Shayea | 1. Aziatam |

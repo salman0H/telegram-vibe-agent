@@ -90,27 +90,29 @@ Verify the wording, attribution, and reuse rights before adding an entry, then r
 
 </details>
 
-## Your channel's artist list
+## Your channel's music catalogue
 
-[`data/artists.txt`](data/artists.txt) keeps a cumulative UTF-8 list of artist credits, one per line. A newly seen artist is appended automatically when the bot successfully publishes audio or either poller receives an audio post from the configured channel. Posts with complete captions are included too; collection does not depend on AI generation.
+[`data/artists.md`](data/artists.md) is an automatically updated Markdown table: one row per artist credit, with their songs numbered in first-recorded order. When another song by an existing artist is published, its title is appended to that artist's row. Repeated artist/title pairs are ignored, while the same title by a different artist is recorded separately.
 
-The registry keeps first-seen order and spelling. Case, repeated whitespace, Persian/Arabic letter variants, diacritics, and trailing punctuation are normalized for duplicate detection. Missing names, unknown-artist placeholders, URLs, and channel handles are skipped. Band names and collaboration credits remain intact as supplied in the audio's `performer` field; aliases or English/Persian spellings are not guessed or merged.
+The catalogue is updated after a successful bot upload and when either poller receives channel audio, including posts whose captions are already complete. It uses the audio's `performer` and `title` fields; AI caption generation is independent of collection.
 
-The initial list was seeded from locally available `daily_log.json` Git history and the current queue. It is not a full archive of past Telegram posts. Future additions are committed alongside the state by the existing workflows. No API key or extra scheduled workflow is required.
+[`data/artist_tracks.json`](data/artist_tracks.json) is the persistent source for the generated table. The workflows commit both files alongside the bot state. Names retain their first spelling and order; duplicate checks normalize case, whitespace, Persian/Arabic letter variants, diacritics, and trailing punctuation. Unknown artists, advertising handles, and missing song titles are not guessed. Band names and collaboration credits stay intact, and aliases or English/Persian spellings are not automatically merged.
 
-To collect artist names from an existing queue locally:
+Existing artist names and song titles were recovered from locally available queue history. This covers the repository's recorded tracks rather than a full Telegram channel archive. Artists with no recoverable title display a dash. Recorded order reflects when metadata was first observed; it is not a verified chronology of every historical channel post.
+
+To refresh the catalogue from the current queue:
 
 ```sh
 python3 scripts/artist_registry.py
 ```
 
-To also seed from the queue history available in your local Git clone:
+To also recover songs from complete historical queue snapshots in the local clone:
 
 ```sh
 python3 scripts/artist_registry.py --from-git-history
 ```
 
-Both commands update only the local artist list and never contact Telegram. Run them while Actions are idle if you plan to commit the result.
+Both commands are idempotent and never contact Telegram. The old `artists.txt` format is supported for migration when no JSON catalogue exists. Edit the JSON source if needed; direct edits to the generated Markdown table are replaced on the next refresh. Save the source and table together while Actions are idle. If rendering is interrupted, the next refresh rebuilds the table from its saved source.
 
 ## Inside the agent
 
@@ -194,7 +196,8 @@ All three state-writing workflows share the `music-agent-state` concurrency grou
 
 | File | Stores |
 | :--- | :--- |
-| `data/artists.txt` | Cumulative unique artist credits from channel audio metadata |
+| `data/artist_tracks.json` | Artist credits and ordered unique song titles |
+| `data/artists.md` | Generated artist/song Markdown table |
 | `state.json` | Downloader update cursor |
 | `music_state.json` | Listener update cursor |
 | `daily_log.json` | Tracks awaiting curation |
@@ -218,7 +221,7 @@ python3 -m unittest discover -s tests -v
 python3 -m compileall -q scripts tests
 ```
 
-Tests mock Groq and Telegram. Coverage includes poetry exhaustion, Persian normalization, exact and near duplicates, pending reservations, bounded retries, caption validation, manual-text preservation, crash recovery, large forwarded audio without local downloads, and persistent artist collection from both ingestion paths. They publish nothing to the channel. The [checks workflow](.github/workflows/tests.yml) runs on relevant pushes and pull requests.
+Tests mock Groq and Telegram. Coverage includes poetry exhaustion, Persian normalization, exact and near duplicates, pending reservations, bounded retries, caption validation, manual-text preservation, crash recovery, large forwarded audio without local downloads, and persistent artist/song collection, ordering, deduplication, and safe Markdown rendering from both ingestion paths. They publish nothing to the channel. The [checks workflow](.github/workflows/tests.yml) runs on relevant pushes and pull requests.
 
 <details>
 <summary><strong>Running against a real channel</strong></summary>

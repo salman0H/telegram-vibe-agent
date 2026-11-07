@@ -6,7 +6,7 @@ import glob
 import urllib.request
 from urllib.error import HTTPError
 import telegram_api
-from artist_registry import collect_channel_artists, record_artists
+from artist_registry import collect_channel_artists, record_tracks
 
 BOT_TOKEN = os.environ.get("MUSIC_BOT_TOKEN")
 CHANNEL_ID = os.environ.get("MUSIC_CHANNEL_ID")
@@ -257,7 +257,8 @@ def main():
             channel_msg = tg_response.get("result", {})
             channel_msg_id = channel_msg.get("message_id")
             published_artist = channel_msg.get("audio", {}).get("performer") or clean_performer
-            record_artists([published_artist])
+            published_title = channel_msg.get("audio", {}).get("title") or clean_title
+            record_tracks([{"performer": published_artist, "title": published_title}])
             
             log_data.append({
                 "message_id": channel_msg_id,
