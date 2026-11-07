@@ -6,6 +6,7 @@ import glob
 import urllib.request
 from urllib.error import HTTPError
 import telegram_api
+from artist_registry import collect_channel_artists, record_artists
 
 BOT_TOKEN = os.environ.get("MUSIC_BOT_TOKEN")
 CHANNEL_ID = os.environ.get("MUSIC_CHANNEL_ID")
@@ -147,6 +148,8 @@ def main():
     offset = state.get("last_update_id", 0) + 1
     
     updates = telegram_api.get_updates(BOT_TOKEN, offset)
+    # This poller can receive channel posts too, before the listener sees them.
+    collect_channel_artists(updates, CHANNEL_ID)
     
     if not updates:
         print("[Agent] No new messages in queue.")
@@ -253,6 +256,8 @@ def main():
         if tg_response and tg_response.get("ok"):
             channel_msg = tg_response.get("result", {})
             channel_msg_id = channel_msg.get("message_id")
+            published_artist = channel_msg.get("audio", {}).get("performer") or clean_performer
+            record_artists([published_artist])
             
             log_data.append({
                 "message_id": channel_msg_id,

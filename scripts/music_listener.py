@@ -3,6 +3,7 @@ import json
 import urllib.request
 import urllib.parse
 from urllib.error import URLError
+from artist_registry import collect_channel_artists
 
 BOT_TOKEN = os.environ.get("MUSIC_BOT_TOKEN", "")
 CHANNEL_ID = str(os.environ.get("MUSIC_CHANNEL_ID", ""))
@@ -47,6 +48,7 @@ def main():
         return
 
     updates = data.get("result", [])
+    collect_channel_artists(updates, CHANNEL_ID)
     if not updates:
         return
 

@@ -90,6 +90,28 @@ Verify the wording, attribution, and reuse rights before adding an entry, then r
 
 </details>
 
+## Your channel's artist list
+
+[`data/artists.txt`](data/artists.txt) keeps a cumulative UTF-8 list of artist credits, one per line. A newly seen artist is appended automatically when the bot successfully publishes audio or either poller receives an audio post from the configured channel. Posts with complete captions are included too; collection does not depend on AI generation.
+
+The registry keeps first-seen order and spelling. Case, repeated whitespace, Persian/Arabic letter variants, diacritics, and trailing punctuation are normalized for duplicate detection. Missing names, unknown-artist placeholders, URLs, and channel handles are skipped. Band names and collaboration credits remain intact as supplied in the audio's `performer` field; aliases or English/Persian spellings are not guessed or merged.
+
+The initial list was seeded from locally available `daily_log.json` Git history and the current queue. It is not a full archive of past Telegram posts. Future additions are committed alongside the state by the existing workflows. No API key or extra scheduled workflow is required.
+
+To collect artist names from an existing queue locally:
+
+```sh
+python3 scripts/artist_registry.py
+```
+
+To also seed from the queue history available in your local Git clone:
+
+```sh
+python3 scripts/artist_registry.py --from-git-history
+```
+
+Both commands update only the local artist list and never contact Telegram. Run them while Actions are idle if you plan to commit the result.
+
 ## Inside the agent
 
 ```mermaid
@@ -172,6 +194,7 @@ All three state-writing workflows share the `music-agent-state` concurrency grou
 
 | File | Stores |
 | :--- | :--- |
+| `data/artists.txt` | Cumulative unique artist credits from channel audio metadata |
 | `state.json` | Downloader update cursor |
 | `music_state.json` | Listener update cursor |
 | `daily_log.json` | Tracks awaiting curation |
@@ -195,7 +218,7 @@ python3 -m unittest discover -s tests -v
 python3 -m compileall -q scripts tests
 ```
 
-Tests mock Groq and Telegram. Coverage includes poetry exhaustion, Persian normalization, exact and near duplicates, pending reservations, bounded retries, caption validation, manual-text preservation, crash recovery, and large forwarded audio without local downloads. They publish nothing to the channel. The [checks workflow](.github/workflows/tests.yml) runs on relevant pushes and pull requests.
+Tests mock Groq and Telegram. Coverage includes poetry exhaustion, Persian normalization, exact and near duplicates, pending reservations, bounded retries, caption validation, manual-text preservation, crash recovery, large forwarded audio without local downloads, and persistent artist collection from both ingestion paths. They publish nothing to the channel. The [checks workflow](.github/workflows/tests.yml) runs on relevant pushes and pull requests.
 
 <details>
 <summary><strong>Running against a real channel</strong></summary>

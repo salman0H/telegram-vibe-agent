@@ -45,6 +45,7 @@ class DownloaderTests(unittest.TestCase):
         download.assert_not_called()
         upload.assert_not_called()
         reuse.assert_called_once_with('test-token', '-100test', 'telegram-audio', caption='', performer='Artist', title='Long track')
+        self.assertEqual(Path('data/artists.txt').read_text(), 'Artist\n')
         queue = json.loads(Path('daily_log.json').read_text())
         self.assertEqual(queue, [dict(message_id=42, performer='Artist', title='Long track', caption='')])
 
@@ -52,6 +53,7 @@ class DownloaderTests(unittest.TestCase):
         with patch.object(telegram_api, 'get_updates', return_value=[self.audio_update()]), patch.object(telegram_api, 'send_message', return_value=None), patch.object(telegram_api, 'send_audio_file_id', return_value=None):
             downloader.main()
         self.assertEqual(json.loads(Path('daily_log.json').read_text()), [])
+        self.assertFalse(Path('data/artists.txt').exists())
 
     def test_large_document_is_not_resent_as_audio_by_id(self):
         update = self.audio_update()

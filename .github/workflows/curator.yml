@@ -26,6 +26,9 @@ jobs:
       # Zero-dependency Architecture: 
       # No 'pip install' step needed since we use pure urllib for the API call.
         
+      - name: Collect artists from the existing queue
+        run: python scripts/artist_registry.py
+
       - name: Run AI Curator via Groq
         env:
           # Standard Telegram Configs
@@ -46,6 +49,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
           git add daily_log.json
+          if [ -f data/artists.txt ]; then git add data/artists.txt; fi
           if [ -f content_memory.json ]; then git add content_memory.json; fi
           
           if ! git diff --cached --quiet; then
