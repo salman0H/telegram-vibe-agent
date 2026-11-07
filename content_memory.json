@@ -23,7 +23,8 @@
     "henley-invictus-03",
     "kwan-scheiner-2022-01",
     "patchett-precious-2021-01",
-    "frost-road-01"
+    "frost-road-01",
+    "tennyson-ulysses-05"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -48,7 +49,8 @@
     "82b331f48e9f358bd79c59ca03e1f1fbbc235f3e8623b6a42a314b58ea495dc3",
     "d959731831402d3b39f59a14eacb4bcd25780bb0fc79a0ac4ccfb9fe1d83d4ae",
     "7a2e17908dc7a765893b2cbfbec04aac9408f0f1c885da73b9d37133f86a94b6",
-    "4ab92352d985deb3b6cb2858bdc3eff22d5d0eeccbe7078b31e2e0a8dbc9cfae"
+    "4ab92352d985deb3b6cb2858bdc3eff22d5d0eeccbe7078b31e2e0a8dbc9cfae",
+    "c8fd592a6e8b5011fb498e50ef5b1509edcc9d093913ef35156a893e01fcd068"
   ],
   "recent": [
     {
@@ -211,6 +213,13 @@
       "author": "Robert Frost",
       "style": "action",
       "lens": "landscape"
+    },
+    {
+      "text": "A cracked sidewalk tile, suddenly humming with a stray saxophone’s breath, turns the rush of the boulevard into a brief invitation to chase the next note.",
+      "poem_id": "tennyson-ulysses-05",
+      "author": "Alfred, Lord Tennyson",
+      "style": "object",
+      "lens": "city"
     }
   ],
   "pending": {
