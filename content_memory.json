@@ -20,7 +20,10 @@
     "karpathy-learning-2024-01",
     "kaluuya-oscar-2021-01",
     "tennyson-ulysses-03",
-    "henley-invictus-03"
+    "henley-invictus-03",
+    "kwan-scheiner-2022-01",
+    "patchett-precious-2021-01",
+    "frost-road-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -42,7 +45,10 @@
     "0b8c4b89e8f71182e25406f9df894069770a0cb16d1cc6de38cd42770e562ab5",
     "083f129c5b3da7da153332a62b1169961247df8e1b527ad45221926b5f546cce",
     "13cfaa67a8085d62006889803f23e8960f1de322c4e9bd40562efd472f32bab5",
-    "82b331f48e9f358bd79c59ca03e1f1fbbc235f3e8623b6a42a314b58ea495dc3"
+    "82b331f48e9f358bd79c59ca03e1f1fbbc235f3e8623b6a42a314b58ea495dc3",
+    "d959731831402d3b39f59a14eacb4bcd25780bb0fc79a0ac4ccfb9fe1d83d4ae",
+    "7a2e17908dc7a765893b2cbfbec04aac9408f0f1c885da73b9d37133f86a94b6",
+    "4ab92352d985deb3b6cb2858bdc3eff22d5d0eeccbe7078b31e2e0a8dbc9cfae"
   ],
   "recent": [
     {
@@ -184,6 +190,27 @@
       "author": "William Ernest Henley",
       "style": "motion",
       "lens": "light"
+    },
+    {
+      "text": "A light breeze tingles the skin, nudging the pulse to sync with the playful riff, as if each note invites the world to lean into the moment’s quiet daring.",
+      "poem_id": "kwan-scheiner-2022-01",
+      "author": "Daniel Kwan & Daniel Scheinert",
+      "style": "sensation",
+      "lens": "body"
+    },
+    {
+      "text": "A cracked vinyl sleeve shivers under neon glare, spilling a flash of reckless camaraderie that fuels the engine’s roar and leaves the night humming with unexpected gratitude.",
+      "poem_id": "patchett-precious-2021-01",
+      "author": "Ann Patchett",
+      "style": "fragment",
+      "lens": "material"
+    },
+    {
+      "text": "Cross the wind‑scarred ridge, each step echoing the quiet fork where yesterday’s promise splits from tomorrow’s unknown.",
+      "poem_id": "frost-road-01",
+      "author": "Robert Frost",
+      "style": "action",
+      "lens": "landscape"
     }
   ],
   "pending": {
