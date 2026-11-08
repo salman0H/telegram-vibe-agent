@@ -25,7 +25,13 @@
     "patchett-precious-2021-01",
     "frost-road-01",
     "tennyson-ulysses-05",
-    "yeats-innisfree-03"
+    "yeats-innisfree-03",
+    "ferdowsi-shahnameh-01",
+    "kingsolver-demon-2022-01",
+    "gorman-hill-2021-01",
+    "yeoh-oscar-2023-01",
+    "malekian-ethics-2021-01",
+    "attar-mantiq-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -52,7 +58,13 @@
     "7a2e17908dc7a765893b2cbfbec04aac9408f0f1c885da73b9d37133f86a94b6",
     "4ab92352d985deb3b6cb2858bdc3eff22d5d0eeccbe7078b31e2e0a8dbc9cfae",
     "c8fd592a6e8b5011fb498e50ef5b1509edcc9d093913ef35156a893e01fcd068",
-    "4fcb3e4306ad307d9240318b280101b2c483ec1be2e9cfa2c66c31adaf0d8ba7"
+    "4fcb3e4306ad307d9240318b280101b2c483ec1be2e9cfa2c66c31adaf0d8ba7",
+    "20553a384b294728cb874ed206810cfa8f7bf2fe1f0c0f6c1af40047119d8b39",
+    "0a5c1786dba24eb94bbf0a04c83b51baad00c2af44688604c9ae7be349a79c02",
+    "a01c69c98a2326891a727ff7286c2468dd97c94698477b5c7bf505ef60749484",
+    "a84550660f9c8feb1c08f2b35a946fcd0f86d88b66c348e46250274c8c617429",
+    "f1563791d53db95e60dc44a0006aa7b6d0d79c0f61874f61406923c6d7c6553d",
+    "2bd1878479ab2e75496c2c221cf5886f353607e06155a1739f6043b02e2d8f73"
   ],
   "recent": [
     {
@@ -228,6 +240,48 @@
       "poem_id": "yeats-innisfree-03",
       "author": "William Butler Yeats",
       "style": "motion",
+      "lens": "growth"
+    },
+    {
+      "text": "دست‌ام بر لبهٔ شیشه سرد می‌لغزد؛ نفس‌نفس‌پایین می‌کشد و لحظهٔ گرمای اولیهٔ صبح، همانند نوای خفیف، به تدریج جای خود را به سوزش آفتاب می‌دهد.",
+      "poem_id": "ferdowsi-shahnameh-01",
+      "author": "فردوسی",
+      "style": "time",
+      "lens": "body"
+    },
+    {
+      "text": "A teacup trembles on the windowsill as the night wind hums through the kitchen fan, holding a silent duel between heat and chill.",
+      "poem_id": "kingsolver-demon-2022-01",
+      "author": "Barbara Kingsolver",
+      "style": "contrast",
+      "lens": "domestic"
+    },
+    {
+      "text": "A thin sheet of glass shivers under the riff's electric surge, sending a cool tremor across the skin like sunrise on steel.",
+      "poem_id": "gorman-hill-2021-01",
+      "author": "Amanda Gorman",
+      "style": "sensation",
+      "lens": "material"
+    },
+    {
+      "text": "A narrow corridor yawns, its far wall holding a flicker that refuses to fade, urging the traveler onward.",
+      "poem_id": "yeoh-oscar-2023-01",
+      "author": "Michelle Yeoh",
+      "style": "fragment",
+      "lens": "space"
+    },
+    {
+      "text": "یک سنگ خشن در دل صحرا، ناگهان با پرتو نور صبح از افق دور، تبدیل به بوم‌نقشی از ضربه‌های ریتمیک می‌شود.",
+      "poem_id": "malekian-ethics-2021-01",
+      "author": "مصطفی ملکیان",
+      "style": "object",
+      "lens": "landscape"
+    },
+    {
+      "text": "بذرهای شبنم بر شاخ‌های بهار می‌چرخند، یاد تو را که در دل خاک نهفته است، به آرامی می‌کشاند.",
+      "poem_id": "attar-mantiq-01",
+      "author": "عطار",
+      "style": "address",
       "lens": "growth"
     }
   ],

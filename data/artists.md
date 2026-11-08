@@ -59,3 +59,10 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 52 | 3 Doors Down | 1. Here Without You |
 | 53 | Radio Company | 1. All Our Own |
 | 54 | Hotel Ugly | 1. Shut up My Moms Calling |
+| 55 | Ehsan Khajehamiri | 1. Vaghti Mikhandi |
+| 56 | Eisaku Ohkawa | 1. なごり雨(半音下げオリジナル・カラオケ) - Nagoriame (Semitone Lower Instrumental) |
+| 57 | Lenny Kravitz | 1. Are You Gonna Go My Way |
+| 58 | Queens Of The Stone Age | 1. Go With The Flow |
+| 59 | Rez | 1. Bidar Sho |
+| 60 | The Strokes | 1. Ode To The Mets |
+| 61 | Ebrahim Monsefi | 1. The Whale/ Nahang (Live) |
