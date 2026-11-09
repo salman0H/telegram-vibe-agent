@@ -66,3 +66,4 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 59 | Rez | 1. Bidar Sho |
 | 60 | The Strokes | 1. Ode To The Mets |
 | 61 | Ebrahim Monsefi | 1. The Whale/ Nahang (Live) |
+| 62 | خسرو شکیبایی | 1. هامون |

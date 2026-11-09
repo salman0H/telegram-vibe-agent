@@ -32,7 +32,8 @@
     "yeoh-oscar-2023-01",
     "malekian-ethics-2021-01",
     "attar-mantiq-01",
-    "mandela-legacy-01"
+    "mandela-legacy-01",
+    "garousi-modern-2020-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -66,7 +67,8 @@
     "a84550660f9c8feb1c08f2b35a946fcd0f86d88b66c348e46250274c8c617429",
     "f1563791d53db95e60dc44a0006aa7b6d0d79c0f61874f61406923c6d7c6553d",
     "2bd1878479ab2e75496c2c221cf5886f353607e06155a1739f6043b02e2d8f73",
-    "374e60783d284a1766d4c85acf7a79720122143968c22a98ef71068e9eebd1cf"
+    "374e60783d284a1766d4c85acf7a79720122143968c22a98ef71068e9eebd1cf",
+    "4e8c0fea33c7e18b81c23f6b8ada8a0539f503c8d2b9ff54e19012a4bc23bcbe"
   ],
   "recent": [
     {
@@ -292,6 +294,13 @@
       "author": "Nelson Mandela",
       "style": "time",
       "lens": "light"
+    },
+    {
+      "text": "باران‌نقطه‌های ریز بر آسفالت خیس، چراغ‌های کم‌سو راه را به رقصی نقره‌ای می‌کشاند؛ هر قدم به سمت نور، زخم‌های دیروز را به سکوی امید می‌سازد.",
+      "poem_id": "garousi-modern-2020-01",
+      "author": "گروس عبدالملکیان",
+      "style": "motion",
+      "lens": "city"
     }
   ],
   "pending": {
