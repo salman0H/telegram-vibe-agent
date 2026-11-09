@@ -33,7 +33,9 @@
     "malekian-ethics-2021-01",
     "attar-mantiq-01",
     "mandela-legacy-01",
-    "garousi-modern-2020-01"
+    "garousi-modern-2020-01",
+    "mehrjui-cinema-2020-01",
+    "de-botton-school-2019-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -68,7 +70,9 @@
     "f1563791d53db95e60dc44a0006aa7b6d0d79c0f61874f61406923c6d7c6553d",
     "2bd1878479ab2e75496c2c221cf5886f353607e06155a1739f6043b02e2d8f73",
     "374e60783d284a1766d4c85acf7a79720122143968c22a98ef71068e9eebd1cf",
-    "4e8c0fea33c7e18b81c23f6b8ada8a0539f503c8d2b9ff54e19012a4bc23bcbe"
+    "4e8c0fea33c7e18b81c23f6b8ada8a0539f503c8d2b9ff54e19012a4bc23bcbe",
+    "5c74e9842fb286f7145f14922d238976b2abdd24495cc40e0eafcc2294716bc3",
+    "f1ed6c566e63eb68ef46bc4b7e9f05cc2e25c3927ebd9c890f2f5884014457af"
   ],
   "recent": [
     {
@@ -301,6 +305,20 @@
       "author": "گروس عبدالملکیان",
       "style": "motion",
       "lens": "city"
+    },
+    {
+      "text": "دست‌های ساکت بر لبهٔ شیشه سرد می‌لغزند، گرمای نفس‌پایین در دل شب می‌چرخد و وزن لحظه را به‌هم می‌ریزد.",
+      "poem_id": "mehrjui-cinema-2020-01",
+      "author": "داریوش مهرجویی",
+      "style": "fragment",
+      "lens": "body"
+    },
+    {
+      "text": "Traverse the sun‑warmed plateau, letting each footfall untie the knots of yesterday’s expectations.",
+      "poem_id": "de-botton-school-2019-01",
+      "author": "Alain de Botton",
+      "style": "action",
+      "lens": "landscape"
     }
   ],
   "pending": {

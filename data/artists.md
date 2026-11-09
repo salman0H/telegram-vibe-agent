@@ -67,3 +67,5 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 60 | The Strokes | 1. Ode To The Mets |
 | 61 | Ebrahim Monsefi | 1. The Whale/ Nahang (Live) |
 | 62 | خسرو شکیبایی | 1. هامون |
+| 63 | Imanemun | 1. Sarnevesht |
+| 64 | Isam, Tamara, ONEDAM | 1. RANGE MESI |
