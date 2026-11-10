@@ -69,3 +69,7 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 62 | خسرو شکیبایی | 1. هامون |
 | 63 | Imanemun | 1. Sarnevesht |
 | 64 | Isam, Tamara, ONEDAM | 1. RANGE MESI |
+| 65 | Harry Styles | 1. As It Was |
+| 66 | Frank Sinatra | 1. Autumn Leaves (1999 Remastered) |
+| 67 | keshi | 1. Dream |
+| 68 | Stevie Wonder | 1. Overjoyed (Live/1995) |

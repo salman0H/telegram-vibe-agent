@@ -35,7 +35,11 @@
     "mandela-legacy-01",
     "garousi-modern-2020-01",
     "mehrjui-cinema-2020-01",
-    "de-botton-school-2019-01"
+    "de-botton-school-2019-01",
+    "gosling-craft-2024-01",
+    "grant-think-2021-01",
+    "cave-redhand-2022-01",
+    "knausgaard-morning-2021-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -72,7 +76,11 @@
     "374e60783d284a1766d4c85acf7a79720122143968c22a98ef71068e9eebd1cf",
     "4e8c0fea33c7e18b81c23f6b8ada8a0539f503c8d2b9ff54e19012a4bc23bcbe",
     "5c74e9842fb286f7145f14922d238976b2abdd24495cc40e0eafcc2294716bc3",
-    "f1ed6c566e63eb68ef46bc4b7e9f05cc2e25c3927ebd9c890f2f5884014457af"
+    "f1ed6c566e63eb68ef46bc4b7e9f05cc2e25c3927ebd9c890f2f5884014457af",
+    "64b2b2e69726e5faf791a121833544f5a3c400776527db0696687cff07686252",
+    "1691bc5ed1f8984f8b1e5f05cfad08cb01deccdbde57b66fd1db4a4b88a09529",
+    "29d1fd694e52891a357e35da984846cddc27e89b6fd874c37183b8c25cc73148",
+    "5901e8ea3b922e0b0fb37761a32bc873f987f68ec9f2b12e581b2f1017977989"
   ],
   "recent": [
     {
@@ -318,6 +326,34 @@
       "poem_id": "de-botton-school-2019-01",
       "author": "Alain de Botton",
       "style": "action",
+      "lens": "landscape"
+    },
+    {
+      "text": "A wilted leaf clings to a blooming branch, reminding us that moving forward can feel like holding onto the past.",
+      "poem_id": "gosling-craft-2024-01",
+      "author": "Ryan Gosling",
+      "style": "contrast",
+      "lens": "growth"
+    },
+    {
+      "text": "A solitary desk lamp, its filament replaced by a tiny orbiting planet, casts a vast, quiet glow that reminds the room how small certainty feels against endless curiosity.",
+      "poem_id": "grant-think-2021-01",
+      "author": "Adam Grant",
+      "style": "object",
+      "lens": "space"
+    },
+    {
+      "text": "A lone tram rattles past a cracked storefront, its rhythm echoing the pulse of midnight sidewalks, where every step feels like a quiet promise of sunrise.",
+      "poem_id": "cave-redhand-2022-01",
+      "author": "Nick Cave",
+      "style": "motion",
+      "lens": "city"
+    },
+    {
+      "text": "A gentle pulse underfoot spreads across the sun‑baked plateau, as distant ridges glimmer with a quiet promise of unseen wonder.",
+      "poem_id": "knausgaard-morning-2021-01",
+      "author": "Karl Ove Knausgård",
+      "style": "sensation",
       "lens": "landscape"
     }
   ],
