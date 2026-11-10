@@ -39,7 +39,8 @@
     "gosling-craft-2024-01",
     "grant-think-2021-01",
     "cave-redhand-2022-01",
-    "knausgaard-morning-2021-01"
+    "knausgaard-morning-2021-01",
+    "inarritu-bardo-2022-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -80,7 +81,8 @@
     "64b2b2e69726e5faf791a121833544f5a3c400776527db0696687cff07686252",
     "1691bc5ed1f8984f8b1e5f05cfad08cb01deccdbde57b66fd1db4a4b88a09529",
     "29d1fd694e52891a357e35da984846cddc27e89b6fd874c37183b8c25cc73148",
-    "5901e8ea3b922e0b0fb37761a32bc873f987f68ec9f2b12e581b2f1017977989"
+    "5901e8ea3b922e0b0fb37761a32bc873f987f68ec9f2b12e581b2f1017977989",
+    "f8294b6a98fb8059d3c7cdd4cc48004971393f38ae78d866d0b0513e53331cc9"
   ],
   "recent": [
     {
@@ -355,6 +357,13 @@
       "author": "Karl Ove Knausgård",
       "style": "sensation",
       "lens": "landscape"
+    },
+    {
+      "text": "A polished teacup holds a whisper of storm, its fragile curve echoing a calm that feels louder than any song.",
+      "poem_id": "inarritu-bardo-2022-01",
+      "author": "Alejandro G. Iñárritu",
+      "style": "contrast",
+      "lens": "domestic"
     }
   ],
   "pending": {

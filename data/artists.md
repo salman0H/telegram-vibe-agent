@@ -73,3 +73,4 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 66 | Frank Sinatra | 1. Autumn Leaves (1999 Remastered) |
 | 67 | keshi | 1. Dream |
 | 68 | Stevie Wonder | 1. Overjoyed (Live/1995) |
+| 69 | Sade | 1. Sade - Pearls (Audio) |
