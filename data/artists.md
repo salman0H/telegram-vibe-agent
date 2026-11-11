@@ -74,3 +74,8 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 67 | keshi | 1. Dream |
 | 68 | Stevie Wonder | 1. Overjoyed (Live/1995) |
 | 69 | Sade | 1. Sade - Pearls (Audio) |
+| 70 | Alex G | 1. Mary |
+| 71 | Bakar, Summer Walker | 1. Hell N Back (feat. Summer Walker) |
+| 72 | Bruno Mars | 1. Finesse |
+| 73 | Bryson Tiller | 1. Whatever She Wants |
+| 74 | GIVĒON | 1. Heartbreak Anniversary |

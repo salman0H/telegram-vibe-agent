@@ -40,7 +40,12 @@
     "grant-think-2021-01",
     "cave-redhand-2022-01",
     "knausgaard-morning-2021-01",
-    "inarritu-bardo-2022-01"
+    "inarritu-bardo-2022-01",
+    "ernaux-nobel-2022-01",
+    "bregman-humankind-2020-01",
+    "adichie-grief-2021-01",
+    "sanders-solidarity-2020-01",
+    "gerwig-art-2023-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -82,7 +87,12 @@
     "1691bc5ed1f8984f8b1e5f05cfad08cb01deccdbde57b66fd1db4a4b88a09529",
     "29d1fd694e52891a357e35da984846cddc27e89b6fd874c37183b8c25cc73148",
     "5901e8ea3b922e0b0fb37761a32bc873f987f68ec9f2b12e581b2f1017977989",
-    "f8294b6a98fb8059d3c7cdd4cc48004971393f38ae78d866d0b0513e53331cc9"
+    "f8294b6a98fb8059d3c7cdd4cc48004971393f38ae78d866d0b0513e53331cc9",
+    "d3de1730fb22ef470cd20ce991bf061f74ca1fb37c4f3156cccfd44a4721d23e",
+    "eacbc7062900a571c4ef1d06c8d255707d7dad1f9e35747016408ba974fdf56a",
+    "84184dc1efcfd28fbb0ae2b8ff45b854046930a5f883c7150473d94a5d6d92d5",
+    "bbe5bbb003223bf49e400eda719998c435a42daa9a3f2c555d1421e9215ca1f1",
+    "d574dd5eb8d9308d78f36c595ddf8b03606f981292d94b76f993c356f27d3992"
   ],
   "recent": [
     {
@@ -364,6 +374,41 @@
       "author": "Alejandro G. Iñárritu",
       "style": "contrast",
       "lens": "domestic"
+    },
+    {
+      "text": "A crumpled page slides over a glass table, each crease whispering a memory that refuses to settle.",
+      "poem_id": "ernaux-nobel-2022-01",
+      "author": "Annie Ernaux",
+      "style": "fragment",
+      "lens": "material"
+    },
+    {
+      "text": "A breath cools the night‑air, then a faint warmth lingers as the streetlights flicker, reminding the skin that even fleeting kindness can stretch a moment longer.",
+      "poem_id": "bregman-humankind-2020-01",
+      "author": "Rutger Bregman",
+      "style": "time",
+      "lens": "body"
+    },
+    {
+      "text": "A neon ripple slides across the pavement, each pulse echoing a heartbeat that remembers a smile now distant, turning the street into a fleeting runway of lingering warmth.",
+      "poem_id": "adichie-grief-2021-01",
+      "author": "Chimamanda Ngozi Adichie",
+      "style": "motion",
+      "lens": "light"
+    },
+    {
+      "text": "A cool draft brushes the back of your neck, echoing the hollow of an empty hallway where each silent step reminds you that distant strangers share the same breath of possibility.",
+      "poem_id": "sanders-solidarity-2020-01",
+      "author": "Bernie Sanders",
+      "style": "sensation",
+      "lens": "space"
+    },
+    {
+      "text": "A glass bottle, its surface etched with tiny constellations, catches the room’s ordinary light and turns it into a quiet map of forgotten wishes.",
+      "poem_id": "gerwig-art-2023-01",
+      "author": "Greta Gerwig",
+      "style": "object",
+      "lens": "material"
     }
   ],
   "pending": {
