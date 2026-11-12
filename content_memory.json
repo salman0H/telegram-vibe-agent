@@ -52,7 +52,8 @@
     "rovelli-time-2018-01",
     "smith-patti-devotion-2017-01",
     "haig-midnight-2020-01",
-    "ishiguro-nobel-2017-01"
+    "ishiguro-nobel-2017-01",
+    "dickinson-632-02"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -106,7 +107,8 @@
     "04704c3b9e7e384a74c2acb480a55afe62ffe0ffbe3d47cb5aee6763d10ae803",
     "4cfdaa0910c9eeb0afe210a69747931ba7bad0e71c38553f82d69c6d97638aca",
     "87233a664f66df828678d4cdafecbe4c2f1f69c13907b26bbfa8638c97841d75",
-    "f07455818df7fda89c14a0eb522e2688c86a0edbaefbfe9ffcce1aee8fce4c28"
+    "f07455818df7fda89c14a0eb522e2688c86a0edbaefbfe9ffcce1aee8fce4c28",
+    "05cf9e8580cf86b468443a62f79c8c2ad1f1415ecfcf58881a521ee70e49cdc8"
   ],
   "recent": [
     {
@@ -472,6 +474,13 @@
       "author": "Kazuo Ishiguro",
       "style": "action",
       "lens": "landscape"
+    },
+    {
+      "text": "A cool hand rests on a warm throat, the weight of silence breathing into a rhythm that feels both feather and stone.",
+      "poem_id": "dickinson-632-02",
+      "author": "Emily Dickinson",
+      "style": "contrast",
+      "lens": "body"
     }
   ],
   "pending": {
