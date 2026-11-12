@@ -79,3 +79,11 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 72 | Bruno Mars | 1. Finesse |
 | 73 | Bryson Tiller | 1. Whatever She Wants |
 | 74 | GIVĒON | 1. Heartbreak Anniversary |
+| 75 | The Beautified Project | 1. All Alone |
+| 76 | REO Speedwagon | 1. Keep on Loving You |
+| 77 | Toothgrinder | 1. The Chain |
+| 78 | Miguel | 1. Sure Thing |
+| 79 | Liana Flores | 1. rises the moon |
+| 80 | Laufey | 1. From The Start |
+| 81 | Kali Uchis | 1. Moonlight |
+| 82 | Jeremih | 1. oui |

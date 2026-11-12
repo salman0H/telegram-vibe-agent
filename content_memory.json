@@ -45,7 +45,14 @@
     "bregman-humankind-2020-01",
     "adichie-grief-2021-01",
     "sanders-solidarity-2020-01",
-    "gerwig-art-2023-01"
+    "gerwig-art-2023-01",
+    "maté-myth-2022-01",
+    "washington-craft-2017-01",
+    "goodall-hope-2021-01",
+    "rovelli-time-2018-01",
+    "smith-patti-devotion-2017-01",
+    "haig-midnight-2020-01",
+    "ishiguro-nobel-2017-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -92,7 +99,14 @@
     "eacbc7062900a571c4ef1d06c8d255707d7dad1f9e35747016408ba974fdf56a",
     "84184dc1efcfd28fbb0ae2b8ff45b854046930a5f883c7150473d94a5d6d92d5",
     "bbe5bbb003223bf49e400eda719998c435a42daa9a3f2c555d1421e9215ca1f1",
-    "d574dd5eb8d9308d78f36c595ddf8b03606f981292d94b76f993c356f27d3992"
+    "d574dd5eb8d9308d78f36c595ddf8b03606f981292d94b76f993c356f27d3992",
+    "54dd62cabda8243179508caf9a70bad45e67f2eaeaf30eaaea7933a18b9c4e33",
+    "8e75b070cdaf886a9a5af012499c27ba4eb5c03e0471aedd385daab9c9eba95e",
+    "efd53544617cc4702f2cfb7c27c2f9d63ef69dc2dbc91e320d6f12b25606006b",
+    "04704c3b9e7e384a74c2acb480a55afe62ffe0ffbe3d47cb5aee6763d10ae803",
+    "4cfdaa0910c9eeb0afe210a69747931ba7bad0e71c38553f82d69c6d97638aca",
+    "87233a664f66df828678d4cdafecbe4c2f1f69c13907b26bbfa8638c97841d75",
+    "f07455818df7fda89c14a0eb522e2688c86a0edbaefbfe9ffcce1aee8fce4c28"
   ],
   "recent": [
     {
@@ -409,6 +423,55 @@
       "author": "Greta Gerwig",
       "style": "object",
       "lens": "material"
+    },
+    {
+      "text": "A lone pine's needle, once bright green, now tinged amber, catches the late afternoon wind, marking the hill's quiet shift from day to dusk.",
+      "poem_id": "maté-myth-2022-01",
+      "author": "Gabor Maté",
+      "style": "time",
+      "lens": "landscape"
+    },
+    {
+      "text": "A sunrise glints off a rusted car hood, while the dashboard clock stubbornly reads midnight, reminding the road that hope and habit travel side by side.",
+      "poem_id": "washington-craft-2017-01",
+      "author": "Denzel Washington",
+      "style": "contrast",
+      "lens": "light"
+    },
+    {
+      "text": "Burst through cracked soil, new shoots thrust upward, each ring of the growing stem echoing the relentless pull of a chain that binds yet fuels relentless ascent.",
+      "poem_id": "goodall-hope-2021-01",
+      "author": "Jane Goodall",
+      "style": "action",
+      "lens": "growth"
+    },
+    {
+      "text": "If you stood by the wide window, you'd see the room stretch like a quiet runway, each empty chair a waypoint waiting for the footsteps you never took.",
+      "poem_id": "rovelli-time-2018-01",
+      "author": "Carlo Rovelli",
+      "style": "address",
+      "lens": "space"
+    },
+    {
+      "text": "A thin glass pane gathers a fleeting line of dew, marking night’s breath fading into dawn’s sigh, as if the surface heeds an inner urge to awaken.",
+      "poem_id": "smith-patti-devotion-2017-01",
+      "author": "Patti Smith",
+      "style": "time",
+      "lens": "material"
+    },
+    {
+      "text": "A coffee mug catches a sudden amber gleam, as if sunrise slipped through its handle.",
+      "poem_id": "haig-midnight-2020-01",
+      "author": "Matt Haig",
+      "style": "object",
+      "lens": "light"
+    },
+    {
+      "text": "Bridge distant horizons with a pulse that stitches strangers together across the night‑lit dunes.",
+      "poem_id": "ishiguro-nobel-2017-01",
+      "author": "Kazuo Ishiguro",
+      "style": "action",
+      "lens": "landscape"
     }
   ],
   "pending": {
