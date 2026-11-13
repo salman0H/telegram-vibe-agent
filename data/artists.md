@@ -87,3 +87,5 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 80 | Laufey | 1. From The Start |
 | 81 | Kali Uchis | 1. Moonlight |
 | 82 | Jeremih | 1. oui |
+| 83 | The Neighborhoods | 1. Cherry Flavored |
+| 84 | Tame Impala | 1. Feels Like We Only Go Backwards |
