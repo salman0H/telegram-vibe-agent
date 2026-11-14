@@ -57,7 +57,7 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 50 | Kenny Loggins | 1. I'm Alright (Theme from "Caddyshack") |
 | 51 | Måneskin | 1. THE DRIVER |
 | 52 | 3 Doors Down | 1. Here Without You |
-| 53 | Radio Company | 1. All Our Own |
+| 53 | Radio Company | 1. All Our Own<br>2. Eyes on Me |
 | 54 | Hotel Ugly | 1. Shut up My Moms Calling |
 | 55 | Ehsan Khajehamiri | 1. Vaghti Mikhandi |
 | 56 | Eisaku Ohkawa | 1. なごり雨(半音下げオリジナル・カラオケ) - Nagoriame (Semitone Lower Instrumental) |
@@ -89,3 +89,5 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 82 | Jeremih | 1. oui |
 | 83 | The Neighborhoods | 1. Cherry Flavored |
 | 84 | Tame Impala | 1. Feels Like We Only Go Backwards |
+| 85 | The D-Day Darlings | 1. We'll Meet Again |
+| 86 | Post Malone | 1. Hollywood's Bleeding |

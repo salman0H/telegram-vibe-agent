@@ -55,7 +55,10 @@
     "ishiguro-nobel-2017-01",
     "dickinson-632-02",
     "chouinard-earth-2022-01",
-    "hawke-creativity-2021-01"
+    "hawke-creativity-2021-01",
+    "cumberbatch-letters-2021-01",
+    "taniguchi-solitude-2017-01",
+    "atwood-burning-2022-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -112,7 +115,10 @@
     "f07455818df7fda89c14a0eb522e2688c86a0edbaefbfe9ffcce1aee8fce4c28",
     "05cf9e8580cf86b468443a62f79c8c2ad1f1415ecfcf58881a521ee70e49cdc8",
     "d437e4b7f232bf09f106d32ce4e48d819662c3f7e6932625eedee99de68ed517",
-    "e4b1e94821d809ec09f239029d577bc5f2524a7d15df5df032084478a2b39608"
+    "e4b1e94821d809ec09f239029d577bc5f2524a7d15df5df032084478a2b39608",
+    "85604bf37c6bab96e856db58c6fb37dc3306d96c6ffddf8705a93301952343da",
+    "74cd631b6af1aeadba708099364702c619eabb538badf33723b8a9115f76a2e1",
+    "d0c57224cc07ba9162bb10bfd1f31ba47fbecaa5fe5725760a02099f775974e3"
   ],
   "recent": [
     {
@@ -499,6 +505,27 @@
       "author": "Ethan Hawke",
       "style": "address",
       "lens": "material"
+    },
+    {
+      "text": "A chipped teacup suddenly hums with the distant echo of a forgotten laugh, reminding the room that partings are only pauses.",
+      "poem_id": "cumberbatch-letters-2021-01",
+      "author": "Benedict Cumberbatch",
+      "style": "object",
+      "lens": "domestic"
+    },
+    {
+      "text": "A fingertip feels the coffee mug’s surface cool then warm as the sunrise slides across the kitchen, each second a gentle rise of heat that marks the day’s quiet turning.",
+      "poem_id": "taniguchi-solitude-2017-01",
+      "author": "Jiro Taniguchi",
+      "style": "time",
+      "lens": "body"
+    },
+    {
+      "text": "Neon amber flickers across the highway, each pulse a fleeting promise that the night will still answer tomorrow's call.",
+      "poem_id": "atwood-burning-2022-01",
+      "author": "Margaret Atwood",
+      "style": "motion",
+      "lens": "light"
     }
   ],
   "pending": {

@@ -322,7 +322,8 @@
   {
     "artist": "Radio Company",
     "tracks": [
-      "All Our Own"
+      "All Our Own",
+      "Eyes on Me"
     ]
   },
   {
@@ -509,6 +510,18 @@
     "artist": "Tame Impala",
     "tracks": [
       "Feels Like We Only Go Backwards"
+    ]
+  },
+  {
+    "artist": "The D-Day Darlings",
+    "tracks": [
+      "We'll Meet Again"
+    ]
+  },
+  {
+    "artist": "Post Malone",
+    "tracks": [
+      "Hollywood's Bleeding"
     ]
   }
 ]
