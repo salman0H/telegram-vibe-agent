@@ -90,4 +90,7 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 83 | The Neighborhoods | 1. Cherry Flavored |
 | 84 | Tame Impala | 1. Feels Like We Only Go Backwards |
 | 85 | The D-Day Darlings | 1. We'll Meet Again |
-| 86 | Post Malone | 1. Hollywood's Bleeding |
+| 86 | Post Malone | 1. Hollywood's Bleeding<br>2. Take What You Want |
+| 87 | Ludwig Goransson | 1. Odysseus |
+| 88 | Farhad Mehrad | 1. Yesterday When I Was Young |
+| 89 | Barbara Dane | 1. Crazy Blues |

@@ -58,7 +58,11 @@
     "hawke-creativity-2021-01",
     "cumberbatch-letters-2021-01",
     "taniguchi-solitude-2017-01",
-    "atwood-burning-2022-01"
+    "atwood-burning-2022-01",
+    "morrison-source-2019-01",
+    "rumi-m1-62-02",
+    "frost-woods-02",
+    "nadella-hitrefresh-2017-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -118,7 +122,11 @@
     "e4b1e94821d809ec09f239029d577bc5f2524a7d15df5df032084478a2b39608",
     "85604bf37c6bab96e856db58c6fb37dc3306d96c6ffddf8705a93301952343da",
     "74cd631b6af1aeadba708099364702c619eabb538badf33723b8a9115f76a2e1",
-    "d0c57224cc07ba9162bb10bfd1f31ba47fbecaa5fe5725760a02099f775974e3"
+    "d0c57224cc07ba9162bb10bfd1f31ba47fbecaa5fe5725760a02099f775974e3",
+    "23c2f59eb492732c080f18d20171f06d2fa1f33529cf42b58c445e42d80fed5d",
+    "ba7f88b9d0bced036d4c413c40a2c80cd5ed9d9756d53b147eefae68256d9e61",
+    "ce7ec778c908110dbb0352f944a4250415a18af0cc8f3e3017dad31affec9db3",
+    "0d3b67b50ccff65191c927c98feb159c31bd19977b6102149f3eaa316759f4c9"
   ],
   "recent": [
     {
@@ -525,6 +533,34 @@
       "poem_id": "atwood-burning-2022-01",
       "author": "Margaret Atwood",
       "style": "motion",
+      "lens": "light"
+    },
+    {
+      "text": "Navigate the rain‑slick alley, each step a promise to carry another's hope toward the distant neon horizon.",
+      "poem_id": "morrison-source-2019-01",
+      "author": "Toni Morrison",
+      "style": "action",
+      "lens": "city"
+    },
+    {
+      "text": "در اتاقی که نور خورشید از پنجره خیس می‌گذرد، صندلی خالی‌ات به‌مانند سایه‌ایست که هنوز انتظار قدم‌های تو را می‌کشد.",
+      "poem_id": "rumi-m1-62-02",
+      "author": "مولانا",
+      "style": "address",
+      "lens": "space"
+    },
+    {
+      "text": "A single leaf unfurls its green, then catches an amber edge as the afternoon drifts, hinting that each note can plant a new root in the listener's day.",
+      "poem_id": "frost-woods-02",
+      "author": "Robert Frost",
+      "style": "time",
+      "lens": "growth"
+    },
+    {
+      "text": "A sudden amber glare bounces off the cracked mirror, turning stubborn shadows into a restless pulse that invites the room to listen.",
+      "poem_id": "nadella-hitrefresh-2017-01",
+      "author": "Satya Nadella",
+      "style": "fragment",
       "lens": "light"
     }
   ],

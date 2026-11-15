@@ -521,7 +521,26 @@
   {
     "artist": "Post Malone",
     "tracks": [
-      "Hollywood's Bleeding"
+      "Hollywood's Bleeding",
+      "Take What You Want"
+    ]
+  },
+  {
+    "artist": "Ludwig Goransson",
+    "tracks": [
+      "Odysseus"
+    ]
+  },
+  {
+    "artist": "Farhad Mehrad",
+    "tracks": [
+      "Yesterday When I Was Young"
+    ]
+  },
+  {
+    "artist": "Barbara Dane",
+    "tracks": [
+      "Crazy Blues"
     ]
   }
 ]
