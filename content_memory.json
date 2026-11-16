@@ -62,7 +62,10 @@
     "morrison-source-2019-01",
     "rumi-m1-62-02",
     "frost-woods-02",
-    "nadella-hitrefresh-2017-01"
+    "nadella-hitrefresh-2017-01",
+    "portman-harvard-2015-01",
+    "jenkins-moonlight-2016-01",
+    "cuaron-roma-2018-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -126,7 +129,10 @@
     "23c2f59eb492732c080f18d20171f06d2fa1f33529cf42b58c445e42d80fed5d",
     "ba7f88b9d0bced036d4c413c40a2c80cd5ed9d9756d53b147eefae68256d9e61",
     "ce7ec778c908110dbb0352f944a4250415a18af0cc8f3e3017dad31affec9db3",
-    "0d3b67b50ccff65191c927c98feb159c31bd19977b6102149f3eaa316759f4c9"
+    "0d3b67b50ccff65191c927c98feb159c31bd19977b6102149f3eaa316759f4c9",
+    "e6f15444ef6bc22e763df18b63e86cffdcf47addd6db612fc7b9704fd5b050c2",
+    "491efeb830025bd8ee8bccaa56e216452f3eae59f40bf83f62eb716a26a57269",
+    "36173b3cea46b176f908d0a999dd12325268822afce9099255aa4671ae2c15ba"
   ],
   "recent": [
     {
@@ -562,6 +568,27 @@
       "author": "Satya Nadella",
       "style": "fragment",
       "lens": "light"
+    },
+    {
+      "text": "Warm breath brushes the back of a hand, like the first step on a cold stone bridge that stirs quiet daring.",
+      "poem_id": "portman-harvard-2015-01",
+      "author": "Natalie Portman",
+      "style": "motion",
+      "lens": "body"
+    },
+    {
+      "text": "Launch across the endless dunes of starlight, each footfall a quiet claim of self against the vast, indifferent horizon.",
+      "poem_id": "jenkins-moonlight-2016-01",
+      "author": "Barry Jenkins",
+      "style": "action",
+      "lens": "landscape"
+    },
+    {
+      "text": "A rusted fire hydrant cradles a wilted paper crane, while a passing bus glides past, oblivious to the fragile hope tucked into the pavement.",
+      "poem_id": "cuaron-roma-2018-01",
+      "author": "Alfonso Cuarón",
+      "style": "contrast",
+      "lens": "city"
     }
   ],
   "pending": {

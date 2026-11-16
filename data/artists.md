@@ -95,3 +95,7 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 88 | Farhad Mehrad | 1. Yesterday When I Was Young |
 | 89 | Barbara Dane | 1. Crazy Blues |
 | 90 | dariush &amp; mehdi | 1. تو ایرانیم دیگه ... |
+| 91 | Ханс Циммер | 1. S.T.A.Y. |
+| 92 | Hans Zimmer | 1. Day One (Interstellar Theme) |
+| 93 | Jóhann Jóhannsson | 1. London, 1988<br>2. Camping |
+| 94 | Secret Garden | 1. Heartstrings<br>2. Ode To Simplicity<br>3. Cantoluna |

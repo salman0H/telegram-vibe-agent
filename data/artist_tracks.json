@@ -548,5 +548,32 @@
     "tracks": [
       "تو ایرانیم دیگه ..."
     ]
+  },
+  {
+    "artist": "Ханс Циммер",
+    "tracks": [
+      "S.T.A.Y."
+    ]
+  },
+  {
+    "artist": "Hans Zimmer",
+    "tracks": [
+      "Day One (Interstellar Theme)"
+    ]
+  },
+  {
+    "artist": "Jóhann Jóhannsson",
+    "tracks": [
+      "London, 1988",
+      "Camping"
+    ]
+  },
+  {
+    "artist": "Secret Garden",
+    "tracks": [
+      "Heartstrings",
+      "Ode To Simplicity",
+      "Cantoluna"
+    ]
   }
 ]
