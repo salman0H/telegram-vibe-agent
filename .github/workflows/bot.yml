@@ -16,6 +16,8 @@ permissions:
 jobs:
   run-agent:
     runs-on: ubuntu-latest
+    env:
+      TASTE_MEMORY_PASSWORD: ${{ secrets.TASTE_MEMORY_PASSWORD }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -31,6 +33,9 @@ jobs:
           sudo apt-get install -y ffmpeg
           pip install --upgrade yt-dlp
           
+      - name: Install encrypted memory dependency
+        run: pip install -r requirements.txt
+
       - name: Shift 1 - Download & Upload (Daytime Logic)
         env:
           MUSIC_BOT_TOKEN: ${{ secrets.MUSIC_BOT_TOKEN }}
@@ -48,12 +53,17 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python scripts/daily_ai_curator.py
         
+      - name: Verify encrypted choice memory
+        if: ${{ always() }}
+        run: python scripts/verify_taste_memory.py
+
       - name: Reconcile and Commit State
         if: ${{ always() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
+          if [ -f data/taste_memory.enc ]; then git add data/taste_memory.enc; fi
           git add state.json daily_log.json
           if [ -f data/artist_tracks.json ]; then git add data/artist_tracks.json; fi
           if [ -f data/artists.md ]; then git add data/artists.md; fi

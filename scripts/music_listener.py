@@ -1,3 +1,4 @@
+import taste_memory
 import os
 import json
 import urllib.request
@@ -70,6 +71,9 @@ def main():
         if message_id in queued_ids:
             continue
 
+        audio = post["audio"]
+        taste_memory.record(msg_channel, message_id, audio.get("performer", "Unknown Artist"),
+                            audio.get("title", "Unknown Title"), post.get("date"), "vibe_channel")
         raw_caption = post.get("caption", "")
         
         needs_caption = not raw_caption.strip()

@@ -1,3 +1,4 @@
+import taste_memory
 import os
 import json
 import time
@@ -150,6 +151,12 @@ def main():
     updates = telegram_api.get_updates(BOT_TOKEN, offset)
     # This poller can receive channel posts too, before the listener sees them.
     collect_channel_artists(updates, CHANNEL_ID)
+    for update in updates:
+        post = update.get("channel_post", {})
+        if post.get("audio") and str(post.get("chat", {}).get("id")) == str(CHANNEL_ID):
+            audio = post["audio"]
+            taste_memory.record(CHANNEL_ID, post.get("message_id"), audio.get("performer", "Unknown Artist"),
+                                audio.get("title", "Unknown Title"), post.get("date"), "vibe_channel")
     
     if not updates:
         print("[Agent] No new messages in queue.")
@@ -258,6 +265,9 @@ def main():
             channel_msg_id = channel_msg.get("message_id")
             published_artist = channel_msg.get("audio", {}).get("performer") or clean_performer
             published_title = channel_msg.get("audio", {}).get("title") or clean_title
+            taste_memory.record(channel_msg.get("chat", {}).get("id") or CHANNEL_ID,
+                                channel_msg_id, published_artist, published_title,
+                                channel_msg.get("date"), "vibe_admin")
             record_tracks([{"performer": published_artist, "title": published_title}])
             
             log_data.append({

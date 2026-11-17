@@ -16,12 +16,17 @@ permissions:
 jobs:
   track:
     runs-on: ubuntu-latest
+    env:
+      TASTE_MEMORY_PASSWORD: ${{ secrets.TASTE_MEMORY_PASSWORD }}
     steps:
       - uses: actions/checkout@v4
       
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Install encrypted memory dependency
+        run: pip install -r requirements.txt
 
       - name: Collect artists from the existing queue
         run: python scripts/artist_registry.py
@@ -32,12 +37,17 @@ jobs:
           MUSIC_CHANNEL_ID: ${{ secrets.MUSIC_CHANNEL_ID }}
         run: python scripts/music_listener.py
         
+      - name: Verify encrypted choice memory
+        if: ${{ always() }}
+        run: python scripts/verify_taste_memory.py
+
       - name: Commit raw state and log
         if: ${{ always() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
+          if [ -f data/taste_memory.enc ]; then git add data/taste_memory.enc; fi
           git add music_state.json daily_log.json
           if [ -f data/artist_tracks.json ]; then git add data/artist_tracks.json; fi
           if [ -f data/artists.md ]; then git add data/artists.md; fi

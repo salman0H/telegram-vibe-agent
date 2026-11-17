@@ -1,2 +1,4 @@
-# Python 3.12 standard library only.
+# Optional encrypted music-choice memory.
 # The downloader workflow installs yt-dlp separately and requires ffmpeg.
+
+cryptography>=44,<47

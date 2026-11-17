@@ -5,3 +5,7 @@ __pycache__/
 venv/
 *.tar.gz
 *.enc
+# Private local music-choice artifacts
+data/taste_memory.enc.lock
+*taste*.svg
+.taste-*
