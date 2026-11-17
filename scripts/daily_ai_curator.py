@@ -129,7 +129,8 @@ def main():
             telegram_client.CHANNEL_ID, message_id,
             track.get("performer", "Unknown Artist"), track.get("title", "Unknown Title"),
             track.get("timestamp"),
-            "vibe_admin" if track.get("taste_source") == "vibe_admin" else "vibe_queue")
+            "vibe_admin" if track.get("taste_source") == "vibe_admin" else "vibe_queue",
+            tags=track.get("taste_tags") or taste_memory.extract_tags(track.get("caption", "")))
         key = str(message_id)
         raw_caption = track.get("caption", "")
         base_caption = html.escape(raw_caption, quote=False)

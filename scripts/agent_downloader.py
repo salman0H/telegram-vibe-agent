@@ -156,7 +156,7 @@ def main():
         if post.get("audio") and str(post.get("chat", {}).get("id")) == str(CHANNEL_ID):
             audio = post["audio"]
             taste_memory.record(CHANNEL_ID, post.get("message_id"), audio.get("performer", "Unknown Artist"),
-                                audio.get("title", "Unknown Title"), post.get("date"), "vibe_channel")
+                                audio.get("title", "Unknown Title"), post.get("date"), "vibe_channel", tags=taste_memory.extract_tags(post.get("caption", "")))
     
     if not updates:
         print("[Agent] No new messages in queue.")
@@ -267,7 +267,7 @@ def main():
             published_title = channel_msg.get("audio", {}).get("title") or clean_title
             taste_memory.record(channel_msg.get("chat", {}).get("id") or CHANNEL_ID,
                                 channel_msg_id, published_artist, published_title,
-                                channel_msg.get("date"), "vibe_admin")
+                                channel_msg.get("date"), "vibe_admin", tags=taste_memory.extract_tags(message.get("caption", "")))
             record_tracks([{"performer": published_artist, "title": published_title}])
             
             log_data.append({
@@ -276,7 +276,8 @@ def main():
                 "title": clean_title,
                 "caption": "",
                 "timestamp": channel_msg.get("date"),
-                "taste_source": "vibe_admin"
+                "taste_source": "vibe_admin",
+                "taste_tags": taste_memory.extract_tags(message.get("caption", ""))
             })
             print(f"[Agent] Queued in daily_log.json (Msg ID: {channel_msg_id})")
             if status_msg_id:

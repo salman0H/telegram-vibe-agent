@@ -73,7 +73,7 @@ def main():
 
         audio = post["audio"]
         taste_memory.record(msg_channel, message_id, audio.get("performer", "Unknown Artist"),
-                            audio.get("title", "Unknown Title"), post.get("date"), "vibe_channel")
+                            audio.get("title", "Unknown Title"), post.get("date"), "vibe_channel", tags=taste_memory.extract_tags(post.get("caption", "")))
         raw_caption = post.get("caption", "")
         
         needs_caption = not raw_caption.strip()

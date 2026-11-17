@@ -49,7 +49,7 @@ class DownloaderTests(unittest.TestCase):
                          [{'artist': 'Artist', 'tracks': ['Long track']}])
         self.assertIn('1. Long track', Path('data/artists.md').read_text())
         queue = json.loads(Path('daily_log.json').read_text())
-        self.assertEqual(queue, [dict(message_id=42, performer='Artist', title='Long track', caption='', timestamp=1735689600, taste_source='vibe_admin')])
+        self.assertEqual(queue, [dict(message_id=42, performer='Artist', title='Long track', caption='', timestamp=1735689600, taste_source='vibe_admin', taste_tags=[])])
 
     def test_failed_reuse_does_not_queue_a_nonexistent_channel_post(self):
         with patch.object(telegram_api, 'get_updates', return_value=[self.audio_update()]), patch.object(telegram_api, 'send_message', return_value=None), patch.object(telegram_api, 'send_audio_file_id', return_value=None):
