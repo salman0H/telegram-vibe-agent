@@ -40,7 +40,7 @@ class DownloaderTests(unittest.TestCase):
 
     def test_ten_minute_large_audio_skips_download_and_local_upload(self):
         update = self.audio_update()
-        with patch.object(telegram_api, 'get_updates', return_value=[update]), patch.object(telegram_api, 'send_message', return_value={'result': {'message_id': 3}}), patch.object(telegram_api, 'edit_message_text'), patch.object(telegram_api, 'send_audio_file_id', return_value={'ok': True, 'result': {'message_id': 42}}) as reuse, patch.object(downloader, 'download_telegram_file') as download, patch.object(telegram_api, 'send_audio') as upload:
+        with patch.object(telegram_api, 'get_updates', return_value=[update]), patch.object(telegram_api, 'send_message', return_value={'result': {'message_id': 3}}), patch.object(telegram_api, 'edit_message_text'), patch.object(telegram_api, 'send_audio_file_id', return_value={'ok': True, 'result': {'message_id': 42, 'date': 1735689600}}) as reuse, patch.object(downloader, 'download_telegram_file') as download, patch.object(telegram_api, 'send_audio') as upload:
             downloader.main()
         download.assert_not_called()
         upload.assert_not_called()
@@ -49,7 +49,7 @@ class DownloaderTests(unittest.TestCase):
                          [{'artist': 'Artist', 'tracks': ['Long track']}])
         self.assertIn('1. Long track', Path('data/artists.md').read_text())
         queue = json.loads(Path('daily_log.json').read_text())
-        self.assertEqual(queue, [dict(message_id=42, performer='Artist', title='Long track', caption='')])
+        self.assertEqual(queue, [dict(message_id=42, performer='Artist', title='Long track', caption='', timestamp=1735689600, taste_source='vibe_admin')])
 
     def test_failed_reuse_does_not_queue_a_nonexistent_channel_post(self):
         with patch.object(telegram_api, 'get_updates', return_value=[self.audio_update()]), patch.object(telegram_api, 'send_message', return_value=None), patch.object(telegram_api, 'send_audio_file_id', return_value=None):

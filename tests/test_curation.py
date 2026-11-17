@@ -143,6 +143,18 @@ class PipelineTests(unittest.TestCase):
     def read_queue(self):
         return json.loads(Path('daily_log.json').read_text())
 
+    def test_legacy_queue_records_even_when_telegram_edit_fails(self):
+        with patch.object(curator.taste_memory, 'record') as record, patch.object(curator, 'generate_ai_content', return_value=copy.deepcopy(self.record)), patch.object(curator.telegram_client, 'edit_message_caption', return_value=None):
+            curator.main()
+        record.assert_called_once_with(curator.telegram_client.CHANNEL_ID, 42, 'Artist', 'Track', None, 'vibe_queue')
+        self.assertEqual(len(self.read_queue()), 1)
+
+    def test_admin_queue_preserves_timestamp_and_priority_on_retry(self):
+        cm.save_json('daily_log.json', [dict(message_id=42, title='Track', performer='Artist', caption='', timestamp=1735689600, taste_source='vibe_admin')])
+        with patch.object(curator.taste_memory, 'record') as record, patch.object(curator, 'generate_ai_content', return_value=copy.deepcopy(self.record)), patch.object(curator.telegram_client, 'edit_message_caption', return_value=None):
+            curator.main()
+        record.assert_called_once_with(curator.telegram_client.CHANNEL_ID, 42, 'Artist', 'Track', 1735689600, 'vibe_admin')
+
     def test_success_remembers_source_and_removes_queue(self):
         with patch.object(curator, 'generate_ai_content', return_value=copy.deepcopy(self.record)), patch.object(curator.telegram_client, 'edit_message_caption', return_value={'ok': True}):
             curator.main()
