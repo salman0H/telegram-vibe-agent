@@ -65,7 +65,11 @@
     "nadella-hitrefresh-2017-01",
     "portman-harvard-2015-01",
     "jenkins-moonlight-2016-01",
-    "cuaron-roma-2018-01"
+    "cuaron-roma-2018-01",
+    "tennyson-ulysses-02",
+    "coel-bafta-2021-01",
+    "mcadams-presence-2023-01",
+    "ishiguro-klara-2021-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -132,7 +136,11 @@
     "0d3b67b50ccff65191c927c98feb159c31bd19977b6102149f3eaa316759f4c9",
     "e6f15444ef6bc22e763df18b63e86cffdcf47addd6db612fc7b9704fd5b050c2",
     "491efeb830025bd8ee8bccaa56e216452f3eae59f40bf83f62eb716a26a57269",
-    "36173b3cea46b176f908d0a999dd12325268822afce9099255aa4671ae2c15ba"
+    "36173b3cea46b176f908d0a999dd12325268822afce9099255aa4671ae2c15ba",
+    "9d088402ac5c5e0454b946ffff7a7749a9bef4e4bc06b271c3da5ee0549b6f44",
+    "43dcfb47541756ab74d46948e748a7a0eac699ed3db736fc54fadfced8af8c07",
+    "5292941dbfa1523c6926b46b8ee6bb45d90e683b9ee813c412570d17de058eaf",
+    "60d624bb6664a91de6b37cae7f28460fb29babdd46a4ccdb831e04aefe307663"
   ],
   "recent": [
     {
@@ -589,6 +597,34 @@
       "author": "Alfonso Cuarón",
       "style": "contrast",
       "lens": "city"
+    },
+    {
+      "text": "A sapling pushes through thawing soil, its tender limbs tracing the curve of a sunrise that promises unseen valleys beyond the ridge.",
+      "poem_id": "tennyson-ulysses-02",
+      "author": "Alfred, Lord Tennyson",
+      "style": "fragment",
+      "lens": "growth"
+    },
+    {
+      "text": "The favorite mug sits untouched, its rim catching the morning light, as if waiting for a conversation that never returns.",
+      "poem_id": "coel-bafta-2021-01",
+      "author": "Michaela Coel",
+      "style": "address",
+      "lens": "domestic"
+    },
+    {
+      "text": "A weathered compass, its needle suddenly pointing toward a distant meadow of silver birches, maps the quiet yearning of a simple melody.",
+      "poem_id": "mcadams-presence-2023-01",
+      "author": "Rachel McAdams",
+      "style": "object",
+      "lens": "landscape"
+    },
+    {
+      "text": "Fold a thin sheet of glass over a whisper of wind, letting its crisp fracture echo the quiet yearning of distant horizons.",
+      "poem_id": "ishiguro-klara-2021-01",
+      "author": "Kazuo Ishiguro",
+      "style": "action",
+      "lens": "material"
     }
   ],
   "pending": {
