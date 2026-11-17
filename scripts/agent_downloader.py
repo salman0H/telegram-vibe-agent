@@ -274,7 +274,9 @@ def main():
                 "message_id": channel_msg_id,
                 "performer": clean_performer,
                 "title": clean_title,
-                "caption": ""
+                "caption": "",
+                "timestamp": channel_msg.get("date"),
+                "taste_source": "vibe_admin"
             })
             print(f"[Agent] Queued in daily_log.json (Msg ID: {channel_msg_id})")
             if status_msg_id:

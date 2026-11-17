@@ -1,4 +1,5 @@
 import os
+import taste_memory
 import time
 import json
 import html
@@ -124,6 +125,11 @@ def main():
     remaining = list(log_data)
     for track in log_data:
         message_id = track["message_id"]
+        taste_memory.record(
+            telegram_client.CHANNEL_ID, message_id,
+            track.get("performer", "Unknown Artist"), track.get("title", "Unknown Title"),
+            track.get("timestamp"),
+            "vibe_admin" if track.get("taste_source") == "vibe_admin" else "vibe_queue")
         key = str(message_id)
         raw_caption = track.get("caption", "")
         base_caption = html.escape(raw_caption, quote=False)
