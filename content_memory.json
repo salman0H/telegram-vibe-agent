@@ -69,7 +69,13 @@
     "tennyson-ulysses-02",
     "coel-bafta-2021-01",
     "mcadams-presence-2023-01",
-    "ishiguro-klara-2021-01"
+    "ishiguro-klara-2021-01",
+    "abramovic-presence-2020-01",
+    "murphy-oscar-2024-01",
+    "keats-urn-02",
+    "byron-beauty-01",
+    "celine-song-pastlives-2023-01",
+    "zendaya-emmy-2020-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -140,7 +146,13 @@
     "9d088402ac5c5e0454b946ffff7a7749a9bef4e4bc06b271c3da5ee0549b6f44",
     "43dcfb47541756ab74d46948e748a7a0eac699ed3db736fc54fadfced8af8c07",
     "5292941dbfa1523c6926b46b8ee6bb45d90e683b9ee813c412570d17de058eaf",
-    "60d624bb6664a91de6b37cae7f28460fb29babdd46a4ccdb831e04aefe307663"
+    "60d624bb6664a91de6b37cae7f28460fb29babdd46a4ccdb831e04aefe307663",
+    "7883da3d3323a2f8b513486fe275d6a2b66e36260d177c22962ce7c9d2755858",
+    "1fb384d0287861cef61a0e7e34e047c1f085e135a9ae9be8c0294afd50b6b457",
+    "876cb85c4b37276d6553455a4cbf6e8be1a1aa6cbab870fdb35fa4799ad49dc1",
+    "3088e6ad7f7536f09b87bc2333bbda2d258ad020fd0e07afe7f499016df9725e",
+    "5d78bbdba6130e599c8d718f55c086403ea8229fa69d1341bb170cdfedb4aa05",
+    "82cbc0b835ceaeb4adde008c74b52e0bab21104a67d17dc3464fd3c5ae134843"
   ],
   "recent": [
     {
@@ -625,6 +637,48 @@
       "author": "Kazuo Ishiguro",
       "style": "action",
       "lens": "material"
+    },
+    {
+      "text": "A traffic light flickers from red to amber, marking the moment a lone commuter steps onto the sidewalk, as the city exhales a quiet promise.",
+      "poem_id": "abramovic-presence-2020-01",
+      "author": "Marina Abramović",
+      "style": "time",
+      "lens": "city"
+    },
+    {
+      "text": "A lone speaker in a cavernous hall watches the last echo fade, as the weight of silent treaties collapses into dust, and the room finally exhales.",
+      "poem_id": "murphy-oscar-2024-01",
+      "author": "Cillian Murphy",
+      "style": "fragment",
+      "lens": "space"
+    },
+    {
+      "text": "A sapphire lamp flickers against a cracked floor, while a single note steadies the darkness like a lighthouse catching a wavering tide.",
+      "poem_id": "keats-urn-02",
+      "author": "John Keats",
+      "style": "contrast",
+      "lens": "light"
+    },
+    {
+      "text": "A cracked teacup, its rim suddenly mirroring a far‑off canyon bathed in amber light, holds the quiet surrender of a chorus that questions belief.",
+      "poem_id": "byron-beauty-01",
+      "author": "Lord Byron",
+      "style": "object",
+      "lens": "landscape"
+    },
+    {
+      "text": "A single amber leaf slips from a torn notebook page, its edge curling as the afternoon light thins, marking the quiet turn of the season.",
+      "poem_id": "celine-song-pastlives-2023-01",
+      "author": "Celine Song",
+      "style": "time",
+      "lens": "material"
+    },
+    {
+      "text": "A seedling darts along a breezy path, each leaf unfurling like a fresh promise that the sunrise will keep turning, urging restless hearts to keep stepping forward.",
+      "poem_id": "zendaya-emmy-2020-01",
+      "author": "Zendaya",
+      "style": "motion",
+      "lens": "growth"
     }
   ],
   "pending": {

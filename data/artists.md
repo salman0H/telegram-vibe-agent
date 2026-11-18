@@ -99,3 +99,9 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 92 | Hans Zimmer | 1. Day One (Interstellar Theme) |
 | 93 | Jóhann Jóhannsson | 1. London, 1988<br>2. Camping |
 | 94 | Secret Garden | 1. Heartstrings<br>2. Ode To Simplicity<br>3. Cantoluna |
+| 95 | Adele | 1. Skyfall |
+| 96 | Bad Omens | 1. THE DEATH OF PEACE OF MIND |
+| 97 | Crimson Spirit | 1. Keep You in the Dark |
+| 98 | R.E.M | 1. Losing My Religion (Live From Into The Night On BBC Radio 1 / 1991) |
+| 99 | Zleepyfred | 1. Last Leaves of Autumn |
+| 100 | Zeynep Bastık | 1. Uslanmıyor Bu |
