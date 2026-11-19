@@ -71,7 +71,7 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 64 | Isam, Tamara, ONEDAM | 1. RANGE MESI |
 | 65 | Harry Styles | 1. As It Was |
 | 66 | Frank Sinatra | 1. Autumn Leaves (1999 Remastered) |
-| 67 | keshi | 1. Dream |
+| 67 | keshi | 1. Dream<br>2. Soft Spot |
 | 68 | Stevie Wonder | 1. Overjoyed (Live/1995) |
 | 69 | Sade | 1. Sade - Pearls (Audio) |
 | 70 | Alex G | 1. Mary |
@@ -108,3 +108,7 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 101 | Poets of the Fall | 1. Daze |
 | 102 | Amirashkan Gholami | 1. Morgh-e Sahar |
 | 103 | Heydoo Hedayati | 1. Yaar |
+| 104 | Mara Mandeau | 1. On my own |
+| 105 | Olivia Rodrigo | 1. favorite crime |
+| 106 | Swedish House Mafia &amp; The Weeknd | 1. Moth To A Flame |
+| 107 | Gorillaz &amp; Kali Uchis | 1. She's My Collar (feat. Kali Uchis) |

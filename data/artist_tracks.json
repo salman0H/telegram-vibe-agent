@@ -407,7 +407,8 @@
   {
     "artist": "keshi",
     "tracks": [
-      "Dream"
+      "Dream",
+      "Soft Spot"
     ]
   },
   {
@@ -628,6 +629,30 @@
     "artist": "Heydoo Hedayati",
     "tracks": [
       "Yaar"
+    ]
+  },
+  {
+    "artist": "Mara Mandeau",
+    "tracks": [
+      "On my own"
+    ]
+  },
+  {
+    "artist": "Olivia Rodrigo",
+    "tracks": [
+      "favorite crime"
+    ]
+  },
+  {
+    "artist": "Swedish House Mafia & The Weeknd",
+    "tracks": [
+      "Moth To A Flame"
+    ]
+  },
+  {
+    "artist": "Gorillaz & Kali Uchis",
+    "tracks": [
+      "She's My Collar (feat. Kali Uchis)"
     ]
   }
 ]

@@ -78,7 +78,12 @@
     "zendaya-emmy-2020-01",
     "wells-aftersun-2022-01",
     "babataher-15-01",
-    "sanapur-fiction-2018-01"
+    "sanapur-fiction-2018-01",
+    "sorrentino-handofgod-2021-01",
+    "rubin-creative-2023-01",
+    "smith-wade-2018-01",
+    "whitman-leaves-05",
+    "walker-sleep-2017-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -158,7 +163,12 @@
     "82cbc0b835ceaeb4adde008c74b52e0bab21104a67d17dc3464fd3c5ae134843",
     "ac5001dedb1d1f848151801b84261824d27bd049c6d4fb99bdb4a70d38e7c06b",
     "595c6e0995addc651eb39298a0da75555dd6964eefac5de08d17a20419122507",
-    "6ededd46733b2c1686e3421ce9300677c249a442b911ebbedc2542041613bf39"
+    "6ededd46733b2c1686e3421ce9300677c249a442b911ebbedc2542041613bf39",
+    "6e645ae7e0ede49aa997aecff23ed92ee608b71bd236a9c11875dae8ef43acb3",
+    "27c28a9a6ab3d0c834bc9196808b04bf6e12d975aed4aeb3896b3d0b8df01ded",
+    "086a7e93d4178cdd8bb2b6736ffa5e03711fdfb624c5dd50270d370fef141428",
+    "a950ce9c7e0178392e8700a8121ac009110b0462ea2904ed316ceb7f962eb112",
+    "846661edb58c7ac0c1c55dd4ddc1323aa4b5e0c5c28f8263a92cd6ab7b8ff0ba"
   ],
   "recent": [
     {
@@ -706,6 +716,41 @@
       "author": "حسین سناپور",
       "style": "fragment",
       "lens": "light"
+    },
+    {
+      "text": "A lone train rolls across a sun‑bleached plain, each carriage a heartbeat that steadies wandering thoughts toward a horizon where yesterday's shadows dissolve into golden light.",
+      "poem_id": "sorrentino-handofgod-2021-01",
+      "author": "Paolo Sorrentino",
+      "style": "motion",
+      "lens": "landscape"
+    },
+    {
+      "text": "A cool pane of glass slides over your palm, catching the faint tremor of a whispered confession that feels like a stolen secret.",
+      "poem_id": "rubin-creative-2023-01",
+      "author": "Rick Rubin",
+      "style": "sensation",
+      "lens": "material"
+    },
+    {
+      "text": "Glide through the hushed hall, feeling the subtle pull of unseen threads that stitch distant moments together.",
+      "poem_id": "smith-wade-2018-01",
+      "author": "Tracy K. Smith",
+      "style": "action",
+      "lens": "space"
+    },
+    {
+      "text": "A kitchen kettle whistles, but instead of steam it releases tiny glowing fireflies, reminding the room that even the mundane can spark new verses.",
+      "poem_id": "whitman-leaves-05",
+      "author": "Walt Whitman",
+      "style": "object",
+      "lens": "domestic"
+    },
+    {
+      "text": "A warm pulse slides along the spine, each beat a soft glide that steadies breath like a tide pulling the heart forward.",
+      "poem_id": "walker-sleep-2017-01",
+      "author": "Matthew Walker",
+      "style": "motion",
+      "lens": "body"
     }
   ],
   "pending": {
