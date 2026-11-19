@@ -75,7 +75,10 @@
     "keats-urn-02",
     "byron-beauty-01",
     "celine-song-pastlives-2023-01",
-    "zendaya-emmy-2020-01"
+    "zendaya-emmy-2020-01",
+    "wells-aftersun-2022-01",
+    "babataher-15-01",
+    "sanapur-fiction-2018-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -152,7 +155,10 @@
     "876cb85c4b37276d6553455a4cbf6e8be1a1aa6cbab870fdb35fa4799ad49dc1",
     "3088e6ad7f7536f09b87bc2333bbda2d258ad020fd0e07afe7f499016df9725e",
     "5d78bbdba6130e599c8d718f55c086403ea8229fa69d1341bb170cdfedb4aa05",
-    "82cbc0b835ceaeb4adde008c74b52e0bab21104a67d17dc3464fd3c5ae134843"
+    "82cbc0b835ceaeb4adde008c74b52e0bab21104a67d17dc3464fd3c5ae134843",
+    "ac5001dedb1d1f848151801b84261824d27bd049c6d4fb99bdb4a70d38e7c06b",
+    "595c6e0995addc651eb39298a0da75555dd6964eefac5de08d17a20419122507",
+    "6ededd46733b2c1686e3421ce9300677c249a442b911ebbedc2542041613bf39"
   ],
   "recent": [
     {
@@ -679,6 +685,27 @@
       "author": "Zendaya",
       "style": "motion",
       "lens": "growth"
+    },
+    {
+      "text": "Clutch the lingering heat of a phantom hand, feeling the invisible weight of forgotten mornings settle into your ribs.",
+      "poem_id": "wells-aftersun-2022-01",
+      "author": "Charlotte Wells",
+      "style": "action",
+      "lens": "body"
+    },
+    {
+      "text": "قابلمه‌ای که هنوز بخار می‌کشد، در حالی که پنجرهٔ سرد صبح، پر از صدای پرنده‌ای که هنوز نرفته است.",
+      "poem_id": "babataher-15-01",
+      "author": "باباطاهر",
+      "style": "contrast",
+      "lens": "domestic"
+    },
+    {
+      "text": "نور زرد لامپی بر آسفالت خیس می‌تابد، جایی که سایه‌ای تنها یک نخ خاطره را می‌گیرد و در نبض شتاب‌زدهٔ شهر می‌نویسد.",
+      "poem_id": "sanapur-fiction-2018-01",
+      "author": "حسین سناپور",
+      "style": "fragment",
+      "lens": "light"
     }
   ],
   "pending": {

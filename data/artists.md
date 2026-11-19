@@ -105,3 +105,6 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 98 | R.E.M | 1. Losing My Religion (Live From Into The Night On BBC Radio 1 / 1991) |
 | 99 | Zleepyfred | 1. Last Leaves of Autumn |
 | 100 | Zeynep Bastık | 1. Uslanmıyor Bu |
+| 101 | Poets of the Fall | 1. Daze |
+| 102 | Amirashkan Gholami | 1. Morgh-e Sahar |
+| 103 | Heydoo Hedayati | 1. Yaar |
