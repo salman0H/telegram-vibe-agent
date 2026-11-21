@@ -68,12 +68,11 @@ def main():
             continue
 
         message_id = post["message_id"]
-        if message_id in queued_ids:
-            continue
-
         audio = post["audio"]
         taste_memory.record(msg_channel, message_id, audio.get("performer", "Unknown Artist"),
                             audio.get("title", "Unknown Title"), post.get("date"), "vibe_channel", tags=taste_memory.extract_tags(post.get("caption", "")))
+        if message_id in queued_ids:
+            continue
         raw_caption = post.get("caption", "")
         
         needs_caption = not raw_caption.strip()
