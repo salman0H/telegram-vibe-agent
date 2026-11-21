@@ -37,6 +37,12 @@ jobs:
           MUSIC_CHANNEL_ID: ${{ secrets.MUSIC_CHANNEL_ID }}
         run: python scripts/music_listener.py
         
+      - name: Backfill deterministic music tags
+        if: ${{ always() }}
+        env:
+          MUSIC_CHANNEL_ID: ${{ secrets.MUSIC_CHANNEL_ID }}
+        run: python -u scripts/backfill_taste_tags.py
+
       - name: Verify encrypted choice memory
         if: ${{ always() }}
         run: python scripts/verify_taste_memory.py
