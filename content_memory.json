@@ -83,7 +83,12 @@
     "rubin-creative-2023-01",
     "smith-wade-2018-01",
     "whitman-leaves-05",
-    "walker-sleep-2017-01"
+    "walker-sleep-2017-01",
+    "triet-anatomy-2023-01",
+    "fouladvand-philosophy-2019-01",
+    "everett-james-2024-01",
+    "murakami-novelist-2022-01",
+    "yeats-cloths-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -168,7 +173,12 @@
     "27c28a9a6ab3d0c834bc9196808b04bf6e12d975aed4aeb3896b3d0b8df01ded",
     "086a7e93d4178cdd8bb2b6736ffa5e03711fdfb624c5dd50270d370fef141428",
     "a950ce9c7e0178392e8700a8121ac009110b0462ea2904ed316ceb7f962eb112",
-    "846661edb58c7ac0c1c55dd4ddc1323aa4b5e0c5c28f8263a92cd6ab7b8ff0ba"
+    "846661edb58c7ac0c1c55dd4ddc1323aa4b5e0c5c28f8263a92cd6ab7b8ff0ba",
+    "ab9857d345278775fe49baaf7d53e737ac0b0fd95449588f5a0ff2710b15fb97",
+    "cf47ea1945d95e8d1c882fd6567b932d9aee0004f30fc9df5c8ad100d6b71d68",
+    "18820e1e7795a6a15e587c06fe27a541742808335d0935659989ed5bf39aa9c0",
+    "d464519e385cab2f4bb0c21525fc34c87af4148d1af975ca52c062f62c787233",
+    "56e4adc70008d0ed91e4fe68ed6ecc5540a2201b0caa4007bdd022c2084c342f"
   ],
   "recent": [
     {
@@ -751,6 +761,41 @@
       "author": "Matthew Walker",
       "style": "motion",
       "lens": "body"
+    },
+    {
+      "text": "A single sapling bends as the first frost kisses its new leaves, reminding us that quiet trust can sprout where certainty has yet to thaw.",
+      "poem_id": "triet-anatomy-2023-01",
+      "author": "Justine Triet",
+      "style": "time",
+      "lens": "growth"
+    },
+    {
+      "text": "می‌نویسم خطی واضح بر سنگفرش خیس، هر قدم شهر را به مسیر آزادی می‌کشاند.",
+      "poem_id": "fouladvand-philosophy-2019-01",
+      "author": "عزت‌الله فولادوند",
+      "style": "action",
+      "lens": "city"
+    },
+    {
+      "text": "A faint tremor runs along the skin of the empty hallway, each echo stretching like a distant star across the room's silent vastness.",
+      "poem_id": "everett-james-2024-01",
+      "author": "Percival Everett",
+      "style": "sensation",
+      "lens": "space"
+    },
+    {
+      "text": "A steady hand slides a sheet of metal across glass, each silent glide echoing the disciplined stride of a runner tracing invisible lines toward an unseen finale.",
+      "poem_id": "murakami-novelist-2022-01",
+      "author": "Haruki Murakami",
+      "style": "motion",
+      "lens": "material"
+    },
+    {
+      "text": "The kitchen clock ticks past midnight as the teacup's steam fades, leaving a faint ring where the rim once caught the warmth, a quiet reminder of something once whole now subtly empty.",
+      "poem_id": "yeats-cloths-01",
+      "author": "William Butler Yeats",
+      "style": "time",
+      "lens": "domestic"
     }
   ],
   "pending": {

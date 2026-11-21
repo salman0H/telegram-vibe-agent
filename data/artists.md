@@ -112,3 +112,8 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 105 | Olivia Rodrigo | 1. favorite crime |
 | 106 | Swedish House Mafia &amp; The Weeknd | 1. Moth To A Flame |
 | 107 | Gorillaz &amp; Kali Uchis | 1. She's My Collar (feat. Kali Uchis) |
+| 108 | Cameron Whitcomb | 1. The Hard Way |
+| 109 | AiVA | 1. Jadeye Ma |
+| 110 | HIM | 1. You Are The One |
+| 111 | Opeth | 1. Ending Credits |
+| 112 | Blackfield | 1. The Hole in Me |
