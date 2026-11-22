@@ -117,3 +117,6 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 110 | HIM | 1. You Are The One |
 | 111 | Opeth | 1. Ending Credits |
 | 112 | Blackfield | 1. The Hole in Me |
+| 113 | Stephen Wilson Jr | 1. "I'm A Song" (Live at the Print Shop) |
+| 114 | Marie Denis | 1. Willow |
+| 115 | Hazel | 1. hotline bling (billie version) |

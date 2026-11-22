@@ -88,7 +88,10 @@
     "fouladvand-philosophy-2019-01",
     "everett-james-2024-01",
     "murakami-novelist-2022-01",
-    "yeats-cloths-01"
+    "yeats-cloths-01",
+    "obama-farewell-2017-02",
+    "colman-oscar-2019-01",
+    "blanchett-venice-2022-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -178,7 +181,10 @@
     "cf47ea1945d95e8d1c882fd6567b932d9aee0004f30fc9df5c8ad100d6b71d68",
     "18820e1e7795a6a15e587c06fe27a541742808335d0935659989ed5bf39aa9c0",
     "d464519e385cab2f4bb0c21525fc34c87af4148d1af975ca52c062f62c787233",
-    "56e4adc70008d0ed91e4fe68ed6ecc5540a2201b0caa4007bdd022c2084c342f"
+    "56e4adc70008d0ed91e4fe68ed6ecc5540a2201b0caa4007bdd022c2084c342f",
+    "2d3824dc31a1554d5758ed215642967bf318ce1fb5365ea21d9a551bcbeb3a9d",
+    "7a9e12f6b0ad3450bbd947ff3dc92bd5849f3643543aa063015c4a3631713b3e",
+    "42522cfcc9c48c1f703ee665d1159d73d422ac93143db576ecf5517f7fa476b0"
   ],
   "recent": [
     {
@@ -796,6 +802,27 @@
       "author": "William Butler Yeats",
       "style": "time",
       "lens": "domestic"
+    },
+    {
+      "text": "A wind‑swept prairie stretches beneath a solitary lighthouse, its beam searching a horizon that never meets the open plain.",
+      "poem_id": "obama-farewell-2017-02",
+      "author": "Barack Obama",
+      "style": "contrast",
+      "lens": "landscape"
+    },
+    {
+      "text": "You, who once planted the seed of curiosity, now watch the sapling stretch toward sunrise, grateful for each unfurling leaf.",
+      "poem_id": "colman-oscar-2019-01",
+      "author": "Olivia Colman",
+      "style": "address",
+      "lens": "growth"
+    },
+    {
+      "text": "Grip the warm edge of a dim phone, the chill of the night seeping into your skin as the silent buzz whispers a lingering doubt.",
+      "poem_id": "blanchett-venice-2022-01",
+      "author": "Cate Blanchett",
+      "style": "action",
+      "lens": "body"
     }
   ],
   "pending": {
