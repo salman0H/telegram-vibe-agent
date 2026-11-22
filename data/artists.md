@@ -120,3 +120,6 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 113 | Stephen Wilson Jr | 1. "I'm A Song" (Live at the Print Shop) |
 | 114 | Marie Denis | 1. Willow |
 | 115 | Hazel | 1. hotline bling (billie version) |
+| 116 | Panic! At the Disco | 1. I Write Sins Not Tragedies |
+| 117 | Don Toliver | 1. Lose My Mind (feat. Doja Cat) |
+| 118 | James Morrison | 1. Broken Strings |
