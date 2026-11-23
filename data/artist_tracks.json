@@ -492,7 +492,9 @@
   {
     "artist": "Kali Uchis",
     "tracks": [
-      "Moonlight"
+      "Moonlight",
+      "Melting",
+      "Never Be Yours"
     ]
   },
   {
@@ -719,6 +721,24 @@
     "artist": "James Morrison",
     "tracks": [
       "Broken Strings"
+    ]
+  },
+  {
+    "artist": "James Taylor",
+    "tracks": [
+      "Fire and Rain"
+    ]
+  },
+  {
+    "artist": "Rubina Armin Najih",
+    "tracks": [
+      "Paperboat"
+    ]
+  },
+  {
+    "artist": "FINNEAS",
+    "tracks": [
+      "My Moon My Man - Live"
     ]
   }
 ]

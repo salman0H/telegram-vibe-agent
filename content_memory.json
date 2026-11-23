@@ -94,7 +94,11 @@
     "blanchett-venice-2022-01",
     "hamaguchi-drive-2021-01",
     "dafoe-wonder-2024-01",
-    "altman-future-2023-01"
+    "altman-future-2023-01",
+    "shakespeare-116-03",
+    "swinton-cinema-2021-01",
+    "murch-editing-modern-01",
+    "attar-mantiq-06"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -190,7 +194,11 @@
     "42522cfcc9c48c1f703ee665d1159d73d422ac93143db576ecf5517f7fa476b0",
     "da2a2326d68af09bbf67076d2c0fb26df1994f8ae3269af53fd933793e9d406f",
     "118cc1c89af51bf74e1b04b1001f3762889ac99a4fafa08e4678706f9e64d004",
-    "37932a9c14f6e54bf56b76519ee85637b94d15eecf22ccbb3a30b082d436a677"
+    "37932a9c14f6e54bf56b76519ee85637b94d15eecf22ccbb3a30b082d436a677",
+    "697022e609483ef367ef0b01d90261eb0f1f4cace0aa8b596c8346bd7acebdac",
+    "46dc17fe09e0b13a067326996f53b31d05735358dfb52c51ef2bde93a3ab417a",
+    "e58b3ac3bff63fba00b37167cbee63e1f977388cec2be0c68033a22e685b69f8",
+    "fdc2885113b60f7ee583165e2b4e896e9883fe9475a85476be677b7494a7b30a"
   ],
   "recent": [
     {
@@ -850,6 +858,34 @@
       "author": "Sam Altman",
       "style": "address",
       "lens": "material"
+    },
+    {
+      "text": "A faint shiver ripples along my arms, as if new shoots are pushing through thawing earth, coaxing the old roots to stretch toward the sunrise.",
+      "poem_id": "shakespeare-116-03",
+      "author": "William Shakespeare",
+      "style": "sensation",
+      "lens": "growth"
+    },
+    {
+      "text": "A cracked mug rests on the windowsill, catching the sunrise, as if the day itself refuses to belong to anyone.",
+      "poem_id": "swinton-cinema-2021-01",
+      "author": "Tilda Swinton",
+      "style": "fragment",
+      "lens": "domestic"
+    },
+    {
+      "text": "Press your palm against a cold window as the breath of memory steadies the tremor of a lingering ache.",
+      "poem_id": "murch-editing-modern-01",
+      "author": "Walter Murch",
+      "style": "action",
+      "lens": "body"
+    },
+    {
+      "text": "یک قایق کاغذی در دل تپه‌های شنی می‌لغزد، همان‌طور که سایهٔ کوه‌ها بر آسمان خالی می‌رقصد.",
+      "poem_id": "attar-mantiq-06",
+      "author": "عطار",
+      "style": "contrast",
+      "lens": "landscape"
     }
   ],
   "pending": {

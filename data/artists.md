@@ -85,7 +85,7 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 78 | Miguel | 1. Sure Thing |
 | 79 | Liana Flores | 1. rises the moon |
 | 80 | Laufey | 1. From The Start |
-| 81 | Kali Uchis | 1. Moonlight |
+| 81 | Kali Uchis | 1. Moonlight<br>2. Melting<br>3. Never Be Yours |
 | 82 | Jeremih | 1. oui |
 | 83 | The Neighborhoods | 1. Cherry Flavored |
 | 84 | Tame Impala | 1. Feels Like We Only Go Backwards |
@@ -123,3 +123,6 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 116 | Panic! At the Disco | 1. I Write Sins Not Tragedies |
 | 117 | Don Toliver | 1. Lose My Mind (feat. Doja Cat) |
 | 118 | James Morrison | 1. Broken Strings |
+| 119 | James Taylor | 1. Fire and Rain |
+| 120 | Rubina Armin Najih | 1. Paperboat |
+| 121 | FINNEAS | 1. My Moon My Man - Live |
