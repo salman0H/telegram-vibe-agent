@@ -99,7 +99,13 @@
     "swinton-cinema-2021-01",
     "murch-editing-modern-01",
     "attar-mantiq-06",
-    "keanu-grief-2019-01"
+    "keanu-grief-2019-01",
+    "deakins-simplicity-2021-01",
+    "hosseini-sea-2018-01",
+    "babak-ahmadi-art-2021-01",
+    "ferdowsi-shahnameh-03",
+    "rumi-shams-441-04",
+    "beyzaie-stanford-2018-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -200,44 +206,15 @@
     "46dc17fe09e0b13a067326996f53b31d05735358dfb52c51ef2bde93a3ab417a",
     "e58b3ac3bff63fba00b37167cbee63e1f977388cec2be0c68033a22e685b69f8",
     "fdc2885113b60f7ee583165e2b4e896e9883fe9475a85476be677b7494a7b30a",
-    "96494ce57b74ed7bedbf79c4879e57c8a5612d32450f5b11f52184f923f94e28"
+    "96494ce57b74ed7bedbf79c4879e57c8a5612d32450f5b11f52184f923f94e28",
+    "4301346ff03277d92581784ff01ed5e1d69d94080d78ac8641305ae118ef0310",
+    "200622ca0428316d9ca1bdf1f49545089a7bad9434e18ad53feaf4a7f25be547",
+    "e460302762272d58408fc62854b43afbe02cf737a04f8beb92f57d2dec235e5b",
+    "a17e2673441266953669cc40bfbe712e2363bc20c6ff26b90c6707541edcb2d5",
+    "f02d4413c4c24f2b4553433034c3c4ca68c00f3dae35b202840e49226e3cda95",
+    "92c6132aeae2d9f4207151e25c61ebeb2a4ae193527704a5f9a684cd4fc824ea"
   ],
   "recent": [
-    {
-      "text": "لامپ زرد آشپزخانه، بیسِ زیرش را به رقص می‌کشاند تا قهوه‌ساز بیدار شود.",
-      "poem_id": "hafez-336-01",
-      "author": "حافظ",
-      "style": "fragment",
-      "lens": "domestic"
-    },
-    {
-      "text": "A lone road stretches thin, its gravel whispering under hesitant footsteps, as distant thunder hints at a fragile promise that could dissolve with the next gust.",
-      "poem_id": "poe-dream-05",
-      "author": "Edgar Allan Poe",
-      "style": "motion",
-      "lens": "landscape"
-    },
-    {
-      "text": "A warm hand slips from a child's palm, the lingering heat fading like a fleeting summer breath.",
-      "poem_id": "shakespeare-18-03",
-      "author": "William Shakespeare",
-      "style": "time",
-      "lens": "body"
-    },
-    {
-      "text": "I leave a quiet hallway waiting for the echo of a footstep that never arrives.",
-      "poem_id": "dickinson-314-03",
-      "author": "Emily Dickinson",
-      "style": "address",
-      "lens": "space"
-    },
-    {
-      "text": "A shiver runs across the cold metal panel, each tremor tracing the grain like a fleeting hour that holds a universe of unspoken stories.",
-      "poem_id": "blake-auguries-04",
-      "author": "William Blake",
-      "style": "sensation",
-      "lens": "material"
-    },
     {
       "text": "A neon billboard flickers over a cracked cobblestone, promising tomorrow while the puddle reflects yesterday's rain.",
       "poem_id": "poe-dream-01",
@@ -895,6 +872,48 @@
       "author": "Keanu Reeves",
       "style": "time",
       "lens": "space"
+    },
+    {
+      "text": "A folded sheet of paper snaps, revealing a hidden silver thread that stitches the silence into a single, bright chord.",
+      "poem_id": "deakins-simplicity-2021-01",
+      "author": "Roger Deakins",
+      "style": "fragment",
+      "lens": "material"
+    },
+    {
+      "text": "Plant a quiet seed of curiosity in the winter soil, watching its tender shoot push through frost toward a sunrise of new understanding.",
+      "poem_id": "hosseini-sea-2018-01",
+      "author": "Khaled Hosseini",
+      "style": "action",
+      "lens": "growth"
+    },
+    {
+      "text": "سردی لبهٔ فنجان‌چای که هنوز بخار می‌کشد، دستم را به سوی پنجرهٔ کوچک می‌کشاند؛ همان‌جا که نور کم‌نور خیابان‌های تهران، در ردیف‌های خاکستری دیوارهای خانه می‌رقصد.",
+      "poem_id": "babak-ahmadi-art-2021-01",
+      "author": "بابک احمدی",
+      "style": "sensation",
+      "lens": "domestic"
+    },
+    {
+      "text": "صبحِ کم‌رنگی که از پنجرهٔ چوبی می‌تابد، رنگ زرد خالی فنجان را به آرامی پر می‌کند، گویی هر جرعهٔ تازه، نگاهی نو به روز می‌افزاید.",
+      "poem_id": "ferdowsi-shahnameh-03",
+      "author": "فردوسی",
+      "style": "time",
+      "lens": "light"
+    },
+    {
+      "text": "یک برگ کاغذ که به آرامی ریزش نور ماه را می‌بلعد، گویی مسیر گمشدهٔ تو را به دنبال می‌کشد.",
+      "poem_id": "rumi-shams-441-04",
+      "author": "مولانا",
+      "style": "object",
+      "lens": "material"
+    },
+    {
+      "text": "می‌سوزاند باد سرد بر فراز دشت بی‌انتها، ردی از نور کم‌سوز را می‌کشد تا خاطره‌ای از اساطیرِ فراموش‌شده به گوش می‌رسد.",
+      "poem_id": "beyzaie-stanford-2018-01",
+      "author": "بهرام بیضایی",
+      "style": "action",
+      "lens": "landscape"
     }
   ],
   "pending": {

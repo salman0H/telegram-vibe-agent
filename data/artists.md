@@ -92,7 +92,7 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 85 | The D-Day Darlings | 1. We'll Meet Again |
 | 86 | Post Malone | 1. Hollywood's Bleeding<br>2. Take What You Want |
 | 87 | Ludwig Goransson | 1. Odysseus |
-| 88 | Farhad Mehrad | 1. Yesterday When I Was Young |
+| 88 | Farhad Mehrad | 1. Yesterday When I Was Young<br>2. Khab Dar Bidari |
 | 89 | Barbara Dane | 1. Crazy Blues |
 | 90 | dariush &amp; mehdi | 1. تو ایرانیم دیگه ... |
 | 91 | Ханс Циммер | 1. S.T.A.Y. |
@@ -126,3 +126,8 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 119 | James Taylor | 1. Fire and Rain |
 | 120 | Rubina Armin Najih | 1. Paperboat |
 | 121 | FINNEAS | 1. My Moon My Man - Live |
+| 122 | Tony Ann | 1. TAURUS “The Tenacious” |
+| 123 | Franz Gordon | 1. The French Library |
+| 124 | Kiasha | 1. Streets of Tehran |
+| 125 | Bomrani | 1. To Kojayi? |
+| 126 | Hani Niroo | 1. شب بود |
