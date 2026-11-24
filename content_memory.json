@@ -98,7 +98,8 @@
     "shakespeare-116-03",
     "swinton-cinema-2021-01",
     "murch-editing-modern-01",
-    "attar-mantiq-06"
+    "attar-mantiq-06",
+    "keanu-grief-2019-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -198,7 +199,8 @@
     "697022e609483ef367ef0b01d90261eb0f1f4cace0aa8b596c8346bd7acebdac",
     "46dc17fe09e0b13a067326996f53b31d05735358dfb52c51ef2bde93a3ab417a",
     "e58b3ac3bff63fba00b37167cbee63e1f977388cec2be0c68033a22e685b69f8",
-    "fdc2885113b60f7ee583165e2b4e896e9883fe9475a85476be677b7494a7b30a"
+    "fdc2885113b60f7ee583165e2b4e896e9883fe9475a85476be677b7494a7b30a",
+    "96494ce57b74ed7bedbf79c4879e57c8a5612d32450f5b11f52184f923f94e28"
   ],
   "recent": [
     {
@@ -886,6 +888,13 @@
       "author": "عطار",
       "style": "contrast",
       "lens": "landscape"
+    },
+    {
+      "text": "A candle's flame flickers, losing a fraction of its length, as the room's shadows stretch farther, reminding me how a shared laugh lingers even as minutes dim.",
+      "poem_id": "keanu-grief-2019-01",
+      "author": "Keanu Reeves",
+      "style": "time",
+      "lens": "space"
     }
   ],
   "pending": {
