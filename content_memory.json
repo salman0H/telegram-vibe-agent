@@ -105,7 +105,9 @@
     "babak-ahmadi-art-2021-01",
     "ferdowsi-shahnameh-03",
     "rumi-shams-441-04",
-    "beyzaie-stanford-2018-01"
+    "beyzaie-stanford-2018-01",
+    "babataher-01-01",
+    "hockney-spring-2021-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -212,23 +214,11 @@
     "e460302762272d58408fc62854b43afbe02cf737a04f8beb92f57d2dec235e5b",
     "a17e2673441266953669cc40bfbe712e2363bc20c6ff26b90c6707541edcb2d5",
     "f02d4413c4c24f2b4553433034c3c4ca68c00f3dae35b202840e49226e3cda95",
-    "92c6132aeae2d9f4207151e25c61ebeb2a4ae193527704a5f9a684cd4fc824ea"
+    "92c6132aeae2d9f4207151e25c61ebeb2a4ae193527704a5f9a684cd4fc824ea",
+    "26a9139b45d675fcfd3edb0bccb8c7ab1789937bd708d5e8b9ac9e352e657fc2",
+    "46aa592dc59190b97dddb358ed8c2d6da5005bc714f28b20f60075044e558f93"
   ],
   "recent": [
-    {
-      "text": "A neon billboard flickers over a cracked cobblestone, promising tomorrow while the puddle reflects yesterday's rain.",
-      "poem_id": "poe-dream-01",
-      "author": "Edgar Allan Poe",
-      "style": "contrast",
-      "lens": "city"
-    },
-    {
-      "text": "Shift the amber streetlight’s glow as it flickers, tracing the edge of a promise that slips farther into night.",
-      "poem_id": "shakespeare-18-05",
-      "author": "William Shakespeare",
-      "style": "action",
-      "lens": "light"
-    },
     {
       "text": "A sapling unfurls its first leaves, catching morning light as the world whispers the promise of becoming.",
       "poem_id": "dickinson-314-02",
@@ -914,6 +904,20 @@
       "author": "بهرام بیضایی",
       "style": "action",
       "lens": "landscape"
+    },
+    {
+      "text": "لرزش ملایم سرمای شیشه زیر انگشتانم، همان‌گونه که نغمهٔ ووالس تهران به آرامی می‌پیچد، حس می‌کند که هر قدم در شهر، وزن خاطره‌ای نو می‌شود.",
+      "poem_id": "babataher-01-01",
+      "author": "باباطاهر",
+      "style": "sensation",
+      "lens": "body"
+    },
+    {
+      "text": "A lone garden clock ticks forward as a tiny bud unfurls, catching the first light that slips past the lingering dusk.",
+      "poem_id": "hockney-spring-2021-01",
+      "author": "David Hockney",
+      "style": "time",
+      "lens": "growth"
     }
   ],
   "pending": {

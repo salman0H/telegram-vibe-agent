@@ -131,3 +131,5 @@ Generated from `artist_tracks.json`; updated automatically when channel audio is
 | 124 | Kiasha | 1. Streets of Tehran |
 | 125 | Bomrani | 1. To Kojayi? |
 | 126 | Hani Niroo | 1. شب بود |
+| 127 | Mehrdad Mehdi | 1. Tehran Waltz 1 |
+| 128 | Toms Mucenieks | 1. Spring Waltz (Mariage d'Amour) |
