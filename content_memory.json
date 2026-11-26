@@ -107,7 +107,8 @@
     "rumi-shams-441-04",
     "beyzaie-stanford-2018-01",
     "babataher-01-01",
-    "hockney-spring-2021-01"
+    "hockney-spring-2021-01",
+    "jarmusch-limits-2019-01"
   ],
   "fingerprints": [
     "3c9092133a1f37546f64db7f68e26515a2b6c531a74f002e1d2c5fefd0b6614b",
@@ -216,16 +217,10 @@
     "f02d4413c4c24f2b4553433034c3c4ca68c00f3dae35b202840e49226e3cda95",
     "92c6132aeae2d9f4207151e25c61ebeb2a4ae193527704a5f9a684cd4fc824ea",
     "26a9139b45d675fcfd3edb0bccb8c7ab1789937bd708d5e8b9ac9e352e657fc2",
-    "46aa592dc59190b97dddb358ed8c2d6da5005bc714f28b20f60075044e558f93"
+    "46aa592dc59190b97dddb358ed8c2d6da5005bc714f28b20f60075044e558f93",
+    "6e9a9ee036aa97e4722757cd78591b9e31db8d0749d63bf1fb30d60ba7028795"
   ],
   "recent": [
-    {
-      "text": "A sapling unfurls its first leaves, catching morning light as the world whispers the promise of becoming.",
-      "poem_id": "dickinson-314-02",
-      "author": "Emily Dickinson",
-      "style": "fragment",
-      "lens": "growth"
-    },
     {
       "text": "دست تو بر دستهٔ قهوه‌ساز سرد می‌ماند، گویی صبرِ یک صبحِ بی‌پایان را می‌کشد.",
       "poem_id": "rumi-m1-62-05",
@@ -918,6 +913,13 @@
       "author": "David Hockney",
       "style": "time",
       "lens": "growth"
+    },
+    {
+      "text": "A muted amber streetlamp glints on the wet pavement, yet the moon's cool silver spills onto the same stones, as if night and dawn share a single breath.",
+      "poem_id": "jarmusch-limits-2019-01",
+      "author": "Jim Jarmusch",
+      "style": "contrast",
+      "lens": "light"
     }
   ],
   "pending": {
